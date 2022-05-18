@@ -6,13 +6,35 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="[toc] 根目录文件及其用处 Linux之用户管理创建&#x2F;删除新用户Linux创建用户命令Linux中使用useradd命令来创建一个新用户。命令格式格式：useradd [命令参数] 参数常见命令参数：  d&lt;登入目录&gt;：指定用户登入时的启始目录； D：查看或变更预设值； g&lt;群组&gt;：指定用户所属的群组； m：自动建立用户的登入目录； M：不要自动建立用户的登入">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2022/05/18/%E5%A4%B4%E5%93%A5Linux%E5%AE%9E%E8%AE%AD%EF%BC%88%E5%AF%B9%E4%BA%8E%E6%89%80%E5%AD%A6%E7%9A%84%E8%A1%A5%E5%85%85%EF%BC%89.md/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[toc] 根目录文件及其用处 Linux之用户管理创建&#x2F;删除新用户Linux创建用户命令Linux中使用useradd命令来创建一个新用户。命令格式格式：useradd [命令参数] 参数常见命令参数：  d&lt;登入目录&gt;：指定用户登入时的启始目录； D：查看或变更预设值； g&lt;群组&gt;：指定用户所属的群组； m：自动建立用户的登入目录； M：不要自动建立用户的登入">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1494/WEBRESOURCEdea73d49a46c94cef625374e8bec0c9b">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1333/WEBRESOURCE0f9cf31f3b13adacacd4187c53f67b4d">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1341/WEBRESOURCE8c26223f89d11d81ad3e5638e6a7c478">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1352/WEBRESOURCEe5234c00b292047e4a545b98a744933f">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1367/WEBRESOURCEa32025de1609acaa7be7e1490443f349">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1377/WEBRESOURCE872de103b52ce86335f64f071339711b">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1391/WEBRESOURCEef112f4be44b29eefc031c7e57c81377">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1404/WEBRESOURCEc1895096ed837d4cf3d6257d558d30dd">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1412/WEBRESOURCE94377d3d0f2192268268a826ea89529f">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1425/WEBRESOURCE7b132e157b3941b8ced0bcc8846e722c">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1441/WEBRESOURCE192d83cd9e04fe6aeb99a4a72a7f3bfa">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1445/WEBRESOURCEa5289f9dfe3b4855c74ac28684cef6f0">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1449/WEBRESOURCEb6b27608b6ddaa34c41f30ea421096cf">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1470/WEBRESOURCE7d62543ad88ccbfa48617f8ff29ad902">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1473/WEBRESOURCEd5d63ed43a1194dbd8a7c51b2218b1c5">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1477/WEBRESOURCE9466627383850c67497f813580ed19fe">
+<meta property="og:image" content="https://note.youdao.com/yws/res/1480/WEBRESOURCEcedd704af8d6046597a37f26ef2c0c82">
+<meta property="article:published_time" content="2022-05-18T05:15:24.899Z">
+<meta property="article:modified_time" content="2022-05-18T05:15:24.900Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://note.youdao.com/yws/res/1494/WEBRESOURCEdea73d49a46c94cef625374e8bec0c9b">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,9 +91,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-头哥Linux实训（对于所学的补充）.md" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-头哥Linux实训（对于所学的补充）.md" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/18/%E5%A4%B4%E5%93%A5Linux%E5%AE%9E%E8%AE%AD%EF%BC%88%E5%AF%B9%E4%BA%8E%E6%89%80%E5%AD%A6%E7%9A%84%E8%A1%A5%E5%85%85%EF%BC%89.md/" class="article-date">
   <time class="dt-published" datetime="2022-05-18T05:15:24.899Z" itemprop="datePublished">2022-05-18</time>
@@ -467,100 +487,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-my-first-blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/18/hello-my-first-blog/" class="article-date">
-  <time class="dt-published" datetime="2022-05-18T03:23:38.000Z" itemprop="datePublished">2022-05-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/18/hello-my-first-blog/">hello_my_first_blog</a>
-    </h1>
+    <a href="/2022/05/18/hello-my-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hello_my_first_blog</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><h2 id="This-is-my-first-blog-punbished-in-the-github"><a href="#This-is-my-first-blog-punbished-in-the-github" class="headerlink" title="This is my first blog punbished in the github!"></a>This is my first blog punbished in the github!</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/18/hello-my-first-blog/" data-id="cl3b15hhh0000i79k6cuo0gum" data-title="hello_my_first_blog" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/18/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-05-18T03:09:10.046Z" itemprop="datePublished">2022-05-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/18/hello-world/" data-id="cl3b09rqa0000wf9kc3zhdj5o" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>

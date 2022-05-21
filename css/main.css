@@ -1720,9 +1720,9 @@ pre code {
   height: 3px;
   position: fixed;
   z-index: 50;
-  width: calc(100% - var(--progress));
+  width: var(--progress);
   left: 0;
-  top: 0;
+  bottom: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2606,7 +2606,7 @@ ul.breadcrumb li:last-child {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ff2475;
+  background: #eeff34;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);

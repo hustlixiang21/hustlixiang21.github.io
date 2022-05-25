@@ -1608,12 +1608,6 @@ pre code {
   display: inline-block;
   margin: 0 5px;
 }
-.busuanzi-count #busuanzi_container_site_uv {
-  display: none;
-}
-.busuanzi-count #busuanzi_container_site_pv {
-  display: none;
-}
 @-moz-keyframes icon-animate {
   0%, 100% {
     transform: scale(1);
@@ -2627,7 +2621,7 @@ ul.breadcrumb li:last-child {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #af24ff;
+  background: #c4dee2;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);

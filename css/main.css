@@ -2741,7 +2741,7 @@ mark.search-keyword {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #e3df9c;
+  background: #fcffff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2760,4 +2760,8 @@ mark.search-keyword {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+#busuanzi_value_site_pv,
+#busuanzi_value_site_uv {
+  color: #00bfff;
 }

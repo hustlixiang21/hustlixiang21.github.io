@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/clicklove.js"></script>
+<scrip type="text/javascript" src="/js/clicklove.js"></script>
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
@@ -58,6 +58,17 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<div id="poem_sentence"></div>
+<div id="poem_info"></div>
+<script type="text/javascript">
+  jinrishici.load(function(result) {
+    var sentence = document.querySelector("#poem_sentence")
+    var info = document.querySelector("#poem_info")
+    sentence.innerHTML = result.data.content
+    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+  });
+</script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">

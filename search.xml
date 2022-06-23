@@ -172,7 +172,477 @@
   <entry>
     <title>头哥linux实训</title>
     <url>/2022/05/25/%E5%A4%B4%E5%93%A5linux%E5%AE%9E%E8%AE%AD/</url>
-    <content><![CDATA[<p><img src="/2022/05/25/%E5%A4%B4%E5%93%A5linux%E5%AE%9E%E8%AE%AD/fec54b792dc73685d9c838ca0bf0f812.png" alt="根目录下文件夹的主要用途"></p>
+    <content><![CDATA[<h1 id="根目录文件及其用处"><a href="#根目录文件及其用处" class="headerlink" title="根目录文件及其用处"></a>根目录文件及其用处</h1><p><img src="https://pic2.zhimg.com/80/v2-faec5535f8d7f0d4589adfa8135fa98a_1440w.png"></p>
+<h1 id="Linux之用户管理"><a href="#Linux之用户管理" class="headerlink" title="Linux之用户管理"></a>Linux之用户管理</h1><h2 id="创建-x2F-删除新用户"><a href="#创建-x2F-删除新用户" class="headerlink" title="创建&#x2F;删除新用户"></a>创建&#x2F;删除新用户</h2><h3 id="Linux创建用户命令"><a href="#Linux创建用户命令" class="headerlink" title="Linux创建用户命令"></a>Linux创建用户命令</h3><p>Linux中使用<code>useradd</code>命令来创建一个新用户。<br>命令格式格式：<code>useradd [命令参数] 参数</code><br>常见命令参数：</p>
+<ul>
+<li>d&lt;登入目录&gt;：指定用户登入时的启始目录；</li>
+<li>D：查看或变更预设值；</li>
+<li>g&lt;群组&gt;：指定用户所属的群组；</li>
+<li>m：自动建立用户的登入目录；</li>
+<li>M：不要自动建立用户的登入目录；</li>
+<li>s：指定用户登入后所使用的shell。</li>
+</ul>
+<p><code>useradd</code>必须以root权限才能执行，如果是普通用户想创建一个新用户时，需要在命令前加<code>sudo</code>命令来提升权限为root权限。</p>
+<p>案例演示：</p>
+<p>1.查看useradd系统默认属性值，使用命令<code>useradd -D</code><br><img src="https://pic1.zhimg.com/80/v2-cd4d69f535cad63f82850712990ef2a7_1440w.png" alt="截屏2022-05-17 20.55.31.png"></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GROUP</td>
+<td>指新创建的用户将被添加到用户组ID为100的公共用户组中</td>
+</tr>
+<tr>
+<td>HOME</td>
+<td>指新创建的用户将在&#x2F;home目录下创建一个HOME账户</td>
+</tr>
+<tr>
+<td>INACTIVE</td>
+<td>指当密码逾期时，用户将不会被禁用</td>
+</tr>
+<tr>
+<td>EXPIRE</td>
+<td>指新创建的用户不会在设定日期被设置为逾期</td>
+</tr>
+<tr>
+<td>SHELL</td>
+<td>指新创建的用户使用&#x2F;bin&#x2F;sh(也就是bash)作为默认shell</td>
+</tr>
+<tr>
+<td>SKEL</td>
+<td>指系统会将&#x2F;etc&#x2F;skel目录中的内容复制到新创建的用户的HOME目录</td>
+</tr>
+<tr>
+<td>CREATE_MAIL_SPOOL</td>
+<td>指系统不会在邮件目录中创建一个文件用于新创建用户账户接受邮件</td>
+</tr>
+</tbody></table>
+<p>2.创建新用户<br><img src="https://pic1.zhimg.com/80/v2-b25c232976216fcb6f3f803aeff450bd_1440w.png" alt="截屏2022-05-17 21.00.31.png"></p>
+<p>Linux中用户信息是保存在<code>/etc/passwd</code>文件中，我们可以使用命令<code>tail</code> <code>/etc/passwd</code>命令查看<code>/etc/passwd</code>文件最后10行中是否存在刚刚新创建的testUser用户信息。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-7cbdd2c9f33f3d821619f37e443faf69_1440w.png" alt="截屏2022-05-17 21.03.00.png"></p>
+<h3 id="Linux删除用户命令"><a href="#Linux删除用户命令" class="headerlink" title="Linux删除用户命令"></a>Linux删除用户命令</h3><p>Linux中使用<code>userdel</code>命令来删除一个已经存在的用户。<br>命令格式：<code>userdel [命令参数] 参数</code><br>常见命令参数：</p>
+<ul>
+<li>f：强制删除用户，即使用户当前已登录；</li>
+<li>r：删除用户的同时，删除与用户相关的所有文件。</li>
+</ul>
+<p><code>userdel</code>必须以root权限才能执行，如果是普通用户想使用该命令时，需要在命令前加sudo命令来提升权限为root权限。</p>
+<p>案例演示:</p>
+<ol>
+<li>使用userdel命令删除一个已经存在的用户testUser，并且自动删除其家目录文件。</li>
+</ol>
+<p><img src="https://pic3.zhimg.com/80/v2-cc94c16290b8db6a31084c63f2cfbc1c_1440w.png" alt="截屏2022-05-17 21.07.46.png"></p>
+<h2 id="Linux-用户密码管理"><a href="#Linux-用户密码管理" class="headerlink" title="Linux 用户密码管理"></a>Linux 用户密码管理</h2><h3 id="用户密码存放地及方式"><a href="#用户密码存放地及方式" class="headerlink" title="用户密码存放地及方式"></a>用户密码存放地及方式</h3><p>Linux中用户的登录密码是存放在<code>/etc/shadow</code>文件中，<code>/etc/shadow</code>文件中存放的是加密过后的密码，所以在<code>/etc/shadow</code>文件中看到的密码是加密过后的密文。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-56da6c940f5d0647ee221877032f9006_1440w.png" alt="截屏2022-05-17 21.12.04.png"></p>
+<p>可以看到第一个冒号前是用户名，用户名是以明文的方式存放。</p>
+<p>在第一个冒号和第二个冒号之间存放的是加密过后的密码，密码是以密文的方式存放，其中密文是由用户密码和其它信息加密后组成的，这里不做详细讲解，我们只需要知道如果第一个冒号和第二个冒号之间是*或者!或者空，则表示该用户没有密码，否则，则表示该用户是有密码。</p>
+<h3 id="使用passwd命令修改用户密码"><a href="#使用passwd命令修改用户密码" class="headerlink" title="使用passwd命令修改用户密码"></a>使用passwd命令修改用户密码</h3><p>命令格式：<code>passwd [命令参数] 参数</code></p>
+<p>常见命令参数：</p>
+<ul>
+<li>d 删除密码；</li>
+<li>l 停止账号使用；</li>
+<li>S 显示密码信息。</li>
+</ul>
+<p>passwd必须以root权限才能执行，如果是普通用户想执行passwd时，需要在命令前加sudo命令来提升权限为root权限。</p>
+<p>案例演示：</p>
+<ol>
+<li>使用useradd命令来新创建一个用户，使用passwd命令来设置登录密码。</li>
+</ol>
+<p><img src="https://pic1.zhimg.com/80/v2-d5b2e731ec72100890b67f8135105474_1440w.png" alt="截屏2022-05-17 21.15.41.png"></p>
+<p>使用useradd命令创建一个新用户(test)，此时test用户是没有密码的，所以使用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">tail</span> -n 1 /etc/shadow</span><br><span class="line"><span class="built_in">tail</span>用法：-n, --lines=[+]NUM</span><br><span class="line">output the last NUM lines, instead of the last 10; or use -n +NUM to output starting with line NUM</span><br></pre></td></tr></table></figure>
+<p>命令查看&#x2F;etc&#x2F;shadow文件的最后一行可以看出test用户密码部分为!。</p>
+<p>使用passwd命令为test用户设置密码时，可以看到需要输入两次密码，目的是为了确保两次输入的密码一致。当设置完密码后，可以看到&#x2F;etc&#x2F;shadow文件中test用户的密码部分已经为加密过后的密文。</p>
+<ol start="2">
+<li>使用passwd命令来清除用户的密码。</li>
+</ol>
+<p><img src="https://pica.zhimg.com/80/v2-103024acdf47401fc675a536612fc29d_1440w.png" alt="截屏2022-05-17 21.22.23.png"></p>
+<p>使用passwd命令清除用户test的登录密码，使用tail -n 1 &#x2F;etc&#x2F;shadow命令查看&#x2F;etc&#x2F;shadow文件的最后一行可以看出test用户密码部分为空，此时test用户是没有密码的。</p>
+<h3 id="使用chpasswd命令修改用户密码"><a href="#使用chpasswd命令修改用户密码" class="headerlink" title="使用chpasswd命令修改用户密码"></a>使用chpasswd命令修改用户密码</h3><p><code>chpasswd</code>命令通常是用于批量修改用户密码，从标准输入批量读取成对的用户名和密码，其中输入的用户名和密码的格式为: 用户名:密码 </p>
+<p>例如要批量更新用户密码，将用户名和密码写入到一个文件中，格式如下所示：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-3614610da6fdd274a3230a23dd8df26a_1440w.png" alt="截屏2022-05-17 21.24.16.png"><br>然后执行执行如下命令来更新密码：</p>
+<p>sudo chpasswd &lt; batch.txt</p>
+<p>“&lt;”代表着重定向</p>
+<p>命令格式：<code>chpasswd [命令参数] 参数</code></p>
+<p>常见命令参数</p>
+<ul>
+<li>e：输入的密码是加密后的密文；</li>
+<li>h：显示帮助信息并退出。</li>
+</ul>
+<p>chpasswd必须以root权限才能执行，如果是普通用户执行时，需要在命令前加sudo命令来提升权限为root权限。</p>
+<h2 id="Linux用户权限切换"><a href="#Linux用户权限切换" class="headerlink" title="Linux用户权限切换"></a>Linux用户权限切换</h2><h3 id="图形化界面登录"><a href="#图形化界面登录" class="headerlink" title="图形化界面登录"></a>图形化界面登录</h3><p>Linux中添加用户后，用户在图形界面登录系统的方式和Windows一样，都是选择要登录的用户后直接输入登录密码即可。</p>
+<p>案例演示：</p>
+<ol>
+<li>添加一个新用户，并且设置登录密码，然后在图形界面登录。</li>
+</ol>
+<p><img src="https://picx.zhimg.com/80/v2-09a98a0817379f8c0b43104f19f9de87_1440w.png" alt="截屏2022-05-17 21.28.44.png"></p>
+<h3 id="使用login命令登录"><a href="#使用login命令登录" class="headerlink" title="使用login命令登录"></a>使用login命令登录</h3><p>login命令是让用户登录系统，可通过它的功能随时更换登入身份。当&#x2F;etc目录里含名称为nologin的文件时，系统只允许root帐号登入系统，其他用户一律不准登入。</p>
+<p>当使用login命令登录系统后，可以使用logout命令或者exit命令来退出当前用户登录，返回到登录前的用户状态。</p>
+<p>命令格式：<code>login [命令参数] 参数</code></p>
+<p>参数为登录的用户名，可以不输入登录的用户名，直接输入login命令后回车，然后根据提示再输入用户名和密码。</p>
+<p>常见命令参数:</p>
+<ul>
+<li>p：告诉login指令不销毁环境变量；</li>
+<li>h：指定远程服务器的主机名。</li>
+</ul>
+<p>login必须以root权限才能执行，如果是普通用户执行时，需要在命令前加sudo命令来提升权限为root权限。</p>
+<p>案例演示:</p>
+<ol>
+<li>使用login命令来登录系统(文件&#x2F;etc&#x2F;nologin不存在)。</li>
+</ol>
+<p>首先查看当前登录的用户名是parallels。</p>
+<p><img src="https://pica.zhimg.com/80/v2-cdc7b7aed2db8158ea6eeb482fcadee0_1440w.png" alt="截屏2022-05-17 21.31.38.png"></p>
+<p>使用test    用户来登录系统，然后查看当前登录的用户名。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-6f2d3e98f7e8c5ba554d10c47f08be59_1440w.png" alt="截屏2022-05-17 21.33.19.png"></p>
+<p>使用logout或者exit命令退出test用户，然后在查看当前登录用户是否为parallels。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-6f2d3e98f7e8c5ba554d10c47f08be59_1440w.png" alt="img"></p>
+<ol start="2">
+<li>使用login命令来登录系统(文件&#x2F;etc&#x2F;nologin存在)。</li>
+</ol>
+<p>首先查看当前登录的用户名是parallels。</p>
+<p>在&#x2F;etc目录下新创建一个nologin文件，使用如下命令创建：</p>
+<p><code>sudo touch /etc/nologin</code></p>
+<p>发现使用test用户是无法登录系统的，只有使用root用户才能登录系统。</p>
+<h3 id="使用su命令切换用户身份"><a href="#使用su命令切换用户身份" class="headerlink" title="使用su命令切换用户身份"></a>使用su命令切换用户身份</h3><p>su命令用于切换当前用户身份到其他用户身份，变更时须输入所要变更的用户帐号的密码。 </p>
+<p>当使用su命令切换用户后，使用exit命令退出当前身份，返回原有登录用户身份。</p>
+<p>注：如果当前用户身份是root，则使用su命令切换到其他用户的时候不需要相应用户的密码</p>
+<p>命令格式：<code>su [命令参数] 参数</code></p>
+<p>参数为登录的用户名，如果没有参数，则默认切换为root用户。</p>
+<p>常见命令参数</p>
+<ul>
+<li>-c&lt;指令&gt;或–command&#x3D;&lt;指令&gt;：执行完指定的指令后，即恢复原来的身份；</li>
+<li>-l或–login：改变身份时，也同时变更工作目录，以及HOME,SHELL,USER,logname。此外，也会变更PATH变量；</li>
+<li>-m,-p或–preserve-environment：变更身份时，不要变更环境变量；</li>
+<li>s<shell>或–shell&#x3D;<shell>：指定要执行的shell。</shell></shell></li>
+</ul>
+<p>su命令所有使用者都可以执行。</p>
+<p>案例演示:</p>
+<ol>
+<li>使用su命令切换当前用户身份(不改变当前工作目录)。</li>
+</ol>
+<p><img src="https://pic3.zhimg.com/80/v2-a3edb5c1caf53250c70364feb7675c44_1440w.png?source=d16d100b" alt="img"></p>
+<ol start="2">
+<li>使用su命令切换当前用户身份(改变当前工作目录)。</li>
+</ol>
+<p><img src="https://pica.zhimg.com/80/v2-4b268df03f89c301fb2afb2a601e452e_1440w.png" alt="img"></p>
+<ol start="3">
+<li>利用-c命令参数实现执行完毕相应的命令立马返回当前用户</li>
+</ol>
+<p><img src="https://pic1.zhimg.com/80/v2-6e1cc71d9b639a1f76c2198e24599a4e_1440w.png?source=d16d100b" alt="img"><br>或者如下也行<br><img src="https://pic2.zhimg.com/80/v2-ed4d916345d18f5d708fcdb476eeca75_1440w.png" alt="截屏2022-05-17 21.54.57.png"></p>
+<h1 id="Linux之文件-x2F-目录搜索"><a href="#Linux之文件-x2F-目录搜索" class="headerlink" title="Linux之文件&#x2F;目录搜索"></a>Linux之文件&#x2F;目录搜索</h1><h2 id="查询命令-locate"><a href="#查询命令-locate" class="headerlink" title="查询命令-locate"></a>查询命令-locate</h2><p><code>locate</code>命令用来查找文件或目录。</p>
+<p>locate命令要比其他查找文件命令（例如:find）快得多，原因在于它不搜索具体目录，而是搜索一个数据库<code>/var/lib/mlocate/mlocate.db</code></p>
+<p><code>/var/lib/mlocate/mlocate.db</code>这个数据库中含有本地所有文件信息。Linux 系统自动创建这个数据库，并且每天自动更新一次，因此，我们在用locate查找文件时，有时会找到已经被删除的数据，或者刚刚建立文件，却无法查找到，原因就是因为数据库文件没有被更新。为了避免这种情况，可以在使用locate之前，先使用updatedb命令，手动更新数据库。</p>
+<p>locate具体命令如下：</p>
+<p><code>locate　命令参数　文件/目录</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-c, –count            只输出找到的数量；</li>
+<li>-d, –database DBPATH  使用DBPATH指定的数据库，而不是默认数据库&#x2F;var&#x2F;lib&#x2F;mlocate&#x2F;mlocate.db；</li>
+<li>-i, –ignore-case      忽略大小写；</li>
+<li>-q, –quiet            安静模式，不会显示任何错误讯息；</li>
+<li>-e, –existing         只显示当前存在的文件条目；</li>
+</ul>
+<p>案例演示：</p>
+<ol>
+<li>搜索etc目录下以pass开头的文件或目录，具体使用如下命令：</li>
+</ol>
+<p><code>locate /etc/pass</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo updatedb</span><br><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ locate /etc/pass</span><br><span class="line">/etc/passwd</span><br><span class="line">/etc/passwd-</span><br></pre></td></tr></table></figure>
+
+<p>因为updatedb需要root权限，这里需要使用sudo </p>
+<ol start="2">
+<li>搜索包含passwd字母的文件或目录总个数，具体使用如下命令：</li>
+</ol>
+<p><code>locate -c passwd</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ locate -c passwd</span><br><span class="line">176</span><br></pre></td></tr></table></figure>
+
+<p><code>updatedb</code></p>
+<p>updatedb命令用来创建或更新locate命令所必需的数据库文件。</p>
+<p>updatedb命令的执行过程较长，因为在执行时它会遍历整个系统的目录树，并将所有的文件信息写入locate数据库文件中。</p>
+<p>具体命令如下：</p>
+<p><code>updatedb　命令参数</code></p>
+<p>常用参数如下：</p>
+<ul>
+<li>-o&lt;文件&gt;：忽略默认的数据库文件，使用指定的slocate数据库文件；</li>
+<li>-U&lt;目录&gt;：更新指定目录的slocate数据库；</li>
+<li>-v：显示执行的详细过程;</li>
+</ul>
+<p>案例演示：</p>
+<ol>
+<li>新创建一个testFile文件，更新locate数据库后使用locate命令定位该文件，具体使用如下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">touch testFile</span><br><span class="line">locate testFile</span><br><span class="line">sudo updatedb</span><br><span class="line">locate testFile</span><br></pre></td></tr></table></figure>
+
+<p>执行情况如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#更新之前</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ touch testFile;locate testFile</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ </span><br><span class="line">#更新数据库之后                                            </span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ sudo updatedb</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ locate testFile </span><br><span class="line">/home/kali/trial/testFile</span><br></pre></td></tr></table></figure>
+
+<p>可以看到新创建文件后直接使用locate去查找是没有任何结果的，只有更新数据库后才能查找到新创建的文件。</p>
+<ol start="2">
+<li>删除testFile文件，更新locate数据库后使用locate命令定位该文件，具体使用如下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm testFile</span><br><span class="line">locate testFile</span><br><span class="line">sudo updatedb -U ./</span><br><span class="line">locate testFile</span><br></pre></td></tr></table></figure>
+
+<p>执行情况如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ rm testFile</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ locate testFile</span><br><span class="line">/home/kali/trial/testFile</span><br><span class="line">#更新数据库之后</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ sudo updatedb -U /home/kali/trial </span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ locate testFile</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$</span><br></pre></td></tr></table></figure>
+
+<p>第三条updatedb命令使用了-U参数，只更新testFile所在目录的数据库，这样速度比较快，如果不使用该参数，则会更新整个文件系统的内容，速度就会比较慢。</p>
+<p>删除文件后直接使用locate去查找可以定位到的，原因是没有马上更新数据库，数据库里面仍然有“过时”的信息。</p>
+<h2 id="查询命令-which-x2F-whereis"><a href="#查询命令-which-x2F-whereis" class="headerlink" title="查询命令-which&#x2F;whereis"></a>查询命令-which&#x2F;whereis</h2><p>which命令主要是用来查找系统&#x3D;&#x3D;PATH目录下的可执行文件&#x3D;&#x3D;，说白了就是查找那些我们已经安装好的可以直接执行的命令。</p>
+<p>whereis命令可以用来查找&#x3D;&#x3D;二进制（命令）、源文件、man文件&#x3D;&#x3D;。与which不同的是这条命令可以是通过文件索引数据库而非PATH来查找的，所以查找的面比which要广。</p>
+<h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><p>which命令用于查找并显示给定命令的绝对路径，环境变量PATH中保存了查找命令时需要遍历的目录。which指令会在环境变量$PATH设置的目录里查找符合条件的文件。也就是说，使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令。</p>
+<p>which是shell内建命令，内建命令要比系统论命令有比较高的执行效率。</p>
+<p>具体命令如下：</p>
+<p><code>which　命令</code></p>
+<p>案例演示：</p>
+<p>使用which命令定位passwd命令的位置，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">which passwd</span><br></pre></td></tr></table></figure>
+
+<p>执行情况如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ which passwd</span><br><span class="line">/usr/bin/passwd</span><br></pre></td></tr></table></figure>
+
+<p>可以看到passwd命令是存放在&#x2F;usr&#x2F;bin目录下。</p>
+<h3 id="whereis"><a href="#whereis" class="headerlink" title="whereis"></a>whereis</h3><p>whereis命令用来定位指令的二进制程序、源代码文件和man手册页等相关文件的路径。</p>
+<p>具体命令如下：</p>
+<p>whereis　命令参数　文件名</p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-b：只查找二进制文件；</li>
+<li>-B&lt;目录&gt;：只在设置的目录下查找二进制文件；</li>
+<li>-m：只查找说明文件；</li>
+<li>-M&lt;目录&gt;：只在设置的目录下查找说明文件；</li>
+<li>-s：只查找原始代码文件；</li>
+<li>-S&lt;目录&gt;只在设置的目录下查找原始代码文件；</li>
+</ul>
+<p>案例演示：</p>
+<ol>
+<li>使用whereis命令查找passwd命令所有信息，包括二进制文件位置、说明文件位置和源码文件位置，具体使用如下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">whereis passwd</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ whereis passwd   </span><br><span class="line">passwd: /usr/bin/passwd /etc/passwd /usr/share/man/man1/passwd.1ssl.gz /usr/share/man/man1/passwd.1.gz /usr/share/man/man5/passwd.5.gz</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用whereis命令仅查找passwd命令二进制文件位置，具体使用如下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">whereis -b passwd</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ whereis -b passwd </span><br><span class="line">passwd: /usr/bin/passwd /etc/passwd</span><br></pre></td></tr></table></figure>
+
+<p>可以看到passwd命令存在的位置有两处，分别是&#x2F;usr&#x2F;bin&#x2F;passwd和&#x2F;usr&#x2F;bin&#x2F;X11&#x2F;passwd，那么在我们执行passwd时，如何确定是执行的哪一个，此时我们就可以使用which命令来定位首先被执行的命令位置。</p>
+<h2 id="查询命令-find"><a href="#查询命令-find" class="headerlink" title="查询命令-find"></a>查询命令-find</h2><p>find命令与locate命令相比各有优劣，locate命令的查找速度比find命令快的多，但是无法查找最新添加的文件&#x2F;目录以及会查找出来已经过期的文件&#x2F;目录。</p>
+<p>相find命令可以按照自定义的方法查找任何文件，功能比较强大。缺点就是查询速度比较慢，因为它会通过遍历硬盘来查找。通常我们会使用find命令，相较于它提供的强大的搜索能力而言，多花费的些微时间不值一提。</p>
+<p>find命令用来在指定目录下查找文件。任何位于参数之前的字符串都将被视为欲查找的目录名。如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件。并且将查找到的子目录和文件全部进行显示。</p>
+<p>具体命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find　查找目录　查找参数　查找内容</span><br></pre></td></tr></table></figure>
+
+
+<p>常用查找参数如下：</p>
+<ul>
+<li>-amin&lt;+|-分钟&gt;：查找在指定时间曾被存取过的文件或目录，单位以分钟计算；</li>
+<li>-atime&lt;+|-24小时数&gt;：查找在指定时间曾被存取过的文件或目录，单位以24小时计算；</li>
+<li>-cmin&lt;+|-分钟&gt;：查找在指定时间之时被更改过的文件或目录；</li>
+<li>-ctime&lt;+|-24小时数&gt;：查找在指定时间之时被更改的文件或目录，单位以24小时计算；</li>
+<li>-mmin&lt;+|-分钟&gt;：查找在指定时间曾被更改过的文件或目录，单位以分钟计算；</li>
+<li>-mtime&lt;+|-24小时数&gt;：查找在指定时间曾被更改过的文件或目录，单位以24小时计算；</li>
+<li>-depth：从指定目录下最深层的子目录开始查找；</li>
+<li>-exec&lt;执行指令&gt;：假设find指令的回传值为True，就执行该指令；</li>
+<li>-follow：排除符号连接；</li>
+<li>-gid&lt;群组识别码&gt;：查找符合指定群组识别码的文件或目录；</li>
+<li>-group&lt;群组名称&gt;：查找符合指定群组名称的文件或目录；</li>
+<li>-uid&lt;用户识别码&gt;：查找符合指定的用户识别码的文件或目录；</li>
+<li>-user&lt;拥有者名称&gt;：查找符和指定的拥有者名称的文件或目录；</li>
+<li>-name&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；</li>
+<li>-iname&lt;范本样式&gt;：此参数的效果和指定“-name”参数类似，但忽略字符大小写的差别；</li>
+<li>-inum&lt;inode编号&gt;：查找符合指定的inode编号的文件或目录；</li>
+<li>-newer&lt;参考文件或目录&gt;：查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；</li>
+<li>-size&lt;+|-|&#x3D;文件大小&gt;：查找符合指定的文件大小的文件；</li>
+<li>-type&lt;文件类型&gt;：只寻找符合指定的文件类型的文件；</li>
+<li>-a：是前后条件都要满足；</li>
+<li>-o ：是满足一个条件就好；</li>
+<li>+：表示大于设置值的文件；</li>
+<li><ul>
+<li>：表示小于设置值的文件；</li>
+</ul>
+</li>
+<li>&#x3D; ：表示等于设置值的文件；</li>
+</ul>
+<p>案例演示1：</p>
+<p>查找&#x2F;etc目录下以update开头以.conf结尾的文件或目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo find /etc -name &quot;update*.conf&quot;</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -name &quot;update*.conf&quot;</span><br><span class="line">/etc/initramfs-tools/update-initramfs.conf</span><br><span class="line">/etc/updatedb.conf</span><br></pre></td></tr></table></figure>
+
+<p>*表示任意字母。这里使用的是正则表达式，正则表达式可以检索、替换那些符合某个模式或规则的文本，非常强大。有兴趣的同学可以了解一下。</p>
+<p>案例演示2：</p>
+<p>查找&#x2F;etc目录下在超过7天前被访问的文件或目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo find /etc -atime +7</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -atime +7</span><br><span class="line">/etc/king-phisher/server_config.yml</span><br><span class="line">/etc/postgresql/14/main/environment</span><br><span class="line">/etc/postgresql/14/main/pg_ctl.conf</span><br><span class="line">/etc/postgresql/14/main/postgresql.conf</span><br><span class="line">/etc/postgresql/14/main/pg_hba.conf</span><br><span class="line">/etc/postgresql/14/main/pg_ident.conf</span><br><span class="line">/etc/geoclue/geoclue.conf</span><br></pre></td></tr></table></figure>
+
+<p>案例演示3：</p>
+<p>查找&#x2F;etc目录下恰好在7天前被访问的文件或目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo find /etc -atime 7</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -atime 7 </span><br><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$</span><br></pre></td></tr></table></figure>
+
+<p>案例演示4：</p>
+<p>查找&#x2F;etc目录下在5分钟内被访问的文件或目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo find /etc -amin -5</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[/etc]</span><br><span class="line">└─$ sudo find /etc -amin -20</span><br><span class="line">/etc/king-phisher</span><br><span class="line">/etc/postgresql/14/main</span><br><span class="line">/etc/postgresql/14/main/conf.d</span><br><span class="line">/etc/geoclue</span><br></pre></td></tr></table></figure>
+
+<h3 id="type-文件类型使用方法"><a href="#type-文件类型使用方法" class="headerlink" title="-type 文件类型使用方法"></a>-type 文件类型使用方法</h3><p>常见文件类型：</p>
+<ul>
+<li>f：普通文件</li>
+<li>l：符号链接</li>
+<li>d：目录</li>
+<li>c：字符设备</li>
+<li>b：块设备</li>
+<li>s：套接字</li>
+<li>p：Fifo</li>
+</ul>
+<p>案例演示：</p>
+<p>查找&#x2F;etc目录下以my开头的目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo find /etc -name &quot;my*&quot; -a -type d</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -name &quot;my*&quot; -a -type d   </span><br><span class="line">/etc/mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="size-lt-x3D-文件大小-gt-使用方法"><a href="#size-lt-x3D-文件大小-gt-使用方法" class="headerlink" title="size &lt;+|-|&#x3D;文件大小&gt;使用方法"></a>size &lt;+|-|&#x3D;文件大小&gt;使用方法</h3><p>常见文件大小单位：</p>
+<ul>
+<li>b —— 块（512字节）</li>
+<li>c —— 字节</li>
+<li>w —— 字（2字节）</li>
+<li>k —— 千字节</li>
+<li>M —— 兆字节</li>
+<li>G —— 吉字节</li>
+</ul>
+<p>案例演示：</p>
+<p>查找&#x2F;etc目录下大于1M的文件，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo find /etc -size +1M</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -size +1M </span><br><span class="line">/etc/theHarvester/wordlists/dns-big.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="exec使用方法"><a href="#exec使用方法" class="headerlink" title="-exec使用方法"></a><code>-exec</code>使用方法</h3><p>具体使用方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find　…　-exec 要执行的命令  &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+
+<p>-exec选项后面跟随着所要执行的命令或脚本，然后是一个空格一对儿{}一个空格和一个;。</p>
+<p>注意：要执行的命令和{之间以及}与;之间的空格是不能省略的。</p>
+<p>案例演示：</p>
+<p>查找&#x2F;etc目录下大于1M的文件&#x2F;目录的详细信息，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo find /etc -size +1M -exec ls -l &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -size +1M -exec ls -l &#123;&#125; \;</span><br><span class="line">-rw-r--r-- 1 root root 1115633 Nov 25 12:42 /etc/theHarvester/wordlists/dns-big.txt</span><br></pre></td></tr></table></figure>
+
+<h1 id="Linux之文件打包和解压缩"><a href="#Linux之文件打包和解压缩" class="headerlink" title="Linux之文件打包和解压缩"></a>Linux之文件打包和解压缩</h1><h2 id="打包和压缩的区别"><a href="#打包和压缩的区别" class="headerlink" title="打包和压缩的区别"></a>打包和压缩的区别</h2><p>文件打包，有可能仅仅是将多个文件连接成1个文件，并不进行压缩处理。有时候也可能看起来文件变小，那是因为多个文件储存可能造成多余的空间浪费，究其原因是文件储存方式中，分块族造成的。1个族1次只能被1个文件使用，虽然1个文件能使用多个族，但最后1个族未必能填满。因此，大量的文件就会造成很多浪费。而连接成1个文件后，只会浪费1个族。压缩就不一样了，它不但把文件连在一起，还进行特定算法的压缩。对于txt这类很“松”的文件，可以大大减小文件的大小</p>
+<h2 id="tar打包命令"><a href="#tar打包命令" class="headerlink" title="tar打包命令"></a>tar打包命令</h2><p>tar（tape archive的简写）工具可完成许多功能，其名称源于它的原始功能－创建和读取归档文件和备份磁带。如今，该工具常用来将多个文件或多个目录打包成一个tar文件，或者将某个tar文件分解开。</p>
+<p>打包:<br>tar命令可以将多个文件&#x2F;目录进行打包，将多个文件生成一个文件，生成的文件后缀为.tar。</p>
+<p>具体的打包命令为:<br><code>tar -cvf 生成的tar包名 要打包的文件或者是目录</code></p>
+<p>常用的参数命令：</p>
+<ul>
+<li>-c 建立新的归档文件</li>
+<li>-v 处理过程中输出相关信息</li>
+<li>-f 对普通文件操作</li>
+</ul>
+<p>解包：<br>tar命令可以将已经打包好的文件解压出来。</p>
+<p>具体解包命令如下:<br><code>tar　-xvf　解压包名 -C 解压到指定目录</code></p>
+<p>常用的参数：</p>
+<ul>
+<li>-x 或 –ext\fract 或 –get：从备份文件中还原文件</li>
+<li>-v 处理过程中输出相关信息</li>
+<li>-f 对普通文件进行操作</li>
+<li>-C &lt;目标路径&gt; 切换到指定的目录</li>
+</ul>
+<p>ps:如果不使用-C(大写)参数，则默认解压到当前目录下。</p>
+<h2 id="文件压缩命令"><a href="#文件压缩命令" class="headerlink" title="文件压缩命令"></a>文件压缩命令</h2><p>Linux下存在多个文件压缩工具，常用的有bzip2、gzip和zip。这三个工具都是可以将一个文件进行压缩操作，使其在不丢失任何信息的情况下占用较少的磁盘空间<br>对于多文件&#x2F;目录的压缩操作分为两步：</p>
+<ol>
+<li>将其进行打包</li>
+<li>将打包过后的文件进行压缩操作。</li>
+</ol>
+<h3 id="bzip2"><a href="#bzip2" class="headerlink" title="bzip2"></a>bzip2</h3><p>bzip2命令用于创建和管理（包括解压缩）.bz2格式的压缩包。</p>
+<p>具体命令如下：<br><code>bzip2　命令参数　指定要压缩的文件</code></p>
+<ul>
+<li>-z或–compress：强制执行压缩；</li>
+<li>-d或–decompress：执行解压缩；</li>
+<li>-f或-force：bzip2在压缩或解压缩时，若输出文件与现有文件同名，预设不会覆盖现有文件。若要覆盖。请使用此参数；</li>
+<li>-v或–verbose：压缩或解压缩文件时，显示详细的信息；</li>
+</ul>
+<p><img src="https://pic3.zhimg.com/80/v2-b42ce538c7788075a09af03c46919de7_1440w.png" alt="img"></p>
+<h3 id="gzip"><a href="#gzip" class="headerlink" title="gzip"></a>gzip</h3><p>gzip命令用于创建和管理（包括解压缩）.gz格式的压缩包。</p>
+<p>具体命令如下：<br><code>gzip　命令参数　指定要压缩的文件</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-d或–decompress或—-uncompress：解开压缩文件；</li>
+<li>-f或——force：强行压缩文件。不理会文件名称或硬连接是否存在以及该文件是否为符号连接；</li>
+<li>-l或——list：列出压缩文件的相关信息；</li>
+<li>-r或——recursive：递归处理，将指定目录下的所有文件及子目录一并处理；</li>
+<li>-v或——verbose：显示指令执行过程；</li>
+</ul>
+<p><img src="https://pic3.zhimg.com/80/v2-41a8bf0cbf36afa1df267e3de583f83f_1440w.png" alt="img"></p>
+<h3 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h3><p>zip命令对文件进行打包操作。zip是个使用广泛的压缩程序，文件经它压缩后会另外产生具有.zip扩展名的压缩文件。</p>
+<p>具体命令如下：<br><code>zip　命令参数　指定生成的压缩文件名　要被压缩的文件/目录列表</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-d：从压缩文件内删除指定的文件；</li>
+<li>-q：不显示指令执行过程；</li>
+<li>-r：递归处理，将指定目录下的所有文件和子目录一并处理；</li>
+<li>-v：显示指令执行过程或显示版本信息；</li>
+<li>-u：更换较新的文件到压缩文件内；</li>
+<li>-x&lt;范本样式&gt;：压缩时排除符合条件的文件；</li>
+</ul>
+<p><img src="https://pic4.zhimg.com/80/v2-9dd464d71df248e65262a1f214bc09e7_1440w.png" alt="img"></p>
+<h3 id="tar命令进行压缩"><a href="#tar命令进行压缩" class="headerlink" title="tar命令进行压缩"></a>tar命令进行压缩</h3><p>可以使用tar命令一步就实现对多文件&#x2F;目录进行压缩操作。</p>
+<h4 id="采用bzip2方式执行tar命令进行压缩"><a href="#采用bzip2方式执行tar命令进行压缩" class="headerlink" title="采用bzip2方式执行tar命令进行压缩"></a>采用bzip2方式执行tar命令进行压缩</h4><p>具体命令如下：<br><code>tar -jcvf　指定生成的压缩文件名　要被压缩的文件/目录列表</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-c 建立新的归档文件；</li>
+<li>-v 处理过程中输出相关信息；</li>
+<li>-f 对普通文件操作；</li>
+<li>-j 以bzip2对文件&#x2F;目录进行压缩；</li>
+</ul>
+<p><img src="https://pic1.zhimg.com/80/v2-8aaf0456c7efac96190cfb060d770eeb_1440w.png" alt="img"></p>
+<h4 id="采用gzip进行压缩"><a href="#采用gzip进行压缩" class="headerlink" title="采用gzip进行压缩"></a>采用gzip进行压缩</h4><p>具体命令如下：<br><code>tar　-zcvf　指定生成的压缩文件名　要被压缩的文件/目录列表</code></p>
+<p>常用命令参数如下：</p>
+<p>-c 建立新的归档文件；<br>-v 处理过程中输出相关信息；<br>-f 对普通文件操作；<br>-z 以gzip对文件&#x2F;目录进行压缩；</p>
+<p><img src="https://pica.zhimg.com/80/v2-02c04e92a06377ae24a04f9370c1ce16_1440w.png" alt="img"></p>
+<h2 id="文件解压缩命令"><a href="#文件解压缩命令" class="headerlink" title="文件解压缩命令"></a>文件解压缩命令</h2><p>针对bzip2、gzip和zip这三种压缩工具生成的压缩包，我们可以使用bunzip2、gunzip和unzip命令对其进行解压缩。</p>
+<h3 id="bunzip2"><a href="#bunzip2" class="headerlink" title="bunzip2"></a>bunzip2</h3><p> bunzip2命令解压缩由bzip2指令创建的.bz2压缩包。使用bzip2 -d命令也可以将.bz2压缩包进行解压。</p>
+<p>具体命令如下：<br><code>bunzip2　命令参数　指定要解压的文件</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-f或–force：解压缩时，若输出的文件与现有文件同名时，预设不会覆盖现有的文件；</li>
+<li>-k或–keep：在解压缩后，预设会删除原来的压缩文件。若要保留压缩文件，请使用此参数；</li>
+<li>-v或–verbose：解压缩文件时，显示详细的信息；</li>
+</ul>
+<h3 id="gunzip"><a href="#gunzip" class="headerlink" title="gunzip"></a>gunzip</h3><p>gunzip命令解压缩由gzip指令创建的.gz压缩包。使用gzip -d命令也可以将.gz压缩包进行解压。</p>
+<p>具体命令如下：<br><code>gunzip　命令参数　指定要解压的文件</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-f或-force：强行解开压缩文件，不理会文件名称或硬连接是否存在以及该文件是否为符号连接；</li>
+<li>-l或-list：列出压缩文件的相关信息；</li>
+<li>-q或-quiet：不显示警告信息；</li>
+<li>-r或-recursive：递归处理，将指定目录下的所有文件及子目录一并处理；</li>
+<li>-v或-verbose：显示指令执行过程；</li>
+</ul>
+<h3 id="unzip"><a href="#unzip" class="headerlink" title="unzip"></a>unzip</h3><p>unzip命令用于解压缩由zip命令压缩的.zip压缩包。</p>
+<p>具体命令如下：<br><code>unzip　命令参数　指定要解压的文件</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-q：执行时不显示任何信息；</li>
+<li>-n：解压缩时不要覆盖原有的文件；</li>
+<li>-d&lt;目录&gt;：指定文件解压缩后所要存储的目录；</li>
+</ul>
 ]]></content>
       <categories>
         <category>linux学习</category>

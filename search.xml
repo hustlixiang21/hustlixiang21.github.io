@@ -198,9 +198,9 @@
     <title>周计划（6.13-6.19）</title>
     <url>/2022/06/13/%E5%91%A8%E8%AE%A1%E5%88%92%EF%BC%886-13-6-19%EF%BC%89/</url>
     <content><![CDATA[<ul>
-<li><input disabled type="checkbox"> 微积分通过考试宝典整体过一遍，熟悉知识体系。</li>
-<li><input disabled type="checkbox"> 大学物理通过宝典和精选习题也是整体的过一遍。</li>
-<li><input disabled type="checkbox"> 英语卓越篇八个单元，每天复习一个单元，认真积累词汇，读懂文章。词汇每日过一遍。</li>
+<li><input checked disabled type="checkbox"> 微积分通过考试宝典整体过一遍，熟悉知识体系。</li>
+<li><input checked disabled type="checkbox"> 大学物理通过宝典和精选习题也是整体的过一遍。</li>
+<li><input checked disabled type="checkbox"> 英语卓越篇八个单元，每天复习一个单元，认真积累词汇，读懂文章。词汇每日过一遍。</li>
 <li><input checked disabled type="checkbox"> 近代史的vlog的ddl尽快完成。</li>
 </ul>
 <p>总结：</p>

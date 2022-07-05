@@ -909,6 +909,8 @@
     <url>/2022/07/05/git%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h1 id="git入门"><a href="#git入门" class="headerlink" title="git入门"></a>git入门</h1><p>依托清华大学暑培进行一些实操，参照书籍<a href="https://git-scm.com/book/en/v2">《pro git》</a>。</p>
 <p>同时推荐一个<a href="https://learngitbranching.js.org/?locale=zh_CN">快速入门的网站</a>。能够更加增加对于分支的理解。</p>
+<span id="more"></span>
+
 <h2 id="什么是git？"><a href="#什么是git？" class="headerlink" title="什么是git？"></a>什么是git？</h2><p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理项目。</p>
 <h3 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h3><p>能够轻易的将仓库里的东西恢复到上一次的<strong>commit</strong>。</p>
 <p>原理：采用快照的方式进行版本控制。</p>

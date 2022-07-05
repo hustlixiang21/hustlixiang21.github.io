@@ -853,9 +853,6 @@
 <h2 id="正视自己，摆平心态"><a href="#正视自己，摆平心态" class="headerlink" title="正视自己，摆平心态"></a>正视自己，摆平心态</h2><p>对于在校的学习生活压力是很大的，今天的选拔赛让我看到了许多同龄人的身影，他们的代码能力又有的甚至能够和大二的匹敌，让我知道自己其实是非常的不足，当然也不应该自暴自弃，只能说去努力的赶超吧。</p>
 <p>勇于直面前方的艰难险阻，才能到达成功的彼岸！</p>
 ]]></content>
-      <categories>
-        <category>心路历程</category>
-      </categories>
       <tags>
         <tag>个人反思</tag>
       </tags>
@@ -906,5 +903,50 @@
     <title>hello_my_first_blog</title>
     <url>/2022/05/18/hello-my-first-blog/</url>
     <content><![CDATA[<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><h2 id="This-is-my-first-blog-punbished-in-the-github"><a href="#This-is-my-first-blog-punbished-in-the-github" class="headerlink" title="This is my first blog punbished in the github!"></a>This is my first blog punbished in the github!</h2>]]></content>
+  </entry>
+  <entry>
+    <title>git入门</title>
+    <url>/2022/07/05/git%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="git入门"><a href="#git入门" class="headerlink" title="git入门"></a>git入门</h1><p>依托清华大学暑培进行一些实操，参照书籍<a href="https://git-scm.com/book/en/v2">《pro git》</a>。</p>
+<p>同时推荐一个<a href="https://learngitbranching.js.org/?locale=zh_CN">快速入门的网站</a>。能够更加增加对于分支的理解。</p>
+<h2 id="什么是git？"><a href="#什么是git？" class="headerlink" title="什么是git？"></a>什么是git？</h2><p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理项目。</p>
+<h3 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h3><p>能够轻易的将仓库里的东西恢复到上一次的<strong>commit</strong>。</p>
+<p>原理：采用快照的方式进行版本控制。</p>
+<h3 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h3><p>我的理解就是能够多人多台主机在不同时空进行同一个开发，且互不影响，最后统一提交。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>分为工作区、暂存区与版本库，文件夹中有一个.git文件，里面是暂存区和版本库，而.git外的区域就是工作区。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-99d8bb59ba479252bfae5f71554b33aa_1440w.png" alt="img"></p>
+<h2 id="案例演示"><a href="#案例演示" class="headerlink" title="案例演示"></a>案例演示</h2><p>首先使用命令行进入当前的文件夹。</p>
+<p>需要初始化当前的文件夹建立一个空的仓库，使用命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pica.zhimg.com/80/v2-099c25239375be8b37a05910cbc07143_1440w.png" alt="img"></p>
+<p>将所需文件添加进入缓存区：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add &lt;文件名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>将缓存区内的文件commit进入版本库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit </span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;这个时候一般会弹出默认的编辑器，要求对本次的提交进行一些描述，通常需要统一标准，写的清楚详细。&#x3D;&#x3D;</p>
+<p><img src="https://pic1.zhimg.com/80/v2-245d2877ae4fc8dfe9e8b64e3e8081e2_1440w.png" alt="img"></p>
+<h3 id="一些常用的命令"><a href="#一些常用的命令" class="headerlink" title="一些常用的命令"></a>一些常用的命令</h3><p>查看commit日志：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic1.zhimg.com/80/v2-1025580221e635d84f2ebf13e632c0fe_1440w.png" alt="img"></p>
+<p>查看git状态，即缓存区内的文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic3.zhimg.com/80/v2-0edf6701fd8e886a2a037d0cc283edb9_1440w.png" alt="img"></p>
+<p>修改<strong>工作区文件</strong>与上次的commit进行比对，并输出不同的地方。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://picx.zhimg.com/80/v2-0c8cd096128899e7b95e084d974e0214_1440w.png" alt="img"></p>
+<h3 id="分支和远程操作"><a href="#分支和远程操作" class="headerlink" title="分支和远程操作"></a>分支和远程操作</h3><p>参见文章开始处的网站教学，生动自然令人印象深刻。</p>
+]]></content>
+      <categories>
+        <category>计算机工具学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
   </entry>
 </search>

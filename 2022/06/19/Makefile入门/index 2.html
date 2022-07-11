@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 页面点击小红心 -->
+<scrip type="text/javascript" src="/js/clicklove.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+<link rel="preconnect" href="null//null" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/sun.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/sun.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-center-simple.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lxyydsyds.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Makefile概念入门知乎原文链接 博客讲解链接 又一篇讲解 本文主要介绍怎么利用“基于目标分层”的方式去理解一个工具，写作一个概念，定义一个设计或者部署一套代码。 本文首先是一个“Makefile入门”，然后才是“基于目标分层的方法介绍”。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Makefile入门">
+<meta property="og:url" content="https://lxyydsyds.github.io/2022/06/19/Makefile%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="Lixiang&#39;s Blog">
+<meta property="og:description" content="Makefile概念入门知乎原文链接 博客讲解链接 又一篇讲解 本文主要介绍怎么利用“基于目标分层”的方式去理解一个工具，写作一个概念，定义一个设计或者部署一套代码。 本文首先是一个“Makefile入门”，然后才是“基于目标分层的方法介绍”。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-90371e6fcdf8f515a68dab7404ed4f43_1440w.jpg">
+<meta property="article:published_time" content="2022-06-19T14:49:31.000Z">
+<meta property="article:modified_time" content="2022-06-19T14:54:54.468Z">
+<meta property="article:author" content="Lixiang">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-90371e6fcdf8f515a68dab7404ed4f43_1440w.jpg">
+
+
+<link rel="canonical" href="https://lxyydsyds.github.io/2022/06/19/Makefile%E5%85%A5%E9%97%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://lxyydsyds.github.io/2022/06/19/Makefile%E5%85%A5%E9%97%A8/","path":"2022/06/19/Makefile入门/","title":"Makefile入门"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Makefile入门 | Lixiang's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Lixiang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Makefile%E6%A6%82%E5%BF%B5%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">Makefile概念入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%AF%91"><span class="nav-number">1.1.</span> <span class="nav-text">关于程序编译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#phony%E4%BE%9D%E8%B5%96"><span class="nav-number">1.2.</span> <span class="nav-text">phony依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8F"><span class="nav-number">1.3.</span> <span class="nav-text">宏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6%E9%97%AE%E9%A2%98"><span class="nav-number">1.4.</span> <span class="nav-text">头文件问题</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+   <a href="/about">
+    <img class="site-author-image" itemprop="image" alt="Lixiang"
+      src="/img/my_dog.png">
+  </a>
+  <p class="site-author-name" itemprop="name">Lixiang</p>
+  <div class="site-description" itemprop="description">李翔的博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lxyydsyds" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lxyydsyds" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mail.qq.com/cgi-bin/frame_html?sid=ans9adl8JxOYBEMh" title="E-Mail → https:&#x2F;&#x2F;mail.qq.com&#x2F;cgi-bin&#x2F;frame_html?sid&#x3D;ans9adl8JxOYBEMh" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/channel/UCdCHZmSL5rtLB0oJlIqm_tA" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCdCHZmSL5rtLB0oJlIqm_tA" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+  <!--音乐播放器-->
+
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/lxyydsyds" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lxyydsyds.github.io/2022/06/19/Makefile%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/my_dog.png">
+      <meta itemprop="name" content="Lixiang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lixiang's Blog">
+      <meta itemprop="description" content="李翔的博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Makefile入门 | Lixiang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Makefile入门
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-06-19 22:49:31 / Modified: 22:54:54" itemprop="dateCreated datePublished" datetime="2022-06-19T22:49:31+08:00">2022-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">计算机工具学习</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>4k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>4 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Makefile概念入门"><a href="#Makefile概念入门" class="headerlink" title="Makefile概念入门"></a>Makefile概念入门</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/29910215">知乎原文链接</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/paul-617/p/15501875.html">博客讲解链接</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_38391755/article/details/80380786">又一篇讲解</a></p>
+<p>本文主要介绍怎么利用“基于目标分层”的方式去理解一个工具，写作一个概念，定义一个设计或者部署一套代码。</p>
+<p>本文首先是一个“Makefile入门”，然后才是“基于目标分层的方法介绍”。</p>
+<span id="more"></span>
+
+<h2 id="关于程序编译"><a href="#关于程序编译" class="headerlink" title="关于程序编译"></a>关于程序编译</h2><p>Makefile解决的是编译的问题。Makefile最初是用来解决C语言的编译问题的，所以和C的关系特别密切，但并不是说Makefile只能用来解决C的编译问题。你用来处理Java一点问题没有，但对于Java，显然ant比Makefile处理得更好。</p>
+<p>比如说，你有foo.c, bar.c, main.c三个C文件，你要编译成一个app.executable，你会怎么做呢？你会执行这样的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gcc -Wall -c foo.c -o foo.o</span><br><span class="line">gcc -Wall -c bar.c -o bar.o</span><br><span class="line">gcc -Wall -c main.c -o main.o</span><br><span class="line">gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
+
+<p>按照程序猿的惯例，凡是要一次次重新执行的命令，都应该写成脚本。所以，简单来说，你会把上面这个命令序列写成一个build.sh，每次编译你只要执行这个脚本问题就解决了。</p>
+<p>但这个脚本有问题，假设我修改了foo.c，但我没有修改bar.c和main.c，那么执行这个脚本是很浪费的，因为它会无条件也重新编译bar.c和main.c。</p>
+<p>这个脚本更合理的写法应该是这样的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[ foo.o -ot foo.c ] &amp;&amp; gcc -Wall -c foo.c -o foo.o</span><br><span class="line">[ bar.o -ot bar.c ] &amp;&amp; gcc -Wall -c bar.c -o bar.o</span><br><span class="line">[ main.o -ot main.o] &amp;&amp; gcc -Wall -c main.c -o main.o</span><br><span class="line">[ app.executable -ot main.o ] &amp;&amp; [ app.executable -ot foo.o ] &amp;&amp; [ app.executable -ot bar.o ] &amp;&amp; gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
+
+<p>如果你面对一个问题，不要尝试重新去定义这个问题，而是看它和原来的问题相比，多出来的问题是什么，尝试解决那个多出来的问题就好了。那么这里，多出来的问题就是文件修改时间比较。这个就是Makefile要解决的基本问题了。我们定义一种新的“脚本语言”（只是不用sh&#x2F;bash&#x2F;tch来解释，而是用make来解释），可以用很简单的方法来说明我们需要做的文件比较。这样上面的脚本就可以写成这个样子了：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sample1</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  gcc -Wall -c foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  gcc -Wall -c bar.c -o woo.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  gcc -Wall -c main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
+
+<p>上面那个Makefile中，foo.o: foo.c定义了一个<strong>“依赖”</strong>，说明foo.o是靠foo.c编译成的，它后面缩进的那些命令，就是简单的shell脚本，称为**规则(rule)**。而Makefile的作用是定义一组依赖，当被依赖的文件比依赖的文件新，就执行规则。这样，前面的问题就解决了。</p>
+<p>IDE中封装了Makefile得使用，但是想要具体控制特定文件的编译细节，最终仍然需要面对这些问题，IDE和make工具的对比，两者解决的是问题的不同层次。</p>
+<p>Makefile中的依赖定义构成了一个依赖链（树），比如上面这个Makefile中，app.executable依赖于main.o，main.o又依赖于main.c，所以，当你去满足app.executable（这个目标）的依赖的时候，它首先去检查main.o的依赖，直到找到依赖树的叶子节点(main.c），然后进行时间比较。这个判断过程由make工具来完成，所以，和一般的脚本不一样。Makefile的执行过程不是基于语句顺序的，而是基于依赖链的顺序的。<img src="https://pic4.zhimg.com/80/v2-90371e6fcdf8f515a68dab7404ed4f43_1440w.jpg" alt="依赖树"></p>
+<h2 id="phony依赖"><a href="#phony依赖" class="headerlink" title="phony依赖"></a>phony依赖</h2><p>make命令执行的时候，后面跟一个“目标”（不带参数的话默认是第一个依赖的目标），然后以这个目标为根建立整个依赖树。依赖树的每个节点是一个文件，任何时候我们都可以通过比较每个依赖文件和被依赖文件的时间，以决定是否需要执行“规则”</p>
+<p>但有时，我们希望某个规则<strong>总是被执行</strong>。这时，很自然地，我们会定义一下<strong>永远都不会被满足</strong>的依赖。</p>
+<p>可能会这么写：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">test:</span></span><br><span class="line">  DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
+
+<p>test这个文件永远都不会被产生，所以，你只要执行这个依赖，rule是必然会被执行的。这种形式看起来很好用，但由于make工具默认认为你这是个文件，当它成为依赖链的一部分的时候，很容易造成各种误会和处理误差。</p>
+<p>所以，简化起见，Makefile允许你显式地把一个依赖目标定义为**假的(Phony)**：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: test</span></span><br><span class="line"><span class="section">test:</span></span><br><span class="line"> DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
+
+<p>这样make工具就不用多想了，也不用检查test这个文件的时间了，反正test就是假的，如果有人依赖它，无条件执行就对了。</p>
+<h2 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h2><p>前面的sample1明显还是有很多多余的成份，这些多余的成份可以简单通过引入“宏”定义来解决，比如上面的Makefile，我们把重复的东西都用宏来写，就成了这样了：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sample2</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> bar.c -o bar.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> main.o foo.o bar.o -o app.executable</span><br></pre></td></tr></table></figure>
+
+<p>还是有“多余”的成份在，因为明明依赖中已经写了foo.o了，rule中还要再写一次，我们可以把依赖的对象定义为$@，被依赖的对象定义为$^（这是当前gnumake的设计），这样就可以进一步化简：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sample3</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+
+<p>很明显，这还是有重复，我们可以把重复的定义写成通配符：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sample4</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"><span class="section">woo.o: woo.c</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+
+<p>实际上，你要化简，还有很多手段，比如gnumake其实是默认定义了一组rule的，上面这个整个你都可以不写，就这样就可以了：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sample5</span></span><br><span class="line">LDLIBS=-lpthead</span><br><span class="line">SRC=<span class="variable">$(<span class="built_in">wildcard</span> *.c)</span></span><br><span class="line">OBJ=$(SRC:.c=.o)</span><br><span class="line"><span class="section">app.executable: <span class="variable">$(OBJ)</span></span></span><br><span class="line"><span class="comment">#看不懂</span></span><br></pre></td></tr></table></figure>
+
+<p>这里其实没有定义.o到.c的依赖，但gnumake默认如果.c存在，.o就依赖对应的.c，而.o到.c的rule，是通过宏默认定义的。你只要修改CC，LDLIBS这类的宏，就能解决大部分问题了。所以你又省掉了一组定义，这就可以写得很短。</p>
+<h2 id="头文件问题"><a href="#头文件问题" class="headerlink" title="头文件问题"></a>头文件问题</h2><p>现在我们把问题搞得复杂一点，增加三个头文件。比如foo.h, bar.h和common.h，前两者定义foo.c和bar.c的对外接口，给main.c使用，common.h定义所有文件都要用到的通用定义（foo.h和woo.h中包含common.h)。这样前面这个sample1就有毛病了。照理说，foo.h更新的时候，foo.o和main.o都需要重新编译，但根据那个定义，根本就没有这个比较。</p>
+<p>我们的定义必须写成这个样子：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sample4+</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br><span class="line"><span class="section">bar.o: bar.c bar.h common.h</span></span><br><span class="line"><span class="section">main.o: main.c foo.h bar.h common.h</span></span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+
+<p>(注：这个例子我们在.o.c依赖的规则中使用了$&lt;宏，它和$^的区别是，它不包括依赖列表中的所有文件，而仅仅是列表中的第一个文件）</p>
+<p>这就又增加了复杂度了——头文件包含关系一变化，我就得更新这个Makefile的定义。这带来了升级时的冗余工作。按我们前面考虑一样的策略，我们尝试在已有的名称空间上解决这个问题。Makefile已经可以定义依赖了，但我们不知道这个依赖本身。这个事情谁能解决？——把这个过程想一下——其实已经有人解决这个问题了，这个包含关系谁知道嘛？当然是编译器。编译器都已经用到那个头文件了，当然是它才知道这种包含关系是什么样的。比如gcc本身直接就提供了-M系列参数，可以自动帮你生成依赖关系。比如你执行gcc -MM foo.c就可以得到</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>本文引自开头的链接，由于能力有限及需求不高，剩余的看的不是很懂，目前就到这里。</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Lixiang
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://lxyydsyds.github.io/2022/06/19/Makefile%E5%85%A5%E9%97%A8/" title="Makefile入门">https://lxyydsyds.github.io/2022/06/19/Makefile入门/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/06/19/19-June/" rel="prev" title="19_June">
+                  <i class="fa fa-chevron-left"></i> 19_June
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/06/22/22-June/" rel="next" title="22_June">
+                  22_June <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">   
+<div class="poem-wrap">
+  <div class="poem-border poem-left"></div>
+  <div class="poem-border poem-right"></div>
+    <h1>念两句诗</h1>
+    <p id="poem">挑选中...</p>
+    <p id="info">
+
+  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    jinrishici.load(function(result) {
+      poem.innerHTML = result.data.content
+      info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+      document.getElementById("poem").value(poem);
+      document.getElementById("info").value(info);  
+  });
+  </script>
+</div>
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lixiang</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>Symbols count total: </span>
+    <span title="Symbols count total">26k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>Reading time total &asymp;</span>
+    <span title="Reading time total">23 mins.</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+  <div>
+    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=FJjnPBRyJLjbrwVZl10YUmJzOcursagX44pjdFmzp4c'></script>
+  </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <script size="90" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+
+
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"lxyydsyds","repo":"gitalk","client_id":"2bfba152b6c1a2086f41","client_secret":"3108cc11b04b17483aa220d8b32acd1811975e4f","admin_user":"lxyydsyds","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","labels":["gitalk"],"perPage":15,"pagerDirection":"last","createIssueManually":false,"distractionFreeMode":false,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"68df84c68f80b234faa808cf753c5639"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+  <!-- gitalk.swig -->
+<link href="https://cdn.bootcss.com/gitalk/1.4.0/gitalk.min.css" rel="stylesheet" />
+<script src="https://cdn.bootcss.com/gitalk/1.4.0/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: 'gitalk',
+    owner: '',
+    admin: [''],
+    id: md5(location.pathname),   // ISSUE：location.href 限制50个字符 (应该是Issue 内容存数据库的标识， 具体在页面上无感)
+    labels: 'gitalk'.split(',').filter(l => l),  // 需要的 labels需要一个数组，否则会报错
+    perPage: 15,
+    pagerDirection: 'last',
+    createIssueManually: false,
+    distractionFreeMode: false
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":-15,"vOffset":-15},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

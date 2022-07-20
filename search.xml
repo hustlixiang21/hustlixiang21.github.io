@@ -75,8 +75,18 @@
   <entry>
     <title>A Happy 521</title>
     <url>/2022/05/18/A_happy_day/</url>
-    <content><![CDATA[<h1 id="A-Happy-Day-With-My-Girlfriend"><a href="#A-Happy-Day-With-My-Girlfriend" class="headerlink" title="A Happy Day With My Girlfriend!"></a>A Happy Day With My Girlfriend!</h1><p>亲爱的宝贝，祝你521快乐，希望即将迎来三周年的我们能够一直一直走下去，我会好好爱你，也希望你能够一直陪伴在我身边。mua～</p>
-]]></content>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="0731971f255c36019af5b401630d22b84536228a105884e6f72b2553b64b06fd">0639fb05c215cbaaf02e5a329f2c74815797972bd732b7935776aa3d958c1de642fbbaa2cbffea2fa56d2d86042369d7a50d25971112910dcf57bb673b455b8934cc5dc350fca98aa11fe4eae240cd03eba9ec6410558df6794d90da41accb23ac6b35e5618a9e51ac50aed6253a5b756f2a72755a90567fbe8b0145367f30aaf1ff658c51980885dea63b8ff10d5437b401b2705a13c4328e72129915b11da3433264185e11c6b8638325f1eeb06358b0616ca50fcd7fec9979e3e8da8477e00ed32cc2acf526293fe334740b588f306359c393432b3f5f68d09fc40d170c1f2c95b538afc27304c653c44e392be7d14ee22c85f8e6d9400337c8b243fce678e9eb7f97c7612e82fd7afdf353712487b6f697229120f3f6f2bc9446917852cfa432abb0f65386beb1de8066202add490b911914e979ce312d0ef64379165069d8ba1c5677da9800c36528127d20537332a978c0c5a09b6cd0e00d32ab3344b93564e852f04ffe51e00007fbc13f899fef3c50f689c389e384e18e88b643c49df457f3683b9c3630ee1620d4e1fe9ab0</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">涉及隐私，请输入密码查看</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>生活</category>
       </categories>
@@ -947,7 +957,7 @@
     <url>/2022/07/17/git%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/</url>
     <content><![CDATA[<p>这个是继上篇文章git入门往后写的，主要原因还是在尝试将一些资料文件上传到github的时候遇到了比较多的问题吧。</p>
 <p>我认为建立连接的方式我所目前能够实现的应该是<strong>两种</strong>。</p>
-<p>在讲述实现方法之前，我觉得应该对于远程操作的命令应该有所了解。</p>
+<p>在讲述实现方法之前，我觉得应该对于<strong>远程操作的命令</strong>应该有所了解。</p>
 <h2 id="git常见的命令"><a href="#git常见的命令" class="headerlink" title="git常见的命令"></a>git常见的命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git init                    //初始化本地仓库，生成一个.git文件夹，这也是git的核心</span><br><span class="line"></span><br><span class="line">git add [target]            //添加目标文件到缓存区</span><br><span class="line"></span><br><span class="line">git rm -f &lt;filename&gt;        //这个命令是删除缓存区里和工作区里该文件</span><br><span class="line"></span><br><span class="line">git rm --cached &lt;filename&gt;  //当你add了你不想要的文件，这个命令可以删除缓存区的文件，但保留工作区</span><br><span class="line"></span><br><span class="line">git commit                  //提交在缓存区的文件，使用 -m [message]添加必要的信息（不添加也行自动弹出）</span><br><span class="line"></span><br><span class="line">git status                  //查看git的状态</span><br><span class="line"></span><br><span class="line">git clone [url or ssh]      </span><br><span class="line">//非常重要的一点是把远程仓库直接clone下来，默认会与其克隆下来的远程仓库进行连接，名称就叫做 origin</span><br><span class="line"></span><br><span class="line">git pull origin master      </span><br><span class="line">//拉去远程仓库“origin”相应的分支到本地仓库中的master中，在push之前常常需要先pull一下最新的仓库</span><br><span class="line"></span><br><span class="line">git pull origin master --allow-unrelated-histories </span><br><span class="line">//如果本地与远程是两个独立的仓库，则在pull时需要指定其“允许无关的日志合并”，否则会保存</span><br><span class="line"></span><br><span class="line">git push origin master </span><br><span class="line">//将本地仓库中的内容提交到远程仓库中（origin为远程分支的名字，master为当前分支的名字，应注意的是，该命令是不完全完整的，在实际使用中，如果是第一次提交到远程，应该使用的命令为【git push -u origin master】，如果不是第一次，则直接使用git push即可）</span><br><span class="line"></span><br><span class="line">git remote add origin [url or ssh]</span><br><span class="line">//添加一个远程仓库连接，并为其命名为&quot;origin&quot;，当然也可以自定义其它的名字，但一般都命名为origin</span><br><span class="line"></span><br><span class="line">git remote rm origin        //删除一个名为&quot;origin&quot;的远程仓库连接</span><br><span class="line"></span><br><span class="line">git remote set-url origin [url or ssh]</span><br><span class="line">//修改&quot;origin&quot;的url（结合上面一个命令可以发现，想要修改远程仓库连接有两种方法：一种是先删除再添加，一种是直接修改）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -1031,6 +1041,180 @@
         <tag>学习笔记</tag>
         <tag>git</tag>
         <tag>CS工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客写作tricks</title>
+    <url>/2022/07/20/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9Ctricks/</url>
+    <content><![CDATA[<h2 id="加粗和斜体"><a href="#加粗和斜体" class="headerlink" title="加粗和斜体"></a>加粗和斜体</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**Hello,World!**</span></span><br><span class="line"><span class="emphasis">*Hello,world!*</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Hello,World!</strong><br><em>Hello,world!</em></p>
+<hr>
+<h2 id="行内HTML"><a href="#行内HTML" class="headerlink" title="行内HTML"></a>行内HTML</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span>To reboot your computer, press <span class="language-xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>ctrl<span class="language-xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span>+<span class="language-xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>alt<span class="language-xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span>+<span class="language-xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>del<span class="language-xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span>.<span class="language-xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>To reboot your computer, press <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>del</kbd>.</p>
+
+<hr>
+<h2 id="博客加密"><a href="#博客加密" class="headerlink" title="博客加密"></a>博客加密</h2><h3 id="安装hexo-blog-encrypt插件"><a href="#安装hexo-blog-encrypt插件" class="headerlink" title="安装hexo-blog-encrypt插件"></a>安装hexo-blog-encrypt插件</h3><ul>
+<li>在hexo目录下<code>npm install hexo-blog-encrypt</code></li>
+<li>在<code>/Hexo/_config.yml</code>文件中添加内容:</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">encrypt</span>:</span><br><span class="line">	<span class="attr">enable</span>:<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h3><ul>
+<li>在想要使用加密功能的Blog头部加上对应文字：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="attr">title</span>: <span class="title class_">Hexo</span>加密功能</span><br><span class="line"><span class="attr">date</span>: <span class="number">2019</span>-<span class="number">09</span>-<span class="number">04</span> <span class="number">23</span>:<span class="number">20</span>:<span class="number">00</span>   </span><br><span class="line"><span class="attr">tags</span>: [学习笔记,<span class="title class_">Hexo</span>]</span><br><span class="line"><span class="attr">categories</span>: <span class="title class_">Hexo</span>      </span><br><span class="line"><span class="attr">password</span>: smile   </span><br><span class="line"><span class="attr">abstract</span>: <span class="title class_">Welcome</span> to my blog, enter password to read. </span><br><span class="line"><span class="attr">message</span>: 密码输入框上描述性内容</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中：<ul>
+<li>password: 该Blog使用的密码</li>
+<li>abstract: Blog摘要文字（少量）</li>
+<li>message: 密码框上的描述性文字</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://cloud.tencent.com/developer/article/1917942">原文链接</a></p>
+<hr>
+<h2 id="Insert-YouTube-Videos"><a href="#Insert-YouTube-Videos" class="headerlink" title="Insert YouTube Videos"></a>Insert YouTube Videos</h2><h3 id="静态图片链接"><a href="#静态图片链接" class="headerlink" title="静态图片链接"></a>静态图片链接</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Html version:</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://youtu.be/BSlMAJ7SkMA</span></span></span></span><br><span class="line"><span class="string"><span class="tag"><span class="language-xml">&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://img.youtube.com/vi/ARted4RniaU/0.jpg&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml"><span class="attr">alt</span>=<span class="string">&quot;IMAGE ALT TEXT HERE&quot;</span> <span class="attr">width</span>=<span class="string">&quot;240&quot;</span> <span class="attr">height</span>=<span class="string">&quot;180&quot;</span> <span class="attr">border</span>=<span class="string">&quot;10&quot;</span> /&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">Pure markdown version:</span><br><span class="line"></span><br><span class="line">[<span class="string">![IMAGE ALT TEXT HERE</span>](<span class="link">https://img.youtube.com/vi/ARted4RniaU/0.jpg</span>)](<span class="link">https://www.youtube.com/watch?v=ARted4RniaU</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://youtu.be/BSlMAJ7SkMA
+" target="_blank"><img src="https://img.youtube.com/vi/ARted4RniaU/0.jpg"
+alt="IMAGE ALT TEXT HERE" width="700" height="500" border="20" /></a></p>
+<p>Pure markdown version:</p>
+<p><a href="https://www.youtube.com/watch?v=ARted4RniaU"><img src="https://img.youtube.com/vi/ARted4RniaU/0.jpg" alt="IMAGE ALT TEXT HERE"></a></p>
+<hr>
+<h3 id="内嵌视频"><a href="#内嵌视频" class="headerlink" title="内嵌视频"></a>内嵌视频</h3><h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% youtube video_id %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="video-container"><iframe src="https://www.youtube.com/embed/BSlMAJ7SkMA" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>视频ID的找法：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2022-07-20%2015.05.24.png"></p>
+<p>图中地址后面那一串英文和数字组成的<strong>字符串</strong> 如：BSlMAJ7SkMA</p>
+<hr>
+<h4 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h4><p>点击上图的嵌入，其提供的是html代码（html和markdown具有一定的兼容性），直接复制到md文件即可。</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2022-07-20%2015.05.39.png"></p>
+<div class="note info flat"><p>自己可以修改html的一些属性如width、height。特别是width&#x3D;100%，就会左右撑满。</p>
+</div>
+
+<iframe width=100% height="400" src="https://www.youtube.com/embed/BSlMAJ7SkMA" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr>
+<h2 id="Block-quote"><a href="#Block-quote" class="headerlink" title="Block quote"></a>Block quote</h2><p>为自己博客添加引用…</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [author,source] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote><p>感谢观看！</p>
+<footer><strong>lixiang, daily</strong><cite><a href="https://hustlixiang21.github.io">李翔的博客</a></cite></footer></blockquote>
+
+<hr>
+<p>可以嵌套哦！</p>
+<blockquote><p>感谢观看！</p>
+<blockquote><p>感谢观看！</p>
+<footer><strong>lixiang, daily</strong><cite><a href="https://hustlixiang21.github.io">李翔的博客</a></cite></footer></blockquote><footer><strong>lixiang, daily</strong><cite><a href="https://hustlixiang21.github.io">李翔的博客</a></cite></footer></blockquote>
+
+<hr>
+<h2 id="Note-Bootstrap-Callout"><a href="#Note-Bootstrap-Callout" class="headerlink" title="Note (Bootstrap Callout)"></a>Note (Bootstrap Callout)</h2><p>每种方法都分 simple、modern 和 flat主题，也就是所谓的样式。</p>
+<p>在此我只呈现出flat样式</p>
+<h3 id="方法一：-1"><a href="#方法一：-1" class="headerlink" title="方法一："></a>方法一：</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note flat %&#125;</span><br><span class="line">默认 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default flat %&#125;</span><br><span class="line">default 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary flat %&#125;</span><br><span class="line">primary 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success flat %&#125;</span><br><span class="line">success 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info flat %&#125;</span><br><span class="line">info 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning flat %&#125;</span><br><span class="line">warning 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger flat %&#125;</span><br><span class="line">danger 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<div class="note flat"><p>默认 提示块标签</p>
+</div>
+
+<div class="note default flat"><p>default 提示块标签</p>
+</div>
+
+<div class="note primary flat"><p>primary 提示块标签</p>
+</div>
+
+<div class="note success flat"><p>success 提示块标签</p>
+</div>
+
+<div class="note info flat"><p>info 提示块标签</p>
+</div>
+
+<div class="note warning flat"><p>warning 提示块标签</p>
+</div>
+
+<div class="note danger flat"><p>danger 提示块标签</p>
+</div>
+
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note &#x27;fab fa-cc-visa&#x27; flat %&#125;</span><br><span class="line">你是刷 Visa 还是 UnionPay</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note blue &#x27;fas fa-bullhorn&#x27; flat %&#125;</span><br><span class="line">2021年快到了....</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note pink &#x27;fas fa-car-crash&#x27; flat %&#125;</span><br><span class="line">小心开车 安全至上</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note red &#x27;fas fa-fan&#x27; flat%&#125;</span><br><span class="line">这是三片呢？还是四片？</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note orange &#x27;fas fa-battery-half&#x27; flat %&#125;</span><br><span class="line">你是刷 Visa 还是 UnionPay</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note purple &#x27;far fa-hand-scissors&#x27; flat %&#125;</span><br><span class="line">剪刀石头布</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note green &#x27;fab fa-internet-explorer&#x27; flat %&#125;</span><br><span class="line">前端最讨厌的浏览器</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note icon-padding flat"><i class="note-icon fab fa-cc-visa"></i><p>你是刷 Visa 还是 UnionPay</p>
+</div>
+<div class="note blue icon-padding flat"><i class="note-icon fas fa-bullhorn"></i><p>2021年快到了….</p>
+</div>
+<div class="note pink icon-padding flat"><i class="note-icon fas fa-car-crash"></i><p>小心开车 安全至上</p>
+</div>
+<div class="note red icon-padding flat"><i class="note-icon fas fa-fan"></i><p>这是三片呢？还是四片？</p>
+</div>
+<div class="note orange icon-padding flat"><i class="note-icon fas fa-battery-half"></i><p>你是刷 Visa 还是 UnionPay</p>
+</div>
+<div class="note purple icon-padding flat"><i class="note-icon far fa-hand-scissors"></i><p>剪刀石头布</p>
+</div>
+<div class="note green icon-padding flat"><i class="note-icon fab fa-internet-explorer"></i><p>前端最讨厌的浏览器</p>
+</div>
+
+<h2 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test1 %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">test1 1</button></li><li class="tab"><button type="button" data-href="#test1-2">test1 2</button></li><li class="tab"><button type="button" data-href="#test1-3">test1 3</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><p><strong>This is Tab 1.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p><strong>This is Tab 2.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-3"><p><strong>This is Tab 3.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+<h2 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h2><h3 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">This is my website, click the button &#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly %&#125;</span><br><span class="line">This is my website, click the button &#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,,outline%&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This is my website, click the button <a class="btn-beautify " href="https://butterfly.js.org" 
+  title="Butterfly"><span>Butterfly</span></a><br>This is my website, click the button <a class="btn-beautify outline" href="https://butterfly.js.org" 
+  title="Butterfly"><span>Butterfly</span></a></p>
+<h3 id="Block"><a href="#Block" class="headerlink" title="Block"></a>Block</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">This is my website, click the button  &#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,block larger %&#125;</span><br><span class="line">This is my website, click the button  &#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,block center larger %&#125;</span><br><span class="line">This is my website, click the button  &#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,block right blue larger %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This is my website, click the button  <a class="btn-beautify block larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a><br>This is my website, click the button  <a class="btn-beautify block center larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a><br>This is my website, click the button  <a class="btn-beautify block right blue larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a></p>
+<h3 id="option"><a href="#option" class="headerlink" title="option"></a>option</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-center&quot;</span>&gt;</span></span></span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,blue larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,pink larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,red larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,purple larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,orange larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,green larger %&#125;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<div class="btn-center">
+<a class="btn-beautify larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify blue larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify pink larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify red larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify purple larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify orange larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify green larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+</div>
+
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-center&quot;</span>&gt;</span></span></span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,outline larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,outline blue larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,outline pink larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,outline red larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,outline purple larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,outline orange larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org&#x27;,Butterfly,far fa-hand-point-right,outline green larger %&#125;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<div class="btn-center">
+<a class="btn-beautify outline larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify outline blue larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify outline pink larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify outline red larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify outline purple larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify outline orange larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify outline green larger" href="https://butterfly.js.org" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+</div>
+
+]]></content>
+      <categories>
+        <category>写作</category>
+      </categories>
+      <tags>
+        <tag>博客写作技巧</tag>
       </tags>
   </entry>
 </search>

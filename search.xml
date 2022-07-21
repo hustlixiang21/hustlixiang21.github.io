@@ -162,8 +162,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
+        <tag>CS工具</tag>
         <tag>makefile基础</tag>
-        <tag>cs工具</tag>
       </tags>
   </entry>
   <entry>
@@ -744,7 +744,7 @@
         <tag>学习</tag>
         <tag>linux基础</tag>
         <tag>命令行</tag>
-        <tag>cs工具</tag>
+        <tag>CS工具</tag>
       </tags>
   </entry>
   <entry>
@@ -1219,6 +1219,361 @@ alt="IMAGE ALT TEXT HERE" width="700" height="500" border="20" /></a></p>
       </categories>
       <tags>
         <tag>博客写作技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPP函数部分</title>
+    <url>/2022/07/20/CPP%E5%87%BD%E6%95%B0%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<h2 id="函数部分"><a href="#函数部分" class="headerlink" title="函数部分"></a>函数部分</h2><h3 id="rand函数"><a href="#rand函数" class="headerlink" title="rand函数"></a>rand函数</h3><p>函数原型 :<code>int rand(void);</code><br>所需头文件 : <code>&lt;cstdlib&gt;</code><br>功能和返回值 : 求出并返回一个伪随机数</p>
+<hr>
+<h3 id="srand函数"><a href="#srand函数" class="headerlink" title="srand函数"></a>srand函数</h3><p>函数原型 :<code>void srand(unsigned int seed);</code><br>参数：seed产生随机数的种子<br>所需头文件 : <code>&lt;cstdlib&gt;</code><br>功能：为使rand（）能产生一系列伪随机整数而设置起始点。使用1作为seed参数，可以重新初化rand（）。</p>
+<hr>
+<h2 id="需要指出，若不使用种子seed，则会出现每次运行程序产生的随机数是固定不变的。故rand函数返回的是伪随机数。"><a href="#需要指出，若不使用种子seed，则会出现每次运行程序产生的随机数是固定不变的。故rand函数返回的是伪随机数。" class="headerlink" title="需要指出，若不使用种子seed，则会出现每次运行程序产生的随机数是固定不变的。故rand函数返回的是伪随机数。"></a>需要指出，若不使用种子seed，则会出现每次运行程序产生的随机数是<strong>固定不变的</strong>。故rand函数返回的是<strong>伪随机数</strong>。</h2><h3 id="引用的概念"><a href="#引用的概念" class="headerlink" title="引用的概念"></a>引用的概念</h3><ul>
+<li>引用(&amp;)是标识符的别名；</li>
+<li>定义一个引用时，必须同时对它进行初始化，使它指向一个已存在的对象。<br>例如：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i, j;</span><br><span class="line"><span class="type">int</span> &amp;ri = i; <span class="comment">//定义int引用ri，并初始化为变量i的引用</span></span><br><span class="line">j = <span class="number">10</span>;</span><br><span class="line">ri = j;  <span class="comment">//相当于 i = j;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>一旦一个引用被初始化后，就不能改为指向其它对象。<br>引用可以作为形参。</li>
+</ul>
+<div class="note info flat"><p>引用可以实现函数形参和实参之间的双向传递</p>
+</div>
+
+<p> 例如下列程序：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span>&amp; a, <span class="type">int</span>&amp; b)</span> <span class="comment">//定义引用类型的形参</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> t = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">5</span>, y = <span class="number">10</span>;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;x = &quot;</span>&lt;&lt;x&lt;&lt;<span class="string">&quot;  y = &quot;</span>&lt;&lt;y&lt;&lt;endl;</span><br><span class="line">    <span class="built_in">swap</span>(x, y);</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;x = &quot;</span>&lt;&lt;x&lt;&lt;<span class="string">&quot;  y = &quot;</span>&lt;&lt;y&lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="含有可变参数的函数"><a href="#含有可变参数的函数" class="headerlink" title="含有可变参数的函数"></a>含有可变参数的函数</h3><p>C++标准中主要提供了两个方法</p>
+<ul>
+<li>如果所有的实参类型相同，可以传递一个名为initializer_list的标准库类型；</li>
+<li>如果实参的类型不同，我们可以编写可变参数的模板（第9章）。</li>
+</ul>
+<hr>
+<h4 id="initializer-list"><a href="#initializer-list" class="headerlink" title="initializer_list"></a>initializer_list</h4><p><code>initializer_list</code>是一种标准库类型，用于表示某种特定类型的值的数组，该类型定义在同名的头文件中。</p>
+<hr>
+<h4 id="initializer-list的使用方法"><a href="#initializer-list的使用方法" class="headerlink" title="initializer_list的使用方法"></a>initializer_list的使用方法</h4><ul>
+<li>initializer_list是一个类模板（第9章详细介绍模板）</li>
+<li>使用模板时，我们需要在模板名字后面跟一对尖括号，括号内给出类型参数。例如：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">initializer_list&lt;string&gt;  ls;  <span class="comment">// initializer_list的元素类型是string</span></span><br><span class="line">initializer_list&lt;<span class="type">int</span>&gt; li;      <span class="comment">// initializer_list的元素类型是int</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>initializer_list比较特殊的一点是，其对象中的元素永远是常量值，我们无法改变initializer_list对象中元素的值。</li>
+<li>含有initializer_list形参的函数也可以同时拥有其他形参</li>
+</ul>
+<hr>
+<h4 id="initializer-list使用举例"><a href="#initializer-list使用举例" class="headerlink" title="initializer_list使用举例"></a>initializer_list使用举例</h4><ul>
+<li>在编写代码输出程序产生的错误信息时，最好统一用一个函数实现该功能，使得对所有错误的处理能够整齐划一。然而错误信息的种类不同，调用错误信息输出函数时传递的参数也会各不相同。</li>
+<li>使用initializer_list编写一个错误信息输出函数，使其可以作用于可变数量的形参。</li>
+</ul>
+<hr>
+<h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><ul>
+<li>声明时使用关键字 inline。</li>
+<li>编译时在调用处用函数体进行替换，节省了参数传递、控制转移等开销。</li>
+<li>注意：<ul>
+<li>内联函数体内不能有循环语句和switch语句；</li>
+<li>内联函数的定义必须出现在内联函数第一次被调用之前；</li>
+<li>对内联函数不能进行异常接口声明。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="应用举例"><a href="#应用举例" class="headerlink" title="应用举例"></a>应用举例</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">double</span> PI = <span class="number">3.14159265358979</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">double</span> <span class="title">calArea</span><span class="params">(<span class="type">double</span> radius)</span> <span class="comment">//inline关键字</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> PI * radius * radius;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">double</span> r = <span class="number">3.0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">double</span> area = <span class="built_in">calArea</span>(r);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; area &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其实本质上就是省略了函数的调用与返回，类似于将函数体直接粘贴至调用处。</p>
+<hr>
+<h3 id="constexpr函数（不是很理解用法）"><a href="#constexpr函数（不是很理解用法）" class="headerlink" title="constexpr函数（不是很理解用法）"></a>constexpr函数（不是很理解用法）</h3><h4 id="constexpr函数语法规定"><a href="#constexpr函数语法规定" class="headerlink" title="constexpr函数语法规定"></a>constexpr函数语法规定</h4><ul>
+<li>constexpr修饰的函数在其所有参数都是constexpr时，一定返回constexpr；</li>
+<li>函数体中必须有且仅有一条return语句。</li>
+</ul>
+<hr>
+<h4 id="constexpr函数举例"><a href="#constexpr函数举例" class="headerlink" title="constexpr函数举例"></a>constexpr函数举例</h4><ul>
+<li>constexpr int get_size() { return 20; }</li>
+<li>constexpr int foo &#x3D; get_size();<br>&#x2F;&#x2F;正确：foo是一个常量表达式</li>
+</ul>
+<hr>
+<h3 id="带默认参数值的函数"><a href="#带默认参数值的函数" class="headerlink" title="带默认参数值的函数"></a>带默认参数值的函数</h3><h4 id="默认参数值的说明次序"><a href="#默认参数值的说明次序" class="headerlink" title="默认参数值的说明次序"></a>默认参数值的说明次序</h4><ul>
+<li>有默认参数的形参必须列在形参列表的最右，即默认参数值的右面不能有无默认值的参数；</li>
+<li>调用时实参与形参的结合次序是从左向右。</li>
+<li>例：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y = <span class="number">5</span>, <span class="type">int</span> z = <span class="number">6</span>)</span></span>;<span class="comment">//正确</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x = <span class="number">1</span>, <span class="type">int</span> y = <span class="number">5</span>, <span class="type">int</span> z)</span></span>;<span class="comment">//错误</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x = <span class="number">1</span>, <span class="type">int</span> y, <span class="type">int</span> z = <span class="number">6</span>)</span></span>;<span class="comment">//错误</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="默认参数值与函数的调用位置"><a href="#默认参数值与函数的调用位置" class="headerlink" title="默认参数值与函数的调用位置"></a>默认参数值与函数的调用位置</h4><p>如果一个函数有原型声明，且原型声明在定义之前，则默认参数值应在函数原型声明中给出；如果只有函数的定义，或函数定义在前，则默认参数值可以函数定义中给出。<br>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x = <span class="number">5</span> ,<span class="type">int</span> y = <span class="number">6</span>)</span>；<span class="comment">//原型声明在前</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">add</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x+y;<span class="comment">//此处不能够再指定默认值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x = <span class="number">5</span> ,<span class="type">int</span> y = <span class="number">6</span>)</span><span class="comment">//只有定义没有原型声明</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x+y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">add</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><p>C++允许功能相近的函数在相同的作用域内以相同函数名声明，从而形成重载。方便使用，便于记忆。</p>
+<p>注意事项：</p>
+<ul>
+<li>重载函数的形参必须不同:个数不同或类型不同。</li>
+<li>编译程序将根据实参和形参的类型及个数的最佳匹配来选择调用哪一个函数。（编译器不以形参名和函数的返回值来区分）</li>
+<li>不要将不同功能的函数声明为重载函数，以免出现调用结果的误解、混淆。</li>
+</ul>
+<p>重载函数应用举例</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">sumOfSquare</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a * a + b * b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">sumOfSquare</span><span class="params">(<span class="type">double</span> a, <span class="type">double</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a * a + b * b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> m, n;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Enter two integer: &quot;</span>;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;Their sum of square: &quot;</span>&lt;&lt;<span class="built_in">sumOfSquare</span>(m, n)&lt;&lt;endl;</span><br><span class="line">    <span class="type">double</span> x, y;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Enter two real number: &quot;</span>;</span><br><span class="line">    cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;Their sum of square: &quot;</span>&lt;&lt;<span class="built_in">sumOfSquare</span>(x, y)&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br>Enter two integer: 3 5<br>Their sum of square: 34<br>Enter two real number: 2.3 5.8<br>Their sum of square: 38.93</p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPP基础中需要注意的部分</title>
+    <url>/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<h2 id="数据的输入和输出"><a href="#数据的输入和输出" class="headerlink" title="数据的输入和输出"></a>数据的输入和输出</h2><h3 id="I-x2F-O流"><a href="#I-x2F-O流" class="headerlink" title="I&#x2F;O流"></a>I&#x2F;O流</h3><p>在C++，将数据从一个对象到另一个对象的流动抽象为“流”。cin和cout是预定义的流类对象，cin用来处理标准输入，即键盘输入，cout用来处理标准输出，即屏幕输出。</p>
+<hr>
+<h3 id="预定义的插入符和提取符"><a href="#预定义的插入符和提取符" class="headerlink" title="预定义的插入符和提取符"></a>预定义的插入符和提取符</h3><p>“&lt;&lt;”是预定义的插入符，作用在流类对象cout上便可以实现最一般的屏幕输出。</p>
+<p>“&gt;&gt;”是提取符，作用在流类对象cin上便可以实现最一般的键盘输入。</p>
+<hr>
+<h3 id="常用的I-x2F-O流类库操纵符"><a href="#常用的I-x2F-O流类库操纵符" class="headerlink" title="常用的I&#x2F;O流类库操纵符"></a>常用的I&#x2F;O流类库操纵符</h3><table>
+<thead>
+<tr>
+<th>操纵符名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dec</td>
+<td>数值数据采用十进制表示</td>
+</tr>
+<tr>
+<td>hex</td>
+<td>数值数据采用十六进制表示</td>
+</tr>
+<tr>
+<td>oct</td>
+<td>数值数据采用八进制表示</td>
+</tr>
+<tr>
+<td>ws</td>
+<td>提取空白符</td>
+</tr>
+<tr>
+<td>endl</td>
+<td>插入换行符，并且更新流</td>
+</tr>
+<tr>
+<td>setsprecision(int)</td>
+<td>设置浮点数的小数位数（包括小数点）</td>
+</tr>
+<tr>
+<td>setw(int)</td>
+<td>设置域宽</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="if-else语句"><a href="#if-else语句" class="headerlink" title="if-else语句"></a>if-else语句</h2><p>首先是<code>else</code>的配对方式是与向上找同层的<code>if</code>配对.<br>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">else</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="built_in">else</span>()</span><br></pre></td></tr></table></figure>
+
+<p>这样是可行的因为<code>else</code>都有配对的，但是缩进并不能代表结构，严格来说应该用<code>&#123;&#125;</code>来区分不同的嵌套。<strong>仅供区分不同的结构</strong>。</p>
+<hr>
+<p><strong>反例</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br></pre></td></tr></table></figure>
+
+<p>这样的话<code>else</code>和带有缩进的<code>if</code>配对。</p>
+<hr>
+<h2 id="typedef声明"><a href="#typedef声明" class="headerlink" title="typedef声明"></a>typedef声明</h2><p>typedef  已有类型名  新类型名表</p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> Area,Volume;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Natural;</span><br><span class="line">Natural i1,i2;</span><br><span class="line">Area a;</span><br><span class="line">Volume v;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="除typedef外另一种自定义类型using"><a href="#除typedef外另一种自定义类型using" class="headerlink" title="除typedef外另一种自定义类型using"></a>除typedef外另一种自定义类型using</h2><p><code>using 新类型名 = 已有类型名</code></p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Area = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">using</span> Volume = <span class="type">double</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="auto类型和decltype类型"><a href="#auto类型和decltype类型" class="headerlink" title="auto类型和decltype类型"></a>auto类型和decltype类型</h2><p><code>auto</code>：编译器通过初始值自动判断变量的类型<br><code>decltype</code>：定义一个变量与某一表达式的类型相同，但并不用该表达式初始化变量<br>例如：<code>decltype(i) j = 2;</code>让j和i有同样的类型，但是并不用2来初始化j。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPP类和对象</title>
+    <url>/2022/07/20/CPP%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h1><h2 id="面向对象程序设计的基本特点"><a href="#面向对象程序设计的基本特点" class="headerlink" title="面向对象程序设计的基本特点"></a>面向对象程序设计的基本特点</h2><p><strong>抽象</strong></p>
+<ul>
+<li>对同一类对象的共同属性和行为进行概括，形成类。<ul>
+<li>先注意问题的本质及描述，其次是实现过程或细节。</li>
+<li>数据抽象：描述某类对象的属性或状态（对象相互区别的物理量）。</li>
+<li>代码抽象：描述某类对象的共有的行为特征或具有的功能。</li>
+<li>抽象的实现：类。</li>
+</ul>
+</li>
+<li>抽象实例——钟表<ul>
+<li>数据抽象：<br>int hour,int minute,int second</li>
+<li>代码抽象：<br>setTime(),showTime()</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span>  <span class="title class_">Clock</span> &#123;</span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">   <span class="function"><span class="type">void</span> <span class="title">setTime</span><span class="params">(<span class="type">int</span> newH, <span class="type">int</span> newM, <span class="type">int</span> newS)</span></span>;</span><br><span class="line">   <span class="function"><span class="type">void</span> <span class="title">showTime</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="keyword">private</span>:</span><br><span class="line">   <span class="type">int</span> hour, minute, second;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>封装</strong></p>
+<ul>
+<li>将抽象出的数据、代码封装在一起，形成类。<ul>
+<li>目的：增强安全性和简化编程，使用者不必了解具体的实现细节，而只需要通过外部接口，以特定的访问权限，来使用类的成员。</li>
+<li>实现封装：类声明中的{}</li>
+</ul>
+</li>
+<li>例：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span>  <span class="title class_">Clock</span> &#123;</span><br><span class="line">  <span class="keyword">public</span>: <span class="function"><span class="type">void</span> <span class="title">setTime</span><span class="params">(<span class="type">int</span> newH, <span class="type">int</span> newM, <span class="type">int</span> newS)</span></span>;</span><br><span class="line">          <span class="function"><span class="type">void</span> <span class="title">showTime</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="keyword">private</span>: <span class="type">int</span> hour, minute, second;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>继承</strong></p>
+<ul>
+<li>在已有类的基础上，进行扩展形成新的类。</li>
+</ul>
+<hr>
+<p><strong>多态</strong></p>
+<ul>
+<li>多态：同一名称，不同的功能实现方式。</li>
+<li>目的：达到行为标识统一，减少程序中标识符的个数。</li>
+</ul>
+<hr>
+<h2 id="类和对象的定义"><a href="#类和对象的定义" class="headerlink" title="类和对象的定义"></a>类和对象的定义</h2><h3 id="类定义的语法形式"><a href="#类定义的语法形式" class="headerlink" title="类定义的语法形式"></a>类定义的语法形式</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> 类名称</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">                公有成员（外部接口）</span><br><span class="line">    <span class="keyword">private</span>：</span><br><span class="line">                私有成员</span><br><span class="line">    <span class="keyword">protected</span>：</span><br><span class="line">                保护型成员</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="类内初始值"><a href="#类内初始值" class="headerlink" title="类内初始值"></a>类内初始值</h3><ul>
+<li>可以为数据成员提供一个类内初始值</li>
+<li>在创建对象时，类内初始值用于初始化数据成员</li>
+<li>没有初始值的成员将被默认初始化</li>
+</ul>
+<hr>
+<h3 id="类成员访问控制"><a href="#类成员访问控制" class="headerlink" title="类成员访问控制"></a>类成员访问控制</h3><ul>
+<li>公有类型成员<ul>
+<li>在关键值public后面声明，它们是类与外部的借口，任何外部函数都可以访问公有类型数据和函数</li>
+</ul>
+</li>
+<li>私有类型成员<ul>
+<li>在关键字private后面声明，只允许本类中的函数访问，而外部任何函数都不能访问。</li>
+<li>如果紧跟在累名称后面声明私有成员，则关键字<strong>private</strong>可以省略</li>
+</ul>
+</li>
+<li>保护类型成员<ul>
+<li>与private类似，其差别表表现在继承与派生时对派生类的影响不同</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="类的成员函数"><a href="#类的成员函数" class="headerlink" title="类的成员函数"></a>类的成员函数</h3><ul>
+<li>在类中说明函数原型</li>
+<li>可以在类外给出函数体实现，并在函数名前使用类名加以限定</li>
+<li>也可以直接在类中给出函数体，形成内联成员函数</li>
+<li>允许声明重载函数和带默认参数值的函数</li>
+</ul>
+<hr>
+<h3 id="类和对象程序举例"><a href="#类和对象程序举例" class="headerlink" title="类和对象程序举例"></a>类和对象程序举例</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//类的定义</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Clock</span>&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">setTime</span><span class="params">(<span class="type">int</span> newH = <span class="number">0</span>,<span class="type">int</span> newM = <span class="number">0</span>,<span class="type">int</span> newS = <span class="number">0</span>)</span></span>;</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">showTime</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        <span class="type">int</span> hour,minute,second;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//成员函数的实现</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Clock::setTime</span><span class="params">(<span class="type">int</span> newH = <span class="number">0</span>,<span class="type">int</span> newM = <span class="number">0</span>,<span class="type">int</span> newS = <span class="number">0</span>)</span></span>;</span><br><span class="line">&#123;</span><br><span class="line">    hour = newH;</span><br><span class="line">    minute = newM;</span><br><span class="line">    second = newS;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Clock::showTime</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; hour &lt;&lt; <span class="string">&quot;:&quot;</span> &lt;&lt; minute &lt;&lt; <span class="string">&quot;:&quot;</span> &lt;&lt; second &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//对象的使用</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Clock myClock;</span><br><span class="line">    myClock.<span class="built_in">setTime</span>(<span class="number">8</span>,<span class="number">30</span>,<span class="number">30</span>);</span><br><span class="line">    myClock.<span class="built_in">showTime</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="构造函数和析构函数"><a href="#构造函数和析构函数" class="headerlink" title="构造函数和析构函数"></a>构造函数和析构函数</h2><h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><h4 id="构造函数的作用"><a href="#构造函数的作用" class="headerlink" title="构造函数的作用"></a>构造函数的作用</h4><p>在对象被创建时使用特定的值构造对象，将对象<strong>初始化</strong>为一个特定的初始状态。</p>
+<blockquote>
+<p>希望在构造一个Clock类对象时，将初始时间设为0:0:0，就可以通过构造函数来设置。</p>
+</blockquote>
+<hr>
+<h4 id="构造函数的形式"><a href="#构造函数的形式" class="headerlink" title="构造函数的形式"></a>构造函数的形式</h4><ul>
+<li>函数名和类名相同</li>
+<li>不能定义返回值类型，也不能有return语句</li>
+<li>可以有形式参数也可以没有形式参数</li>
+<li>可以是内联函数</li>
+<li>可以重载</li>
+<li>可以带默认参数值</li>
+</ul>
+<hr>
+<h4 id="构造函数的调用时机"><a href="#构造函数的调用时机" class="headerlink" title="构造函数的调用时机"></a>构造函数的调用时机</h4><p>在对象创建时被自动调用</p>
+<hr>
+<h4 id="构造函数实例"><a href="#构造函数实例" class="headerlink" title="构造函数实例"></a>构造函数实例</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//类的定义</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Clock</span>&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="built_in">Clock</span>(<span class="type">int</span> newH,<span class="type">int</span> newM,<span class="type">int</span> newS);<span class="comment">//构造函数</span></span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">setTime</span><span class="params">(<span class="type">int</span> newH = <span class="number">0</span>,<span class="type">int</span> newM = <span class="number">0</span>,<span class="type">int</span> newS = <span class="number">0</span>)</span></span>;</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">showTime</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        <span class="type">int</span> hour,minute,second;</span><br><span class="line">&#125;；<span class="comment">//这个地方有个分号</span></span><br><span class="line"><span class="comment">//构造函数的实现</span></span><br><span class="line">Clock::<span class="built_in">Clock</span>(<span class="type">int</span> newH,<span class="type">int</span> newM,<span class="type">int</span> newS): <span class="built_in">hour</span>(newH),<span class="built_in">minute</span>(newM),<span class="built_in">second</span>(newS)&#123;&#125;</span><br><span class="line"><span class="comment">//成员函数的实现</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Clock::setTime</span><span class="params">(<span class="type">int</span> newH = <span class="number">0</span>,<span class="type">int</span> newM = <span class="number">0</span>,<span class="type">int</span> newS = <span class="number">0</span>)</span></span>;</span><br><span class="line">&#123;</span><br><span class="line">    hour = newH;</span><br><span class="line">    minute = newM;</span><br><span class="line">    second = newS;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Clock::showTime</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; hour &lt;&lt; <span class="string">&quot;:&quot;</span> &lt;&lt; minute &lt;&lt; <span class="string">&quot;:&quot;</span> &lt;&lt; second &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//对象的使用</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">Clock <span class="title">c</span><span class="params">(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span></span>;<span class="comment">//自动调用构造函数</span></span><br><span class="line">    c.<span class="built_in">showTime</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>：：符号是作用域解析运算符，也就是函数定义是需要用，类名：：来限制成员函数。</p>
+</blockquote>
+<div class="note warning flat"><p>一件很重要的事儿是类的定义结束之后有个分号！！！（浪费大把时间）</p>
+</div>
+
+<hr>
+<h4 id="默认构造函数"><a href="#默认构造函数" class="headerlink" title="默认构造函数"></a>默认构造函数</h4><ul>
+<li>调用时可以不需要实参的构造函数<ul>
+<li>参数表全为空的构造函数</li>
+<li>全部参数都有默认值的构造函数</li>
+</ul>
+</li>
+<li>下面两个都是<strong>默认构造函数</strong>，如在类中同时出现，将产生编译错误：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Clock</span>();</span><br><span class="line"><span class="built_in">Clock</span>(<span class="type">int</span> newH=<span class="number">0</span>,<span class="type">int</span> newM=<span class="number">0</span>,<span class="type">int</span> newS=<span class="number">0</span>);</span><br><span class="line"><span class="comment">// 这两个函数均不需要初始值，所以会产生调用矛盾</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="隐含生成的构造函数"><a href="#隐含生成的构造函数" class="headerlink" title="隐含生成的构造函数"></a>隐含生成的构造函数</h4><p>如果程序中未定义构造函数，编译器将在需要时自动生成一个<strong>默认构造函数</strong></p>
+<ul>
+<li>参数列表为空，不为数据成员设计初始值</li>
+<li>如果类内定义了成员的初始值，则使用类内定义的初始值</li>
+<li>如果没有定义类内的初始值，则以默认方式初始化</li>
+<li>基本类型的数据默认初始化的值是不确定的</li>
+</ul>
+<hr>
+<h4 id="“-x3D-default”"><a href="#“-x3D-default”" class="headerlink" title="“&#x3D;default”"></a>“&#x3D;default”</h4><p>如果类内已定义构造函数，默认情况下编译器不再隐含生成默认构造函数。<br>如果你坚持希望隐含生成默认构造函数，用“&#x3D;default”</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Clock</span>() = <span class="keyword">default</span>;<span class="comment">//指示编译器提供默认构造函数</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="委托构造函数"><a href="#委托构造函数" class="headerlink" title="委托构造函数"></a>委托构造函数</h4><p>委托构造函数（delegating constructor）使用类其他构造函数执行初始化过程</p>
+<p>例如</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Clock</span>(<span class="type">int</span> newH,<span class="type">int</span> newM,<span class="type">int</span> newS):<span class="built_in">hour</span>(newH),<span class="built_in">minute</span>(newM),<span class="built_in">second</span>(newS)&#123;&#125;</span><br><span class="line"><span class="built_in">Clock</span>():<span class="built_in">Clock</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)&#123;&#125;</span><br><span class="line"><span class="comment">//有的编译器并不支持委托构造函数</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="复制构造函数"><a href="#复制构造函数" class="headerlink" title="复制构造函数"></a>复制构造函数</h3><p>复制构造函数时一种特殊的构造函数，其形参为本类的对象引用。作用是用一个已存在的对象去初始化同类型的新对象。</p>
+<p>用法：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> 类名</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        类名(形参);<span class="comment">//构造函数</span></span><br><span class="line">        类名(<span class="type">const</span> 类名&amp;对象名);<span class="comment">//复制构造函数</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br><span class="line">类名::类(<span class="type">const</span> 类名&amp;对象名)<span class="comment">//复制构造函数的实现</span></span><br><span class="line">&#123;函数体&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="隐含的复制构造函数"><a href="#隐含的复制构造函数" class="headerlink" title="隐含的复制构造函数"></a>隐含的复制构造函数</h4><ul>
+<li>如果没有为类声明拷贝初始化构造函数，则比编译器自己生成一个复制构造函数。</li>
+<li>这个构造函数执行的功能是：用作为初始值对象的每个数据成员的值，初始化将要建立的对象的对应数据成员。</li>
+</ul>
+<hr>
+<h4 id="“-x3D-delete”"><a href="#“-x3D-delete”" class="headerlink" title="“&#x3D;delete”"></a>“&#x3D;delete”</h4><p>如若不希望被复制构造</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Point(const Point&amp;p) = delete;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="复制构造函数被调用的三种情况"><a href="#复制构造函数被调用的三种情况" class="headerlink" title="复制构造函数被调用的三种情况"></a>复制构造函数被调用的三种情况</h4><ul>
+<li>定义一个对象是，以被雷另一个对象作为初始值，发生复制构造</li>
+<li>如果函数的形参是类的对象，调用函数时，将使用实参对象初始化形参对象，发生复制构造</li>
+<li>如果函数的返回值是类的对象，函数执行完成返回主函数时，将使用return语句中的对象初始化一个临时无名对象，传递给主函数，此时发生复制构造</li>
+</ul>
+<hr>
+<h3 id="析构函数"><a href="#析构函数" class="headerlink" title="析构函数"></a>析构函数</h3><p>作用：完成对象被删除前的一些清理工作</p>
+<ul>
+<li>在对象生存期结束的时刻系统自动调用它，然后再释放此对象所属的空间</li>
+<li>如果程序中未声明析构函数，编译器会自动生成一个默认的析构函数，函数体为空</li>
+</ul>
+<hr>
+<h2 id="类的组合"><a href="#类的组合" class="headerlink" title="类的组合"></a>类的组合</h2><p>说白了就是类的数据成员是别的类的对象，下面用计算两点之间线段的距离的程序来说明。</p>
+<hr>
+<h3 id="线段类和点类实例"><a href="#线段类和点类实例" class="headerlink" title="线段类和点类实例"></a>线段类和点类实例</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Point类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Point</span>(<span class="type">float</span> xx,<span class="type">float</span> yy); <span class="comment">//构造函数</span></span><br><span class="line">    <span class="built_in">Point</span>(); <span class="comment">//默认构造函数</span></span><br><span class="line">    <span class="built_in">Point</span>(Point &amp;p); <span class="comment">//复制构造函数</span></span><br><span class="line">    <span class="function"><span class="type">float</span> <span class="title">getX</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> x;&#125;</span><br><span class="line">    <span class="function"><span class="type">float</span> <span class="title">getY</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> y;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">float</span> x,y;</span><br><span class="line">&#125;;</span><br><span class="line">Point::<span class="built_in">Point</span>(<span class="type">float</span> xx,<span class="type">float</span> yy):<span class="built_in">x</span>(xx),<span class="built_in">y</span>(yy)&#123;&#125; <span class="comment">//构造函数的定义</span></span><br><span class="line">Point::<span class="built_in">Point</span>():<span class="built_in">x</span>(<span class="number">0</span>),<span class="built_in">y</span>(<span class="number">0</span>)&#123;&#125; <span class="comment">//默认构造函数的定义</span></span><br><span class="line">Point::<span class="built_in">Point</span>(Point &amp;p) <span class="comment">//复制构造函数的定义</span></span><br><span class="line">&#123;</span><br><span class="line">    x=p.x;</span><br><span class="line">    y=p.y;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Calling the copy constructor of Point&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Line类，类的组合，计算两点之间的距离</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Line</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Line</span>(Point o1,Point o2); <span class="comment">//参数为Point对象的构造函数</span></span><br><span class="line">    <span class="built_in">Line</span>(Line &amp;l); <span class="comment">//复制构造函数</span></span><br><span class="line">    <span class="function"><span class="type">float</span> <span class="title">getLen</span><span class="params">()</span></span>; <span class="comment">//外部接口</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Point p1,p2;</span><br><span class="line">    <span class="type">float</span> len=<span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line">Line::<span class="built_in">Line</span>(Point o1,Point o2):<span class="built_in">p1</span>(o1),<span class="built_in">p2</span>(o2) <span class="comment">//构造函数是每一个成员变量都要初始化的</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> x=p1.<span class="built_in">getX</span>()-p2.<span class="built_in">getX</span>();</span><br><span class="line">    <span class="comment">//此处并不能够直接写  p1.x - p2.x 因为x属于私有变量</span></span><br><span class="line">    <span class="comment">// 通过两个public成员函数可以访问，相当于提供了外部接口</span></span><br><span class="line">    <span class="type">float</span> y=p1.<span class="built_in">getY</span>()-p2.<span class="built_in">getY</span>();</span><br><span class="line">    len= <span class="built_in">sqrt</span>(x*x+y*y);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Calling the constructor of Line&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">Line::<span class="built_in">Line</span>(Line &amp;l): <span class="built_in">p1</span>(l.p1),<span class="built_in">p2</span>(l.p2) <span class="comment">//复制构造函数是每一个成员变量都需要进行复制的 且这个&#x27;.&#x27;只能够在类的作用域内使用。</span></span><br><span class="line">&#123;</span><br><span class="line">    len=l.len;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Calling the copy constructor of Line&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">Line::getLen</span><span class="params">()</span> </span>&#123;<span class="keyword">return</span> len;&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">Point <span class="title">myp1</span><span class="params">(<span class="number">1</span>,<span class="number">1</span>)</span>,<span class="title">myp2</span><span class="params">(<span class="number">4</span>,<span class="number">5</span>)</span></span>;</span><br><span class="line">    <span class="function">Line <span class="title">line</span><span class="params">(myp1,myp2)</span></span>; <span class="comment">//参数传递的时候也需要复制构造哦</span></span><br><span class="line">    <span class="function">Line <span class="title">line2</span><span class="params">(line)</span></span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;The length of line is &quot;</span> &lt;&lt; line.<span class="built_in">getLen</span>() &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;The length of line2 is &quot;</span> &lt;&lt; line2.<span class="built_in">getLen</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="前向引用声明"><a href="#前向引用声明" class="headerlink" title="前向引用声明"></a>前向引用声明</h3><p>遇到两个类相互引用的情况，也称为循环依赖，简单理解就是你不能使用一个在前面完全没有出现过的标识符。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>;  					<span class="comment">//前向引用声明</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;						<span class="comment">//A类的定义</span></span><br><span class="line"><span class="keyword">public</span>:							<span class="comment">//外部接口</span></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">f</span><span class="params">(B b)</span></span>;			<span class="comment">//以B类对象b为形参的成员函数</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>&#123;						<span class="comment">//B类定义</span></span><br><span class="line"><span class="keyword">public</span>:							<span class="comment">//外部接口</span></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">g</span><span class="params">(A a)</span></span>;      <span class="comment">//以A类对象a为形参的成员函数</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
       </tags>
   </entry>
 </search>

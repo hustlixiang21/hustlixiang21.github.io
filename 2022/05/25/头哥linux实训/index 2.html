@@ -1,0 +1,788 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>linux实训 | 仰望星空，脚踏实地</title><meta name="keywords" content="学习,CS工具,linux基础,命令行"><meta name="author" content="Lixiang"><meta name="copyright" content="Lixiang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="学习Linux的笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux实训">
+<meta property="og:url" content="https://hustlixiang21.github.io/2022/05/25/%E5%A4%B4%E5%93%A5linux%E5%AE%9E%E8%AE%AD/index.html">
+<meta property="og:site_name" content="仰望星空，脚踏实地">
+<meta property="og:description" content="学习Linux的笔记">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F25972705-87554cf24a5700fc.jpg&refer=http%3A%2F%2Fupload-images.jianshu.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660320538&t=5af76b16f36b9d6cf008cadc998bfe9d">
+<meta property="article:published_time" content="2022-05-25T01:06:47.000Z">
+<meta property="article:modified_time" content="2022-07-20T09:26:03.224Z">
+<meta property="article:author" content="Lixiang">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="CS工具">
+<meta property="article:tag" content="linux基础">
+<meta property="article:tag" content="命令行">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F25972705-87554cf24a5700fc.jpg&refer=http%3A%2F%2Fupload-images.jianshu.io&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660320538&t=5af76b16f36b9d6cf008cadc998bfe9d"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://hustlixiang21.github.io/2022/05/25/%E5%A4%B4%E5%93%A5linux%E5%AE%9E%E8%AE%AD/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: Lixiang","link":"Link: ","source":"Source: 仰望星空，脚踏实地","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'linux实训',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-07-20 17:26:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-b6830c2136b7784c0aba649af7ec2867_1440w.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">20</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> Album</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fas fa-video"></i><span> Videos</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> Movies</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> Games</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F25972705-87554cf24a5700fc.jpg&amp;refer=http%3A%2F%2Fupload-images.jianshu.io&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1660320538&amp;t=5af76b16f36b9d6cf008cadc998bfe9d')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">仰望星空，脚踏实地</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> Album</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fas fa-video"></i><span> Videos</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> Movies</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> Games</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">linux实训</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-05-25T01:06:47.000Z" title="Created 2022-05-25 09:06:47">2022-05-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-07-20T09:26:03.224Z" title="Updated 2022-07-20 17:26:03">2022-07-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/CS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CS学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">32k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>NaN:aNmin</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="linux实训"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="根目录文件及其用处"><a href="#根目录文件及其用处" class="headerlink" title="根目录文件及其用处"></a>根目录文件及其用处</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/80/v2-faec5535f8d7f0d4589adfa8135fa98a_1440w.png"></p>
+<span id="more"></span>
+
+<h1 id="Linux之用户管理"><a href="#Linux之用户管理" class="headerlink" title="Linux之用户管理"></a>Linux之用户管理</h1><h2 id="创建-x2F-删除新用户"><a href="#创建-x2F-删除新用户" class="headerlink" title="创建&#x2F;删除新用户"></a>创建&#x2F;删除新用户</h2><h3 id="Linux创建用户命令"><a href="#Linux创建用户命令" class="headerlink" title="Linux创建用户命令"></a>Linux创建用户命令</h3><p>Linux中使用<code>useradd</code>命令来创建一个新用户。<br>命令格式格式：<code>useradd [命令参数] 参数</code><br>常见命令参数：</p>
+<ul>
+<li>d&lt;登入目录&gt;：指定用户登入时的启始目录；</li>
+<li>D：查看或变更预设值；</li>
+<li>g&lt;群组&gt;：指定用户所属的群组；</li>
+<li>m：自动建立用户的登入目录；</li>
+<li>M：不要自动建立用户的登入目录；</li>
+<li>s：指定用户登入后所使用的shell。</li>
+</ul>
+<p><code>useradd</code>必须以root权限才能执行，如果是普通用户想创建一个新用户时，需要在命令前加<code>sudo</code>命令来提升权限为root权限。</p>
+<p>案例演示：</p>
+<p>1.查看useradd系统默认属性值，使用命令<code>useradd -D</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-cd4d69f535cad63f82850712990ef2a7_1440w.png" alt="截屏2022-05-17 20.55.31.png"></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GROUP</td>
+<td>指新创建的用户将被添加到用户组ID为100的公共用户组中</td>
+</tr>
+<tr>
+<td>HOME</td>
+<td>指新创建的用户将在&#x2F;home目录下创建一个HOME账户</td>
+</tr>
+<tr>
+<td>INACTIVE</td>
+<td>指当密码逾期时，用户将不会被禁用</td>
+</tr>
+<tr>
+<td>EXPIRE</td>
+<td>指新创建的用户不会在设定日期被设置为逾期</td>
+</tr>
+<tr>
+<td>SHELL</td>
+<td>指新创建的用户使用&#x2F;bin&#x2F;sh(也就是bash)作为默认shell</td>
+</tr>
+<tr>
+<td>SKEL</td>
+<td>指系统会将&#x2F;etc&#x2F;skel目录中的内容复制到新创建的用户的HOME目录</td>
+</tr>
+<tr>
+<td>CREATE_MAIL_SPOOL</td>
+<td>指系统不会在邮件目录中创建一个文件用于新创建用户账户接受邮件</td>
+</tr>
+</tbody></table>
+<p>2.创建新用户<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-b25c232976216fcb6f3f803aeff450bd_1440w.png" alt="截屏2022-05-17 21.00.31.png"></p>
+<p>Linux中用户信息是保存在<code>/etc/passwd</code>文件中，我们可以使用命令<code>tail</code> <code>/etc/passwd</code>命令查看<code>/etc/passwd</code>文件最后10行中是否存在刚刚新创建的testUser用户信息。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-7cbdd2c9f33f3d821619f37e443faf69_1440w.png" alt="截屏2022-05-17 21.03.00.png"></p>
+<h3 id="Linux删除用户命令"><a href="#Linux删除用户命令" class="headerlink" title="Linux删除用户命令"></a>Linux删除用户命令</h3><p>Linux中使用<code>userdel</code>命令来删除一个已经存在的用户。<br>命令格式：<code>userdel [命令参数] 参数</code><br>常见命令参数：</p>
+<ul>
+<li>f：强制删除用户，即使用户当前已登录；</li>
+<li>r：删除用户的同时，删除与用户相关的所有文件。</li>
+</ul>
+<p><code>userdel</code>必须以root权限才能执行，如果是普通用户想使用该命令时，需要在命令前加sudo命令来提升权限为root权限。</p>
+<p>案例演示:</p>
+<ol>
+<li>使用userdel命令删除一个已经存在的用户testUser，并且自动删除其家目录文件。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-cc94c16290b8db6a31084c63f2cfbc1c_1440w.png" alt="截屏2022-05-17 21.07.46.png"></p>
+<h2 id="Linux-用户密码管理"><a href="#Linux-用户密码管理" class="headerlink" title="Linux 用户密码管理"></a>Linux 用户密码管理</h2><h3 id="用户密码存放地及方式"><a href="#用户密码存放地及方式" class="headerlink" title="用户密码存放地及方式"></a>用户密码存放地及方式</h3><p>Linux中用户的登录密码是存放在<code>/etc/shadow</code>文件中，<code>/etc/shadow</code>文件中存放的是加密过后的密码，所以在<code>/etc/shadow</code>文件中看到的密码是加密过后的密文。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-56da6c940f5d0647ee221877032f9006_1440w.png" alt="截屏2022-05-17 21.12.04.png"></p>
+<p>可以看到第一个冒号前是用户名，用户名是以明文的方式存放。</p>
+<p>在第一个冒号和第二个冒号之间存放的是加密过后的密码，密码是以密文的方式存放，其中密文是由用户密码和其它信息加密后组成的，这里不做详细讲解，我们只需要知道如果第一个冒号和第二个冒号之间是*或者!或者空，则表示该用户没有密码，否则，则表示该用户是有密码。</p>
+<h3 id="使用passwd命令修改用户密码"><a href="#使用passwd命令修改用户密码" class="headerlink" title="使用passwd命令修改用户密码"></a>使用passwd命令修改用户密码</h3><p>命令格式：<code>passwd [命令参数] 参数</code></p>
+<p>常见命令参数：</p>
+<ul>
+<li>d 删除密码；</li>
+<li>l 停止账号使用；</li>
+<li>S 显示密码信息。</li>
+</ul>
+<p>passwd必须以root权限才能执行，如果是普通用户想执行passwd时，需要在命令前加sudo命令来提升权限为root权限。</p>
+<p>案例演示：</p>
+<ol>
+<li>使用useradd命令来新创建一个用户，使用passwd命令来设置登录密码。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-d5b2e731ec72100890b67f8135105474_1440w.png" alt="截屏2022-05-17 21.15.41.png"></p>
+<p>使用useradd命令创建一个新用户(test)，此时test用户是没有密码的，所以使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">tail</span> -n 1 /etc/shadow</span><br><span class="line"><span class="built_in">tail</span>用法：-n, --lines=[+]NUM</span><br><span class="line">output the last NUM lines, instead of the last 10; or use -n +NUM to output starting with line NUM</span><br></pre></td></tr></table></figure>
+<p>命令查看&#x2F;etc&#x2F;shadow文件的最后一行可以看出test用户密码部分为!。</p>
+<p>使用passwd命令为test用户设置密码时，可以看到需要输入两次密码，目的是为了确保两次输入的密码一致。当设置完密码后，可以看到&#x2F;etc&#x2F;shadow文件中test用户的密码部分已经为加密过后的密文。</p>
+<ol start="2">
+<li>使用passwd命令来清除用户的密码。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-103024acdf47401fc675a536612fc29d_1440w.png" alt="截屏2022-05-17 21.22.23.png"></p>
+<p>使用passwd命令清除用户test的登录密码，使用tail -n 1 &#x2F;etc&#x2F;shadow命令查看&#x2F;etc&#x2F;shadow文件的最后一行可以看出test用户密码部分为空，此时test用户是没有密码的。</p>
+<h3 id="使用chpasswd命令修改用户密码"><a href="#使用chpasswd命令修改用户密码" class="headerlink" title="使用chpasswd命令修改用户密码"></a>使用chpasswd命令修改用户密码</h3><p><code>chpasswd</code>命令通常是用于批量修改用户密码，从标准输入批量读取成对的用户名和密码，其中输入的用户名和密码的格式为: 用户名:密码 </p>
+<p>例如要批量更新用户密码，将用户名和密码写入到一个文件中，格式如下所示：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-3614610da6fdd274a3230a23dd8df26a_1440w.png" alt="截屏2022-05-17 21.24.16.png"><br>然后执行执行如下命令来更新密码：</p>
+<p>sudo chpasswd &lt; batch.txt</p>
+<p>“&lt;”代表着重定向</p>
+<p>命令格式：<code>chpasswd [命令参数] 参数</code></p>
+<p>常见命令参数</p>
+<ul>
+<li>e：输入的密码是加密后的密文；</li>
+<li>h：显示帮助信息并退出。</li>
+</ul>
+<p>chpasswd必须以root权限才能执行，如果是普通用户执行时，需要在命令前加sudo命令来提升权限为root权限。</p>
+<h2 id="Linux用户权限切换"><a href="#Linux用户权限切换" class="headerlink" title="Linux用户权限切换"></a>Linux用户权限切换</h2><h3 id="图形化界面登录"><a href="#图形化界面登录" class="headerlink" title="图形化界面登录"></a>图形化界面登录</h3><p>Linux中添加用户后，用户在图形界面登录系统的方式和Windows一样，都是选择要登录的用户后直接输入登录密码即可。</p>
+<p>案例演示：</p>
+<ol>
+<li>添加一个新用户，并且设置登录密码，然后在图形界面登录。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picx.zhimg.com/80/v2-09a98a0817379f8c0b43104f19f9de87_1440w.png" alt="截屏2022-05-17 21.28.44.png"></p>
+<h3 id="使用login命令登录"><a href="#使用login命令登录" class="headerlink" title="使用login命令登录"></a>使用login命令登录</h3><p>login命令是让用户登录系统，可通过它的功能随时更换登入身份。当&#x2F;etc目录里含名称为nologin的文件时，系统只允许root帐号登入系统，其他用户一律不准登入。</p>
+<p>当使用login命令登录系统后，可以使用logout命令或者exit命令来退出当前用户登录，返回到登录前的用户状态。</p>
+<p>命令格式：<code>login [命令参数] 参数</code></p>
+<p>参数为登录的用户名，可以不输入登录的用户名，直接输入login命令后回车，然后根据提示再输入用户名和密码。</p>
+<p>常见命令参数:</p>
+<ul>
+<li>p：告诉login指令不销毁环境变量；</li>
+<li>h：指定远程服务器的主机名。</li>
+</ul>
+<p>login必须以root权限才能执行，如果是普通用户执行时，需要在命令前加sudo命令来提升权限为root权限。</p>
+<p>案例演示:</p>
+<ol>
+<li>使用login命令来登录系统(文件&#x2F;etc&#x2F;nologin不存在)。</li>
+</ol>
+<p>首先查看当前登录的用户名是parallels。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-cdc7b7aed2db8158ea6eeb482fcadee0_1440w.png" alt="截屏2022-05-17 21.31.38.png"></p>
+<p>使用test    用户来登录系统，然后查看当前登录的用户名。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/80/v2-6f2d3e98f7e8c5ba554d10c47f08be59_1440w.png" alt="截屏2022-05-17 21.33.19.png"></p>
+<p>使用logout或者exit命令退出test用户，然后在查看当前登录用户是否为parallels。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/80/v2-6f2d3e98f7e8c5ba554d10c47f08be59_1440w.png" alt="img"></p>
+<ol start="2">
+<li>使用login命令来登录系统(文件&#x2F;etc&#x2F;nologin存在)。</li>
+</ol>
+<p>首先查看当前登录的用户名是parallels。</p>
+<p>在&#x2F;etc目录下新创建一个nologin文件，使用如下命令创建：</p>
+<p><code>sudo touch /etc/nologin</code></p>
+<p>发现使用test用户是无法登录系统的，只有使用root用户才能登录系统。</p>
+<h3 id="使用su命令切换用户身份"><a href="#使用su命令切换用户身份" class="headerlink" title="使用su命令切换用户身份"></a>使用su命令切换用户身份</h3><p>su命令用于切换当前用户身份到其他用户身份，变更时须输入所要变更的用户帐号的密码。 </p>
+<p>当使用su命令切换用户后，使用exit命令退出当前身份，返回原有登录用户身份。</p>
+<p>注：如果当前用户身份是root，则使用su命令切换到其他用户的时候不需要相应用户的密码</p>
+<p>命令格式：<code>su [命令参数] 参数</code></p>
+<p>参数为登录的用户名，如果没有参数，则默认切换为root用户。</p>
+<p>常见命令参数</p>
+<ul>
+<li>-c&lt;指令&gt;或–command&#x3D;&lt;指令&gt;：执行完指定的指令后，即恢复原来的身份；</li>
+<li>-l或–login：改变身份时，也同时变更工作目录，以及HOME,SHELL,USER,logname。此外，也会变更PATH变量；</li>
+<li>-m,-p或–preserve-environment：变更身份时，不要变更环境变量；</li>
+<li>s<shell>或–shell&#x3D;<shell>：指定要执行的shell。</li>
+</ul>
+<p>su命令所有使用者都可以执行。</p>
+<p>案例演示:</p>
+<ol>
+<li>使用su命令切换当前用户身份(不改变当前工作目录)。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-a3edb5c1caf53250c70364feb7675c44_1440w.png?source=d16d100b" alt="img"></p>
+<ol start="2">
+<li>使用su命令切换当前用户身份(改变当前工作目录)。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-4b268df03f89c301fb2afb2a601e452e_1440w.png" alt="img"></p>
+<ol start="3">
+<li>利用-c命令参数实现执行完毕相应的命令立马返回当前用户</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-6e1cc71d9b639a1f76c2198e24599a4e_1440w.png?source=d16d100b" alt="img"><br>或者如下也行<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/80/v2-ed4d916345d18f5d708fcdb476eeca75_1440w.png" alt="截屏2022-05-17 21.54.57.png"></p>
+<h1 id="Linux之文件-x2F-目录搜索"><a href="#Linux之文件-x2F-目录搜索" class="headerlink" title="Linux之文件&#x2F;目录搜索"></a>Linux之文件&#x2F;目录搜索</h1><h2 id="查询命令-locate"><a href="#查询命令-locate" class="headerlink" title="查询命令-locate"></a>查询命令-locate</h2><p><code>locate</code>命令用来查找文件或目录。</p>
+<p>locate命令要比其他查找文件命令（例如:find）快得多，原因在于它不搜索具体目录，而是搜索一个数据库<code>/var/lib/mlocate/mlocate.db</code></p>
+<p><code>/var/lib/mlocate/mlocate.db</code>这个数据库中含有本地所有文件信息。Linux 系统自动创建这个数据库，并且每天自动更新一次，因此，我们在用locate查找文件时，有时会找到已经被删除的数据，或者刚刚建立文件，却无法查找到，原因就是因为数据库文件没有被更新。为了避免这种情况，可以在使用locate之前，先使用updatedb命令，手动更新数据库。</p>
+<p>locate具体命令如下：</p>
+<p><code>locate　命令参数　文件/目录</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-c, –count            只输出找到的数量；</li>
+<li>-d, –database DBPATH  使用DBPATH指定的数据库，而不是默认数据库&#x2F;var&#x2F;lib&#x2F;mlocate&#x2F;mlocate.db；</li>
+<li>-i, –ignore-case      忽略大小写；</li>
+<li>-q, –quiet            安静模式，不会显示任何错误讯息；</li>
+<li>-e, –existing         只显示当前存在的文件条目；</li>
+</ul>
+<p>案例演示：</p>
+<ol>
+<li>搜索etc目录下以pass开头的文件或目录，具体使用如下命令：</li>
+</ol>
+<p><code>locate /etc/pass</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo updatedb</span><br><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ locate /etc/pass</span><br><span class="line">/etc/passwd</span><br><span class="line">/etc/passwd-</span><br></pre></td></tr></table></figure>
+
+<p>因为updatedb需要root权限，这里需要使用sudo </p>
+<ol start="2">
+<li>搜索包含passwd字母的文件或目录总个数，具体使用如下命令：</li>
+</ol>
+<p><code>locate -c passwd</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ locate -c passwd</span><br><span class="line">176</span><br></pre></td></tr></table></figure>
+
+<p><code>updatedb</code></p>
+<p>updatedb命令用来创建或更新locate命令所必需的数据库文件。</p>
+<p>updatedb命令的执行过程较长，因为在执行时它会遍历整个系统的目录树，并将所有的文件信息写入locate数据库文件中。</p>
+<p>具体命令如下：</p>
+<p><code>updatedb　命令参数</code></p>
+<p>常用参数如下：</p>
+<ul>
+<li>-o&lt;文件&gt;：忽略默认的数据库文件，使用指定的slocate数据库文件；</li>
+<li>-U&lt;目录&gt;：更新指定目录的slocate数据库；</li>
+<li>-v：显示执行的详细过程;</li>
+</ul>
+<p>案例演示：</p>
+<ol>
+<li>新创建一个testFile文件，更新locate数据库后使用locate命令定位该文件，具体使用如下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">touch testFile</span><br><span class="line">locate testFile</span><br><span class="line">sudo updatedb</span><br><span class="line">locate testFile</span><br></pre></td></tr></table></figure>
+
+<p>执行情况如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#更新之前</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ touch testFile;locate testFile</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ </span><br><span class="line">#更新数据库之后                                            </span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ sudo updatedb</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ locate testFile </span><br><span class="line">/home/kali/trial/testFile</span><br></pre></td></tr></table></figure>
+
+<p>可以看到新创建文件后直接使用locate去查找是没有任何结果的，只有更新数据库后才能查找到新创建的文件。</p>
+<ol start="2">
+<li>删除testFile文件，更新locate数据库后使用locate命令定位该文件，具体使用如下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rm testFile</span><br><span class="line">locate testFile</span><br><span class="line">sudo updatedb -U ./</span><br><span class="line">locate testFile</span><br></pre></td></tr></table></figure>
+
+<p>执行情况如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ rm testFile</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ locate testFile</span><br><span class="line">/home/kali/trial/testFile</span><br><span class="line">#更新数据库之后</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ sudo updatedb -U /home/kali/trial </span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$ locate testFile</span><br><span class="line">┌──(kali㉿kali)-[~/trial]</span><br><span class="line">└─$</span><br></pre></td></tr></table></figure>
+
+<p>第三条updatedb命令使用了-U参数，只更新testFile所在目录的数据库，这样速度比较快，如果不使用该参数，则会更新整个文件系统的内容，速度就会比较慢。</p>
+<p>删除文件后直接使用locate去查找可以定位到的，原因是没有马上更新数据库，数据库里面仍然有“过时”的信息。</p>
+<h2 id="查询命令-which-x2F-whereis"><a href="#查询命令-which-x2F-whereis" class="headerlink" title="查询命令-which&#x2F;whereis"></a>查询命令-which&#x2F;whereis</h2><p>which命令主要是用来查找系统&#x3D;&#x3D;PATH目录下的可执行文件&#x3D;&#x3D;，说白了就是查找那些我们已经安装好的可以直接执行的命令。</p>
+<p>whereis命令可以用来查找&#x3D;&#x3D;二进制（命令）、源文件、man文件&#x3D;&#x3D;。与which不同的是这条命令可以是通过文件索引数据库而非PATH来查找的，所以查找的面比which要广。</p>
+<h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><p>which命令用于查找并显示给定命令的绝对路径，环境变量PATH中保存了查找命令时需要遍历的目录。which指令会在环境变量$PATH设置的目录里查找符合条件的文件。也就是说，使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令。</p>
+<p>which是shell内建命令，内建命令要比系统论命令有比较高的执行效率。</p>
+<p>具体命令如下：</p>
+<p><code>which　命令</code></p>
+<p>案例演示：</p>
+<p>使用which命令定位passwd命令的位置，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which passwd</span><br></pre></td></tr></table></figure>
+
+<p>执行情况如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ which passwd</span><br><span class="line">/usr/bin/passwd</span><br></pre></td></tr></table></figure>
+
+<p>可以看到passwd命令是存放在&#x2F;usr&#x2F;bin目录下。</p>
+<h3 id="whereis"><a href="#whereis" class="headerlink" title="whereis"></a>whereis</h3><p>whereis命令用来定位指令的二进制程序、源代码文件和man手册页等相关文件的路径。</p>
+<p>具体命令如下：</p>
+<p>whereis　命令参数　文件名</p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-b：只查找二进制文件；</li>
+<li>-B&lt;目录&gt;：只在设置的目录下查找二进制文件；</li>
+<li>-m：只查找说明文件；</li>
+<li>-M&lt;目录&gt;：只在设置的目录下查找说明文件；</li>
+<li>-s：只查找原始代码文件；</li>
+<li>-S&lt;目录&gt;只在设置的目录下查找原始代码文件；</li>
+</ul>
+<p>案例演示：</p>
+<ol>
+<li>使用whereis命令查找passwd命令所有信息，包括二进制文件位置、说明文件位置和源码文件位置，具体使用如下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis passwd</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ whereis passwd   </span><br><span class="line">passwd: /usr/bin/passwd /etc/passwd /usr/share/man/man1/passwd.1ssl.gz /usr/share/man/man1/passwd.1.gz /usr/share/man/man5/passwd.5.gz</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用whereis命令仅查找passwd命令二进制文件位置，具体使用如下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis -b passwd</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ whereis -b passwd </span><br><span class="line">passwd: /usr/bin/passwd /etc/passwd</span><br></pre></td></tr></table></figure>
+
+<p>可以看到passwd命令存在的位置有两处，分别是&#x2F;usr&#x2F;bin&#x2F;passwd和&#x2F;usr&#x2F;bin&#x2F;X11&#x2F;passwd，那么在我们执行passwd时，如何确定是执行的哪一个，此时我们就可以使用which命令来定位首先被执行的命令位置。</p>
+<h2 id="查询命令-find"><a href="#查询命令-find" class="headerlink" title="查询命令-find"></a>查询命令-find</h2><p>find命令与locate命令相比各有优劣，locate命令的查找速度比find命令快的多，但是无法查找最新添加的文件&#x2F;目录以及会查找出来已经过期的文件&#x2F;目录。</p>
+<p>相find命令可以按照自定义的方法查找任何文件，功能比较强大。缺点就是查询速度比较慢，因为它会通过遍历硬盘来查找。通常我们会使用find命令，相较于它提供的强大的搜索能力而言，多花费的些微时间不值一提。</p>
+<p>find命令用来在指定目录下查找文件。任何位于参数之前的字符串都将被视为欲查找的目录名。如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件。并且将查找到的子目录和文件全部进行显示。</p>
+<p>具体命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find　查找目录　查找参数　查找内容</span><br></pre></td></tr></table></figure>
+
+
+<p>常用查找参数如下：</p>
+<ul>
+<li>-amin&lt;+|-分钟&gt;：查找在指定时间曾被存取过的文件或目录，单位以分钟计算；</li>
+<li>-atime&lt;+|-24小时数&gt;：查找在指定时间曾被存取过的文件或目录，单位以24小时计算；</li>
+<li>-cmin&lt;+|-分钟&gt;：查找在指定时间之时被更改过的文件或目录；</li>
+<li>-ctime&lt;+|-24小时数&gt;：查找在指定时间之时被更改的文件或目录，单位以24小时计算；</li>
+<li>-mmin&lt;+|-分钟&gt;：查找在指定时间曾被更改过的文件或目录，单位以分钟计算；</li>
+<li>-mtime&lt;+|-24小时数&gt;：查找在指定时间曾被更改过的文件或目录，单位以24小时计算；</li>
+<li>-depth：从指定目录下最深层的子目录开始查找；</li>
+<li>-exec&lt;执行指令&gt;：假设find指令的回传值为True，就执行该指令；</li>
+<li>-follow：排除符号连接；</li>
+<li>-gid&lt;群组识别码&gt;：查找符合指定群组识别码的文件或目录；</li>
+<li>-group&lt;群组名称&gt;：查找符合指定群组名称的文件或目录；</li>
+<li>-uid&lt;用户识别码&gt;：查找符合指定的用户识别码的文件或目录；</li>
+<li>-user&lt;拥有者名称&gt;：查找符和指定的拥有者名称的文件或目录；</li>
+<li>-name&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；</li>
+<li>-iname&lt;范本样式&gt;：此参数的效果和指定“-name”参数类似，但忽略字符大小写的差别；</li>
+<li>-inum&lt;inode编号&gt;：查找符合指定的inode编号的文件或目录；</li>
+<li>-newer&lt;参考文件或目录&gt;：查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；</li>
+<li>-size&lt;+|-|&#x3D;文件大小&gt;：查找符合指定的文件大小的文件；</li>
+<li>-type&lt;文件类型&gt;：只寻找符合指定的文件类型的文件；</li>
+<li>-a：是前后条件都要满足；</li>
+<li>-o ：是满足一个条件就好；</li>
+<li>+：表示大于设置值的文件；</li>
+<li><ul>
+<li>：表示小于设置值的文件；</li>
+</ul>
+</li>
+<li>&#x3D; ：表示等于设置值的文件；</li>
+</ul>
+<p>案例演示1：</p>
+<p>查找&#x2F;etc目录下以update开头以.conf结尾的文件或目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find /etc -name &quot;update*.conf&quot;</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -name &quot;update*.conf&quot;</span><br><span class="line">/etc/initramfs-tools/update-initramfs.conf</span><br><span class="line">/etc/updatedb.conf</span><br></pre></td></tr></table></figure>
+
+<p>*表示任意字母。这里使用的是正则表达式，正则表达式可以检索、替换那些符合某个模式或规则的文本，非常强大。有兴趣的同学可以了解一下。</p>
+<p>案例演示2：</p>
+<p>查找&#x2F;etc目录下在超过7天前被访问的文件或目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find /etc -atime +7</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -atime +7</span><br><span class="line">/etc/king-phisher/server_config.yml</span><br><span class="line">/etc/postgresql/14/main/environment</span><br><span class="line">/etc/postgresql/14/main/pg_ctl.conf</span><br><span class="line">/etc/postgresql/14/main/postgresql.conf</span><br><span class="line">/etc/postgresql/14/main/pg_hba.conf</span><br><span class="line">/etc/postgresql/14/main/pg_ident.conf</span><br><span class="line">/etc/geoclue/geoclue.conf</span><br></pre></td></tr></table></figure>
+
+<p>案例演示3：</p>
+<p>查找&#x2F;etc目录下恰好在7天前被访问的文件或目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find /etc -atime 7</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -atime 7 </span><br><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$</span><br></pre></td></tr></table></figure>
+
+<p>案例演示4：</p>
+<p>查找&#x2F;etc目录下在5分钟内被访问的文件或目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find /etc -amin -5</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[/etc]</span><br><span class="line">└─$ sudo find /etc -amin -20</span><br><span class="line">/etc/king-phisher</span><br><span class="line">/etc/postgresql/14/main</span><br><span class="line">/etc/postgresql/14/main/conf.d</span><br><span class="line">/etc/geoclue</span><br></pre></td></tr></table></figure>
+
+<h3 id="type-文件类型使用方法"><a href="#type-文件类型使用方法" class="headerlink" title="-type 文件类型使用方法"></a>-type 文件类型使用方法</h3><p>常见文件类型：</p>
+<ul>
+<li>f：普通文件</li>
+<li>l：符号链接</li>
+<li>d：目录</li>
+<li>c：字符设备</li>
+<li>b：块设备</li>
+<li>s：套接字</li>
+<li>p：Fifo</li>
+</ul>
+<p>案例演示：</p>
+<p>查找&#x2F;etc目录下以my开头的目录，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find /etc -name &quot;my*&quot; -a -type d</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -name &quot;my*&quot; -a -type d   </span><br><span class="line">/etc/mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="size-lt-x3D-文件大小-gt-使用方法"><a href="#size-lt-x3D-文件大小-gt-使用方法" class="headerlink" title="size &lt;+|-|&#x3D;文件大小&gt;使用方法"></a>size &lt;+|-|&#x3D;文件大小&gt;使用方法</h3><p>常见文件大小单位：</p>
+<ul>
+<li>b —— 块（512字节）</li>
+<li>c —— 字节</li>
+<li>w —— 字（2字节）</li>
+<li>k —— 千字节</li>
+<li>M —— 兆字节</li>
+<li>G —— 吉字节</li>
+</ul>
+<p>案例演示：</p>
+<p>查找&#x2F;etc目录下大于1M的文件，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find /etc -size +1M</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -size +1M </span><br><span class="line">/etc/theHarvester/wordlists/dns-big.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="exec使用方法"><a href="#exec使用方法" class="headerlink" title="-exec使用方法"></a><code>-exec</code>使用方法</h3><p>具体使用方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find　…　-exec 要执行的命令  &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+
+<p>-exec选项后面跟随着所要执行的命令或脚本，然后是一个空格一对儿{}一个空格和一个;。</p>
+<p>注意：要执行的命令和{之间以及}与;之间的空格是不能省略的。</p>
+<p>案例演示：</p>
+<p>查找&#x2F;etc目录下大于1M的文件&#x2F;目录的详细信息，具体使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find /etc -size +1M -exec ls -l &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ sudo find /etc -size +1M -exec ls -l &#123;&#125; \;</span><br><span class="line">-rw-r--r-- 1 root root 1115633 Nov 25 12:42 /etc/theHarvester/wordlists/dns-big.txt</span><br></pre></td></tr></table></figure>
+
+<h1 id="Linux之文件打包和解压缩"><a href="#Linux之文件打包和解压缩" class="headerlink" title="Linux之文件打包和解压缩"></a>Linux之文件打包和解压缩</h1><h2 id="打包和压缩的区别"><a href="#打包和压缩的区别" class="headerlink" title="打包和压缩的区别"></a>打包和压缩的区别</h2><p>文件打包，有可能仅仅是将多个文件连接成1个文件，并不进行压缩处理。有时候也可能看起来文件变小，那是因为多个文件储存可能造成多余的空间浪费，究其原因是文件储存方式中，分块族造成的。1个族1次只能被1个文件使用，虽然1个文件能使用多个族，但最后1个族未必能填满。因此，大量的文件就会造成很多浪费。而连接成1个文件后，只会浪费1个族。压缩就不一样了，它不但把文件连在一起，还进行特定算法的压缩。对于txt这类很“松”的文件，可以大大减小文件的大小</p>
+<h2 id="tar打包命令"><a href="#tar打包命令" class="headerlink" title="tar打包命令"></a>tar打包命令</h2><p>tar（tape archive的简写）工具可完成许多功能，其名称源于它的原始功能－创建和读取归档文件和备份磁带。如今，该工具常用来将多个文件或多个目录打包成一个tar文件，或者将某个tar文件分解开。</p>
+<p>打包:<br>tar命令可以将多个文件&#x2F;目录进行打包，将多个文件生成一个文件，生成的文件后缀为.tar。</p>
+<p>具体的打包命令为:<br><code>tar -cvf 生成的tar包名 要打包的文件或者是目录</code></p>
+<p>常用的参数命令：</p>
+<ul>
+<li>-c 建立新的归档文件</li>
+<li>-v 处理过程中输出相关信息</li>
+<li>-f 对普通文件操作</li>
+</ul>
+<p>解包：<br>tar命令可以将已经打包好的文件解压出来。</p>
+<p>具体解包命令如下:<br><code>tar　-xvf　解压包名 -C 解压到指定目录</code></p>
+<p>常用的参数：</p>
+<ul>
+<li>-x 或 –ext\fract 或 –get：从备份文件中还原文件</li>
+<li>-v 处理过程中输出相关信息</li>
+<li>-f 对普通文件进行操作</li>
+<li>-C &lt;目标路径&gt; 切换到指定的目录</li>
+</ul>
+<p>ps:如果不使用-C(大写)参数，则默认解压到当前目录下。</p>
+<h2 id="文件压缩命令"><a href="#文件压缩命令" class="headerlink" title="文件压缩命令"></a>文件压缩命令</h2><p>Linux下存在多个文件压缩工具，常用的有bzip2、gzip和zip。这三个工具都是可以将一个文件进行压缩操作，使其在不丢失任何信息的情况下占用较少的磁盘空间<br>对于多文件&#x2F;目录的压缩操作分为两步：</p>
+<ol>
+<li>将其进行打包</li>
+<li>将打包过后的文件进行压缩操作。</li>
+</ol>
+<h3 id="bzip2"><a href="#bzip2" class="headerlink" title="bzip2"></a>bzip2</h3><p>bzip2命令用于创建和管理（包括解压缩）.bz2格式的压缩包。</p>
+<p>具体命令如下：<br><code>bzip2　命令参数　指定要压缩的文件</code></p>
+<ul>
+<li>-z或–compress：强制执行压缩；</li>
+<li>-d或–decompress：执行解压缩；</li>
+<li>-f或-force：bzip2在压缩或解压缩时，若输出文件与现有文件同名，预设不会覆盖现有文件。若要覆盖。请使用此参数；</li>
+<li>-v或–verbose：压缩或解压缩文件时，显示详细的信息；</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-b42ce538c7788075a09af03c46919de7_1440w.png" alt="img"></p>
+<h3 id="gzip"><a href="#gzip" class="headerlink" title="gzip"></a>gzip</h3><p>gzip命令用于创建和管理（包括解压缩）.gz格式的压缩包。</p>
+<p>具体命令如下：<br><code>gzip　命令参数　指定要压缩的文件</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-d或–decompress或—-uncompress：解开压缩文件；</li>
+<li>-f或——force：强行压缩文件。不理会文件名称或硬连接是否存在以及该文件是否为符号连接；</li>
+<li>-l或——list：列出压缩文件的相关信息；</li>
+<li>-r或——recursive：递归处理，将指定目录下的所有文件及子目录一并处理；</li>
+<li>-v或——verbose：显示指令执行过程；</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-41a8bf0cbf36afa1df267e3de583f83f_1440w.png" alt="img"></p>
+<h3 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h3><p>zip命令对文件进行打包操作。zip是个使用广泛的压缩程序，文件经它压缩后会另外产生具有.zip扩展名的压缩文件。</p>
+<p>具体命令如下：<br><code>zip　命令参数　指定生成的压缩文件名　要被压缩的文件/目录列表</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-d：从压缩文件内删除指定的文件；</li>
+<li>-q：不显示指令执行过程；</li>
+<li>-r：递归处理，将指定目录下的所有文件和子目录一并处理；</li>
+<li>-v：显示指令执行过程或显示版本信息；</li>
+<li>-u：更换较新的文件到压缩文件内；</li>
+<li>-x&lt;范本样式&gt;：压缩时排除符合条件的文件；</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic4.zhimg.com/80/v2-9dd464d71df248e65262a1f214bc09e7_1440w.png" alt="img"></p>
+<h3 id="tar命令进行压缩"><a href="#tar命令进行压缩" class="headerlink" title="tar命令进行压缩"></a>tar命令进行压缩</h3><p>可以使用tar命令一步就实现对多文件&#x2F;目录进行压缩操作。</p>
+<h4 id="采用bzip2方式执行tar命令进行压缩"><a href="#采用bzip2方式执行tar命令进行压缩" class="headerlink" title="采用bzip2方式执行tar命令进行压缩"></a>采用bzip2方式执行tar命令进行压缩</h4><p>具体命令如下：<br><code>tar -jcvf　指定生成的压缩文件名　要被压缩的文件/目录列表</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-c 建立新的归档文件；</li>
+<li>-v 处理过程中输出相关信息；</li>
+<li>-f 对普通文件操作；</li>
+<li>-j 以bzip2对文件&#x2F;目录进行压缩；</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-8aaf0456c7efac96190cfb060d770eeb_1440w.png" alt="img"></p>
+<h4 id="采用gzip进行压缩"><a href="#采用gzip进行压缩" class="headerlink" title="采用gzip进行压缩"></a>采用gzip进行压缩</h4><p>具体命令如下：<br><code>tar　-zcvf　指定生成的压缩文件名　要被压缩的文件/目录列表</code></p>
+<p>常用命令参数如下：</p>
+<p>-c 建立新的归档文件；<br>-v 处理过程中输出相关信息；<br>-f 对普通文件操作；<br>-z 以gzip对文件&#x2F;目录进行压缩；</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-02c04e92a06377ae24a04f9370c1ce16_1440w.png" alt="img"></p>
+<h2 id="文件解压缩命令"><a href="#文件解压缩命令" class="headerlink" title="文件解压缩命令"></a>文件解压缩命令</h2><p>针对bzip2、gzip和zip这三种压缩工具生成的压缩包，我们可以使用bunzip2、gunzip和unzip命令对其进行解压缩。</p>
+<h3 id="bunzip2"><a href="#bunzip2" class="headerlink" title="bunzip2"></a>bunzip2</h3><p> bunzip2命令解压缩由bzip2指令创建的.bz2压缩包。使用bzip2 -d命令也可以将.bz2压缩包进行解压。</p>
+<p>具体命令如下：<br><code>bunzip2　命令参数　指定要解压的文件</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-f或–force：解压缩时，若输出的文件与现有文件同名时，预设不会覆盖现有的文件；</li>
+<li>-k或–keep：在解压缩后，预设会删除原来的压缩文件。若要保留压缩文件，请使用此参数；</li>
+<li>-v或–verbose：解压缩文件时，显示详细的信息；</li>
+</ul>
+<h3 id="gunzip"><a href="#gunzip" class="headerlink" title="gunzip"></a>gunzip</h3><p>gunzip命令解压缩由gzip指令创建的.gz压缩包。使用gzip -d命令也可以将.gz压缩包进行解压。</p>
+<p>具体命令如下：<br><code>gunzip　命令参数　指定要解压的文件</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-f或-force：强行解开压缩文件，不理会文件名称或硬连接是否存在以及该文件是否为符号连接；</li>
+<li>-l或-list：列出压缩文件的相关信息；</li>
+<li>-q或-quiet：不显示警告信息；</li>
+<li>-r或-recursive：递归处理，将指定目录下的所有文件及子目录一并处理；</li>
+<li>-v或-verbose：显示指令执行过程；</li>
+</ul>
+<h3 id="unzip"><a href="#unzip" class="headerlink" title="unzip"></a>unzip</h3><p>unzip命令用于解压缩由zip命令压缩的.zip压缩包。</p>
+<p>具体命令如下：<br><code>unzip　命令参数　指定要解压的文件</code></p>
+<p>常用命令参数如下：</p>
+<ul>
+<li>-q：执行时不显示任何信息；</li>
+<li>-n：解压缩时不要覆盖原有的文件；</li>
+<li>-d&lt;目录&gt;：指定文件解压缩后所要存储的目录；</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://hustlixiang21.github.io">Lixiang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://hustlixiang21.github.io/2022/05/25/%E5%A4%B4%E5%93%A5linux%E5%AE%9E%E8%AE%AD/">https://hustlixiang21.github.io/2022/05/25/头哥linux实训/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/CS%E5%B7%A5%E5%85%B7/">CS工具</a><a class="post-meta__tags" href="/tags/linux%E5%9F%BA%E7%A1%80/">linux基础</a><a class="post-meta__tags" href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行</a></div><div class="post_share"><div class="social-share" data-image="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F25972705-87554cf24a5700fc.jpg&amp;refer=http%3A%2F%2Fupload-images.jianshu.io&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1660320538&amp;t=5af76b16f36b9d6cf008cadc998bfe9d" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/06/01/%E6%91%84%E5%BD%B1/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-d2596945a42864e294bf820b716c0101_1440w.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">摄影</div></div></a></div><div class="next-post pull-right"><a href="/2022/05/25/useful-links/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-5a46a5d9fa0a1a69a99846b5efc689f8_1440w.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">useful_links</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/06/19/Makefile%E5%85%A5%E9%97%A8/" title="Makefile入门"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-24ea206b8da2b8b916c63fed288cd862_1440w.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-19</div><div class="title">Makefile入门</div></div></a></div><div><a href="/2022/05/25/useful-links/" title="useful_links"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-5a46a5d9fa0a1a69a99846b5efc689f8_1440w.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-25</div><div class="title">useful_links</div></div></a></div><div><a href="/2022/06/01/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92/" title="个人计划（暑假）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-9f7c5ea8719df399f0b661e61506a285_1440w.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-01</div><div class="title">个人计划（暑假）</div></div></a></div><div><a href="/2022/06/13/%E5%91%A8%E8%AE%A1%E5%88%92%EF%BC%886-13-6-19%EF%BC%89/" title="周计划（6.13-6.19）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-d2596945a42864e294bf820b716c0101_1440w.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-13</div><div class="title">周计划（6.13-6.19）</div></div></a></div><div><a href="/2022/06/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="计算机网络基础知识"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/nasa-Q1p7bh3SHj8-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-13</div><div class="title">计算机网络基础知识</div></div></a></div><div><a href="/2022/07/17/git%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" title="git远程连接"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/david-kaloczi-012FTEA0ZQ0-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-17</div><div class="title">git远程连接</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Gitalk</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%B6%E7%94%A8%E5%A4%84"><span class="toc-number">1.</span> <span class="toc-text">根目录文件及其用处</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E4%B9%8B%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">Linux之用户管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-x2F-%E5%88%A0%E9%99%A4%E6%96%B0%E7%94%A8%E6%88%B7"><span class="toc-number">2.1.</span> <span class="toc-text">创建&#x2F;删除新用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%91%BD%E4%BB%A4"><span class="toc-number">2.1.1.</span> <span class="toc-text">Linux创建用户命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7%E5%91%BD%E4%BB%A4"><span class="toc-number">2.1.2.</span> <span class="toc-text">Linux删除用户命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">Linux 用户密码管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%AD%98%E6%94%BE%E5%9C%B0%E5%8F%8A%E6%96%B9%E5%BC%8F"><span class="toc-number">2.2.1.</span> <span class="toc-text">用户密码存放地及方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8passwd%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="toc-number">2.2.2.</span> <span class="toc-text">使用passwd命令修改用户密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8chpasswd%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="toc-number">2.2.3.</span> <span class="toc-text">使用chpasswd命令修改用户密码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E5%88%87%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">Linux用户权限切换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%E7%99%BB%E5%BD%95"><span class="toc-number">2.3.1.</span> <span class="toc-text">图形化界面登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8login%E5%91%BD%E4%BB%A4%E7%99%BB%E5%BD%95"><span class="toc-number">2.3.2.</span> <span class="toc-text">使用login命令登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8su%E5%91%BD%E4%BB%A4%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD"><span class="toc-number">2.3.3.</span> <span class="toc-text">使用su命令切换用户身份</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E4%B9%8B%E6%96%87%E4%BB%B6-x2F-%E7%9B%AE%E5%BD%95%E6%90%9C%E7%B4%A2"><span class="toc-number">3.</span> <span class="toc-text">Linux之文件&#x2F;目录搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4-locate"><span class="toc-number">3.1.</span> <span class="toc-text">查询命令-locate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4-which-x2F-whereis"><span class="toc-number">3.2.</span> <span class="toc-text">查询命令-which&#x2F;whereis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#which"><span class="toc-number">3.2.1.</span> <span class="toc-text">which</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#whereis"><span class="toc-number">3.2.2.</span> <span class="toc-text">whereis</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4-find"><span class="toc-number">3.3.</span> <span class="toc-text">查询命令-find</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#type-%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.3.1.</span> <span class="toc-text">-type 文件类型使用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#size-lt-x3D-%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F-gt-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.3.2.</span> <span class="toc-text">size &lt;+|-|&#x3D;文件大小&gt;使用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exec%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.3.3.</span> <span class="toc-text">-exec使用方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E4%B9%8B%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="toc-number">4.</span> <span class="toc-text">Linux之文件打包和解压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E5%92%8C%E5%8E%8B%E7%BC%A9%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">4.1.</span> <span class="toc-text">打包和压缩的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tar%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4"><span class="toc-number">4.2.</span> <span class="toc-text">tar打包命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E5%91%BD%E4%BB%A4"><span class="toc-number">4.3.</span> <span class="toc-text">文件压缩命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bzip2"><span class="toc-number">4.3.1.</span> <span class="toc-text">bzip2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gzip"><span class="toc-number">4.3.2.</span> <span class="toc-text">gzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zip"><span class="toc-number">4.3.3.</span> <span class="toc-text">zip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar%E5%91%BD%E4%BB%A4%E8%BF%9B%E8%A1%8C%E5%8E%8B%E7%BC%A9"><span class="toc-number">4.3.4.</span> <span class="toc-text">tar命令进行压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%87%E7%94%A8bzip2%E6%96%B9%E5%BC%8F%E6%89%A7%E8%A1%8Ctar%E5%91%BD%E4%BB%A4%E8%BF%9B%E8%A1%8C%E5%8E%8B%E7%BC%A9"><span class="toc-number">4.3.4.1.</span> <span class="toc-text">采用bzip2方式执行tar命令进行压缩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%87%E7%94%A8gzip%E8%BF%9B%E8%A1%8C%E5%8E%8B%E7%BC%A9"><span class="toc-number">4.3.4.2.</span> <span class="toc-text">采用gzip进行压缩</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%91%BD%E4%BB%A4"><span class="toc-number">4.4.</span> <span class="toc-text">文件解压缩命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bunzip2"><span class="toc-number">4.4.1.</span> <span class="toc-text">bunzip2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gunzip"><span class="toc-number">4.4.2.</span> <span class="toc-text">gunzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unzip"><span class="toc-number">4.4.3.</span> <span class="toc-text">unzip</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/url(https:/pic1.zhimg.com/80/v2-d2596945a42864e294bf820b716c0101_1440w.jpeg)')"><div id="footer-wrap"><div class="copyright">&copy;2022 By Lixiang</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">笑相遇，似觉琼枝玉树，暖日明霞光烂。</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'IgaCfv8yUwqEcIFRqhEhEBG0-gzGzoHsz',
+      appKey: 'hCCYk2PzNXmmj2A8mjzBcjRR',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '2bfba152b6c1a2086f41',
+      clientSecret: '3108cc11b04b17483aa220d8b32acd1811975e4f',
+      repo: 'gitalk',
+      owner: '',
+      admin: [''],
+      id: 'c99dc3a8b16d7b3cfb7cf0c506879c4b',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Valine' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="3849362943" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="true" muted></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":15,"vOffset":15},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body></html>

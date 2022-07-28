@@ -1,64 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>15_June</title>
+    <url>/2022/06/15/15-June/</url>
+    <content><![CDATA[<h3 id="May-you-be-loyal-to-yourself-live-like-yourself">May you be loyal to yourself, live like yourself.</h3>
+<h3 id="愿你忠于自我，活出自我">愿你忠于自我，活出自我</h3>
+<span id="more"></span>
+<h2 id="每天早点睡觉！！！">每天早点睡觉！！！</h2>
+]]></content>
+      <categories>
+        <category>一句</category>
+      </categories>
+      <tags>
+        <tag>一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>13_June</title>
     <url>/2022/06/13/13-June/</url>
     <content><![CDATA[<p>As a child, you daydreamed and made stuff up. You were a daydream believer by day and in your right brain at night you sailed down a river of dreams.</p>
 <p>So, forget about the literal attainment of your dream fot now. Focus on just going for it. By simply going for the dream, you make yourself come true.</p>
-]]></content>
-      <categories>
-        <category>一句</category>
-      </categories>
-      <tags>
-        <tag>一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>14_June</title>
-    <url>/2022/06/14/14-june/</url>
-    <content><![CDATA[<h3 id="Great-things-never-came-from-comfort-zones">Great things never came from comfort zones.</h3>
-<h3 id="伟大的事物从不来自于舒适圈。">伟大的事物从不来自于舒适圈。</h3>
-]]></content>
-      <categories>
-        <category>一句</category>
-      </categories>
-      <tags>
-        <tag>一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>22_June</title>
-    <url>/2022/06/22/22-June/</url>
-    <content><![CDATA[<h3 id="The-only-person-you-are-destined-to-become-is-the-person-you-decide-to-be">The only person you are destined to become is the person you decide to be.</h3>
-<h3 id="你注定只会成为你决心要变成的那个人。">你注定只会成为你决心要变成的那个人。</h3>
-]]></content>
-      <categories>
-        <category>一句</category>
-      </categories>
-      <tags>
-        <tag>一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>19_June</title>
-    <url>/2022/06/19/19-June/</url>
-    <content><![CDATA[<h3 id="The-first-time-I-hugged-the-sky-was-when-you-held-me-above-your-head">The first time I hugged the sky was when you held me above your head.</h3>
-<h3 id="我第一次拥抱天空是您将我举过头顶。">我第一次拥抱天空是您将我举过头顶。</h3>
-<h3 id="祝所有的父亲父亲节快乐！！！">祝所有的父亲父亲节快乐！！！</h3>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>自我激励</tag>
-        <tag>亲情</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>24_May</title>
-    <url>/2022/05/24/24-May/</url>
-    <content><![CDATA[<h3 id="Have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -81,12 +42,10 @@
       </tags>
   </entry>
   <entry>
-    <title>15_June</title>
-    <url>/2022/06/15/15-June/</url>
-    <content><![CDATA[<h3 id="May-you-be-loyal-to-yourself-live-like-yourself">May you be loyal to yourself, live like yourself.</h3>
-<h3 id="愿你忠于自我，活出自我">愿你忠于自我，活出自我</h3>
-<span id="more"></span>
-<h2 id="每天早点睡觉！！！">每天早点睡觉！！！</h2>
+    <title>14_June</title>
+    <url>/2022/06/14/14-june/</url>
+    <content><![CDATA[<h3 id="Great-things-never-came-from-comfort-zones">Great things never came from comfort zones.</h3>
+<h3 id="伟大的事物从不来自于舒适圈。">伟大的事物从不来自于舒适圈。</h3>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -249,88 +208,19 @@ Their sum of square: 38.93</p>
       </tags>
   </entry>
   <entry>
-    <title>CPP基础中需要注意的部分</title>
-    <url>/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/</url>
-    <content><![CDATA[<h2 id="数据的输入和输出">数据的输入和输出</h2>
-<h3 id="I-O流">I/O流</h3>
-<p>在C++，将数据从一个对象到另一个对象的流动抽象为“流”。cin和cout是预定义的流类对象，cin用来处理标准输入，即键盘输入，cout用来处理标准输出，即屏幕输出。</p>
-<hr>
-<h3 id="预定义的插入符和提取符">预定义的插入符和提取符</h3>
-<p>“&lt;&lt;”是预定义的插入符，作用在流类对象cout上便可以实现最一般的屏幕输出。</p>
-<p>“&gt;&gt;”是提取符，作用在流类对象cin上便可以实现最一般的键盘输入。</p>
-<hr>
-<h3 id="常用的I-O流类库操纵符">常用的I/O流类库操纵符</h3>
-<table>
-<thead>
-<tr>
-<th>操纵符名</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dec</td>
-<td>数值数据采用十进制表示</td>
-</tr>
-<tr>
-<td>hex</td>
-<td>数值数据采用十六进制表示</td>
-</tr>
-<tr>
-<td>oct</td>
-<td>数值数据采用八进制表示</td>
-</tr>
-<tr>
-<td>ws</td>
-<td>提取空白符</td>
-</tr>
-<tr>
-<td>endl</td>
-<td>插入换行符，并且更新流</td>
-</tr>
-<tr>
-<td>setsprecision(int)</td>
-<td>设置浮点数的小数位数（包括小数点）</td>
-</tr>
-<tr>
-<td>setw(int)</td>
-<td>设置域宽</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="if-else语句">if-else语句</h2>
-<p>首先是<code>else</code>的配对方式是与向上找同层的<code>if</code>配对.<br>
-例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">else</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="built_in">else</span>()</span><br></pre></td></tr></table></figure>
-<p>这样是可行的因为<code>else</code>都有配对的，但是缩进并不能代表结构，严格来说应该用<code>&#123;&#125;</code>来区分不同的嵌套。<strong>仅供区分不同的结构</strong>。</p>
-<hr>
-<p><strong>反例</strong>：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br></pre></td></tr></table></figure>
-<p>这样的话<code>else</code>和带有缩进的<code>if</code>配对。</p>
-<hr>
-<h2 id="typedef声明">typedef声明</h2>
-<p>typedef  已有类型名  新类型名表</p>
-<p>例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> Area,Volume;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Natural;</span><br><span class="line">Natural i1,i2;</span><br><span class="line">Area a;</span><br><span class="line">Volume v;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="除typedef外另一种自定义类型using">除typedef外另一种自定义类型using</h2>
-<p><code>using 新类型名 = 已有类型名</code></p>
-<p>例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Area = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">using</span> Volume = <span class="type">double</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="auto类型和decltype类型">auto类型和decltype类型</h2>
-<p><code>auto</code>：编译器通过初始值自动判断变量的类型<br>
-<code>decltype</code>：定义一个变量与某一表达式的类型相同，但并不用该表达式初始化变量<br>
-例如：<code>decltype(i) j = 2;</code>让j和i有同样的类型，但是并不用2来初始化j。</p>
-<h2 id=""></h2>
+    <title>19_June</title>
+    <url>/2022/06/19/19-June/</url>
+    <content><![CDATA[<h3 id="The-first-time-I-hugged-the-sky-was-when-you-held-me-above-your-head">The first time I hugged the sky was when you held me above your head.</h3>
+<h3 id="我第一次拥抱天空是您将我举过头顶。">我第一次拥抱天空是您将我举过头顶。</h3>
+<h3 id="祝所有的父亲父亲节快乐！！！">祝所有的父亲父亲节快乐！！！</h3>
 ]]></content>
       <categories>
-        <category>CS学习笔记</category>
+        <category>生活</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
-        <tag>C++程序设计</tag>
-        <tag>C++语言</tag>
+        <tag>生活</tag>
+        <tag>自我激励</tag>
+        <tag>亲情</tag>
       </tags>
   </entry>
   <entry>
@@ -477,8 +367,7 @@ Their sum of square: 38.93</p>
   <entry>
     <title>CPP数组、指针和字符串</title>
     <url>/2022/07/23/CPP%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</url>
-    <content><![CDATA[<p>[toc]</p>
-<h1>数组</h1>
+    <content><![CDATA[<h1>数组</h1>
 <p>数组是具有一定顺序关系的若干对象的集合体，组成数组的对象成为该数组的元素。数组名是一个不能被赋值的指针，叫做指针常量。</p>
 <blockquote><p>C++中的二维数组被当作<strong>一维数组的数组</strong>。因此二维数组是按照<strong>行优先</strong>的顺序存储。</p>
 </blockquote>
@@ -539,7 +428,28 @@ Their sum of square: 38.93</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">float</span> * fp;</span><br><span class="line">fp = <span class="keyword">new</span> <span class="type">float</span>[<span class="number">10</span>][<span class="number">25</span>][<span class="number">10</span>]</span><br></pre></td></tr></table></figure>
  <div class="note danger flat"><p>在这里new操作产生的是一个指向一个<code>$25 \times 10$</code>的二维float类型数组的指针，而fp是一个指向float型数据的指针，产生了矛盾！</p>
 </div>
-<p>\beta \rho</p>
+<h1>用vector创建数组对象</h1>
+<p>C++提供了被封装的动态数组—vector，具有各种类型。vector<strong>不是一个类</strong>，而是<strong>一个类模板</strong>。</p>
+<p>使用vector定义动态数组的形式为：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;元素类型&gt;数组对象名(数组长度);</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>vector定义的数组对象的所有元素都会被初始化。如果为基本数据类型，则所有元素都会被0以初始化；如果为类类型，则会调用类的默认构造函数初始化。所以需要保证作为数组元素的类<strong>需要具有默认构造函数</strong>，初值可以指定，但是<strong>所有的元素初值必须是一样的</strong>。</p>
+</div>
+<h1>引用相关补充</h1>
+<p>引用通常用于函数参数列表和函数返回值。下面列出了 C++ 程序员必须清楚的两个与 C++ 引用相关的重要概念：</p>
+<p><a href="https://www.runoob.com/cplusplus/passing-parameters-by-references.html">把引用作为参数</a></p>
+<p><a href="https://www.runoob.com/cplusplus/returning-values-by-reference.html">把引用作为返回值</a></p>
+<h1>深复制与浅复制</h1>
+<p>隐含的复制构造函数实现的只是浅复制，但是这样的复制并不适用于所有的情况。</p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B5%85%E5%A4%8D%E5%88%B6/main.cpp">浅复制代码示例</a></p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B7%B1%E5%A4%8D%E5%88%B6/main.cpp">深复制代码示例</a></p>
+<h1>字符串</h1>
+<p>C++对字符串一系列复杂的操作进行了封装，形成了string类，更加方便的操作字符串。</p>
+<div class="note info flat"><p>执行很多字符串操作需要借助<strong>cstring</strong>头文件中的<strong>字符串处理函数</strong>，使用string类需要包含头文件<strong>string</strong>。</p>
+</div>
+<p><a href="https://www.runoob.com/cplusplus/cpp-strings.html">字符串相关讲解</a></p>
+<h1>个人银行账户管理程序</h1>
+<p>对于上一个管理程序的功能补充。</p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update">源码见github</a></p>
 ]]></content>
       <categories>
         <category>CS学习笔记</category>
@@ -1027,6 +937,31 @@ setTime(),showTime()</li>
       </tags>
   </entry>
   <entry>
+    <title>24_May</title>
+    <url>/2022/05/24/24-May/</url>
+    <content><![CDATA[<h3 id="Have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
+]]></content>
+      <categories>
+        <category>一句</category>
+      </categories>
+      <tags>
+        <tag>一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>22_June</title>
+    <url>/2022/06/22/22-June/</url>
+    <content><![CDATA[<h3 id="The-only-person-you-are-destined-to-become-is-the-person-you-decide-to-be">The only person you are destined to become is the person you decide to be.</h3>
+<h3 id="你注定只会成为你决心要变成的那个人。">你注定只会成为你决心要变成的那个人。</h3>
+]]></content>
+      <categories>
+        <category>一句</category>
+      </categories>
+      <tags>
+        <tag>一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客写作tricks</title>
     <url>/2022/07/20/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9Ctricks/</url>
     <content><![CDATA[<h2 id="加粗和斜体">加粗和斜体</h2>
@@ -1195,48 +1130,6 @@ This is my website, click the button  <a class="btn-beautify block right blue la
       </categories>
       <tags>
         <tag>博客写作技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人计划（暑假）</title>
-    <url>/2022/06/01/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<h1>对于这个暑假的一些具体安排</h1>
-<p>最近觉得心里乱乱的，感觉什么都想学，什么都想知道，但是人的精力的确是有限的，所以在此厘清自己的头绪，学会取舍。</p>
-<span id="more"></span>
-<p>按照我认为从急到缓</p>
-<ul>
-<li>[ ] 科研老师交予的任务，三本书，还有斯坦福的视频，这是一定要完成的任务！</li>
-<li>[ ] C++（郑莉）的学习和数据结构（清华数据结构），算法（先就PAT乙）的学习，努力提高自己的代码能力，练习配上地大的实习和头哥的实验。</li>
-<li>[ ] 学会一些基础的CS工具，linux，git，py，cmake和docker等等，对自己的要求就是浅尝辄止，不许过多浪费时间。</li>
-<li>[ ] 至少要有做自己的项目的经历，初步的想法是用自己买的服务器搭一个网页游戏，从中学习前后端的知识，边做边学。还有一个就是利用c++写一个小游戏，参照地大的项目，目的是提高自己对C++的理解，然后熟悉程序开发的过程，OOP(面向对象编程)可以先搁置。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>个人反思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>周计划（6.13-6.19）</title>
-    <url>/2022/06/13/%E5%91%A8%E8%AE%A1%E5%88%92%EF%BC%886-13-6-19%EF%BC%89/</url>
-    <content><![CDATA[<ul>
-<li>[x] 微积分通过考试宝典整体过一遍，熟悉知识体系。</li>
-<li>[x] 大学物理通过宝典和精选习题也是整体的过一遍。</li>
-<li>[x] 英语卓越篇八个单元，每天复习一个单元，认真积累词汇，读懂文章。词汇每日过一遍。</li>
-<li>[x] 近代史的vlog的ddl尽快完成。</li>
-</ul>
-<p>总结：</p>
-<p>微积分基本完成，大学物理还没开始复习，英语也只完成了两个单元，效率低下，面对即将到来的考试你准备怎么应对？大物好好复习！！！</p>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>个人反思</tag>
       </tags>
   </entry>
   <entry>
@@ -1760,6 +1653,133 @@ tar命令可以将已经打包好的文件解压出来。</p>
       </tags>
   </entry>
   <entry>
+    <title>周计划（6.13-6.19）</title>
+    <url>/2022/06/13/%E5%91%A8%E8%AE%A1%E5%88%92%EF%BC%886-13-6-19%EF%BC%89/</url>
+    <content><![CDATA[<ul>
+<li>[x] 微积分通过考试宝典整体过一遍，熟悉知识体系。</li>
+<li>[x] 大学物理通过宝典和精选习题也是整体的过一遍。</li>
+<li>[x] 英语卓越篇八个单元，每天复习一个单元，认真积累词汇，读懂文章。词汇每日过一遍。</li>
+<li>[x] 近代史的vlog的ddl尽快完成。</li>
+</ul>
+<p>总结：</p>
+<p>微积分基本完成，大学物理还没开始复习，英语也只完成了两个单元，效率低下，面对即将到来的考试你准备怎么应对？大物好好复习！！！</p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPP基础中需要注意的部分</title>
+    <url>/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<h2 id="数据的输入和输出">数据的输入和输出</h2>
+<h3 id="I-O流">I/O流</h3>
+<p>在C++，将数据从一个对象到另一个对象的流动抽象为“流”。cin和cout是预定义的流类对象，cin用来处理标准输入，即键盘输入，cout用来处理标准输出，即屏幕输出。</p>
+<hr>
+<h3 id="预定义的插入符和提取符">预定义的插入符和提取符</h3>
+<p>“&lt;&lt;”是预定义的插入符，作用在流类对象cout上便可以实现最一般的屏幕输出。</p>
+<p>“&gt;&gt;”是提取符，作用在流类对象cin上便可以实现最一般的键盘输入。</p>
+<hr>
+<h3 id="常用的I-O流类库操纵符">常用的I/O流类库操纵符</h3>
+<table>
+<thead>
+<tr>
+<th>操纵符名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dec</td>
+<td>数值数据采用十进制表示</td>
+</tr>
+<tr>
+<td>hex</td>
+<td>数值数据采用十六进制表示</td>
+</tr>
+<tr>
+<td>oct</td>
+<td>数值数据采用八进制表示</td>
+</tr>
+<tr>
+<td>ws</td>
+<td>提取空白符</td>
+</tr>
+<tr>
+<td>endl</td>
+<td>插入换行符，并且更新流</td>
+</tr>
+<tr>
+<td>setsprecision(int)</td>
+<td>设置浮点数的小数位数（包括小数点）</td>
+</tr>
+<tr>
+<td>setw(int)</td>
+<td>设置域宽</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="if-else语句">if-else语句</h2>
+<p>首先是<code>else</code>的配对方式是与向上找同层的<code>if</code>配对.<br>
+例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">else</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="built_in">else</span>()</span><br></pre></td></tr></table></figure>
+<p>这样是可行的因为<code>else</code>都有配对的，但是缩进并不能代表结构，严格来说应该用<code>&#123;&#125;</code>来区分不同的嵌套。<strong>仅供区分不同的结构</strong>。</p>
+<hr>
+<p><strong>反例</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br></pre></td></tr></table></figure>
+<p>这样的话<code>else</code>和带有缩进的<code>if</code>配对。</p>
+<hr>
+<h2 id="typedef声明">typedef声明</h2>
+<p>typedef  已有类型名  新类型名表</p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> Area,Volume;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Natural;</span><br><span class="line">Natural i1,i2;</span><br><span class="line">Area a;</span><br><span class="line">Volume v;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="除typedef外另一种自定义类型using">除typedef外另一种自定义类型using</h2>
+<p><code>using 新类型名 = 已有类型名</code></p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Area = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">using</span> Volume = <span class="type">double</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="auto类型和decltype类型">auto类型和decltype类型</h2>
+<p><code>auto</code>：编译器通过初始值自动判断变量的类型<br>
+<code>decltype</code>：定义一个变量与某一表达式的类型相同，但并不用该表达式初始化变量<br>
+例如：<code>decltype(i) j = 2;</code>让j和i有同样的类型，但是并不用2来初始化j。</p>
+<h2 id=""></h2>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人计划（暑假）</title>
+    <url>/2022/06/01/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<h1>对于这个暑假的一些具体安排</h1>
+<p>最近觉得心里乱乱的，感觉什么都想学，什么都想知道，但是人的精力的确是有限的，所以在此厘清自己的头绪，学会取舍。</p>
+<span id="more"></span>
+<p>按照我认为从急到缓</p>
+<ul>
+<li>[ ] 科研老师交予的任务，三本书，还有斯坦福的视频，这是一定要完成的任务！</li>
+<li>[ ] C++（郑莉）的学习和数据结构（清华数据结构），算法（先就PAT乙）的学习，努力提高自己的代码能力，练习配上地大的实习和头哥的实验。</li>
+<li>[ ] 学会一些基础的CS工具，linux，git，py，cmake和docker等等，对自己的要求就是浅尝辄止，不许过多浪费时间。</li>
+<li>[ ] 至少要有做自己的项目的经历，初步的想法是用自己买的服务器搭一个网页游戏，从中学习前后端的知识，边做边学。还有一个就是利用c++写一个小游戏，参照地大的项目，目的是提高自己对C++的理解，然后熟悉程序开发的过程，OOP(面向对象编程)可以先搁置。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>摄影</title>
     <url>/2022/06/01/%E6%91%84%E5%BD%B1/</url>
     <content><![CDATA[<h3 id="分享一些自己的拍摄照片">分享一些自己的拍摄照片</h3>
@@ -1792,6 +1812,24 @@ tar命令可以将已经打包好的文件解压出来。</p>
       <tags>
         <tag>摄影</tag>
         <tag>美景</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>认清差距，努力追赶</title>
+    <url>/2022/05/22/%E8%AE%A4%E6%B8%85%E5%B7%AE%E8%B7%9D%EF%BC%8C%E5%8A%AA%E5%8A%9B%E8%BF%BD%E8%B5%B6/</url>
+    <content><![CDATA[<h2 id="对于今天学院csp选拔赛的感受">对于今天学院csp选拔赛的感受</h2>
+<p>我对于今天的几道编程题颇有感触，跟我之前做过的完全是不同的感觉，我以为的程序是能够运行成功，但是真正的题目数据是非常大的，且有严格的时间限制，所以必须要考虑到算法的效率。</p>
+<span id="more"></span>
+<p>也终于明白了一味的暴力求解是很呆的方式，完全想不到效率更高的算法， 这也与我并没有接触过相关题目有关系，这个暑假提高自己的代码能力迫在眉睫，数据结构这门课需要好好吃透，然后往算法方面去提高自己的能力。</p>
+<h2 id="正视自己，摆平心态">正视自己，摆平心态</h2>
+<p>对于在校的学习生活压力是很大的，今天的选拔赛让我看到了许多同龄人的身影，他们的代码能力又有的甚至能够和大二的匹敌，让我知道自己其实是非常的不足，当然也不应该自暴自弃，只能说去努力的赶超吧。</p>
+<p>勇于直面前方的艰难险阻，才能到达成功的彼岸！</p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>个人反思</tag>
       </tags>
   </entry>
   <entry>
@@ -1968,24 +2006,6 @@ FTP支持两种模式：Standard（PORT方式，主动方式），Passive（PASV
       <tags>
         <tag>学习</tag>
         <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>认清差距，努力追赶</title>
-    <url>/2022/05/22/%E8%AE%A4%E6%B8%85%E5%B7%AE%E8%B7%9D%EF%BC%8C%E5%8A%AA%E5%8A%9B%E8%BF%BD%E8%B5%B6/</url>
-    <content><![CDATA[<h2 id="对于今天学院csp选拔赛的感受">对于今天学院csp选拔赛的感受</h2>
-<p>我对于今天的几道编程题颇有感触，跟我之前做过的完全是不同的感觉，我以为的程序是能够运行成功，但是真正的题目数据是非常大的，且有严格的时间限制，所以必须要考虑到算法的效率。</p>
-<span id="more"></span>
-<p>也终于明白了一味的暴力求解是很呆的方式，完全想不到效率更高的算法， 这也与我并没有接触过相关题目有关系，这个暑假提高自己的代码能力迫在眉睫，数据结构这门课需要好好吃透，然后往算法方面去提高自己的能力。</p>
-<h2 id="正视自己，摆平心态">正视自己，摆平心态</h2>
-<p>对于在校的学习生活压力是很大的，今天的选拔赛让我看到了许多同龄人的身影，他们的代码能力又有的甚至能够和大二的匹敌，让我知道自己其实是非常的不足，当然也不应该自暴自弃，只能说去努力的赶超吧。</p>
-<p>勇于直面前方的艰难险阻，才能到达成功的彼岸！</p>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>个人反思</tag>
       </tags>
   </entry>
 </search>

@@ -2008,4 +2008,163 @@ FTP支持两种模式：Standard（PORT方式，主动方式），Passive（PASV
         <tag>计算机网络</tag>
       </tags>
   </entry>
+  <entry>
+    <title>多态性</title>
+    <url>/2022/07/31/%E5%A4%9A%E6%80%81%E6%80%A7/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>CPP继承与派生</title>
+    <url>/2022/07/31/%E7%BB%A7%E6%89%BF%E4%B8%8E%E6%B4%BE%E7%94%9F/</url>
+    <content><![CDATA[<h1>类的继承与派生</h1>
+<h2 id="概述-97">概述</h2>
+<p>所谓继承就是从先辈处得到<strong>属性</strong>和<strong>行为特征</strong>。</p>
+<p>类的继承，是新的类从已有类那里得到已有的特性。从另一个角度来看，从已有类产生新类的过程就是类的派生。</p>
+<div class="note info flat"><p>两者本质上是一样的，只是同一过程从不同角度去看而已。</p>
+</div>
+<h3 id="继承与派生的目的-97">继承与派生的目的</h3>
+<p>继承的目的：实现设计与代码的重用。</p>
+<p>派生的目的：当新的问题出现，原有程序无法较好的解决，需要对原有程序进行改造。</p>
+<hr>
+<blockquote><p>不同标准的分类</p>
+<blockquote><p>直接参与派生出某类的基类叫做<strong>直接基类</strong>，基类的基类甚至更高层的基类称为<strong>间接基类</strong>。</p>
+</blockquote>
+<blockquote><p>一个派生类，可以同时有多个基类，这种情况称为<strong>多继承</strong>。同理，只有一个基类的情况称为<strong>单继承</strong>。</p>
+</blockquote></blockquote>
+<h2 id="派生类的定义-104">派生类的定义</h2>
+<p>派生类定义语法为：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> 派生类名: 继承方式 基类名<span class="number">1</span>,...,继承方式 基类名n</span><br><span class="line">&#123;</span><br><span class="line">  成员声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="派生类的生成过程-87">派生类的生成过程</h2>
+<ol>
+<li>吸收基类成员</li>
+</ol>
+<p>​	吸收基类成员之后，派生类实际上就包含了它的全部基类中<strong>除构造和析构函数之外</strong>的所有成员。</p>
+<ol start="2">
+<li>改造基类成员</li>
+</ol>
+<p>​	如果派生类声明了一个和某基类成员同名的新成员，派生的新成员就<strong>隐藏或覆盖</strong>了外层同名成员。</p>
+<ol start="3">
+<li>添加新的成员</li>
+</ol>
+<p>​	派生类增加新成员使派生类在功能上有所发展。</p>
+<h1>访问控制</h1>
+<p>访问主要来自两个方面：一是派生类中的新增成员访问从基类继承的成员；二是在派生类外部，通过派生类的对象访问从基类继承的成员。</p>
+<p>继承方式主要分为<strong>三种</strong>，及其各自的特点在下面列出。</p>
+<h2 id="公有继承（public）-71">公有继承（public）</h2>
+<ul>
+<li>
+<p>基类的public和protected成员的访问属性在派生类中<strong>保持不变</strong>，但基类的private成员<strong>不可直接访问</strong>。</p>
+</li>
+<li>
+<p>派生类中的成员函数可以直接访问基类中的public和protected成员，但<strong>不能直接访问</strong>基类的private成员。</p>
+</li>
+<li>
+<p>通过派生类的对象访问从基类继承的成员<strong>只能访问public成员</strong>。</p>
+</li>
+</ul>
+<h2 id="保护继承（protected）-69">保护继承（protected）</h2>
+<ul>
+<li>
+<p>基类的public和protected成员都<strong>以protected身份</strong>出现在派生类中，但基类的private成员<strong>不可直接访问</strong>。</p>
+</li>
+<li>
+<p>派生类中的成员函数可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员。</p>
+</li>
+<li>
+<p>通过派生类的对象<strong>不能直接访问从基类继承的任何成员</strong>。</p>
+</li>
+</ul>
+<h2 id="私有继承（private）-69">私有继承（private）</h2>
+<ul>
+<li>
+<p>基类的public和protected成员都<strong>以private身份</strong>出现在派生类中，但基类的private成员<strong>不可直接访问</strong>。</p>
+</li>
+<li>
+<p>派生类中的成员函数<strong>可以直接访问</strong>基类中的public和protected成员，但<strong>不能直接访问</strong>基类的private成员。</p>
+</li>
+<li>
+<p>通过派生类的对象<strong>不能直接访问从基类继承的任何成员</strong>。</p>
+</li>
+</ul>
+<div class="note success flat"><p>其实不难看出，这三种继承方式的第二条完全一模一样，这正是遵循了数据的共享与保护原则。派生类的对象在公有继承下可以访问public成员，其余情况出于对数据的保护都不能访问。</p>
+</div>
+<p><a href="https://www.cnblogs.com/NueXini/p/16180257.html">附上一篇比较好的详解</a></p>
+<h1>类型兼容规则</h1>
+<p>类型兼容规则是指在需要基类对象的任何地方，都可以使用<strong>公有派生类的对象</strong>来替代。通过公有继承，派生类得到了基类中除构造函数、析构函数之外的所有成员，具备了基类的所有功能。（保护和私有继承不行，因为从对象不能访问从基类继承的任何成员）</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>&#123;...&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">D</span>: <span class="keyword">public</span> B &#123;...&#125;</span><br><span class="line"></span><br><span class="line">B b1, * pb1;</span><br><span class="line">D d1;</span><br></pre></td></tr></table></figure>
+<p>根据上述代码有如下三种替代的情况:</p>
+<ul>
+<li>
+<p>派生类的对象可以隐含转化为基类的对象</p>
+<p><code>b1=d1;</code></p>
+</li>
+<li>
+<p>派生类的对象可以初始化基类的引用</p>
+<p><code>B &amp;rb=d1;</code></p>
+</li>
+<li>
+<p>派生类的指针可以隐含转化为基类的指针</p>
+<p><code>pb1=&amp;d1</code></p>
+</li>
+</ul>
+<p>这种兼容规则使得我们可以用相同的函数统一处理基类及公有派生类的对象。即形参是基类的对象（引用、指针）时，实参 可以是派生类的对象或指针。大大提高了程序运行的效率。</p>
+<h1>派生类的构造和析构函数</h1>
+<p>派生类的构造函数只负责对派生类新增的成员进行初始化，对所有从基类继承下来的成员，其初始化工作还是由基类的构造函数完成。最后对派生对象的清理工作也需要加入新的析构函数。</p>
+<h2 id="构造函数-32">构造函数</h2>
+<p>由于派生的类对于基类中的很多数据成员是不能访问的，需要借助基类的构造函数。且在构造派生类对象的时候，会首先调用基类的构造函数，其次再是初始化派生类新增的成员对象。</p>
+<p>一般语法形式为</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">派生类名::派生类名(参数表):基类名<span class="number">1</span>(基类名<span class="number">1</span>初始化参数表),...,基类名<span class="built_in">n</span>(基类n初始化参数表)</span><br><span class="line">,成员对象名<span class="number">1</span>(成员对象<span class="number">1</span>初始化参数表),...,成员对象名<span class="built_in">m</span>(成员对象m初始化参数表)</span><br><span class="line">&#123;</span><br><span class="line">  派生类构造函数其他初始化操作</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>构造函数执行的一般次序</p>
+<ol>
+<li>调用基类构造函数，调用顺序按照被继承时声明的顺序(从左向右)。</li>
+<li>对派生类新增的成员对象初始化，按照在类中声明的顺序。</li>
+<li>执行派生类构造函数体中的内容。</li>
+</ol>
+<h2 id="复制构造函数-24">复制构造函数</h2>
+<p>派生类进行复制构造的时候同样会用到基类的复制构造函数。</p>
+<p>例：如果要为Derived类（以Base类为基类）编写复制构造函数，形式如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Derived::<span class="built_in">Derived</span>(<span class="type">const</span> Derived &amp;v): <span class="built_in">Base</span>(v)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>此处基类使用了派生类的引用，完全符合类型兼容规则中的，可以用派生类的对象去初始化基类。</p>
+</div>
+<h2 id="析构函数-22">析构函数</h2>
+<p>其实和构造函数的思想完全一致，最大的区别就是，<strong>析构的次序和初始化的次序完全反了过来。</strong></p>
+<hr>
+<h1>派生类成员的标识与访问</h1>
+<h2 id="作用域分辨符-18">作用域分辨符</h2>
+<p>&quot;::&quot;就是作用域分辨符，用来限定要访问的成员所在的类的名称。</p>
+<p>如果派生类中声明了与基类成员函数同名的新函数，即使函数的参数表不同，从基类继承的同名函数的所有重载形式也都会被隐藏。</p>
+<p>对于数据成员也是如此，新增同名数据会覆盖基类；若多继承基类重复，则会产生二义性，必须通过类名和作用域分辨符来标识成员。</p>
+<div class="note danger flat"><p>只有在相同作用域中定义的函数才叫做重载。</p>
+</div>
+<hr>
+<p>可以使用using关键字去使用别的作用域中的标识符。</p>
+<h2 id="虚基类-12">虚基类</h2>
+<p>假设一个派生类继承了多个基类，而且这多个基类中部分或者全部基类由<strong>另一个共同基类派生而来</strong>的时候，那么在这个派生类中，会有相同的名称，在内存中也拥有<strong>多个副本</strong>，造成程序开销。</p>
+<p>这时候可以将共同基类设置为虚基类，从不同路径继承过来的同名数据成员在内存中就只有一个副本，同一个函数名也只有一个映射。</p>
+<p>语法形式为：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> 派生类名:<span class="keyword">virtual</span> 继承方式 基类名</span><br></pre></td></tr></table></figure>
+<h2 id="虚基类及其派生类的构造函数-8">虚基类及其派生类的构造函数</h2>
+<p>在整个继承关系中，直接或间接继承虚基类的所有派生类，都必须在构造函数的成员初始化列表中列出对虚基类的初始化。</p>
+<p>且调用虚拟类的构造函数时，C++编译器会指定最远派生类的构造函数去调用虚基类的构造函数，不必担心会多次重复调用。</p>
+<blockquote><p>构造一个类的对象的一般顺序是：</p>
+<p>（1） 如果该类有直接或间接的虚基类，则限制性虚基类的构造函数。</p>
+<p>（2） 如果有其他基类，则按照他们在继承声明列表中出现的次序，分别初始化，但在构造的过程中，不再执行他们的虚基类的构造函数</p>
+<p>（3） 按照定义出现的顺序，对新增的成员对象初始化。对于类类型的成员对象，如果出现在构造函数初始化列表中，则以其中指定的参数执行构造函数，如未出现，则执行默认构造函数；对于基本类型的成员独享，如果出现在初始化列表中，则使用其中指定的值为其赋初值，否则什么也不干。</p>
+<p>（4） 执行构造函数的函数体。</p>
+</blockquote>
+<h1>程序实例——用高斯消去法解线性方程组</h1>
+<p>源码见github</p>
+<h1>综合实例——个人银行账户管理程序</h1>
+<p>源码见github</p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
 </search>

@@ -2286,9 +2286,91 @@ FTP支持两种模式：Standard（PORT方式，主动方式），Passive（PASV
       </tags>
   </entry>
   <entry>
-    <title>模版与群体数据</title>
+    <title>模版与群体数据的组织</title>
     <url>/2022/08/04/%E6%A8%A1%E7%89%88%E4%B8%8E%E7%BE%A4%E4%BD%93%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1>函数模版与类模版</h1>
+<p>模板可以实现<strong>参数化多态性</strong>，就是将程序处理对象的类型参数化，使一段程序能够用于处理多种<strong>不同类型</strong>的对象。</p>
+<h2 id="函数模板-8">函数模板</h2>
+<p>函数模板存在的意义简单来说就是为了避免两个只有处理<strong>数据类型不同</strong>的函数重复编写，使代码的可重用性大大提高，从而提高软件的开发效率。</p>
+<p>语法形式在函数定义前加上语句<code>template&lt;模板参数表&gt;</code></p>
+<p>模板参数表的内容：</p>
+<ul>
+<li>类型参数： class（或typename）标识符</li>
+<li>常量参数： 类型说明符 标识符</li>
+<li>模板参数： template&lt;参数表&gt; class 标识符</li>
+</ul>
+<p>实例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通用类型的绝对值函数</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">T <span class="title">abs</span><span class="params">(T x)</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x&gt;<span class="number">0</span> ? x : -x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <div class="note danger flat"><p>函数模版与函数有着本质的区别</p>
+<ol>
+<li>函数模版本身在编译时<strong>不会生成</strong>任何目标代码，只有函数模版的实例会生成目标代码。</li>
+<li>被多个源文件引用的函数模板，需要连通函数体一同放在头文件中，而不能像普通函数那样只把声明放在头文件中。</li>
+<li>函数指针也只能指向函数模版的实例，<strong>不能指向函数模板</strong>。</li>
+</ol>
+</div>
+<h2 id="类模版-8">类模版</h2>
+<p>使用类模板能够可以为类定义一种模式，使得类中的某些数据成员，某些成员函数的参数，返回值或局部变量能取任意类型。</p>
+<p>类模版的声明方式与函数模版方式相同，</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在类模版以外的地方定义成员函数</span></span><br><span class="line"><span class="keyword">template</span>&lt;模板参数表&gt;</span><br><span class="line">类型名 类名&lt;模板参数标识符列表&gt;::函数名(参数表)</span><br><span class="line">&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用模版类来定义对象</span></span><br><span class="line">模板名&lt;模版参数类型&gt;对象名<span class="number">1</span>,...,对象名n;</span><br></pre></td></tr></table></figure>
+<h1>线性群体</h1>
+<p>线性群体顾名思义，元素的位置与其位置关系时互相对应的。分类可以分为，直接访问、顺序访问和索引访问。直接访问指不需要按照顺序直接跳到需要访问的位置，而顺序访问只能够按照元素排列顺序从头访问。</p>
+<h2 id="直接访问群体—数组类-8">直接访问群体—数组类</h2>
+<p>要求自己设计一个可变长度的数组，<a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%95%B0%E7%BB%84%E7%B1%BB%E6%A8%A1%E7%89%88/Array.h">点击查看源码</a>，并列出一些语法注意点。</p>
+ <div class="note info flat"><p>语法规定“=”，“[ ]”，“( )”，“-&gt;”只能被重载为成员函数，而且派生类中的“=”运算函数总会隐藏基类中的“=”运算符。</p>
+</div>
+<p>如果我们希望在程序中像使用普通数组一样使用Array类的对象，需要对其进行重载指针转换运算符。</p>
+<h3 id="指针转换运算符的作用-6">指针转换运算符的作用</h3>
+<p>为了说明重载指针转换运算符的必要性，先来看看下面这段程序：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">read</span> <span class="params">(<span class="type">int</span> *p, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++）</span><br><span class="line">        cin&gt;&gt;p[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> a[<span class="number">10</span>];</span><br><span class="line">    <span class="built_in">read</span>(a,<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里函数 read 的第一个形参是 int 指针，而数组名a 是一个int 型地址常量，类型恰好是匹配的。如果希望在程序中像使用普通数组一祥做用Array类的对象，将上述 main两数修改如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="function">Arrays&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line">    <span class="built_in">read</span>(a,<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>情况会怎样呢？这回在调用read 时会发现实参类型与形参类型不同，这时编译系统会试图进行自动类型转换：将对象名转换为 int * 类型。由于a是自定义的类型对象,所以编译系统提供的自动转换功能当然<strong>无法实现这一转换</strong>，因此我们需要自行编写重载的指针类型转换函数。<br>
+C++中,如果想将自定义类型T的对象隐含或显式地转换为S 类型，可以将operator S定义为T的成员函数。这样，在把T类型对象显式隐含转换为 S 类型，或用static_cast 显式转换为 S 类型时，该成员函数会被调用。转换操作符的重载函数不用指<br>
+定返回值的类型，这是由于这种情况下<strong>重载函数的返回类型与操作符名称一致</strong>，因此C++标准规定不能为这类函数指定返回值类型(也不要写 void)。<br>
+而当对象本身为常数时，为了避免通过指针对数组内容进行修改,只能将对象转换为常指针。</p>
+<p>在这个Array类中重载指针转换运算符的写法如下；</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line">Array&lt;T&gt;::<span class="keyword">operator</span> T *()  <span class="comment">//不用写返回值的类型</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> list;<span class="comment">//数组的首地址</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="顺序访问群体—链表类-6">顺序访问群体—链表类</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// LinkedList.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> LINKEDLIST_H </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LINKEDLIST_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Node.h&quot;</span></span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinkedList</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Node&lt;T&gt; *front, *rear;      <span class="comment">//表头和表尾指针</span></span><br><span class="line">    Node&lt;T&gt; *prevPtr, *currPtr; <span class="comment">//记录表当前遍历位置的指针，由插入和删除操作更新</span></span><br><span class="line">    <span class="type">int</span> size;                   <span class="comment">//表中的元素个数</span></span><br><span class="line">    <span class="type">int</span> position;               <span class="comment">//当前元素在表中的位置序号。由函数reset使用 </span></span><br><span class="line">    <span class="comment">//生成新结点，数据域为item，指针域为ptrNext</span></span><br><span class="line">    <span class="function">Node&lt;T&gt; *<span class="title">newNode</span><span class="params">(<span class="type">const</span> T &amp;item, Node&lt;T&gt; *ptrNext = <span class="literal">NULL</span>)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">freeNode</span><span class="params">(Node&lt;T&gt; *p)</span></span>; <span class="comment">//释放结点</span></span><br><span class="line">    <span class="comment">//将链表L 复制到当前表(假设当前表为空)，被复制构造函数、operator = 调用</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">copy</span><span class="params">(<span class="type">const</span> LinkedList&lt;T&gt; &amp;L)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">LinkedList</span>();                                     <span class="comment">//构造函数</span></span><br><span class="line">    <span class="built_in">LinkedList</span>(<span class="type">const</span> LinkedList&lt;T&gt; &amp;L);               <span class="comment">//复制构造函数</span></span><br><span class="line">    ~<span class="built_in">LinkedList</span>();                                    <span class="comment">//析构函数</span></span><br><span class="line">    LinkedList&lt;T&gt; &amp;<span class="keyword">operator</span>=(<span class="type">const</span> LinkedList&lt;T&gt; &amp;L); <span class="comment">//重载赋值运算符</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getSize</span><span class="params">()</span> <span class="type">const</span></span>;                              <span class="comment">//返回链表中元素个数 bool isEmpty() const; //链表是否为空</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">reset</span><span class="params">(<span class="type">int</span> pos = <span class="number">0</span>)</span></span>;                          <span class="comment">//初始化游标的位置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">next</span><span class="params">()</span></span>;                                      <span class="comment">//使游标移动到下一个结点</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">endOfList</span><span class="params">()</span> <span class="type">const</span></span>;                           <span class="comment">//游标是否到了链尾</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">currentPosition</span><span class="params">()</span> <span class="type">const</span></span>;                      <span class="comment">//返回游标当前的位置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertFront</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                  <span class="comment">//在表头插入结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertRear</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                   <span class="comment">//在表尾添加结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertAt</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                     <span class="comment">//在当前结点之前插入结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertAfter</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                  <span class="comment">//在当前结点之后插入结点</span></span><br><span class="line">    <span class="function">T <span class="title">deleteFront</span><span class="params">()</span></span>;                                  <span class="comment">//删除头结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">deleteCurrent</span><span class="params">()</span></span>;                             <span class="comment">//删除当前结点</span></span><br><span class="line">    <span class="function">T &amp;<span class="title">data</span><span class="params">()</span></span>;                                        <span class="comment">//返回对当前结点成员数据的引用</span></span><br><span class="line">    <span class="function"><span class="type">const</span> T &amp;<span class="title">data</span><span class="params">()</span> <span class="type">const</span></span>;                            <span class="comment">//返回对当前结点成员数据的常引用</span></span><br><span class="line">    <span class="comment">//清空链表:释放所有结点的内存空间。被析构函数、operator= 调用</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">clear</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// LINKEDLIST_H </span></span></span><br><span class="line"><span class="comment">//链表类模板函数实现代码可以从网上下载</span></span><br></pre></td></tr></table></figure>
+<p>链表的基本操作:</p>
+<ul>
+<li>生成链表</li>
+<li>插入结点</li>
+<li>查找结点</li>
+<li>删除结点</li>
+<li>遍历链表</li>
+<li>清空链表</li>
+</ul>
+<h2 id="栈类-6">栈类</h2>
+<p><strong>栈类模版的编写</strong>，<a href="https://github.com/hustlixiang21/cpp-practice/blob/main/stack_calculator/Stack.h">点击查看源码</a>。</p>
+<p>栈的元素其实可以用<strong>数组</strong>表示也可以用<strong>链表</strong>表示。</p>
+<p>栈的基本操作：</p>
+<ul>
+<li>初始化</li>
+<li>入栈</li>
+<li>出栈</li>
+<li>清空栈</li>
+<li>访问栈顶元素</li>
+<li>检测栈的状态（满、空）</li>
+</ul>
+<h2 id="队列类-6">队列类</h2>
+<p>设计的是循环队列，用的是数组，增减较为的麻烦，其实我觉得用链表实现的话不需要用循环。</p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E9%98%9F%E5%88%97%E7%B1%BB%E6%A8%A1%E7%89%88/Queue.h">点击此处查看源码</a></p>
+<h1>群体数组的组织</h1>
+<p>简单的排序和查找都较为的基础，在此插入一些图片和链接以更好的理解。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-7da3a687b4b607d415bbf4617768727f_1440w.jpeg" alt=""></p>
+<p><a href="https://labuladong.github.io/algo/1/11/">我把二分搜索写了一首诗—labuladong</a></p>
+<h1>综合实例—对个人银行账户管理程序的改进</h1>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update_3">查看源码点击此处</a></p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
   </entry>
   <entry>
     <title>泛型程序设计与C++标准模版库（STL）</title>

@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>13_June</title>
+    <url>/2022/06/13/13-June/</url>
+    <content><![CDATA[<p>As a child, you daydreamed and made stuff up. You were a daydream believer by day and in your right brain at night you sailed down a river of dreams.</p>
+<p>So, forget about the literal attainment of your dream fot now. Focus on just going for it. By simply going for the dream, you make yourself come true.</p>
+]]></content>
+      <categories>
+        <category>一句</category>
+      </categories>
+      <tags>
+        <tag>一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>14_June</title>
+    <url>/2022/06/14/14-june/</url>
+    <content><![CDATA[<h3 id="great-things-never-came-from-comfort-zones">Great things never came from comfort zones.</h3>
+<h3 id="伟大的事物从不来自于舒适圈">伟大的事物从不来自于舒适圈。</h3>
+]]></content>
+      <categories>
+        <category>一句</category>
+      </categories>
+      <tags>
+        <tag>一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>15_June</title>
     <url>/2022/06/15/15-June/</url>
     <content><![CDATA[<h3 id="may-you-be-loyal-to-yourself-live-like-yourself">May you be loyal to yourself, live like yourself.</h3>
@@ -29,32 +55,6 @@
       </tags>
   </entry>
   <entry>
-    <title>14_June</title>
-    <url>/2022/06/14/14-june/</url>
-    <content><![CDATA[<h3 id="great-things-never-came-from-comfort-zones">Great things never came from comfort zones.</h3>
-<h3 id="伟大的事物从不来自于舒适圈">伟大的事物从不来自于舒适圈。</h3>
-]]></content>
-      <categories>
-        <category>一句</category>
-      </categories>
-      <tags>
-        <tag>一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>13_June</title>
-    <url>/2022/06/13/13-June/</url>
-    <content><![CDATA[<p>As a child, you daydreamed and made stuff up. You were a daydream believer by day and in your right brain at night you sailed down a river of dreams.</p>
-<p>So, forget about the literal attainment of your dream fot now. Focus on just going for it. By simply going for the dream, you make yourself come true.</p>
-]]></content>
-      <categories>
-        <category>一句</category>
-      </categories>
-      <tags>
-        <tag>一句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>19_June</title>
     <url>/2022/06/19/19-June/</url>
     <content><![CDATA[<h3 id="the-first-time-i-hugged-the-sky-was-when-you-held-me-above-your-head">The first time I hugged the sky was when you held me above your head.</h3>
@@ -71,10 +71,9 @@
       </tags>
   </entry>
   <entry>
-    <title>22_June</title>
-    <url>/2022/06/22/22-June/</url>
-    <content><![CDATA[<h3 id="the-only-person-you-are-destined-to-become-is-the-person-you-decide-to-be">The only person you are destined to become is the person you decide to be.</h3>
-<h3 id="你注定只会成为你决心要变成的那个人">你注定只会成为你决心要变成的那个人。</h3>
+    <title>24_May</title>
+    <url>/2022/05/24/24-May/</url>
+    <content><![CDATA[<h3 id="have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -84,9 +83,10 @@
       </tags>
   </entry>
   <entry>
-    <title>24_May</title>
-    <url>/2022/05/24/24-May/</url>
-    <content><![CDATA[<h3 id="have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
+    <title>22_June</title>
+    <url>/2022/06/22/22-June/</url>
+    <content><![CDATA[<h3 id="the-only-person-you-are-destined-to-become-is-the-person-you-decide-to-be">The only person you are destined to become is the person you decide to be.</h3>
+<h3 id="你注定只会成为你决心要变成的那个人">你注定只会成为你决心要变成的那个人。</h3>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -567,6 +567,68 @@ Their sum of square: 38.93</p>
       </tags>
   </entry>
   <entry>
+    <title>Makefile入门</title>
+    <url>/2022/06/19/Makefile%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="makefile概念入门">Makefile概念入门</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/29910215">知乎原文链接</a></p>
+<p><a href="https://www.cnblogs.com/paul-617/p/15501875.html">博客讲解链接</a></p>
+<p><a href="https://blog.csdn.net/weixin_38391755/article/details/80380786">又一篇讲解</a></p>
+<p>本文主要介绍怎么利用“基于目标分层”的方式去理解一个工具，写作一个概念，定义一个设计或者部署一套代码。</p>
+<p>本文首先是一个“Makefile入门”，然后才是“基于目标分层的方法介绍”。</p>
+<span id="more"></span>
+<h2 id="关于程序编译">关于程序编译</h2>
+<p>Makefile解决的是编译的问题。Makefile最初是用来解决C语言的编译问题的，所以和C的关系特别密切，但并不是说Makefile只能用来解决C的编译问题。你用来处理Java一点问题没有，但对于Java，显然ant比Makefile处理得更好。</p>
+<p>比如说，你有foo.c, bar.c, main.c三个C文件，你要编译成一个app.executable，你会怎么做呢？你会执行这样的命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc -Wall -c foo.c -o foo.o</span><br><span class="line">gcc -Wall -c bar.c -o bar.o</span><br><span class="line">gcc -Wall -c main.c -o main.o</span><br><span class="line">gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
+<p>按照程序猿的惯例，凡是要一次次重新执行的命令，都应该写成脚本。所以，简单来说，<a href="http://xn--build-fg1hjcwnb27p5qh0aj8tnybdzrt45b0pms6bwy60bjr5a.sh">你会把上面这个命令序列写成一个build.sh</a>，每次编译你只要执行这个脚本问题就解决了。</p>
+<p>但这个脚本有问题，假设我修改了foo.c，但我没有修改bar.c和main.c，那么执行这个脚本是很浪费的，因为它会无条件也重新编译bar.c和main.c。</p>
+<p>这个脚本更合理的写法应该是这样的：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[ foo.o -ot foo.c ] &amp;&amp; gcc -Wall -c foo.c -o foo.o</span><br><span class="line">[ bar.o -ot bar.c ] &amp;&amp; gcc -Wall -c bar.c -o bar.o</span><br><span class="line">[ main.o -ot main.o] &amp;&amp; gcc -Wall -c main.c -o main.o</span><br><span class="line">[ app.executable -ot main.o ] &amp;&amp; [ app.executable -ot foo.o ] &amp;&amp; [ app.executable -ot bar.o ] &amp;&amp; gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
+<p>如果你面对一个问题，不要尝试重新去定义这个问题，而是看它和原来的问题相比，多出来的问题是什么，尝试解决那个多出来的问题就好了。那么这里，多出来的问题就是文件修改时间比较。这个就是Makefile要解决的基本问题了。我们定义一种新的“脚本语言”（只是不用sh/bash/tch来解释，而是用make来解释），可以用很简单的方法来说明我们需要做的文件比较。这样上面的脚本就可以写成这个样子了：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample1</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  gcc -Wall -c foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  gcc -Wall -c bar.c -o woo.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  gcc -Wall -c main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
+<p>上面那个Makefile中，foo.o: foo.c定义了一个**“依赖”<strong>，说明foo.o是靠foo.c编译成的，它后面缩进的那些命令，就是简单的shell脚本，称为</strong>规则(rule)**。而Makefile的作用是定义一组依赖，当被依赖的文件比依赖的文件新，就执行规则。这样，前面的问题就解决了。</p>
+<p>IDE中封装了Makefile得使用，但是想要具体控制特定文件的编译细节，最终仍然需要面对这些问题，IDE和make工具的对比，两者解决的是问题的不同层次。</p>
+<p>Makefile中的依赖定义构成了一个依赖链（树），比如上面这个Makefile中，app.executable依赖于main.o，main.o又依赖于main.c，所以，当你去满足app.executable（这个目标）的依赖的时候，它首先去检查main.o的依赖，直到找到依赖树的叶子节点(main.c），然后进行时间比较。这个判断过程由make工具来完成，所以，和一般的脚本不一样。Makefile的执行过程不是基于语句顺序的，而是基于依赖链的顺序的。<img src="https://pic4.zhimg.com/80/v2-90371e6fcdf8f515a68dab7404ed4f43_1440w.jpg" alt="依赖树"></p>
+<h2 id="phony依赖">phony依赖</h2>
+<p>make命令执行的时候，后面跟一个“目标”（不带参数的话默认是第一个依赖的目标），然后以这个目标为根建立整个依赖树。依赖树的每个节点是一个文件，任何时候我们都可以通过比较每个依赖文件和被依赖文件的时间，以决定是否需要执行“规则”</p>
+<p>但有时，我们希望某个规则<strong>总是被执行</strong>。这时，很自然地，我们会定义一下<strong>永远都不会被满足</strong>的依赖。</p>
+<p>可能会这么写：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">test:</span></span><br><span class="line">  DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
+<p>test这个文件永远都不会被产生，所以，你只要执行这个依赖，rule是必然会被执行的。这种形式看起来很好用，但由于make工具默认认为你这是个文件，当它成为依赖链的一部分的时候，很容易造成各种误会和处理误差。</p>
+<p>所以，简化起见，Makefile允许你显式地把一个依赖目标定义为<strong>假的(Phony)</strong>：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: test</span></span><br><span class="line"><span class="section">test:</span></span><br><span class="line"> DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
+<p>这样make工具就不用多想了，也不用检查test这个文件的时间了，反正test就是假的，如果有人依赖它，无条件执行就对了。</p>
+<h2 id="宏">宏</h2>
+<p>前面的sample1明显还是有很多多余的成份，这些多余的成份可以简单通过引入“宏”定义来解决，比如上面的Makefile，我们把重复的东西都用宏来写，就成了这样了：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample2</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> bar.c -o bar.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> main.o foo.o bar.o -o app.executable</span><br></pre></td></tr></table></figure>
+<p>还是有“多余”的成份在，因为明明依赖中已经写了foo.o了，rule中还要再写一次，我们可以把依赖的对象定义为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">@</mi><mtext>，被依赖的对象定义为</mtext></mrow><annotation encoding="application/x-tex">@，被依赖的对象定义为</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">@</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">被</span><span class="mord cjk_fallback">依</span><span class="mord cjk_fallback">赖</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">为</span></span></span></span>^（这是当前gnumake的设计），这样就可以进一步化简：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample3</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+<p>很明显，这还是有重复，我们可以把重复的定义写成通配符：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample4</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"><span class="section">woo.o: woo.c</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+<p>实际上，你要化简，还有很多手段，比如gnumake其实是默认定义了一组rule的，上面这个整个你都可以不写，就这样就可以了：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample5</span></span><br><span class="line">LDLIBS=-lpthead</span><br><span class="line">SRC=<span class="variable">$(<span class="built_in">wildcard</span> *.c)</span></span><br><span class="line">OBJ=$(SRC:.c=.o)</span><br><span class="line"><span class="section">app.executable: <span class="variable">$(OBJ)</span></span></span><br><span class="line"><span class="comment">#看不懂</span></span><br></pre></td></tr></table></figure>
+<p>这里其实没有定义.o到.c的依赖，但gnumake默认如果.c存在，.o就依赖对应的.c，而.o到.c的rule，是通过宏默认定义的。你只要修改CC，LDLIBS这类的宏，就能解决大部分问题了。所以你又省掉了一组定义，这就可以写得很短。</p>
+<h2 id="头文件问题">头文件问题</h2>
+<p>现在我们把问题搞得复杂一点，增加三个头文件。比如foo.h, bar.h和common.h，前两者定义foo.c和bar.c的对外接口，给main.c使用，common.h定义所有文件都要用到的通用定义（foo.h和woo.h中包含common.h)。这样前面这个sample1就有毛病了。照理说，foo.h更新的时候，foo.o和main.o都需要重新编译，但根据那个定义，根本就没有这个比较。</p>
+<p>我们的定义必须写成这个样子：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample4+</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br><span class="line"><span class="section">bar.o: bar.c bar.h common.h</span></span><br><span class="line"><span class="section">main.o: main.c foo.h bar.h common.h</span></span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+<p>(注：这个例子我们在.o.c依赖的规则中使用了$&lt;宏，它和$^的区别是，它不包括依赖列表中的所有文件，而仅仅是列表中的第一个文件）</p>
+<p>这就又增加了复杂度了——头文件包含关系一变化，我就得更新这个Makefile的定义。这带来了升级时的冗余工作。按我们前面考虑一样的策略，我们尝试在已有的名称空间上解决这个问题。Makefile已经可以定义依赖了，但我们不知道这个依赖本身。这个事情谁能解决？——把这个过程想一下——其实已经有人解决这个问题了，这个包含关系谁知道嘛？当然是编译器。编译器都已经用到那个头文件了，当然是它才知道这种包含关系是什么样的。比如gcc本身直接就提供了-M系列参数，可以自动帮你生成依赖关系。比如你执行gcc -MM foo.c就可以得到</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>本文引自开头的链接，由于能力有限及需求不高，剩余的看的不是很懂，目前就到这里。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>makefile基础</tag>
+        <tag>CS工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CPP类和对象</title>
     <url>/2022/07/20/CPP%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h1 id="类和对象">类和对象</h1>
@@ -763,68 +825,6 @@ setTime(),showTime()</li>
         <tag>学习笔记</tag>
         <tag>C++程序设计</tag>
         <tag>C++语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Makefile入门</title>
-    <url>/2022/06/19/Makefile%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h1 id="makefile概念入门">Makefile概念入门</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/29910215">知乎原文链接</a></p>
-<p><a href="https://www.cnblogs.com/paul-617/p/15501875.html">博客讲解链接</a></p>
-<p><a href="https://blog.csdn.net/weixin_38391755/article/details/80380786">又一篇讲解</a></p>
-<p>本文主要介绍怎么利用“基于目标分层”的方式去理解一个工具，写作一个概念，定义一个设计或者部署一套代码。</p>
-<p>本文首先是一个“Makefile入门”，然后才是“基于目标分层的方法介绍”。</p>
-<span id="more"></span>
-<h2 id="关于程序编译">关于程序编译</h2>
-<p>Makefile解决的是编译的问题。Makefile最初是用来解决C语言的编译问题的，所以和C的关系特别密切，但并不是说Makefile只能用来解决C的编译问题。你用来处理Java一点问题没有，但对于Java，显然ant比Makefile处理得更好。</p>
-<p>比如说，你有foo.c, bar.c, main.c三个C文件，你要编译成一个app.executable，你会怎么做呢？你会执行这样的命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc -Wall -c foo.c -o foo.o</span><br><span class="line">gcc -Wall -c bar.c -o bar.o</span><br><span class="line">gcc -Wall -c main.c -o main.o</span><br><span class="line">gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
-<p>按照程序猿的惯例，凡是要一次次重新执行的命令，都应该写成脚本。所以，简单来说，<a href="http://xn--build-fg1hjcwnb27p5qh0aj8tnybdzrt45b0pms6bwy60bjr5a.sh">你会把上面这个命令序列写成一个build.sh</a>，每次编译你只要执行这个脚本问题就解决了。</p>
-<p>但这个脚本有问题，假设我修改了foo.c，但我没有修改bar.c和main.c，那么执行这个脚本是很浪费的，因为它会无条件也重新编译bar.c和main.c。</p>
-<p>这个脚本更合理的写法应该是这样的：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[ foo.o -ot foo.c ] &amp;&amp; gcc -Wall -c foo.c -o foo.o</span><br><span class="line">[ bar.o -ot bar.c ] &amp;&amp; gcc -Wall -c bar.c -o bar.o</span><br><span class="line">[ main.o -ot main.o] &amp;&amp; gcc -Wall -c main.c -o main.o</span><br><span class="line">[ app.executable -ot main.o ] &amp;&amp; [ app.executable -ot foo.o ] &amp;&amp; [ app.executable -ot bar.o ] &amp;&amp; gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
-<p>如果你面对一个问题，不要尝试重新去定义这个问题，而是看它和原来的问题相比，多出来的问题是什么，尝试解决那个多出来的问题就好了。那么这里，多出来的问题就是文件修改时间比较。这个就是Makefile要解决的基本问题了。我们定义一种新的“脚本语言”（只是不用sh/bash/tch来解释，而是用make来解释），可以用很简单的方法来说明我们需要做的文件比较。这样上面的脚本就可以写成这个样子了：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample1</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  gcc -Wall -c foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  gcc -Wall -c bar.c -o woo.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  gcc -Wall -c main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
-<p>上面那个Makefile中，foo.o: foo.c定义了一个**“依赖”<strong>，说明foo.o是靠foo.c编译成的，它后面缩进的那些命令，就是简单的shell脚本，称为</strong>规则(rule)**。而Makefile的作用是定义一组依赖，当被依赖的文件比依赖的文件新，就执行规则。这样，前面的问题就解决了。</p>
-<p>IDE中封装了Makefile得使用，但是想要具体控制特定文件的编译细节，最终仍然需要面对这些问题，IDE和make工具的对比，两者解决的是问题的不同层次。</p>
-<p>Makefile中的依赖定义构成了一个依赖链（树），比如上面这个Makefile中，app.executable依赖于main.o，main.o又依赖于main.c，所以，当你去满足app.executable（这个目标）的依赖的时候，它首先去检查main.o的依赖，直到找到依赖树的叶子节点(main.c），然后进行时间比较。这个判断过程由make工具来完成，所以，和一般的脚本不一样。Makefile的执行过程不是基于语句顺序的，而是基于依赖链的顺序的。<img src="https://pic4.zhimg.com/80/v2-90371e6fcdf8f515a68dab7404ed4f43_1440w.jpg" alt="依赖树"></p>
-<h2 id="phony依赖">phony依赖</h2>
-<p>make命令执行的时候，后面跟一个“目标”（不带参数的话默认是第一个依赖的目标），然后以这个目标为根建立整个依赖树。依赖树的每个节点是一个文件，任何时候我们都可以通过比较每个依赖文件和被依赖文件的时间，以决定是否需要执行“规则”</p>
-<p>但有时，我们希望某个规则<strong>总是被执行</strong>。这时，很自然地，我们会定义一下<strong>永远都不会被满足</strong>的依赖。</p>
-<p>可能会这么写：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">test:</span></span><br><span class="line">  DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
-<p>test这个文件永远都不会被产生，所以，你只要执行这个依赖，rule是必然会被执行的。这种形式看起来很好用，但由于make工具默认认为你这是个文件，当它成为依赖链的一部分的时候，很容易造成各种误会和处理误差。</p>
-<p>所以，简化起见，Makefile允许你显式地把一个依赖目标定义为<strong>假的(Phony)</strong>：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: test</span></span><br><span class="line"><span class="section">test:</span></span><br><span class="line"> DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
-<p>这样make工具就不用多想了，也不用检查test这个文件的时间了，反正test就是假的，如果有人依赖它，无条件执行就对了。</p>
-<h2 id="宏">宏</h2>
-<p>前面的sample1明显还是有很多多余的成份，这些多余的成份可以简单通过引入“宏”定义来解决，比如上面的Makefile，我们把重复的东西都用宏来写，就成了这样了：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample2</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> bar.c -o bar.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> main.o foo.o bar.o -o app.executable</span><br></pre></td></tr></table></figure>
-<p>还是有“多余”的成份在，因为明明依赖中已经写了foo.o了，rule中还要再写一次，我们可以把依赖的对象定义为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">@</mi><mtext>，被依赖的对象定义为</mtext></mrow><annotation encoding="application/x-tex">@，被依赖的对象定义为</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">@</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">被</span><span class="mord cjk_fallback">依</span><span class="mord cjk_fallback">赖</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">为</span></span></span></span>^（这是当前gnumake的设计），这样就可以进一步化简：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample3</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
-<p>很明显，这还是有重复，我们可以把重复的定义写成通配符：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample4</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"><span class="section">woo.o: woo.c</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
-<p>实际上，你要化简，还有很多手段，比如gnumake其实是默认定义了一组rule的，上面这个整个你都可以不写，就这样就可以了：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample5</span></span><br><span class="line">LDLIBS=-lpthead</span><br><span class="line">SRC=<span class="variable">$(<span class="built_in">wildcard</span> *.c)</span></span><br><span class="line">OBJ=$(SRC:.c=.o)</span><br><span class="line"><span class="section">app.executable: <span class="variable">$(OBJ)</span></span></span><br><span class="line"><span class="comment">#看不懂</span></span><br></pre></td></tr></table></figure>
-<p>这里其实没有定义.o到.c的依赖，但gnumake默认如果.c存在，.o就依赖对应的.c，而.o到.c的rule，是通过宏默认定义的。你只要修改CC，LDLIBS这类的宏，就能解决大部分问题了。所以你又省掉了一组定义，这就可以写得很短。</p>
-<h2 id="头文件问题">头文件问题</h2>
-<p>现在我们把问题搞得复杂一点，增加三个头文件。比如foo.h, bar.h和common.h，前两者定义foo.c和bar.c的对外接口，给main.c使用，common.h定义所有文件都要用到的通用定义（foo.h和woo.h中包含common.h)。这样前面这个sample1就有毛病了。照理说，foo.h更新的时候，foo.o和main.o都需要重新编译，但根据那个定义，根本就没有这个比较。</p>
-<p>我们的定义必须写成这个样子：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample4+</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br><span class="line"><span class="section">bar.o: bar.c bar.h common.h</span></span><br><span class="line"><span class="section">main.o: main.c foo.h bar.h common.h</span></span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
-<p>(注：这个例子我们在.o.c依赖的规则中使用了$&lt;宏，它和$^的区别是，它不包括依赖列表中的所有文件，而仅仅是列表中的第一个文件）</p>
-<p>这就又增加了复杂度了——头文件包含关系一变化，我就得更新这个Makefile的定义。这带来了升级时的冗余工作。按我们前面考虑一样的策略，我们尝试在已有的名称空间上解决这个问题。Makefile已经可以定义依赖了，但我们不知道这个依赖本身。这个事情谁能解决？——把这个过程想一下——其实已经有人解决这个问题了，这个包含关系谁知道嘛？当然是编译器。编译器都已经用到那个头文件了，当然是它才知道这种包含关系是什么样的。比如gcc本身直接就提供了-M系列参数，可以自动帮你生成依赖关系。比如你执行gcc -MM foo.c就可以得到</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>本文引自开头的链接，由于能力有限及需求不高，剩余的看的不是很懂，目前就到这里。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>makefile基础</tag>
-        <tag>CS工具</tag>
       </tags>
   </entry>
   <entry>
@@ -1066,28 +1066,6 @@ setTime(),showTime()</li>
       </tags>
   </entry>
   <entry>
-    <title>个人计划（暑假）</title>
-    <url>/2022/06/01/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<h1 id="对于这个暑假的一些具体安排">对于这个暑假的一些具体安排</h1>
-<p>最近觉得心里乱乱的，感觉什么都想学，什么都想知道，但是人的精力的确是有限的，所以在此厘清自己的头绪，学会取舍。</p>
-<span id="more"></span>
-<p>按照我认为从急到缓</p>
-<ul>
-<li>[ ] 科研老师交予的任务，三本书，还有斯坦福的视频，这是一定要完成的任务！</li>
-<li>[ ] C++（郑莉）的学习和数据结构（清华数据结构），算法（先就PAT乙）的学习，努力提高自己的代码能力，练习配上地大的实习和头哥的实验。</li>
-<li>[ ] 学会一些基础的CS工具，linux，git，py，cmake和docker等等，对自己的要求就是浅尝辄止，不许过多浪费时间。</li>
-<li>[ ] 至少要有做自己的项目的经历，初步的想法是用自己买的服务器搭一个网页游戏，从中学习前后端的知识，边做边学。还有一个就是利用c++写一个小游戏，参照地大的项目，目的是提高自己对C++的理解，然后熟悉程序开发的过程，OOP(面向对象编程)可以先搁置。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>个人反思</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>千与千寻有感</title>
     <url>/2022/08/09/%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<p>近几天有点混，突发奇想去看一些比较经典的影片，看完千里千寻之后被其中优美的旋律和动人的故事吸引，决定也来写一些自己的感受吧。</p>
@@ -1285,6 +1263,28 @@ This is my website, click the button  <a class="btn-beautify block right blue la
       </categories>
       <tags>
         <tag>博客写作技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人计划（暑假）</title>
+    <url>/2022/06/01/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<h1 id="对于这个暑假的一些具体安排">对于这个暑假的一些具体安排</h1>
+<p>最近觉得心里乱乱的，感觉什么都想学，什么都想知道，但是人的精力的确是有限的，所以在此厘清自己的头绪，学会取舍。</p>
+<span id="more"></span>
+<p>按照我认为从急到缓</p>
+<ul>
+<li>[ ] 科研老师交予的任务，三本书，还有斯坦福的视频，这是一定要完成的任务！</li>
+<li>[ ] C++（郑莉）的学习和数据结构（清华数据结构），算法（先就PAT乙）的学习，努力提高自己的代码能力，练习配上地大的实习和头哥的实验。</li>
+<li>[ ] 学会一些基础的CS工具，linux，git，py，cmake和docker等等，对自己的要求就是浅尝辄止，不许过多浪费时间。</li>
+<li>[ ] 至少要有做自己的项目的经历，初步的想法是用自己买的服务器搭一个网页游戏，从中学习前后端的知识，边做边学。还有一个就是利用c++写一个小游戏，参照地大的项目，目的是提高自己对C++的理解，然后熟悉程序开发的过程，OOP(面向对象编程)可以先搁置。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>个人反思</tag>
       </tags>
   </entry>
   <entry>
@@ -2013,6 +2013,23 @@ tar命令可以将已经打包好的文件解压出来。</p>
         <tag>CS工具</tag>
         <tag>linux基础</tag>
         <tag>命令行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我们应当去往何处？</title>
+    <url>/2022/10/11/%E6%88%91%E4%BB%AC%E5%BA%94%E5%BD%93%E5%8E%BB%E5%BE%80%E4%BD%95%E5%A4%84%EF%BC%9F/</url>
+    <content><![CDATA[<p>已经许久没更新过自己的博客了，或许也是因为这忙碌的生活导致自己无暇顾及。开学后的一个半月里，终于在昨天，迎来了自己本学期的第一次破防，我决定在今天去写一些东西，希望能够记录乃至帮助自己走出自己像轮子一般的生活。</p>
+<p>我从未想到过我的大学竟然可以这么累，我现在甚至不知道自己忙碌的意义在哪里，数不清的任务，还有数不清的需要去做的事儿，还有忙着跟npy争辩。我的生活给我的感觉就像是完成一项项的任务，完成了任务就能稍微舒服点了，然后紧接着别的任务来了，我又得忙碌了，做不完心里就不踏实。试问，这样的生活真的有意思么？看着别人的大学生活，我很羡慕，能有三五好友漫步谈心，干饭喝酒，这样的生活我也想要。但是我的学校给我的感觉就是，不学你就得死，众多的傻x课程，包括无聊至极的思政课，无脑夸无脑鼓吹，你当我是tmd小学生呢。还不能选自己想要的课程，这样的课程体系还停留在上个世纪，能不能有点进步性的改革，当成高中生来教。</p>
+<p>当然，说这些的一切前提还是我并不是一个摆子，我也不想摆，但是也不想卷，只想学自己想学的，要考试的课程复习复习就完事儿了，我也不想去下很大的功夫去刷题考高分，但是总有这么一群人喜欢干这种事儿，譬如那个奖学金答辩就是，甲醛为王，答辩走个过场，你分数是啥，你就是啥奖，那你就别说综合评定占比多少多少，名额大概率也是分配好的，平衡嘛，我懂。</p>
+<p>喷完了，舒服！但是生活还得继续，我希望自己的生活能够更加的丰富，改变盲目内卷的状态，find your own path！面对着清晨的第一缕阳光，我发现我仍然是那个自信阳光正能量的李翔！</p>
+<p>我的目标是星辰大海，我必将远航！</p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>感悟</tag>
+        <tag>个人反思</tag>
       </tags>
   </entry>
   <entry>

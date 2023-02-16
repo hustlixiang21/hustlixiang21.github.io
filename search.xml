@@ -3253,4 +3253,61 @@ FTP支持两种模式：Standard（PORT方式，主动方式），Passive（PASV
         <tag>个人反思</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Web认证的校园网接路由器</title>
+    <url>/2023/02/16/Web%E8%AE%A4%E8%AF%81%E7%9A%84%E6%A0%A1%E5%9B%AD%E7%BD%91%E6%8E%A5%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="需求">需求</h1>
+<p>由于校园网的有设备数量的限制，于是想要利用校园的有线网接自己的路由器解除设备数量的限制，并且实现所谓的硬件翻墙，即流量经由路由器转发至代理服务器，作用就是处于该路由器形成的网络中的设备不用启动科学上网，省了一点事儿。</p>
+<h1 id="困难与解决办法">困难与解决办法</h1>
+<p>校园网不同于家庭网络，需要进行一步web认证才能进行联网，我一开始就是以为我买个现成路由器（华硕 TUF AX3000）接上去认证一下就好了，结果是并不会弹出这个认证的界面。所以我又买了台软路由R2S（本质上是一台微型计算机），并且装上<a href="https://zh.wikipedia.org/zh-hans/OpenWrt">openwrt</a>系统作为路由器的上级路由，因为本质上是个嵌入的linux系统，有命令行工具，可以用<code>curl</code>命令向自己校园网的认证界面(华科是192.168.50.3)发个http请求实现登陆即可。至于科学，利用软路由里的软件配置好自己订阅的机场地址就行，没错，本质上还是软翻，不过是交到网关去处理了而已。</p>
+<h1 id="过程演示">过程演示</h1>
+<h2 id="设备准备">设备准备</h2>
+<p>一台路由器，一台软路由，两根网线，一台电脑。</p>
+<h2 id="利用网络抓包获取校园网认证中http请求的content值">利用网络抓包获取校园网认证中http请求的content值</h2>
+<p>首先用一根网线的一端接校园有线网的端口，另一端接自己的电脑。通过浏览器进入校园网的认证界面，此处最好关闭掉wifi功能。提前输入好账号密码，<strong>不要点登录</strong>。<br>
+<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.01.16.png" alt=""></p>
+<h3 id="进入开发者模式">进入开发者模式</h3>
+<p>按F12进入浏览器的开发者模式，大致看一下，并了解该网页的逻辑，即登录的函数<br>
+<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.05.27.png" alt=""></p>
+<h3 id="在post位置处打上断点">在post位置处打上断点</h3>
+<p>跟平常调试代码一样。<br>
+<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.06.24.png" alt=""></p>
+<h3 id="点击login登录获取content值">点击login登录获取content值</h3>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.27.04.png" alt=""></p>
+<h3 id="利用curl命令发送请求">利用curl命令发送请求</h3>
+<p>写一个shell脚本，或者不写都行。<br>
+<img src="https://picx.zhimg.com/80/v2-285e2cea8e82f818410f32dd796559b3_1440w.png" alt=""><br>
+利用chmod命令赋予其执行权限之后，执行该脚本，发现返回值是succees即代表该命令成功执行并完成了校园网的认证；如若不成功，重复获取content的操作，因为我也是第一次没成功。</p>
+<h2 id="配置软路由">配置软路由</h2>
+<h3 id="安装openwrt系统">安装openwrt系统</h3>
+<p>由于github上开源众多，效果应该都差不多，随便选就行，而且tb上买的软路由大多是提前预装好的，如果是一台全新的机器，参考下面的video以安装好openwrt系统。</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/gsrAj1vySaE" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h3 id="进入软路由后台">进入软路由后台</h3>
+<p>把TF卡正确插入软路由，并确保自己的软路由sys的指示灯正常。<br>
+<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2019.46.52.png"/></p>
+<p>用一根网线一端接校园有线网的端口，另一端接软路由的wan口。另一根网线的一端接软路由的lan口，另一端接上电脑。此时电脑和软路由处于同一局域网下，通过其ip地址（这个一般商家会告诉你，如果没有则可以查看网关的ip地址，或者关闭dhcp手动分配）在浏览器中去登陆软路由的后台，输入用户名和密码进行登录。<br>
+<img src="https://picx.zhimg.com/80/v2-7d989b04c23b0a4f5f0bef25068a117a_1440w.png" alt=""></p>
+<h3 id="命令行中使用curl命令">命令行中使用curl命令</h3>
+<p>进入软路由的命令行工具，使用上面写好的curl命令去进行校园网的认证。最好尝试ping一下百度，看能不能通。<br>
+<img src="https://pica.zhimg.com/80/v2-1b493abb1ef9054903270b5bdffeabb5_1440w.png" alt=""></p>
+<h3 id="配置科学上网">配置科学上网</h3>
+<p>我使用的openclash这是它里面自带的软件，随便使用一款代理软件都行，然后就如在其他设备上配置科学一样，输入订阅的url就行。<br>
+<img src="https://pic1.zhimg.com/80/v2-d9aab76bd341cae45b8c5524653098e7_1440w.png" alt=""></p>
+<h2 id="配置硬路由">配置硬路由</h2>
+<p>因为软路由不能像路由器那样发送无线的网络信号（至少我的入门机不行），需要使用一台真正的路由器去发送wifi信号或者是提供更多的lan口进行有线网的连接。我的华硕路由器的用途就是如此，关注到软路由接lan口那条线，把这条线接电脑的一端改接到路由器的wan口，当然也可以接到lan口，不过需要使用路由器的ap模式。不同点在于，接到wan口的方法，软路由变成了上级路由，你无法通过输入ip地址的方法进入软路由的后台（至少现在的我技术达不到）；而接到lan口的话，软路由仍与我们的设备处于同一个局域网内（此时的路由器充当的作用就跟一个具有无线功能的交换机一样）。</p>
+<p>我是接到wan口，然后用任意一台能够上网的设备连接该wifi信号，根据路由器背面提供的信息完成对路由器的初始设置，例如名称密码什么的。此过程比较简单，不进行过多的赘述。</p>
+<h1 id="写在最后">写在最后</h1>
+<p>由于学校断电断网的局限性导致设备夜间断网，那也不能每次都得重复登录软路由后台去连接校园网，但是貌似启用无感认证之后，就算断了一段时间也能够自动的连上去。还是准备又时间写一个自动登录和自动下线的脚本，来迎合学校的规定。</p>
+<p>上述的方法的确适用于我的状况，而且我买的路由器本身就支持刷机，其实对于一般的无需认证的家庭网络可以不用软路由这个东西，华硕的某些系列的路由器支持刷梅林系统，本质也是一个适配华硕路由器的openwrt系统。由于我目前没有找到更好的解决办法，只能够维持现状。软路由更多还是作为旁路由，专门给家里的电视盒子提供一些屏蔽广告的服务，或者是流媒体加速，最重要的还是能够科学，看外国的一些流媒体软件。</p>
+<p>参考文章<br>
+<a href="https://blog.csdn.net/qq_30763587/article/details/119523231">openwrt下实现校园网的web认证</a><br>
+<a href="https://zhuanlan.zhihu.com/p/443145372?utm_campaign=shareopn&amp;utm_medium=social&amp;utm_oi=1137483569697013760&amp;utm_psn=1609660582969470976&amp;utm_source=wechat_session">华中科技大学校园网自动重连</a></p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机网络 - 校园网 - 路由</tag>
+      </tags>
+  </entry>
 </search>

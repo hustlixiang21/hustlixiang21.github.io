@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>13_June</title>
-    <url>/2022/06/13/13-June/</url>
-    <content><![CDATA[<p>As a child, you daydreamed and made stuff up. You were a daydream believer by day and in your right brain at night you sailed down a river of dreams.</p>
-<p>So, forget about the literal attainment of your dream fot now. Focus on just going for it. By simply going for the dream, you make yourself come true.</p>
+    <title>14_June</title>
+    <url>/2022/06/14/14-june/</url>
+    <content><![CDATA[<h3 id="great-things-never-came-from-comfort-zones">Great things never came from comfort zones.</h3>
+<h3 id="伟大的事物从不来自于舒适圈">伟大的事物从不来自于舒适圈。</h3>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -14,10 +14,10 @@
       </tags>
   </entry>
   <entry>
-    <title>14_June</title>
-    <url>/2022/06/14/14-june/</url>
-    <content><![CDATA[<h3 id="great-things-never-came-from-comfort-zones">Great things never came from comfort zones.</h3>
-<h3 id="伟大的事物从不来自于舒适圈">伟大的事物从不来自于舒适圈。</h3>
+    <title>13_June</title>
+    <url>/2022/06/13/13-June/</url>
+    <content><![CDATA[<p>As a child, you daydreamed and made stuff up. You were a daydream believer by day and in your right brain at night you sailed down a river of dreams.</p>
+<p>So, forget about the literal attainment of your dream fot now. Focus on just going for it. By simply going for the dream, you make yourself come true.</p>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -55,6 +55,19 @@
       </tags>
   </entry>
   <entry>
+    <title>22_June</title>
+    <url>/2022/06/22/22-June/</url>
+    <content><![CDATA[<h3 id="the-only-person-you-are-destined-to-become-is-the-person-you-decide-to-be">The only person you are destined to become is the person you decide to be.</h3>
+<h3 id="你注定只会成为你决心要变成的那个人">你注定只会成为你决心要变成的那个人。</h3>
+]]></content>
+      <categories>
+        <category>一句</category>
+      </categories>
+      <tags>
+        <tag>一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>19_June</title>
     <url>/2022/06/19/19-June/</url>
     <content><![CDATA[<h3 id="the-first-time-i-hugged-the-sky-was-when-you-held-me-above-your-head">The first time I hugged the sky was when you held me above your head.</h3>
@@ -83,39 +96,88 @@
       </tags>
   </entry>
   <entry>
-    <title>22_June</title>
-    <url>/2022/06/22/22-June/</url>
-    <content><![CDATA[<h3 id="the-only-person-you-are-destined-to-become-is-the-person-you-decide-to-be">The only person you are destined to become is the person you decide to be.</h3>
-<h3 id="你注定只会成为你决心要变成的那个人">你注定只会成为你决心要变成的那个人。</h3>
+    <title>CPP基础中需要注意的部分</title>
+    <url>/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<h2 id="数据的输入和输出">数据的输入和输出</h2>
+<h3 id="i-o流">I/O流</h3>
+<p>在C++，将数据从一个对象到另一个对象的流动抽象为“流”。cin和cout是预定义的流类对象，cin用来处理标准输入，即键盘输入，cout用来处理标准输出，即屏幕输出。</p>
+<hr>
+<h3 id="预定义的插入符和提取符">预定义的插入符和提取符</h3>
+<p>“&lt;&lt;”是预定义的插入符，作用在流类对象cout上便可以实现最一般的屏幕输出。</p>
+<p>“&gt;&gt;”是提取符，作用在流类对象cin上便可以实现最一般的键盘输入。</p>
+<hr>
+<h3 id="常用的i-o流类库操纵符">常用的I/O流类库操纵符</h3>
+<table>
+<thead>
+<tr>
+<th>操纵符名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dec</td>
+<td>数值数据采用十进制表示</td>
+</tr>
+<tr>
+<td>hex</td>
+<td>数值数据采用十六进制表示</td>
+</tr>
+<tr>
+<td>oct</td>
+<td>数值数据采用八进制表示</td>
+</tr>
+<tr>
+<td>ws</td>
+<td>提取空白符</td>
+</tr>
+<tr>
+<td>endl</td>
+<td>插入换行符，并且更新流</td>
+</tr>
+<tr>
+<td>setsprecision(int)</td>
+<td>设置浮点数的小数位数（包括小数点）</td>
+</tr>
+<tr>
+<td>setw(int)</td>
+<td>设置域宽</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="if-else语句">if-else语句</h2>
+<p>首先是<code>else</code>的配对方式是与向上找同层的<code>if</code>配对.<br>
+例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">else</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="built_in">else</span>()</span><br></pre></td></tr></table></figure>
+<p>这样是可行的因为<code>else</code>都有配对的，但是缩进并不能代表结构，严格来说应该用<code>&#123;&#125;</code>来区分不同的嵌套。<strong>仅供区分不同的结构</strong>。</p>
+<hr>
+<p><strong>反例</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br></pre></td></tr></table></figure>
+<p>这样的话<code>else</code>和带有缩进的<code>if</code>配对。</p>
+<hr>
+<h2 id="typedef声明">typedef声明</h2>
+<p>typedef  已有类型名  新类型名表</p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> Area,Volume;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Natural;</span><br><span class="line">Natural i1,i2;</span><br><span class="line">Area a;</span><br><span class="line">Volume v;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="除typedef外另一种自定义类型using">除typedef外另一种自定义类型using</h2>
+<p><code>using 新类型名 = 已有类型名</code></p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Area = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">using</span> Volume = <span class="type">double</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="auto类型和decltype类型">auto类型和decltype类型</h2>
+<p><code>auto</code>：编译器通过初始值自动判断变量的类型<br>
+<code>decltype</code>：定义一个变量与某一表达式的类型相同，但并不用该表达式初始化变量<br>
+例如：<code>decltype(i) j = 2;</code>让j和i有同样的类型，但是并不用2来初始化j。</p>
+<h2 id="none"></h2>
 ]]></content>
       <categories>
-        <category>一句</category>
+        <category>CS学习笔记</category>
       </categories>
       <tags>
-        <tag>一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>A Happy 521</title>
-    <url>/2022/05/18/A_happy_day/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="09d539e697ab57c6792459e410107cfcacd8825849d464460a376f7b66015c0e">0639fb05c215cbaaf02e5a329f2c74815797972bd732b7935776aa3d958c1de6bc55142d178c0b6d032e277dc89ee69d35dfd3dc984520532c5d67816d405fea80b677362dac748633c96da94b3478bf2e58734e35dc662ba3955e24d8f6441872ac076d6a71e197ddf8dddf1fa8124325959c8166bda1b5af442c3581c9f12880074b4280e6b2359e9b358c79b53b948044ed6fe5fe573cbbe369dddb1542cd48b8e245788c4850c6ceda62e5c5ddc87b2ac5c6c5edad6f0737668c90e243fad2d4908ababe1b1b65856119dcfb2cd92ff5f29e1a1700c3c51a67774e6340620804b4a7c77fa1215013bd2767d64fd722d1ac6b6ea2e8b30ceeca533a8781cbb1a2d837773dc73602b0da3c38ee3d3416480148d1a84638a60676fedc3374c6</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">涉及隐私，请输入密码查看</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>和宝贝在一起的时光</tag>
-        <tag>爱情</tag>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
       </tags>
   </entry>
   <entry>
@@ -246,88 +308,26 @@ Their sum of square: 38.93</p>
       </tags>
   </entry>
   <entry>
-    <title>CPP基础中需要注意的部分</title>
-    <url>/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/</url>
-    <content><![CDATA[<h2 id="数据的输入和输出">数据的输入和输出</h2>
-<h3 id="i-o流">I/O流</h3>
-<p>在C++，将数据从一个对象到另一个对象的流动抽象为“流”。cin和cout是预定义的流类对象，cin用来处理标准输入，即键盘输入，cout用来处理标准输出，即屏幕输出。</p>
-<hr>
-<h3 id="预定义的插入符和提取符">预定义的插入符和提取符</h3>
-<p>“&lt;&lt;”是预定义的插入符，作用在流类对象cout上便可以实现最一般的屏幕输出。</p>
-<p>“&gt;&gt;”是提取符，作用在流类对象cin上便可以实现最一般的键盘输入。</p>
-<hr>
-<h3 id="常用的i-o流类库操纵符">常用的I/O流类库操纵符</h3>
-<table>
-<thead>
-<tr>
-<th>操纵符名</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dec</td>
-<td>数值数据采用十进制表示</td>
-</tr>
-<tr>
-<td>hex</td>
-<td>数值数据采用十六进制表示</td>
-</tr>
-<tr>
-<td>oct</td>
-<td>数值数据采用八进制表示</td>
-</tr>
-<tr>
-<td>ws</td>
-<td>提取空白符</td>
-</tr>
-<tr>
-<td>endl</td>
-<td>插入换行符，并且更新流</td>
-</tr>
-<tr>
-<td>setsprecision(int)</td>
-<td>设置浮点数的小数位数（包括小数点）</td>
-</tr>
-<tr>
-<td>setw(int)</td>
-<td>设置域宽</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="if-else语句">if-else语句</h2>
-<p>首先是<code>else</code>的配对方式是与向上找同层的<code>if</code>配对.<br>
-例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">else</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="built_in">else</span>()</span><br></pre></td></tr></table></figure>
-<p>这样是可行的因为<code>else</code>都有配对的，但是缩进并不能代表结构，严格来说应该用<code>&#123;&#125;</code>来区分不同的嵌套。<strong>仅供区分不同的结构</strong>。</p>
-<hr>
-<p><strong>反例</strong>：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br></pre></td></tr></table></figure>
-<p>这样的话<code>else</code>和带有缩进的<code>if</code>配对。</p>
-<hr>
-<h2 id="typedef声明">typedef声明</h2>
-<p>typedef  已有类型名  新类型名表</p>
-<p>例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> Area,Volume;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Natural;</span><br><span class="line">Natural i1,i2;</span><br><span class="line">Area a;</span><br><span class="line">Volume v;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="除typedef外另一种自定义类型using">除typedef外另一种自定义类型using</h2>
-<p><code>using 新类型名 = 已有类型名</code></p>
-<p>例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Area = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">using</span> Volume = <span class="type">double</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="auto类型和decltype类型">auto类型和decltype类型</h2>
-<p><code>auto</code>：编译器通过初始值自动判断变量的类型<br>
-<code>decltype</code>：定义一个变量与某一表达式的类型相同，但并不用该表达式初始化变量<br>
-例如：<code>decltype(i) j = 2;</code>让j和i有同样的类型，但是并不用2来初始化j。</p>
-<h2 id="none"></h2>
-]]></content>
+    <title>A Happy 521</title>
+    <url>/2022/05/18/A_happy_day/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="09d539e697ab57c6792459e410107cfcacd8825849d464460a376f7b66015c0e">0639fb05c215cbaaf02e5a329f2c74815797972bd732b7935776aa3d958c1de6bc55142d178c0b6d032e277dc89ee69d35dfd3dc984520532c5d67816d405fea80b677362dac748633c96da94b3478bf2e58734e35dc662ba3955e24d8f6441872ac076d6a71e197ddf8dddf1fa8124325959c8166bda1b5af442c3581c9f12880074b4280e6b2359e9b358c79b53b948044ed6fe5fe573cbbe369dddb1542cd48b8e245788c4850c6ceda62e5c5ddc87b2ac5c6c5edad6f0737668c90e243fad2d4908ababe1b1b65856119dcfb2cd92ff5f29e1a1700c3c51a67774e6340620804b4a7c77fa1215013bd2767d64fd722d1ac6b6ea2e8b30ceeca533a8781cbb1a2d837773dc73602b0da3c38ee3d3416480148d1a84638a60676fedc3374c6</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">涉及隐私，请输入密码查看</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>CS学习笔记</category>
+        <category>生活</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
-        <tag>C++程序设计</tag>
-        <tag>C++语言</tag>
+        <tag>和宝贝在一起的时光</tag>
+        <tag>爱情</tag>
       </tags>
   </entry>
   <entry>
@@ -468,164 +468,6 @@ Their sum of square: 38.93</p>
         <tag>学习笔记</tag>
         <tag>C++程序设计</tag>
         <tag>C++语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CPP数组、指针和字符串</title>
-    <url>/2022/07/23/CPP%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</url>
-    <content><![CDATA[<h1 id="数组">数组</h1>
-<p>数组是具有一定顺序关系的若干对象的集合体，组成数组的对象成为该数组的元素。数组名是一个不能被赋值的指针，叫做指针常量。</p>
-<blockquote><p>C++中的二维数组被当作<strong>一维数组的数组</strong>。因此二维数组是按照<strong>行优先</strong>的顺序存储。</p>
-</blockquote>
-<hr>
-<blockquote><p>把数组作为参数时，一般不指定数组第一维的大小，即使指定，也会被忽略。</p>
-</blockquote>
-<h2 id="程序实例-线性拟合">程序实例—线性拟合</h2>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Linear%20fit">查看源代码</a></p>
-<hr>
-<h1 id="指针">指针</h1>
-<p>基本定义使用略去。</p>
-<h2 id="void指针的使用">void指针的使用</h2>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="type">void</span> voidObject;             <span class="comment">//不能声明void类型的变量</span></span><br><span class="line">  <span class="type">void</span> *pv;                    <span class="comment">//可以声明void类型的指针</span></span><br><span class="line">  <span class="type">int</span> i = <span class="number">5</span>;</span><br><span class="line">  pv = &amp;i;</span><br><span class="line">  <span class="type">int</span> *pint = <span class="built_in">static_cast</span>&lt;<span class="type">int</span> *&gt;(pv);</span><br><span class="line">  cout &lt;&lt; <span class="string">&quot;* pint=&quot;</span> &lt;&lt; * pint &lt;&lt; endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">运行结果：</span><br><span class="line">  * pint = <span class="number">5</span></span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p>void指针一般只在指针所指向的数据类型不确定的时候使用。</p>
-</div>
-<h2 id="空指针的使用">空指针的使用</h2>
-<p>不同类型的指针之间或者指针与非零整数之间的关系运算是<strong>毫无意义</strong>的，但是指针变量可以和整数0进行比较。0专用于表示空指针，也就是一个不指向任何有效地址的指针。</p>
-<p>空指针同时也可以用NULL表示。</p>
-<div class="note success flat"><p>NULL是一个在很多头文件中都有定义的宏，该定义为0。</p>
-</div>
-<h2 id="对象指针">对象指针</h2>
-<p>顾名思义，指向一个对象的指针。</p>
-<p>使用对象指针时，可以很形象的表示对象的成员，语法形式为<code>对象指针名-&gt;成员名</code>这个与<code>(*对象指针名).成员名</code>的访问是等价的。</p>
-<p>前面在类的组合时有个知识点叫做前向引用声明，当时有两个类，在定义时互相引用，这个问题就可以用指针解决。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>;         <span class="comment">//前向引用说明</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>&#123;</span><br><span class="line">  A *x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">  B *y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>声明一个指针而不是对象时允许的，当A定义完，就可以声明A对象。</p>
-<h3 id="this指针">this指针</h3>
-<p>this指针是一个隐含于每一个类的非静态成员函数中的特殊指针（包括构造函数和析构函数），它用于指向正在被<strong>成员函数操作的对象</strong></p>
-<div class="note info flat"><p>this指针是成员函数的隐含参数，让函数知道操作的是哪个对象，从而访问其数据成员。对于常成员函数来说，这个隐含的参数是长指针类型的。</p>
-</div>
-<h3 id="指向类的非静态成员的指针">指向类的非静态成员的指针</h3>
-<p>声明语句</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">类型说明符  类名::* 指针名                           <span class="comment">//声明指向数据成员的指针</span></span><br><span class="line">类型说明符 (类名::* 指针名)(参数表);                  <span class="comment">//声明指向函数成员的指针</span></span><br></pre></td></tr></table></figure>
-<p>为指向数据成员的指针赋值的一般语法形式为</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">指针名 = &amp;类名::数据成员名;</span><br></pre></td></tr></table></figure>
-<p>访问数据成员时，可以</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">对象名.*类成员指针名</span><br><span class="line">或</span><br><span class="line">对象指针名 -&gt; *类成员指针名</span><br></pre></td></tr></table></figure>
-<p>为指向成员函数的指针赋值的一般语法为</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">指针名 = &amp;类名::函数成员名;</span><br></pre></td></tr></table></figure>
-<h3 id="指向类的静态成员的指针">指向类的静态成员的指针</h3>
-<p>只需要使用普通的指针就可以</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">类型说明符  *指针名 = &amp;类名::静态数据成员</span><br><span class="line">类型说明符 (*指针名)(形式参数) = &amp;类名::静态成员函数</span><br></pre></td></tr></table></figure>
-<h1 id="动态内存分配">动态内存分配</h1>
-<p>在C++程序中建立和删除堆对象（程序运行过程中申请和释放的存储单元）使用的两个运算符：<code>new</code>和<code>delete</code>。</p>
-<div class="note danger flat"><p>有new必有delete释放，否则导致无法回收内存，使得程序占据的内存越来越大，叫做内存泄漏。</p>
-</div>
-<h2 id="创建一个类的对象">创建一个类的对象</h2>
-<blockquote><p>new建立一个类的对象时，需要注意的细节。</p>
-<blockquote><p>如果该类存在用户定义的默认构造函数，那么<code>new T</code>和<code>new T()</code>没有任何的区别。</p>
-</blockquote>
-<blockquote><p>如果该类没有定义默认的构造函数，使用<code>new T</code>时会调用系统生成的隐含的默认构造函数；使用<code>new T()</code>时，除了执行这个隐含的函数，还会为基本数据类型和指针类型的成员用0赋初值，这一过程是<strong>递归的</strong>。</p>
-</blockquote></blockquote>
-<h2 id="创建多维数组">创建多维数组</h2>
-<p>形式如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> 类型名T[数组第<span class="number">1</span>维长度][数组第二维长度]...;</span><br></pre></td></tr></table></figure>
-<p>其中数组的第一维长度可以是任何结果为正整数的<strong>表达式</strong>，而其他各维数组的长度必须是结果为正整数的<strong>常量表达式</strong>。</p>
-<p>错误的例子：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">float</span> * fp;</span><br><span class="line">fp = <span class="keyword">new</span> <span class="type">float</span>[<span class="number">10</span>][<span class="number">25</span>][<span class="number">10</span>]</span><br></pre></td></tr></table></figure>
- <div class="note danger flat"><p>在这里new操作产生的是一个指向一个<code>$25 \times 10$</code>的二维float类型数组的指针，而fp是一个指向float型数据的指针，产生了矛盾！</p>
-</div>
-<h1 id="用vector创建数组对象">用vector创建数组对象</h1>
-<p>C++提供了被封装的动态数组—vector，具有各种类型。vector<strong>不是一个类</strong>，而是<strong>一个类模板</strong>。</p>
-<p>使用vector定义动态数组的形式为：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;元素类型&gt;数组对象名(数组长度);</span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p>vector定义的数组对象的所有元素都会被初始化。如果为基本数据类型，则所有元素都会被0以初始化；如果为类类型，则会调用类的默认构造函数初始化。所以需要保证作为数组元素的类<strong>需要具有默认构造函数</strong>，初值可以指定，但是<strong>所有的元素初值必须是一样的</strong>。</p>
-</div>
-<h1 id="引用相关补充">引用相关补充</h1>
-<p>引用通常用于函数参数列表和函数返回值。下面列出了 C++ 程序员必须清楚的两个与 C++ 引用相关的重要概念：</p>
-<p><a href="https://www.runoob.com/cplusplus/passing-parameters-by-references.html">把引用作为参数</a></p>
-<p><a href="https://www.runoob.com/cplusplus/returning-values-by-reference.html">把引用作为返回值</a></p>
-<h1 id="深复制与浅复制">深复制与浅复制</h1>
-<p>隐含的复制构造函数实现的只是浅复制，但是这样的复制并不适用于所有的情况。</p>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B5%85%E5%A4%8D%E5%88%B6/main.cpp">浅复制代码示例</a></p>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B7%B1%E5%A4%8D%E5%88%B6/main.cpp">深复制代码示例</a></p>
-<h1 id="字符串">字符串</h1>
-<p>C++对字符串一系列复杂的操作进行了封装，形成了string类，更加方便的操作字符串。</p>
-<div class="note info flat"><p>执行很多字符串操作需要借助<strong>cstring</strong>头文件中的<strong>字符串处理函数</strong>，使用string类需要包含头文件<strong>string</strong>。</p>
-</div>
-<p><a href="https://www.runoob.com/cplusplus/cpp-strings.html">字符串相关讲解</a></p>
-<h1 id="个人银行账户管理程序">个人银行账户管理程序</h1>
-<p>对于上一个管理程序的功能补充。</p>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update">源码见github</a></p>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>C++程序设计</tag>
-        <tag>C++语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Makefile入门</title>
-    <url>/2022/06/19/Makefile%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h1 id="makefile概念入门">Makefile概念入门</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/29910215">知乎原文链接</a></p>
-<p><a href="https://www.cnblogs.com/paul-617/p/15501875.html">博客讲解链接</a></p>
-<p><a href="https://blog.csdn.net/weixin_38391755/article/details/80380786">又一篇讲解</a></p>
-<p>本文主要介绍怎么利用“基于目标分层”的方式去理解一个工具，写作一个概念，定义一个设计或者部署一套代码。</p>
-<p>本文首先是一个“Makefile入门”，然后才是“基于目标分层的方法介绍”。</p>
-<span id="more"></span>
-<h2 id="关于程序编译">关于程序编译</h2>
-<p>Makefile解决的是编译的问题。Makefile最初是用来解决C语言的编译问题的，所以和C的关系特别密切，但并不是说Makefile只能用来解决C的编译问题。你用来处理Java一点问题没有，但对于Java，显然ant比Makefile处理得更好。</p>
-<p>比如说，你有foo.c, bar.c, main.c三个C文件，你要编译成一个app.executable，你会怎么做呢？你会执行这样的命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc -Wall -c foo.c -o foo.o</span><br><span class="line">gcc -Wall -c bar.c -o bar.o</span><br><span class="line">gcc -Wall -c main.c -o main.o</span><br><span class="line">gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
-<p>按照程序猿的惯例，凡是要一次次重新执行的命令，都应该写成脚本。所以，简单来说，<a href="http://xn--build-fg1hjcwnb27p5qh0aj8tnybdzrt45b0pms6bwy60bjr5a.sh">你会把上面这个命令序列写成一个build.sh</a>，每次编译你只要执行这个脚本问题就解决了。</p>
-<p>但这个脚本有问题，假设我修改了foo.c，但我没有修改bar.c和main.c，那么执行这个脚本是很浪费的，因为它会无条件也重新编译bar.c和main.c。</p>
-<p>这个脚本更合理的写法应该是这样的：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[ foo.o -ot foo.c ] &amp;&amp; gcc -Wall -c foo.c -o foo.o</span><br><span class="line">[ bar.o -ot bar.c ] &amp;&amp; gcc -Wall -c bar.c -o bar.o</span><br><span class="line">[ main.o -ot main.o] &amp;&amp; gcc -Wall -c main.c -o main.o</span><br><span class="line">[ app.executable -ot main.o ] &amp;&amp; [ app.executable -ot foo.o ] &amp;&amp; [ app.executable -ot bar.o ] &amp;&amp; gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
-<p>如果你面对一个问题，不要尝试重新去定义这个问题，而是看它和原来的问题相比，多出来的问题是什么，尝试解决那个多出来的问题就好了。那么这里，多出来的问题就是文件修改时间比较。这个就是Makefile要解决的基本问题了。我们定义一种新的“脚本语言”（只是不用sh/bash/tch来解释，而是用make来解释），可以用很简单的方法来说明我们需要做的文件比较。这样上面的脚本就可以写成这个样子了：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample1</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  gcc -Wall -c foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  gcc -Wall -c bar.c -o woo.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  gcc -Wall -c main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
-<p>上面那个Makefile中，foo.o: foo.c定义了一个**“依赖”<strong>，说明foo.o是靠foo.c编译成的，它后面缩进的那些命令，就是简单的shell脚本，称为</strong>规则(rule)**。而Makefile的作用是定义一组依赖，当被依赖的文件比依赖的文件新，就执行规则。这样，前面的问题就解决了。</p>
-<p>IDE中封装了Makefile得使用，但是想要具体控制特定文件的编译细节，最终仍然需要面对这些问题，IDE和make工具的对比，两者解决的是问题的不同层次。</p>
-<p>Makefile中的依赖定义构成了一个依赖链（树），比如上面这个Makefile中，app.executable依赖于main.o，main.o又依赖于main.c，所以，当你去满足app.executable（这个目标）的依赖的时候，它首先去检查main.o的依赖，直到找到依赖树的叶子节点(main.c），然后进行时间比较。这个判断过程由make工具来完成，所以，和一般的脚本不一样。Makefile的执行过程不是基于语句顺序的，而是基于依赖链的顺序的。<img src="https://pic4.zhimg.com/80/v2-90371e6fcdf8f515a68dab7404ed4f43_1440w.jpg" alt="依赖树"></p>
-<h2 id="phony依赖">phony依赖</h2>
-<p>make命令执行的时候，后面跟一个“目标”（不带参数的话默认是第一个依赖的目标），然后以这个目标为根建立整个依赖树。依赖树的每个节点是一个文件，任何时候我们都可以通过比较每个依赖文件和被依赖文件的时间，以决定是否需要执行“规则”</p>
-<p>但有时，我们希望某个规则<strong>总是被执行</strong>。这时，很自然地，我们会定义一下<strong>永远都不会被满足</strong>的依赖。</p>
-<p>可能会这么写：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">test:</span></span><br><span class="line">  DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
-<p>test这个文件永远都不会被产生，所以，你只要执行这个依赖，rule是必然会被执行的。这种形式看起来很好用，但由于make工具默认认为你这是个文件，当它成为依赖链的一部分的时候，很容易造成各种误会和处理误差。</p>
-<p>所以，简化起见，Makefile允许你显式地把一个依赖目标定义为<strong>假的(Phony)</strong>：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: test</span></span><br><span class="line"><span class="section">test:</span></span><br><span class="line"> DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
-<p>这样make工具就不用多想了，也不用检查test这个文件的时间了，反正test就是假的，如果有人依赖它，无条件执行就对了。</p>
-<h2 id="宏">宏</h2>
-<p>前面的sample1明显还是有很多多余的成份，这些多余的成份可以简单通过引入“宏”定义来解决，比如上面的Makefile，我们把重复的东西都用宏来写，就成了这样了：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample2</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> bar.c -o bar.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> main.o foo.o bar.o -o app.executable</span><br></pre></td></tr></table></figure>
-<p>还是有“多余”的成份在，因为明明依赖中已经写了foo.o了，rule中还要再写一次，我们可以把依赖的对象定义为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">@</mi><mtext>，被依赖的对象定义为</mtext></mrow><annotation encoding="application/x-tex">@，被依赖的对象定义为</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">@</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">被</span><span class="mord cjk_fallback">依</span><span class="mord cjk_fallback">赖</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">为</span></span></span></span>^（这是当前gnumake的设计），这样就可以进一步化简：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample3</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
-<p>很明显，这还是有重复，我们可以把重复的定义写成通配符：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample4</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"><span class="section">woo.o: woo.c</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
-<p>实际上，你要化简，还有很多手段，比如gnumake其实是默认定义了一组rule的，上面这个整个你都可以不写，就这样就可以了：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample5</span></span><br><span class="line">LDLIBS=-lpthead</span><br><span class="line">SRC=<span class="variable">$(<span class="built_in">wildcard</span> *.c)</span></span><br><span class="line">OBJ=$(SRC:.c=.o)</span><br><span class="line"><span class="section">app.executable: <span class="variable">$(OBJ)</span></span></span><br><span class="line"><span class="comment">#看不懂</span></span><br></pre></td></tr></table></figure>
-<p>这里其实没有定义.o到.c的依赖，但gnumake默认如果.c存在，.o就依赖对应的.c，而.o到.c的rule，是通过宏默认定义的。你只要修改CC，LDLIBS这类的宏，就能解决大部分问题了。所以你又省掉了一组定义，这就可以写得很短。</p>
-<h2 id="头文件问题">头文件问题</h2>
-<p>现在我们把问题搞得复杂一点，增加三个头文件。比如foo.h, bar.h和common.h，前两者定义foo.c和bar.c的对外接口，给main.c使用，common.h定义所有文件都要用到的通用定义（foo.h和woo.h中包含common.h)。这样前面这个sample1就有毛病了。照理说，foo.h更新的时候，foo.o和main.o都需要重新编译，但根据那个定义，根本就没有这个比较。</p>
-<p>我们的定义必须写成这个样子：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample4+</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br><span class="line"><span class="section">bar.o: bar.c bar.h common.h</span></span><br><span class="line"><span class="section">main.o: main.c foo.h bar.h common.h</span></span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
-<p>(注：这个例子我们在.o.c依赖的规则中使用了$&lt;宏，它和$^的区别是，它不包括依赖列表中的所有文件，而仅仅是列表中的第一个文件）</p>
-<p>这就又增加了复杂度了——头文件包含关系一变化，我就得更新这个Makefile的定义。这带来了升级时的冗余工作。按我们前面考虑一样的策略，我们尝试在已有的名称空间上解决这个问题。Makefile已经可以定义依赖了，但我们不知道这个依赖本身。这个事情谁能解决？——把这个过程想一下——其实已经有人解决这个问题了，这个包含关系谁知道嘛？当然是编译器。编译器都已经用到那个头文件了，当然是它才知道这种包含关系是什么样的。比如gcc本身直接就提供了-M系列参数，可以自动帮你生成依赖关系。比如你执行gcc -MM foo.c就可以得到</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>本文引自开头的链接，由于能力有限及需求不高，剩余的看的不是很懂，目前就到这里。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>makefile基础</tag>
-        <tag>CS工具</tag>
       </tags>
   </entry>
   <entry>
@@ -828,6 +670,164 @@ setTime(),showTime()</li>
       </tags>
   </entry>
   <entry>
+    <title>CPP数组、指针和字符串</title>
+    <url>/2022/07/23/CPP%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</url>
+    <content><![CDATA[<h1 id="数组">数组</h1>
+<p>数组是具有一定顺序关系的若干对象的集合体，组成数组的对象成为该数组的元素。数组名是一个不能被赋值的指针，叫做指针常量。</p>
+<blockquote><p>C++中的二维数组被当作<strong>一维数组的数组</strong>。因此二维数组是按照<strong>行优先</strong>的顺序存储。</p>
+</blockquote>
+<hr>
+<blockquote><p>把数组作为参数时，一般不指定数组第一维的大小，即使指定，也会被忽略。</p>
+</blockquote>
+<h2 id="程序实例-线性拟合">程序实例—线性拟合</h2>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Linear%20fit">查看源代码</a></p>
+<hr>
+<h1 id="指针">指针</h1>
+<p>基本定义使用略去。</p>
+<h2 id="void指针的使用">void指针的使用</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="type">void</span> voidObject;             <span class="comment">//不能声明void类型的变量</span></span><br><span class="line">  <span class="type">void</span> *pv;                    <span class="comment">//可以声明void类型的指针</span></span><br><span class="line">  <span class="type">int</span> i = <span class="number">5</span>;</span><br><span class="line">  pv = &amp;i;</span><br><span class="line">  <span class="type">int</span> *pint = <span class="built_in">static_cast</span>&lt;<span class="type">int</span> *&gt;(pv);</span><br><span class="line">  cout &lt;&lt; <span class="string">&quot;* pint=&quot;</span> &lt;&lt; * pint &lt;&lt; endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">运行结果：</span><br><span class="line">  * pint = <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>void指针一般只在指针所指向的数据类型不确定的时候使用。</p>
+</div>
+<h2 id="空指针的使用">空指针的使用</h2>
+<p>不同类型的指针之间或者指针与非零整数之间的关系运算是<strong>毫无意义</strong>的，但是指针变量可以和整数0进行比较。0专用于表示空指针，也就是一个不指向任何有效地址的指针。</p>
+<p>空指针同时也可以用NULL表示。</p>
+<div class="note success flat"><p>NULL是一个在很多头文件中都有定义的宏，该定义为0。</p>
+</div>
+<h2 id="对象指针">对象指针</h2>
+<p>顾名思义，指向一个对象的指针。</p>
+<p>使用对象指针时，可以很形象的表示对象的成员，语法形式为<code>对象指针名-&gt;成员名</code>这个与<code>(*对象指针名).成员名</code>的访问是等价的。</p>
+<p>前面在类的组合时有个知识点叫做前向引用声明，当时有两个类，在定义时互相引用，这个问题就可以用指针解决。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>;         <span class="comment">//前向引用说明</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>&#123;</span><br><span class="line">  A *x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">  B *y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>声明一个指针而不是对象时允许的，当A定义完，就可以声明A对象。</p>
+<h3 id="this指针">this指针</h3>
+<p>this指针是一个隐含于每一个类的非静态成员函数中的特殊指针（包括构造函数和析构函数），它用于指向正在被<strong>成员函数操作的对象</strong></p>
+<div class="note info flat"><p>this指针是成员函数的隐含参数，让函数知道操作的是哪个对象，从而访问其数据成员。对于常成员函数来说，这个隐含的参数是长指针类型的。</p>
+</div>
+<h3 id="指向类的非静态成员的指针">指向类的非静态成员的指针</h3>
+<p>声明语句</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">类型说明符  类名::* 指针名                           <span class="comment">//声明指向数据成员的指针</span></span><br><span class="line">类型说明符 (类名::* 指针名)(参数表);                  <span class="comment">//声明指向函数成员的指针</span></span><br></pre></td></tr></table></figure>
+<p>为指向数据成员的指针赋值的一般语法形式为</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">指针名 = &amp;类名::数据成员名;</span><br></pre></td></tr></table></figure>
+<p>访问数据成员时，可以</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">对象名.*类成员指针名</span><br><span class="line">或</span><br><span class="line">对象指针名 -&gt; *类成员指针名</span><br></pre></td></tr></table></figure>
+<p>为指向成员函数的指针赋值的一般语法为</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">指针名 = &amp;类名::函数成员名;</span><br></pre></td></tr></table></figure>
+<h3 id="指向类的静态成员的指针">指向类的静态成员的指针</h3>
+<p>只需要使用普通的指针就可以</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">类型说明符  *指针名 = &amp;类名::静态数据成员</span><br><span class="line">类型说明符 (*指针名)(形式参数) = &amp;类名::静态成员函数</span><br></pre></td></tr></table></figure>
+<h1 id="动态内存分配">动态内存分配</h1>
+<p>在C++程序中建立和删除堆对象（程序运行过程中申请和释放的存储单元）使用的两个运算符：<code>new</code>和<code>delete</code>。</p>
+<div class="note danger flat"><p>有new必有delete释放，否则导致无法回收内存，使得程序占据的内存越来越大，叫做内存泄漏。</p>
+</div>
+<h2 id="创建一个类的对象">创建一个类的对象</h2>
+<blockquote><p>new建立一个类的对象时，需要注意的细节。</p>
+<blockquote><p>如果该类存在用户定义的默认构造函数，那么<code>new T</code>和<code>new T()</code>没有任何的区别。</p>
+</blockquote>
+<blockquote><p>如果该类没有定义默认的构造函数，使用<code>new T</code>时会调用系统生成的隐含的默认构造函数；使用<code>new T()</code>时，除了执行这个隐含的函数，还会为基本数据类型和指针类型的成员用0赋初值，这一过程是<strong>递归的</strong>。</p>
+</blockquote></blockquote>
+<h2 id="创建多维数组">创建多维数组</h2>
+<p>形式如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> 类型名T[数组第<span class="number">1</span>维长度][数组第二维长度]...;</span><br></pre></td></tr></table></figure>
+<p>其中数组的第一维长度可以是任何结果为正整数的<strong>表达式</strong>，而其他各维数组的长度必须是结果为正整数的<strong>常量表达式</strong>。</p>
+<p>错误的例子：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">float</span> * fp;</span><br><span class="line">fp = <span class="keyword">new</span> <span class="type">float</span>[<span class="number">10</span>][<span class="number">25</span>][<span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+ <div class="note danger flat"><p>在这里new操作产生的是一个指向一个<code>$25 \times 10$</code>的二维float类型数组的指针，而fp是一个指向float型数据的指针，产生了矛盾！</p>
+</div>
+<h1 id="用vector创建数组对象">用vector创建数组对象</h1>
+<p>C++提供了被封装的动态数组—vector，具有各种类型。vector<strong>不是一个类</strong>，而是<strong>一个类模板</strong>。</p>
+<p>使用vector定义动态数组的形式为：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;元素类型&gt;数组对象名(数组长度);</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>vector定义的数组对象的所有元素都会被初始化。如果为基本数据类型，则所有元素都会被0以初始化；如果为类类型，则会调用类的默认构造函数初始化。所以需要保证作为数组元素的类<strong>需要具有默认构造函数</strong>，初值可以指定，但是<strong>所有的元素初值必须是一样的</strong>。</p>
+</div>
+<h1 id="引用相关补充">引用相关补充</h1>
+<p>引用通常用于函数参数列表和函数返回值。下面列出了 C++ 程序员必须清楚的两个与 C++ 引用相关的重要概念：</p>
+<p><a href="https://www.runoob.com/cplusplus/passing-parameters-by-references.html">把引用作为参数</a></p>
+<p><a href="https://www.runoob.com/cplusplus/returning-values-by-reference.html">把引用作为返回值</a></p>
+<h1 id="深复制与浅复制">深复制与浅复制</h1>
+<p>隐含的复制构造函数实现的只是浅复制，但是这样的复制并不适用于所有的情况。</p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B5%85%E5%A4%8D%E5%88%B6/main.cpp">浅复制代码示例</a></p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B7%B1%E5%A4%8D%E5%88%B6/main.cpp">深复制代码示例</a></p>
+<h1 id="字符串">字符串</h1>
+<p>C++对字符串一系列复杂的操作进行了封装，形成了string类，更加方便的操作字符串。</p>
+<div class="note info flat"><p>执行很多字符串操作需要借助<strong>cstring</strong>头文件中的<strong>字符串处理函数</strong>，使用string类需要包含头文件<strong>string</strong>。</p>
+</div>
+<p><a href="https://www.runoob.com/cplusplus/cpp-strings.html">字符串相关讲解</a></p>
+<h1 id="个人银行账户管理程序">个人银行账户管理程序</h1>
+<p>对于上一个管理程序的功能补充。</p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update">源码见github</a></p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Makefile入门</title>
+    <url>/2022/06/19/Makefile%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="makefile概念入门">Makefile概念入门</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/29910215">知乎原文链接</a></p>
+<p><a href="https://www.cnblogs.com/paul-617/p/15501875.html">博客讲解链接</a></p>
+<p><a href="https://blog.csdn.net/weixin_38391755/article/details/80380786">又一篇讲解</a></p>
+<p>本文主要介绍怎么利用“基于目标分层”的方式去理解一个工具，写作一个概念，定义一个设计或者部署一套代码。</p>
+<p>本文首先是一个“Makefile入门”，然后才是“基于目标分层的方法介绍”。</p>
+<span id="more"></span>
+<h2 id="关于程序编译">关于程序编译</h2>
+<p>Makefile解决的是编译的问题。Makefile最初是用来解决C语言的编译问题的，所以和C的关系特别密切，但并不是说Makefile只能用来解决C的编译问题。你用来处理Java一点问题没有，但对于Java，显然ant比Makefile处理得更好。</p>
+<p>比如说，你有foo.c, bar.c, main.c三个C文件，你要编译成一个app.executable，你会怎么做呢？你会执行这样的命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc -Wall -c foo.c -o foo.o</span><br><span class="line">gcc -Wall -c bar.c -o bar.o</span><br><span class="line">gcc -Wall -c main.c -o main.o</span><br><span class="line">gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
+<p>按照程序猿的惯例，凡是要一次次重新执行的命令，都应该写成脚本。所以，简单来说，<a href="http://xn--build-fg1hjcwnb27p5qh0aj8tnybdzrt45b0pms6bwy60bjr5a.sh">你会把上面这个命令序列写成一个build.sh</a>，每次编译你只要执行这个脚本问题就解决了。</p>
+<p>但这个脚本有问题，假设我修改了foo.c，但我没有修改bar.c和main.c，那么执行这个脚本是很浪费的，因为它会无条件也重新编译bar.c和main.c。</p>
+<p>这个脚本更合理的写法应该是这样的：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[ foo.o -ot foo.c ] &amp;&amp; gcc -Wall -c foo.c -o foo.o</span><br><span class="line">[ bar.o -ot bar.c ] &amp;&amp; gcc -Wall -c bar.c -o bar.o</span><br><span class="line">[ main.o -ot main.o] &amp;&amp; gcc -Wall -c main.c -o main.o</span><br><span class="line">[ app.executable -ot main.o ] &amp;&amp; [ app.executable -ot foo.o ] &amp;&amp; [ app.executable -ot bar.o ] &amp;&amp; gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
+<p>如果你面对一个问题，不要尝试重新去定义这个问题，而是看它和原来的问题相比，多出来的问题是什么，尝试解决那个多出来的问题就好了。那么这里，多出来的问题就是文件修改时间比较。这个就是Makefile要解决的基本问题了。我们定义一种新的“脚本语言”（只是不用sh/bash/tch来解释，而是用make来解释），可以用很简单的方法来说明我们需要做的文件比较。这样上面的脚本就可以写成这个样子了：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample1</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  gcc -Wall -c foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  gcc -Wall -c bar.c -o woo.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  gcc -Wall -c main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  gcc main.o foo.o bar.o -lpthread -o app.executable</span><br></pre></td></tr></table></figure>
+<p>上面那个Makefile中，foo.o: foo.c定义了一个**“依赖”<strong>，说明foo.o是靠foo.c编译成的，它后面缩进的那些命令，就是简单的shell脚本，称为</strong>规则(rule)**。而Makefile的作用是定义一组依赖，当被依赖的文件比依赖的文件新，就执行规则。这样，前面的问题就解决了。</p>
+<p>IDE中封装了Makefile得使用，但是想要具体控制特定文件的编译细节，最终仍然需要面对这些问题，IDE和make工具的对比，两者解决的是问题的不同层次。</p>
+<p>Makefile中的依赖定义构成了一个依赖链（树），比如上面这个Makefile中，app.executable依赖于main.o，main.o又依赖于main.c，所以，当你去满足app.executable（这个目标）的依赖的时候，它首先去检查main.o的依赖，直到找到依赖树的叶子节点(main.c），然后进行时间比较。这个判断过程由make工具来完成，所以，和一般的脚本不一样。Makefile的执行过程不是基于语句顺序的，而是基于依赖链的顺序的。<img src="https://pic4.zhimg.com/80/v2-90371e6fcdf8f515a68dab7404ed4f43_1440w.jpg" alt="依赖树"></p>
+<h2 id="phony依赖">phony依赖</h2>
+<p>make命令执行的时候，后面跟一个“目标”（不带参数的话默认是第一个依赖的目标），然后以这个目标为根建立整个依赖树。依赖树的每个节点是一个文件，任何时候我们都可以通过比较每个依赖文件和被依赖文件的时间，以决定是否需要执行“规则”</p>
+<p>但有时，我们希望某个规则<strong>总是被执行</strong>。这时，很自然地，我们会定义一下<strong>永远都不会被满足</strong>的依赖。</p>
+<p>可能会这么写：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">test:</span></span><br><span class="line">  DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
+<p>test这个文件永远都不会被产生，所以，你只要执行这个依赖，rule是必然会被执行的。这种形式看起来很好用，但由于make工具默认认为你这是个文件，当它成为依赖链的一部分的时候，很容易造成各种误会和处理误差。</p>
+<p>所以，简化起见，Makefile允许你显式地把一个依赖目标定义为<strong>假的(Phony)</strong>：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: test</span></span><br><span class="line"><span class="section">test:</span></span><br><span class="line"> DEBUG=1 ./app.executable</span><br></pre></td></tr></table></figure>
+<p>这样make工具就不用多想了，也不用检查test这个文件的时间了，反正test就是假的，如果有人依赖它，无条件执行就对了。</p>
+<h2 id="宏">宏</h2>
+<p>前面的sample1明显还是有很多多余的成份，这些多余的成份可以简单通过引入“宏”定义来解决，比如上面的Makefile，我们把重复的东西都用宏来写，就成了这样了：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample2</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> foo.c -o foo.o</span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> bar.c -o bar.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> main.c -o main.o</span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> main.o foo.o bar.o -o app.executable</span><br></pre></td></tr></table></figure>
+<p>还是有“多余”的成份在，因为明明依赖中已经写了foo.o了，rule中还要再写一次，我们可以把依赖的对象定义为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">@</mi><mtext>，被依赖的对象定义为</mtext></mrow><annotation encoding="application/x-tex">@，被依赖的对象定义为</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">@</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">被</span><span class="mord cjk_fallback">依</span><span class="mord cjk_fallback">赖</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">为</span></span></span></span>^（这是当前gnumake的设计），这样就可以进一步化简：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample3</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">bar.o: bar.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+<p>很明显，这还是有重复，我们可以把重复的定义写成通配符：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample4</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line"> <span class="variable">$(CC)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c</span></span><br><span class="line"><span class="section">woo.o: woo.c</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line"><span class="section">app.executable: foo.o woo.o main.o</span></span><br><span class="line"> <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+<p>实际上，你要化简，还有很多手段，比如gnumake其实是默认定义了一组rule的，上面这个整个你都可以不写，就这样就可以了：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample5</span></span><br><span class="line">LDLIBS=-lpthead</span><br><span class="line">SRC=<span class="variable">$(<span class="built_in">wildcard</span> *.c)</span></span><br><span class="line">OBJ=$(SRC:.c=.o)</span><br><span class="line"><span class="section">app.executable: <span class="variable">$(OBJ)</span></span></span><br><span class="line"><span class="comment">#看不懂</span></span><br></pre></td></tr></table></figure>
+<p>这里其实没有定义.o到.c的依赖，但gnumake默认如果.c存在，.o就依赖对应的.c，而.o到.c的rule，是通过宏默认定义的。你只要修改CC，LDLIBS这类的宏，就能解决大部分问题了。所以你又省掉了一组定义，这就可以写得很短。</p>
+<h2 id="头文件问题">头文件问题</h2>
+<p>现在我们把问题搞得复杂一点，增加三个头文件。比如foo.h, bar.h和common.h，前两者定义foo.c和bar.c的对外接口，给main.c使用，common.h定义所有文件都要用到的通用定义（foo.h和woo.h中包含common.h)。这样前面这个sample1就有毛病了。照理说，foo.h更新的时候，foo.o和main.o都需要重新编译，但根据那个定义，根本就没有这个比较。</p>
+<p>我们的定义必须写成这个样子：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sample4+</span></span><br><span class="line">CC=gcc -Wall -c</span><br><span class="line">LD=gcc</span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">  <span class="variable">$(CC)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br><span class="line"><span class="section">bar.o: bar.c bar.h common.h</span></span><br><span class="line"><span class="section">main.o: main.c foo.h bar.h common.h</span></span><br><span class="line"><span class="section">app.executable: foo.o bar.o main.o</span></span><br><span class="line">  <span class="variable">$(LD)</span> <span class="variable">$^</span> -o <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+<p>(注：这个例子我们在.o.c依赖的规则中使用了$&lt;宏，它和$^的区别是，它不包括依赖列表中的所有文件，而仅仅是列表中的第一个文件）</p>
+<p>这就又增加了复杂度了——头文件包含关系一变化，我就得更新这个Makefile的定义。这带来了升级时的冗余工作。按我们前面考虑一样的策略，我们尝试在已有的名称空间上解决这个问题。Makefile已经可以定义依赖了，但我们不知道这个依赖本身。这个事情谁能解决？——把这个过程想一下——其实已经有人解决这个问题了，这个包含关系谁知道嘛？当然是编译器。编译器都已经用到那个头文件了，当然是它才知道这种包含关系是什么样的。比如gcc本身直接就提供了-M系列参数，可以自动帮你生成依赖关系。比如你执行gcc -MM foo.c就可以得到</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">foo.o: foo.c foo.h common.h</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>本文引自开头的链接，由于能力有限及需求不高，剩余的看的不是很懂，目前就到这里。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>makefile基础</tag>
+        <tag>CS工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Qt</title>
     <url>/2022/09/03/Qt/</url>
     <content><![CDATA[<p><a href="https://github.com/liubf21/Qt-Practical-Training-For-Programming">非爷的Qt仓库</a></p>
@@ -848,6 +848,63 @@ setTime(),showTime()</li>
         <tag>学习笔记</tag>
         <tag>C++语言</tag>
         <tag>ui程序设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Web认证的校园网接路由器</title>
+    <url>/2023/02/16/Web%E8%AE%A4%E8%AF%81%E7%9A%84%E6%A0%A1%E5%9B%AD%E7%BD%91%E6%8E%A5%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="需求">需求</h1>
+<p>由于校园网的有设备数量的限制，于是想要利用校园的有线网接自己的路由器解除设备数量的限制，并且实现所谓的硬件翻墙，即流量经由路由器转发至代理服务器，作用就是处于该路由器形成的网络中的设备不用启动科学上网，省了一点事儿。</p>
+<h1 id="困难与解决办法">困难与解决办法</h1>
+<p>校园网不同于家庭网络，需要进行一步web认证才能进行联网，我一开始就是以为我买个现成路由器（华硕 TUF AX3000）接上去认证一下就好了，结果是并不会弹出这个认证的界面。所以我又买了台软路由R2S（本质上是一台微型计算机），并且装上<a href="https://zh.wikipedia.org/zh-hans/OpenWrt">openwrt</a>系统作为路由器的上级路由，因为本质上是个嵌入的linux系统，有命令行工具，可以用<code>curl</code>命令向自己校园网的认证界面(华科是192.168.50.3)发个http请求实现登陆即可。至于科学，利用软路由里的软件配置好自己订阅的机场地址就行，没错，本质上还是软翻，不过是交到网关去处理了而已。</p>
+<h1 id="过程演示">过程演示</h1>
+<h2 id="设备准备">设备准备</h2>
+<p>一台路由器，一台软路由，两根网线，一台电脑。</p>
+<h2 id="利用网络抓包获取校园网认证中http请求的content值">利用网络抓包获取校园网认证中http请求的content值</h2>
+<p>首先用一根网线的一端接校园有线网的端口，另一端接自己的电脑。通过浏览器进入校园网的认证界面，此处最好关闭掉wifi功能。提前输入好账号密码，<strong>不要点登录</strong>。<br>
+<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.01.16.png" alt=""></p>
+<h3 id="进入开发者模式">进入开发者模式</h3>
+<p>按F12进入浏览器的开发者模式，大致看一下，并了解该网页的逻辑，即登录的函数<br>
+<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.05.27.png" alt=""></p>
+<h3 id="在post位置处打上断点">在post位置处打上断点</h3>
+<p>跟平常调试代码一样。<br>
+<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.06.24.png" alt=""></p>
+<h3 id="点击login登录获取content值">点击login登录获取content值</h3>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.27.04.png" alt=""></p>
+<h3 id="利用curl命令发送请求">利用curl命令发送请求</h3>
+<p>写一个shell脚本，或者不写都行。<br>
+<img src="https://picx.zhimg.com/80/v2-285e2cea8e82f818410f32dd796559b3_1440w.png" alt=""><br>
+利用chmod命令赋予其执行权限之后，执行该脚本，发现返回值是succees即代表该命令成功执行并完成了校园网的认证；如若不成功，重复获取content的操作，因为我也是第一次没成功。</p>
+<h2 id="配置软路由">配置软路由</h2>
+<h3 id="安装openwrt系统">安装openwrt系统</h3>
+<p>由于github上开源众多，效果应该都差不多，随便选就行，而且tb上买的软路由大多是提前预装好的，如果是一台全新的机器，参考下面的video以安装好openwrt系统。</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/gsrAj1vySaE" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h3 id="进入软路由后台">进入软路由后台</h3>
+<p>把TF卡正确插入软路由，并确保自己的软路由sys的指示灯正常。<br>
+<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2019.46.52.png"/></p>
+<p>用一根网线一端接校园有线网的端口，另一端接软路由的wan口。另一根网线的一端接软路由的lan口，另一端接上电脑。此时电脑和软路由处于同一局域网下，通过其ip地址（这个一般商家会告诉你，如果没有则可以查看网关的ip地址，或者关闭dhcp手动分配）在浏览器中去登陆软路由的后台，输入用户名和密码进行登录。<br>
+<img src="https://picx.zhimg.com/80/v2-7d989b04c23b0a4f5f0bef25068a117a_1440w.png" alt=""></p>
+<h3 id="命令行中使用curl命令">命令行中使用curl命令</h3>
+<p>进入软路由的命令行工具，使用上面写好的curl命令去进行校园网的认证。最好尝试ping一下百度，看能不能通。<br>
+<img src="https://pica.zhimg.com/80/v2-1b493abb1ef9054903270b5bdffeabb5_1440w.png" alt=""></p>
+<h3 id="配置科学上网">配置科学上网</h3>
+<p>我使用的openclash这是它里面自带的软件，随便使用一款代理软件都行，然后就如在其他设备上配置科学一样，输入订阅的url就行。<br>
+<img src="https://pic1.zhimg.com/80/v2-d9aab76bd341cae45b8c5524653098e7_1440w.png" alt=""></p>
+<h2 id="配置硬路由">配置硬路由</h2>
+<p>因为软路由不能像路由器那样发送无线的网络信号（至少我的入门机不行），需要使用一台真正的路由器去发送wifi信号或者是提供更多的lan口进行有线网的连接。我的华硕路由器的用途就是如此，关注到软路由接lan口那条线，把这条线接电脑的一端改接到路由器的wan口，当然也可以接到lan口，不过需要使用路由器的ap模式。不同点在于，接到wan口的方法，软路由变成了上级路由，你无法通过输入ip地址的方法进入软路由的后台（至少现在的我技术达不到）；而接到lan口的话，软路由仍与我们的设备处于同一个局域网内（此时的路由器充当的作用就跟一个具有无线功能的交换机一样）。</p>
+<p>我是接到wan口，然后用任意一台能够上网的设备连接该wifi信号，根据路由器背面提供的信息完成对路由器的初始设置，例如名称密码什么的。此过程比较简单，不进行过多的赘述。</p>
+<h1 id="写在最后">写在最后</h1>
+<p>由于学校断电断网的局限性导致设备夜间断网，那也不能每次都得重复登录软路由后台去连接校园网，但是貌似启用无感认证之后，就算断了一段时间也能够自动的连上去。还是准备又时间写一个自动登录和自动下线的脚本，来迎合学校的规定。</p>
+<p>上述的方法的确适用于我的状况，而且我买的路由器本身就支持刷机，其实对于一般的无需认证的家庭网络可以不用软路由这个东西，华硕的某些系列的路由器支持刷梅林系统，本质也是一个适配华硕路由器的openwrt系统。由于我目前没有找到更好的解决办法，只能够维持现状。软路由更多还是作为旁路由，专门给家里的电视盒子提供一些屏蔽广告的服务，或者是流媒体加速，最重要的还是能够科学，看外国的一些流媒体软件。</p>
+<p>参考文章<br>
+<a href="https://blog.csdn.net/qq_30763587/article/details/119523231">openwrt下实现校园网的web认证</a><br>
+<a href="https://zhuanlan.zhihu.com/p/443145372?utm_campaign=shareopn&amp;utm_medium=social&amp;utm_oi=1137483569697013760&amp;utm_psn=1609660582969470976&amp;utm_source=wechat_session">华中科技大学校园网自动重连</a></p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机网络 - 校园网 - 路由</tag>
       </tags>
   </entry>
   <entry>
@@ -1066,6 +1123,28 @@ setTime(),showTime()</li>
       </tags>
   </entry>
   <entry>
+    <title>个人计划（暑假）</title>
+    <url>/2022/06/01/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<h1 id="对于这个暑假的一些具体安排">对于这个暑假的一些具体安排</h1>
+<p>最近觉得心里乱乱的，感觉什么都想学，什么都想知道，但是人的精力的确是有限的，所以在此厘清自己的头绪，学会取舍。</p>
+<span id="more"></span>
+<p>按照我认为从急到缓</p>
+<ul>
+<li>[ ] 科研老师交予的任务，三本书，还有斯坦福的视频，这是一定要完成的任务！</li>
+<li>[ ] C++（郑莉）的学习和数据结构（清华数据结构），算法（先就PAT乙）的学习，努力提高自己的代码能力，练习配上地大的实习和头哥的实验。</li>
+<li>[ ] 学会一些基础的CS工具，linux，git，py，cmake和docker等等，对自己的要求就是浅尝辄止，不许过多浪费时间。</li>
+<li>[ ] 至少要有做自己的项目的经历，初步的想法是用自己买的服务器搭一个网页游戏，从中学习前后端的知识，边做边学。还有一个就是利用c++写一个小游戏，参照地大的项目，目的是提高自己对C++的理解，然后熟悉程序开发的过程，OOP(面向对象编程)可以先搁置。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>千与千寻有感</title>
     <url>/2022/08/09/%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<p>近几天有点混，突发奇想去看一些比较经典的影片，看完千里千寻之后被其中优美的旋律和动人的故事吸引，决定也来写一些自己的感受吧。</p>
@@ -1263,28 +1342,6 @@ This is my website, click the button  <a class="btn-beautify block right blue la
       </categories>
       <tags>
         <tag>博客写作技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人计划（暑假）</title>
-    <url>/2022/06/01/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<h1 id="对于这个暑假的一些具体安排">对于这个暑假的一些具体安排</h1>
-<p>最近觉得心里乱乱的，感觉什么都想学，什么都想知道，但是人的精力的确是有限的，所以在此厘清自己的头绪，学会取舍。</p>
-<span id="more"></span>
-<p>按照我认为从急到缓</p>
-<ul>
-<li>[ ] 科研老师交予的任务，三本书，还有斯坦福的视频，这是一定要完成的任务！</li>
-<li>[ ] C++（郑莉）的学习和数据结构（清华数据结构），算法（先就PAT乙）的学习，努力提高自己的代码能力，练习配上地大的实习和头哥的实验。</li>
-<li>[ ] 学会一些基础的CS工具，linux，git，py，cmake和docker等等，对自己的要求就是浅尝辄止，不许过多浪费时间。</li>
-<li>[ ] 至少要有做自己的项目的经历，初步的想法是用自己买的服务器搭一个网页游戏，从中学习前后端的知识，边做边学。还有一个就是利用c++写一个小游戏，参照地大的项目，目的是提高自己对C++的理解，然后熟悉程序开发的过程，OOP(面向对象编程)可以先搁置。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>个人反思</tag>
       </tags>
   </entry>
   <entry>
@@ -2028,43 +2085,24 @@ tar命令可以将已经打包好的文件解压出来。</p>
         <category>心路</category>
       </categories>
       <tags>
-        <tag>感悟</tag>
         <tag>个人反思</tag>
+        <tag>感悟</tag>
       </tags>
   </entry>
   <entry>
-    <title>摄影</title>
-    <url>/2022/06/01/%E6%91%84%E5%BD%B1/</url>
-    <content><![CDATA[<h3 id="分享一些自己的拍摄照片">分享一些自己的拍摄照片</h3>
-<p><img src="https://pic2.zhimg.com/80/v2-880f14a452020c4bc2960951c42b20f1_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<span id="more"></span>
-<p><img src="https://pic1.zhimg.com/80/v2-a0f11cbb7953ba01a890c23e3be6c63f_1440w.jpeg" alt="夕阳"></p>
-<p><img src="https://pic3.zhimg.com/80/v2-9649a908558db3a70a77ae9e1fb8d33a_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pica.zhimg.com/80/v2-717a3602b5c57865874b88f563cee104_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic2.zhimg.com/80/v2-319e56149a37bb79ebf398313ee0ef8a_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic1.zhimg.com/80/v2-d4104a182c25846d796f9334e94d860c_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pica.zhimg.com/80/v2-35c2028c96d3af9820616de6388003f4_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic1.zhimg.com/80/v2-def6aca439de3567dfd35065ee0e61e7_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic3.zhimg.com/80/v2-ac2fd89cd4fa0896b54d2b6a20b66486_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic2.zhimg.com/80/v2-eaff4c547270c0b99608f71874ebc9a5_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pica.zhimg.com/80/v2-3e75354556b09d68ea7385b9c5610748_1440w.png?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic1.zhimg.com/80/v2-64aae8ff73271c57cab8a5c79b7b29db_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pica.zhimg.com/80/v2-648b81c8736de915dc8bc2e4c0385f8b_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic3.zhimg.com/80/v2-ea5211faa3dd7dfaed9a64bd645866a3_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic3.zhimg.com/80/v2-e6e138d6ab805a903e7ad780a0c4fff1_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic3.zhimg.com/80/v2-835481f1de4157b12dfc740d54378618_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic1.zhimg.com/80/v2-a90e6cd32db008c98c24a931b83e1dd1_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic3.zhimg.com/80/v2-1b4264e392f1b8337c353a01adf72601_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic3.zhimg.com/80/v2-4ce7490f09c5f2f2909cdbad626b9308_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic1.zhimg.com/80/v2-5a3bfbbb36571fecb58251160155c7fb_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
-<p><img src="https://pic1.zhimg.com/80/v2-bf9de49eb26f598c9af619bd40a3bdfc_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+    <title>杭州游记</title>
+    <url>/2023/05/03/%E6%9D%AD%E5%B7%9E%E6%B8%B8%E8%AE%B0/</url>
+    <content><![CDATA[<p>五一假期，我和几个好兄弟决定去有着“上有天堂，下有苏杭”美誉的杭州走走看看，正好也是许久不见相聚的好机会，于是五一一到，我们整装待发，从各个省份城市，共同奔赴杭州。</p>
+<h3 id="4-30">4.30</h3>
+<p>早上跟乐哥碰头，从武汉站出发历经4个半小时到达杭州东站，见到非爷在酒店楼下等我们，然后摆了俩小时聊天，去浙大华家池校区，被残忍的拒之门外，我好说歹说也不让进，我们几个只得绕着浙大走了一圈，也算是到过了浙大，得知陶神也到了我们几个赶忙回酒店迎接，没想到陶神从我们后面窜了出来，得陶神因为有事儿只能来一晚上，然后我们一起吃饭、喝酒，最重要的还是夸天，回到酒店就开卷，搞各种东西，非爷卷图形学和人智导，我等只能在旁仰望，欢声笑语罢，我们上床进入梦乡，结束了这四人团聚的一天。（这次有俩人没赶上高铁，我不说是谁）</p>
+<h3 id="5-1">5.1</h3>
 ]]></content>
       <categories>
-        <category>生活</category>
+        <category>心路</category>
       </categories>
       <tags>
-        <tag>摄影</tag>
-        <tag>美景</tag>
+        <tag>生活</tag>
+        <tag>游记</tag>
       </tags>
   </entry>
   <entry>
@@ -3039,9 +3077,62 @@ unordered_set、unordered_map、unordered_multiset、unordered_multimap</p>
       </tags>
   </entry>
   <entry>
+    <title>摄影</title>
+    <url>/2022/06/01/%E6%91%84%E5%BD%B1/</url>
+    <content><![CDATA[<h3 id="分享一些自己的拍摄照片">分享一些自己的拍摄照片</h3>
+<p><img src="https://pic2.zhimg.com/80/v2-880f14a452020c4bc2960951c42b20f1_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<span id="more"></span>
+<p><img src="https://pic1.zhimg.com/80/v2-a0f11cbb7953ba01a890c23e3be6c63f_1440w.jpeg" alt="夕阳"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-9649a908558db3a70a77ae9e1fb8d33a_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pica.zhimg.com/80/v2-717a3602b5c57865874b88f563cee104_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic2.zhimg.com/80/v2-319e56149a37bb79ebf398313ee0ef8a_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-d4104a182c25846d796f9334e94d860c_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pica.zhimg.com/80/v2-35c2028c96d3af9820616de6388003f4_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-def6aca439de3567dfd35065ee0e61e7_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-ac2fd89cd4fa0896b54d2b6a20b66486_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic2.zhimg.com/80/v2-eaff4c547270c0b99608f71874ebc9a5_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pica.zhimg.com/80/v2-3e75354556b09d68ea7385b9c5610748_1440w.png?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-64aae8ff73271c57cab8a5c79b7b29db_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pica.zhimg.com/80/v2-648b81c8736de915dc8bc2e4c0385f8b_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-ea5211faa3dd7dfaed9a64bd645866a3_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-e6e138d6ab805a903e7ad780a0c4fff1_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-835481f1de4157b12dfc740d54378618_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-a90e6cd32db008c98c24a931b83e1dd1_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-1b4264e392f1b8337c353a01adf72601_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-4ce7490f09c5f2f2909cdbad626b9308_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-5a3bfbbb36571fecb58251160155c7fb_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-bf9de49eb26f598c9af619bd40a3bdfc_1440w.jpeg?source=d16d100b" alt="夕阳"></p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>摄影</tag>
+        <tag>美景</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>警醒</title>
     <url>/2022/06/15/%E8%AD%A6%E9%86%92/</url>
     <content><![CDATA[<h1 id="戒骄戒躁-专注当下">戒骄戒躁，专注当下！</h1>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>认清差距，努力追赶</title>
+    <url>/2022/05/22/%E8%AE%A4%E6%B8%85%E5%B7%AE%E8%B7%9D%EF%BC%8C%E5%8A%AA%E5%8A%9B%E8%BF%BD%E8%B5%B6/</url>
+    <content><![CDATA[<h2 id="对于今天学院csp选拔赛的感受">对于今天学院csp选拔赛的感受</h2>
+<p>我对于今天的几道编程题颇有感触，跟我之前做过的完全是不同的感觉，我以为的程序是能够运行成功，但是真正的题目数据是非常大的，且有严格的时间限制，所以必须要考虑到算法的效率。</p>
+<span id="more"></span>
+<p>也终于明白了一味的暴力求解是很呆的方式，完全想不到效率更高的算法， 这也与我并没有接触过相关题目有关系，这个暑假提高自己的代码能力迫在眉睫，数据结构这门课需要好好吃透，然后往算法方面去提高自己的能力。</p>
+<h2 id="正视自己-摆平心态">正视自己，摆平心态</h2>
+<p>对于在校的学习生活压力是很大的，今天的选拔赛让我看到了许多同龄人的身影，他们的代码能力又有的甚至能够和大二的匹敌，让我知道自己其实是非常的不足，当然也不应该自暴自弃，只能说去努力的赶超吧。</p>
+<p>勇于直面前方的艰难险阻，才能到达成功的彼岸！</p>
 ]]></content>
       <categories>
         <category>心路</category>
@@ -3215,24 +3306,6 @@ FTP支持两种模式：Standard（PORT方式，主动方式），Passive（PASV
       </tags>
   </entry>
   <entry>
-    <title>认清差距，努力追赶</title>
-    <url>/2022/05/22/%E8%AE%A4%E6%B8%85%E5%B7%AE%E8%B7%9D%EF%BC%8C%E5%8A%AA%E5%8A%9B%E8%BF%BD%E8%B5%B6/</url>
-    <content><![CDATA[<h2 id="对于今天学院csp选拔赛的感受">对于今天学院csp选拔赛的感受</h2>
-<p>我对于今天的几道编程题颇有感触，跟我之前做过的完全是不同的感觉，我以为的程序是能够运行成功，但是真正的题目数据是非常大的，且有严格的时间限制，所以必须要考虑到算法的效率。</p>
-<span id="more"></span>
-<p>也终于明白了一味的暴力求解是很呆的方式，完全想不到效率更高的算法， 这也与我并没有接触过相关题目有关系，这个暑假提高自己的代码能力迫在眉睫，数据结构这门课需要好好吃透，然后往算法方面去提高自己的能力。</p>
-<h2 id="正视自己-摆平心态">正视自己，摆平心态</h2>
-<p>对于在校的学习生活压力是很大的，今天的选拔赛让我看到了许多同龄人的身影，他们的代码能力又有的甚至能够和大二的匹敌，让我知道自己其实是非常的不足，当然也不应该自暴自弃，只能说去努力的赶超吧。</p>
-<p>勇于直面前方的艰难险阻，才能到达成功的彼岸！</p>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>个人反思</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>随想_2022_12_10</title>
     <url>/2022/12/10/%E9%9A%8F%E6%83%B3-2022-12-10/</url>
     <content><![CDATA[<h1 id="本学期的收获和反思">本学期的收获和反思</h1>
@@ -3251,63 +3324,6 @@ FTP支持两种模式：Standard（PORT方式，主动方式），Passive（PASV
       </categories>
       <tags>
         <tag>个人反思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Web认证的校园网接路由器</title>
-    <url>/2023/02/16/Web%E8%AE%A4%E8%AF%81%E7%9A%84%E6%A0%A1%E5%9B%AD%E7%BD%91%E6%8E%A5%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
-    <content><![CDATA[<h1 id="需求">需求</h1>
-<p>由于校园网的有设备数量的限制，于是想要利用校园的有线网接自己的路由器解除设备数量的限制，并且实现所谓的硬件翻墙，即流量经由路由器转发至代理服务器，作用就是处于该路由器形成的网络中的设备不用启动科学上网，省了一点事儿。</p>
-<h1 id="困难与解决办法">困难与解决办法</h1>
-<p>校园网不同于家庭网络，需要进行一步web认证才能进行联网，我一开始就是以为我买个现成路由器（华硕 TUF AX3000）接上去认证一下就好了，结果是并不会弹出这个认证的界面。所以我又买了台软路由R2S（本质上是一台微型计算机），并且装上<a href="https://zh.wikipedia.org/zh-hans/OpenWrt">openwrt</a>系统作为路由器的上级路由，因为本质上是个嵌入的linux系统，有命令行工具，可以用<code>curl</code>命令向自己校园网的认证界面(华科是192.168.50.3)发个http请求实现登陆即可。至于科学，利用软路由里的软件配置好自己订阅的机场地址就行，没错，本质上还是软翻，不过是交到网关去处理了而已。</p>
-<h1 id="过程演示">过程演示</h1>
-<h2 id="设备准备">设备准备</h2>
-<p>一台路由器，一台软路由，两根网线，一台电脑。</p>
-<h2 id="利用网络抓包获取校园网认证中http请求的content值">利用网络抓包获取校园网认证中http请求的content值</h2>
-<p>首先用一根网线的一端接校园有线网的端口，另一端接自己的电脑。通过浏览器进入校园网的认证界面，此处最好关闭掉wifi功能。提前输入好账号密码，<strong>不要点登录</strong>。<br>
-<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.01.16.png" alt=""></p>
-<h3 id="进入开发者模式">进入开发者模式</h3>
-<p>按F12进入浏览器的开发者模式，大致看一下，并了解该网页的逻辑，即登录的函数<br>
-<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.05.27.png" alt=""></p>
-<h3 id="在post位置处打上断点">在post位置处打上断点</h3>
-<p>跟平常调试代码一样。<br>
-<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.06.24.png" alt=""></p>
-<h3 id="点击login登录获取content值">点击login登录获取content值</h3>
-<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2020.27.04.png" alt=""></p>
-<h3 id="利用curl命令发送请求">利用curl命令发送请求</h3>
-<p>写一个shell脚本，或者不写都行。<br>
-<img src="https://picx.zhimg.com/80/v2-285e2cea8e82f818410f32dd796559b3_1440w.png" alt=""><br>
-利用chmod命令赋予其执行权限之后，执行该脚本，发现返回值是succees即代表该命令成功执行并完成了校园网的认证；如若不成功，重复获取content的操作，因为我也是第一次没成功。</p>
-<h2 id="配置软路由">配置软路由</h2>
-<h3 id="安装openwrt系统">安装openwrt系统</h3>
-<p>由于github上开源众多，效果应该都差不多，随便选就行，而且tb上买的软路由大多是提前预装好的，如果是一台全新的机器，参考下面的video以安装好openwrt系统。</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/gsrAj1vySaE" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<h3 id="进入软路由后台">进入软路由后台</h3>
-<p>把TF卡正确插入软路由，并确保自己的软路由sys的指示灯正常。<br>
-<img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E6%88%AA%E5%B1%8F2023-02-16%2019.46.52.png"/></p>
-<p>用一根网线一端接校园有线网的端口，另一端接软路由的wan口。另一根网线的一端接软路由的lan口，另一端接上电脑。此时电脑和软路由处于同一局域网下，通过其ip地址（这个一般商家会告诉你，如果没有则可以查看网关的ip地址，或者关闭dhcp手动分配）在浏览器中去登陆软路由的后台，输入用户名和密码进行登录。<br>
-<img src="https://picx.zhimg.com/80/v2-7d989b04c23b0a4f5f0bef25068a117a_1440w.png" alt=""></p>
-<h3 id="命令行中使用curl命令">命令行中使用curl命令</h3>
-<p>进入软路由的命令行工具，使用上面写好的curl命令去进行校园网的认证。最好尝试ping一下百度，看能不能通。<br>
-<img src="https://pica.zhimg.com/80/v2-1b493abb1ef9054903270b5bdffeabb5_1440w.png" alt=""></p>
-<h3 id="配置科学上网">配置科学上网</h3>
-<p>我使用的openclash这是它里面自带的软件，随便使用一款代理软件都行，然后就如在其他设备上配置科学一样，输入订阅的url就行。<br>
-<img src="https://pic1.zhimg.com/80/v2-d9aab76bd341cae45b8c5524653098e7_1440w.png" alt=""></p>
-<h2 id="配置硬路由">配置硬路由</h2>
-<p>因为软路由不能像路由器那样发送无线的网络信号（至少我的入门机不行），需要使用一台真正的路由器去发送wifi信号或者是提供更多的lan口进行有线网的连接。我的华硕路由器的用途就是如此，关注到软路由接lan口那条线，把这条线接电脑的一端改接到路由器的wan口，当然也可以接到lan口，不过需要使用路由器的ap模式。不同点在于，接到wan口的方法，软路由变成了上级路由，你无法通过输入ip地址的方法进入软路由的后台（至少现在的我技术达不到）；而接到lan口的话，软路由仍与我们的设备处于同一个局域网内（此时的路由器充当的作用就跟一个具有无线功能的交换机一样）。</p>
-<p>我是接到wan口，然后用任意一台能够上网的设备连接该wifi信号，根据路由器背面提供的信息完成对路由器的初始设置，例如名称密码什么的。此过程比较简单，不进行过多的赘述。</p>
-<h1 id="写在最后">写在最后</h1>
-<p>由于学校断电断网的局限性导致设备夜间断网，那也不能每次都得重复登录软路由后台去连接校园网，但是貌似启用无感认证之后，就算断了一段时间也能够自动的连上去。还是准备又时间写一个自动登录和自动下线的脚本，来迎合学校的规定。</p>
-<p>上述的方法的确适用于我的状况，而且我买的路由器本身就支持刷机，其实对于一般的无需认证的家庭网络可以不用软路由这个东西，华硕的某些系列的路由器支持刷梅林系统，本质也是一个适配华硕路由器的openwrt系统。由于我目前没有找到更好的解决办法，只能够维持现状。软路由更多还是作为旁路由，专门给家里的电视盒子提供一些屏蔽广告的服务，或者是流媒体加速，最重要的还是能够科学，看外国的一些流媒体软件。</p>
-<p>参考文章<br>
-<a href="https://blog.csdn.net/qq_30763587/article/details/119523231">openwrt下实现校园网的web认证</a><br>
-<a href="https://zhuanlan.zhihu.com/p/443145372?utm_campaign=shareopn&amp;utm_medium=social&amp;utm_oi=1137483569697013760&amp;utm_psn=1609660582969470976&amp;utm_source=wechat_session">华中科技大学校园网自动重连</a></p>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>计算机网络 - 校园网 - 路由</tag>
       </tags>
   </entry>
 </search>

@@ -1,0 +1,815 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>泛型程序设计与C++标准模版库（STL） | 仰望星空，脚踏实地</title><meta name="keywords" content="学习笔记,C++程序设计,C++语言"><meta name="author" content="Lixiang"><meta name="copyright" content="Lixiang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="介绍C++的标准模版库（Standard Template Library）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="泛型程序设计与C++标准模版库（STL）">
+<meta property="og:url" content="https://hustlixiang21.github.io/2022/08/04/%E6%B3%9B%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8EC-%E6%A0%87%E5%87%86%E6%A8%A1%E7%89%88%E5%BA%93%EF%BC%88STL%EF%BC%89/index.html">
+<meta property="og:site_name" content="仰望星空，脚踏实地">
+<meta property="og:description" content="介绍C++的标准模版库（Standard Template Library）">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-b3235667ca289c4b127e5448bed79144_1440w.jpeg">
+<meta property="article:published_time" content="2022-08-04T06:31:05.000Z">
+<meta property="article:modified_time" content="2022-08-27T16:23:34.499Z">
+<meta property="article:author" content="Lixiang">
+<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="C++程序设计">
+<meta property="article:tag" content="C++语言">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-b3235667ca289c4b127e5448bed79144_1440w.jpeg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://hustlixiang21.github.io/2022/08/04/%E6%B3%9B%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8EC-%E6%A0%87%E5%87%86%E6%A8%A1%E7%89%88%E5%BA%93%EF%BC%88STL%EF%BC%89/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: Lixiang","link":"Link: ","source":"Source: 仰望星空，脚踏实地","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '泛型程序设计与C++标准模版库（STL）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-28 00:23:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-b6830c2136b7784c0aba649af7ec2867_1440w.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> Album</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fas fa-video"></i><span> Videos</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> Movies</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> Games</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic1.zhimg.com/80/v2-b3235667ca289c4b127e5448bed79144_1440w.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">仰望星空，脚踏实地</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> Album</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fas fa-video"></i><span> Videos</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> Movies</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> Games</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">泛型程序设计与C++标准模版库（STL）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-08-04T06:31:05.000Z" title="Created 2022-08-04 14:31:05">2022-08-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-08-27T16:23:34.499Z" title="Updated 2022-08-28 00:23:34">2022-08-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/CS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CS学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">49k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>NaN:aNmin</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="泛型程序设计与C++标准模版库（STL）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>上来先来两篇文章作为参考：<br>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_61907955/article/details/123855928">STL函数大全</a><br>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41969690/article/details/106648441">什么是STL？</a></p>
+<h1 id="泛型程序设计及stl结构">泛型程序设计及STL结构</h1>
+<h2 id="泛性程序设计的基本概念">泛性程序设计的基本概念</h2>
+<p>即指编写<strong>不依赖具体数据类型</strong>的程序，模板是泛性程序设计的主要工具。</p>
+<p>术语：概念</p>
+<p>用来界定具备一定功能的数据类型。例如:</p>
+<ul>
+<li>将“可以比大小的所有数据类型(有比较运算符)”这一概念记为Comparable</li>
+<li>将“具有公有的复制构造函数并可以用‘=’赋值的数据类型”这一概念 记为Assignable</li>
+<li>将“可以比大小、具有公有的复制构造函数并可以用‘=’赋值的所有数 据类型”这个概念记作Sortable。</li>
+</ul>
+<p>对于两个不同的概念A和B，如果概念A所需求的所有功能也是概念B所需求的功能，那么就说概念B是概念A的子概念。例如:</p>
+<ul>
+<li>Sortable既是Comparable的子概念，也是Assignable的子概念</li>
+</ul>
+<blockquote>
+<p>其实这个子概念和基类派生的子类意思差不多。</p>
+</blockquote>
+<p>术语：模型</p>
+<p>模型（model）：符合一个概念的数据类型称为该概念的模型</p>
+<ul>
+<li>int型是Comparable概念的模型；</li>
+<li>静态数组类型不是Assignable概念的类型（静态数组不可赋值）。</li>
+</ul>
+<p>用概念做模板参数名</p>
+<ul>
+<li>很多STL的实现代码就是使用概念来命名模板参数的。</li>
+<li>为概念赋予一个名称，并使用该名称作为模板参数名。</li>
+</ul>
+<p>例如：<br>
+表示insertionSort这样一个函数模板的原型:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">Sortable</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insertionSort</span><span class="params">(Sortable a[], <span class="type">int</span> n)</span></span>;</span><br></pre></td></tr></table></figure>
+<h1 id="stl简介">STL简介</h1>
+<p><strong>标准模版库</strong>提供了一些非常常用的数据结构和算法。</p>
+<p>STL的基本组件：</p>
+<ul>
+<li>容器（container）</li>
+<li>迭代器（iterator）</li>
+<li>函数对象（function object）</li>
+<li>算法（algorithms）</li>
+</ul>
+<p>基本的关系：</p>
+<ul>
+<li>Iterator（迭代器）是算法和容器的桥梁。将迭代器作为算法的参数、通过迭代器来访问容器而不是把容器直接作为算法的参数；</li>
+<li>将函数对象作为算法的参数而不是将函数所执行的运算作为算法的一部分。</li>
+</ul>
+<p>关系图：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic4.zhimg.com/80/v2-277324313f500492215f4604944da7fb_1440w.png" alt=""></p>
+<h2 id="stl的基本组件-容器-container">STL的基本组件—容器（container）</h2>
+<p>容器是容纳一组元素的对象，容器类库包含七种基本容器：向量（vector）、双端队列（deque）、列表（list）、集合（set）、多重集合（multiset）、map（映射）和多重映射（multimap）。</p>
+<ul>
+<li>顺序容器：array，vector，deque，forward_list（单链表）、list（列表，底层是双向链表） ；</li>
+<li>有序关联容器：set、multiset、map、multimap；</li>
+<li>无序关联容器：unordered_set、unordered_multiset、unordered_map、unordered_mutimap。</li>
+</ul>
+<p>容器适配器：stack、queue、priority_queue（优先队列，底层是最大或最小二叉堆）</p>
+<div class="note info flat"><p>使用容器，需要包含对应的头文件。</p>
+</div>
+<h2 id="stl的基本组件-迭代器-iterator">STL的基本组件—迭代器（iterator）</h2>
+<ul>
+<li>迭代器是泛化的指针，提供了顺序访问容器中每个元素的方法；</li>
+<li>提供了顺序访问容器中每个元素的方法；</li>
+<li>可以使用“++”运算符来获得指向下一个元素的迭代器；</li>
+<li>可以使用“*”运算符访问一个迭代器所指向的元素，如果元素类型是类或结构体，还可以使用“-&gt;”运算符直接访问该元素的一个成员；</li>
+<li>有些迭代器还支持通过“–”运算符获得指向上一个元素的迭代器；</li>
+<li>迭代器是泛化的指针：指针也具有同样的特性，因此指针本身就是一种迭代器；</li>
+<li>使用独立于STL容器的迭代器，需要包含头文件<code>&lt;iterator&gt;</code>。</li>
+</ul>
+<h2 id="stl的基本组件-函数对象-function-object">STL的基本组件—函数对象（function object）</h2>
+<ul>
+<li>一个行为类似函数的对象，对它可以像调用函数一样调用。</li>
+<li>函数对象是泛化的函数：任何普通的函数和任何重载了“()” 运算符的类的对象都可以作为函数对象使用。</li>
+<li>使用STL的函数对象，需要包含头文件<code>&lt;functional&gt;</code>。</li>
+</ul>
+<h2 id="stl的基本组件-算法-algorithms">STL的基本组件—算法（algorithms）</h2>
+<ul>
+<li>STL包括70多个算法,例如：排序算法，消除算法，计数算法，比较算法，变换算法，置换算法和容器管理等;</li>
+<li>可以广泛用于不同的对象和内置的数据类型;</li>
+<li>使用STL的算法，需要包含头文件<code>&lt;algorithm&gt;</code>。</li>
+</ul>
+<h3 id="算法举例-transform算法">算法举例—transform算法</h3>
+<p>transform算法顺序遍历first和last两个迭代器所指向的元素；</p>
+<ul>
+<li>将每个元素的值作为函数对象op的参数；</li>
+<li>将op的返回值通过迭代器result顺序输出；</li>
+<li>遍历完成后result迭代器指向的是输出的最后一个元素的下一个位置，transform会将该迭代器返回。</li>
+</ul>
+<p>例如，以下可以是transform算法的一种实现：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">InputIterator</span>, <span class="keyword">class</span> <span class="title class_">OutputIterator</span>, <span class="keyword">class</span> <span class="title class_">UnaryFunction</span>&gt;</span><br><span class="line"><span class="function">OutputIterator <span class="title">transform</span><span class="params">(InputIterator first, InputIterator last, OutputIterator result, UnaryFunction op)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (;first != last; ++first, ++result) </span><br><span class="line">		&#123;</span><br><span class="line">			*result = <span class="built_in">op</span>(*first);</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//从标准输入读入几个整数，存入向量容器，输出相反数</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iterator&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">5</span>;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">s</span><span class="params">(N)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">&#123;</span><br><span class="line">cin &gt;&gt; s[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">transform</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>(), <span class="built_in">ostream_iterator</span>&lt;<span class="type">int</span>&gt;(cout,<span class="string">&quot; &quot;</span>),<span class="built_in">negate</span>&lt;<span class="type">int</span>&gt;());</span><br><span class="line">cout &lt;&lt; endl;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="迭代器">迭代器</h1>
+<p>迭代器是算法和容器的桥梁：</p>
+<ul>
+<li>迭代器用作访问容器中的元素</li>
+<li>算法不直接操作容器中的数据，而是通过迭代器间接操作</li>
+</ul>
+<p>算法和容器独立：</p>
+<ul>
+<li>增加新的算法，无需影响容器的实现</li>
+<li>增加新的容器，原有的算法也能适用</li>
+</ul>
+<h2 id="输入流迭代器和输出流迭代器">输入流迭代器和输出流迭代器</h2>
+<p>输入流迭代器</p>
+<ul>
+<li><code>stream_iterator&lt;T&gt;</code></li>
+<li>以输入流(如cin)为参数构造</li>
+<li>可用*(p++)获得下一个输入的元素<br>
+输出流迭代器</li>
+<li><code>ostream_iterator&lt;T&gt;</code></li>
+<li>构造时需要提供输出流(如cout)</li>
+<li>可用(*p++) = x将x输出到输出流</li>
+</ul>
+<p>二者都属于适配器</p>
+<ul>
+<li>适配器是用来为已有对象提供新的接口的对象</li>
+<li>输入流适配器和输出流适配器为流对象提供了迭代器的接口</li>
+</ul>
+<p>程序实例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//从标准输入读入几个实数，分别输出他们的平方</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iterator&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">square</span><span class="params">(<span class="type">double</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x * x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">transform</span>(<span class="built_in">istream_iterator</span>&lt;<span class="type">double</span>&gt;(cin),<span class="built_in">istream_iterator</span>&lt;<span class="type">double</span>&gt;(),<span class="built_in">ostream_iterator</span>&lt;<span class="type">double</span>&gt;(cout,<span class="string">&quot;\t&quot;</span>),square);</span><br><span class="line">    <span class="comment">//istream_iterator&lt;double&gt;()调用了输入流迭代器的默认构造函数，使之指向的是输入流的结束位置。</span></span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//你如果不手动终止程序，程序会一直运行下去，因为输入流一直在等待你的输入</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="迭代器的分类">迭代器的分类</h2>
+<p>根据访问的方式分类：<br>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/20200609192939833.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk2OTY5MA==,size_16,color_FFFFFF,t_70" alt="Fetching Title#2j8d"></p>
+<p>关系图：<br>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-9cb5c611c9ab48c561a010de1208c150_1440w.png" alt=""></p>
+<p>根据操作类型分类：<br>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/20200609192955690.png" alt=""></p>
+<h2 id="迭代器的区间">迭代器的区间</h2>
+<ul>
+<li>两个迭代器表示一个区间:[p1, p2)，区间包含p1，但不包含p2；</li>
+<li>STL算法常以迭代器的区间作为输入，传递输入数据；</li>
+<li>合法的区间：p1经过n次(n &gt; 0)自增(++)操作后满足p1 == p2。</li>
+</ul>
+<p>程序实例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//综合运用集中迭代器的实例</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iterator&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>, <span class="keyword">class</span> <span class="title class_">InputIterator</span>, <span class="keyword">class</span> <span class="title class_">OutputIterator</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">mySort</span><span class="params">(InputIterator first, InputIterator last, OutputIterator result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;T&gt; s;</span><br><span class="line">    <span class="keyword">while</span> (first != last)</span><br><span class="line">    &#123;</span><br><span class="line">        s.<span class="built_in">push_back</span>(*first);</span><br><span class="line">        first++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(s.<span class="built_in">begin</span>(), s.<span class="built_in">end</span>()); <span class="comment">//sort参数必须是随机访问迭代器</span></span><br><span class="line">    <span class="built_in">copy</span>(s.<span class="built_in">begin</span>(), s.<span class="built_in">end</span>(), result);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">double</span> a[<span class="number">5</span>] = &#123;<span class="number">1.2</span>, <span class="number">2.4</span>, <span class="number">0.8</span>, <span class="number">3.3</span>, <span class="number">3.2</span>&#125;;</span><br><span class="line">    <span class="comment">//对已知数组排序</span></span><br><span class="line">    <span class="built_in">mySort</span>&lt;<span class="type">double</span>&gt;(a, a + <span class="number">5</span>, <span class="built_in">ostream_iterator</span>&lt;<span class="type">double</span>&gt;(cout, <span class="string">&quot; &quot;</span>));</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="comment">//从标准输入读入若干整数，排序后的结果输出</span></span><br><span class="line">    <span class="built_in">mySort</span>&lt;<span class="type">int</span>&gt;(<span class="built_in">istream_iterator</span>&lt;<span class="type">int</span>&gt;(cin), <span class="built_in">istream_iterator</span>&lt;<span class="type">int</span>&gt;(), <span class="built_in">ostream_iterator</span>&lt;<span class="type">int</span>&gt;(cout, <span class="string">&quot; &quot;</span>));</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="迭代器的辅助函数">迭代器的辅助函数</h2>
+<ul>
+<li>advance(p,n)：对p执行n次自增操作</li>
+<li>distance(first,last)：计算两个迭代器first和last的距离</li>
+</ul>
+<h1 id="容器">容器</h1>
+<h2 id="容器的基本功能与分类">容器的基本功能与分类</h2>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-015ee01d628fdd4ee76acf4213a6d583_1440w.png" alt=""></p>
+<p>容器的通用功能</p>
+<ul>
+<li>用默认构造函数构造空容器</li>
+<li>支持关系运算符：==、!=、&lt;、&lt;=、&gt;、&gt;=</li>
+<li>begin()、end()：获得容器首、尾迭代器(<strong>其实指向的是容器尾元素的下一个元素</strong>)</li>
+<li>cbegin() 、cend()：获取容器首、尾常迭代器，不需要改变容器时更加安全</li>
+<li>clear()：将容器清空</li>
+<li>empty()：判断容器是否为空</li>
+<li>size()：得到容器元素个数</li>
+<li>s1.swap(s2)：将s1和s2两容器内容交换</li>
+</ul>
+<p>相关数据类型(S表示容器类型)</p>
+<ul>
+<li>S::iterator：指向容器元素的迭代器类型</li>
+<li>S::const_iterator：常迭代器类型</li>
+</ul>
+<p>使用一般容器的begin()/end()，得到的迭代器都是前向迭代器，而可逆容器所提供的迭代器都是双向迭代器。</p>
+<div class="note info flat"><p>事实上，STL模版提供的标准容器至少都是可逆容器，但有些非标准的模版库，提供像slist（单向链表）这样仅提供前向迭代器的容器。</p>
+</div>
+<h3 id="对可逆容器的访问">对可逆容器的访问</h3>
+<p>STL为每个可逆容器都提供了逆向迭代器，逆向迭代器可以通过下面的成员函数得到:</p>
+<ul>
+<li>rbegin() :指向容器尾的逆向迭代器</li>
+<li>rend():指向容器首的逆向迭代器</li>
+</ul>
+<p>逆向迭代器的类型名的表示方式如下(S表示容器类型):</p>
+<ul>
+<li>S::reverse_iterator:逆向迭代器类型</li>
+<li>S::const_reverse_iterator:逆向常迭代器类型</li>
+</ul>
+<p>逆向迭代器是普通迭代器的适配器，逆向迭代器的++被映射成了前向迭代器的–。</p>
+<blockquote>
+<p>细节：<br>
+一个迭代器和它的逆向迭代器之间可以相互转换。例如：若p1是S::iterator类型的迭代器，则使用表达式S::reverse_iterator(p1)可以得到与p1对应的逆向迭代器；也可以使用base函数得到逆向迭代器对应的那个普通迭代器，如：r1是一个通过S::reverse_iterator(p1)构造的逆向迭代器，那么就有r1.base() == p1。但是r1和p1并不是指向同一个元素的，r1指向的元素总是与p1-1所指向的元素相同。</p>
+</blockquote>
+<h2 id="顺序容器">顺序容器</h2>
+<p>STL中的顺序容器</p>
+<ul>
+<li>
+<p>向量（vector）</p>
+</li>
+<li>
+<p>双端队列（deque）</p>
+</li>
+<li>
+<p>列表（list）</p>
+</li>
+<li>
+<p>单向链表（forward_list）</p>
+</li>
+<li>
+<p>数组（array）</p>
+</li>
+<li>
+<p>元素线性排列，可以随时在指定位置插入元素和删除元素。</p>
+</li>
+<li>
+<p>必须符合Assignable这一概念（即具有公有的复制构造函数并可以<br>
+用“=”赋值）。</p>
+</li>
+<li>
+<p>array对象的大小固定，forward_list有特殊的添加和删除操作。</p>
+</li>
+</ul>
+<h3 id="顺序容器的接口">顺序容器的接口</h3>
+<div class="note danger flat"><p>不包含单向链表（forward_list）和数组（array）</p>
+</div>
+<ol>
+<li>构造函数
+<ul>
+<li>列表初始化，如<code>vector&lt;int&gt; arr = &#123;1,4,5,7&#125;;</code></li>
+</ul>
+</li>
+<li>赋值函数
+<ul>
+<li>assign</li>
+</ul>
+</li>
+<li>插入函数
+<ul>
+<li><code>insert(iterator pos, const T&amp; v)</code>, 在pos位置插入后，返回新插入元素的迭代器;</li>
+<li>push_front(只对list和deque), push_back;</li>
+<li>emplace_front、emplace 和 emplace_back，这些操作构造而不是拷贝元素到容器中，这些操作分别对应push_front、insert 和push_back，允许我们将元素放在容器头部、一个指定的位置和容器尾部。</li>
+</ul>
+</li>
+<li>删除函数
+<ul>
+<li>erase，clear，pop_front(只对list和deque)，pop_back</li>
+</ul>
+</li>
+<li>首尾元素的直接访问
+<ul>
+<li>front，back</li>
+</ul>
+</li>
+<li>改变大小
+<ul>
+<li>resize</li>
+</ul>
+</li>
+</ol>
+<div class="note success flat"><p>记住对于头部的操作不适合物理地址连续的数据结构。</p>
+</div>
+<h3 id="向量-vector">向量（vector）</h3>
+<p>特点：</p>
+<ul>
+<li>一个可以扩展的动态数组</li>
+<li>随机访问、在尾部插入或删除元素快</li>
+<li>在中间或头部插入或删除元素慢</li>
+</ul>
+<p>向量的容量(capacity)：实际分配空间的大小</p>
+<ul>
+<li>s.capacity() ：返回当前容量</li>
+<li>s.reserve(n)：若容量小于n，则对s进行扩展，使其容量至少为n</li>
+<li>s.shrink_to_fit(): 回收未使用的元素空间，即size和capacity函数返回值相等</li>
+</ul>
+<div class="note danger flat"><p>失效：<br>
+如果加入元素使得vector有扩展的话，那么所有的迭代器，指针和引用都会失效，因为内存空间被重新分配了；如果没有扩展，那么只是插入（或删除）的元素之后的迭代器等等会失效（因为元素被移动了）。</p>
+</div>
+<h3 id="双端队列-deque">双端队列（deque）</h3>
+<p>特点</p>
+<ul>
+<li>在两端插入或删除元素快</li>
+<li>在中间插入或删除元素慢</li>
+<li>随机访问较快，但比向量容器慢</li>
+</ul>
+<p>双端队列在很多STL的实现中是一个分段数组，容器中的元素分段的存放在一个个大小固定的数组中，此外容器还需要维护一个存这些分段数组首地址的索引数组，所以双端队列连续是一个假象。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/20190217155302649.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQ2MjIwMg==,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/20190217155302649.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQ2MjIwMg==,size_16,color_FFFFFF,t_70"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先按照从大到小顺序输出奇数，再按照从小到大顺序输出偶数。</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;deque&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iterator&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">istream_iterator&lt;<span class="type">int</span>&gt; <span class="title">i1</span><span class="params">(cin)</span>, i2</span>; <span class="comment">//建立一对输入流迭代器,第一个是标准输入的开始，第二个是标准输入的结束</span></span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">s1</span><span class="params">(i1, i2)</span></span>;            <span class="comment">//通过输入流迭代器从标准输入流中输入数据</span></span><br><span class="line">    <span class="built_in">sort</span>(s1.<span class="built_in">begin</span>(), s1.<span class="built_in">end</span>());        <span class="comment">//将输入的整数排序</span></span><br><span class="line">    deque&lt;<span class="type">int</span>&gt; s2;</span><br><span class="line">    <span class="comment">//以下循环遍历s1</span></span><br><span class="line">    <span class="keyword">for</span> (vector&lt;<span class="type">int</span>&gt;::iterator iter = s1.<span class="built_in">begin</span>(); iter != s1.<span class="built_in">end</span>(); ++iter)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (*iter % <span class="number">2</span> == <span class="number">0</span>) <span class="comment">//偶数放到s2尾部</span></span><br><span class="line">            s2.<span class="built_in">push_back</span>(*iter);</span><br><span class="line">        <span class="keyword">else</span> <span class="comment">//奇数放到s2首部</span></span><br><span class="line">            s2.<span class="built_in">push_front</span>(*iter);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//将s2的结果输出</span></span><br><span class="line">    <span class="built_in">copy</span>(s2.<span class="built_in">begin</span>(), s2.<span class="built_in">end</span>(), <span class="built_in">ostream_iterator</span>&lt;<span class="type">int</span>&gt;(cout, <span class="string">&quot; &quot;</span>));</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="列表-list">列表(list)</h3>
+<p>底层逻辑是双向链表。</p>
+<p>特点</p>
+<ul>
+<li>在任意位置插入和删除元素都很快</li>
+<li>不支持随机访问</li>
+</ul>
+<p>接合(splice)操作<code>s1.splice(p, s2, q1, q2)</code>表示将s2中[q1, q2)移动到s1中p所指向元素之前</p>
+<h3 id="单向链表-forward-list">单向链表（forward_list）</h3>
+<p>特点：</p>
+<ul>
+<li>单向链表每个结点只有指向下个结点的指针，没有简单的方法来获取一个结点的前驱；</li>
+<li>未定义insert、emplace和erase操作，而定义了insert_after、emplace_after和erase_after操作，其参数与list的insert、emplace和erase相同，但并不是插入或删除迭代器p1所指的元素，而是对p1所指元素之后的结点进行操作；</li>
+<li>不支持size操作。</li>
+</ul>
+<h3 id="数组-array">数组（array）</h3>
+<p>特点：</p>
+<ul>
+<li>array是对内置数组的封装，提供了更安全，更方便的使用数组的方式</li>
+<li>array的对象的大小是固定的，定义时除了需要指定元素类型，还需要指定容器大小。</li>
+<li>不能动态地改变容器大小</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picx.zhimg.com/80/v2-ea9110203c1e89cfaac565d2c3356953_1440w.jpeg" alt=""></p>
+<h2 id="顺序容器的插入迭代器与适配器">顺序容器的插入迭代器与适配器</h2>
+<h3 id="顺序容器的插入迭代器">顺序容器的插入迭代器</h3>
+<p>概念：用于向容器头部、尾部或中间指定位置插入元素的迭代器，包括前插迭代器（front_inserter）、后插迭代器（back_insrter）和任意位置插入迭代器（inserter）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list&lt;<span class="type">int</span>&gt; s;</span><br><span class="line"><span class="function">back_inserter <span class="title">iter</span><span class="params">(s)</span></span>;</span><br><span class="line">*(iter++) = <span class="number">5</span>; <span class="comment">//通过iter把5插入s末尾</span></span><br></pre></td></tr></table></figure>
+<h3 id="顺序容器的适配器">顺序容器的适配器</h3>
+<p>以顺序容器胃基础构建一些常用的数据结构，是对顺序容器的封装：</p>
+<ul>
+<li>栈（stack）：最先压入的元素最后被弹出</li>
+<li>队列（queue）：最先压入的元素最先被弹出</li>
+<li>优先级队列（priority_queue）：最“大”的元素最先被弹出</li>
+</ul>
+<p>栈可以用任何一种顺序容器作为基础容器，但是队列只允许用<strong>前插顺序容器</strong>（双端队列或列表）</p>
+<div class="note info flat"><p>优先级队列的本质是最大（小）二叉堆。</p>
+</div>
+<h4 id="栈和队列共同支持的操作">栈和队列共同支持的操作</h4>
+<ul>
+<li>s1 op s2 op可以是==、!=、&lt;、&lt;=、&gt;、&gt;=之一，它会对两个容器适配器之间的元素按<strong>字典序</strong>进行比较;</li>
+<li>s.size() 返回s的元素个数;</li>
+<li>s.empty() 返回s是否为空;</li>
+<li>s.push(t) 将元素t压入到s中;</li>
+<li>s.pop() 将一个元素从s中弹出，对于栈来说，每次弹出的是最后被压入的元素，而对于队列，每次被弹出的是最先被压入的元素;</li>
+<li><strong>不支持迭代器</strong>，因为它们不允许对任意元素进行访问。</li>
+</ul>
+<h4 id="栈和队列的不同操作">栈和队列的不同操作</h4>
+<p>栈的操作：</p>
+<ul>
+<li>s.top() 返回栈顶元素的引用</li>
+</ul>
+<p>队列操作：</p>
+<ul>
+<li>s.front() 获得队头元素的引用</li>
+<li>s.back() 获得队尾元素的引用</li>
+</ul>
+<h4 id="优先级队列">优先级队列</h4>
+<p>优先级队列也像栈和队列一样支持元素的压入和弹出，但元素弹出的顺序与元素的大小有关，每次弹出的总是容器中最“大”的一个元素。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>, <span class="keyword">class</span> <span class="title class_">Sequence</span> = vector&lt;T&gt;</span><br><span class="line"><span class="keyword">class</span> priority_queue; </span><br></pre></td></tr></table></figure>
+<p>优先级队列的基础容器必须是<strong>支持随机访问</strong>的顺序容器。</p>
+<ul>
+<li>支持栈和队列的size、empty、push、pop几个成员函数，用法与栈和队列相同。</li>
+<li>优先级队列并<strong>不支持比较操作</strong>。</li>
+<li>与栈类似，优先级队列提供一个top函数，可以获得下一个即将被弹出元素（即最“大”的元素）的引用。</li>
+</ul>
+<h2 id="关联容器">关联容器</h2>
+<h3 id="关联容器的分类和基本功能">关联容器的分类和基本功能</h3>
+<p>对于关联容器而言，每个元素都有一个键(key),容器中元素的顺序是按照键<strong>取值的升序</strong>排列的。</p>
+<blockquote>
+<p>与顺序容器查找元素的时间复杂度<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>不同，关联容器会把元素根据键的大小组织成一颗<strong>平衡二叉树</strong>，时间复杂度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(logn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>。</p>
+</blockquote>
+<p>有序关联容器的分类：</p>
+<ul>
+<li>单重关联容器(set和map)
+<ul>
+<li>键值是<strong>唯一的</strong>，一个键值<strong>只能对应一个元素</strong></li>
+</ul>
+</li>
+<li>多重关联容器(multiset和multimap)
+<ul>
+<li>键值是<strong>不唯一的</strong>，一个键值可以<strong>对应多个元素</strong></li>
+</ul>
+</li>
+<li>简单关联容器(set和multiset)
+<ul>
+<li>容器只有<strong>一个类型参数</strong>，如set&lt;K&gt;、multiset&lt;K&gt;，表示键类型</li>
+<li>容器的<strong>元素就是键本身</strong></li>
+</ul>
+</li>
+<li>二元关联容器(map和multimap)
+<ul>
+<li>容器有<strong>两个类型参数</strong>，如map&lt;K,V&gt;、multimap&lt;K,V&gt;，分别表示键和附加数据的类型</li>
+<li>容器的元素类型是pair&lt;K,V&gt;，即由<strong>键类型和附加数据类型复合</strong>而成的二元组</li>
+</ul>
+</li>
+</ul>
+<p>接口</p>
+<ul>
+<li>构造：列表初始化，如<code>map&lt;string, int&gt; id_map = &#123;&#123;"小明", 1&#125;, &#123;"李华", 2&#125;&#125;</code></li>
+<li>插入：insert</li>
+<li>删除：erase</li>
+<li>查找：find</li>
+<li>定界：lower_bound、upper_bound、equal_range</li>
+<li>计数：count</li>
+</ul>
+<blockquote>
+<p>C++11新标准中定义了4个无序关联容器<br>
+unordered_set、unordered_map、unordered_multiset、unordered_multimap</p>
+<ul>
+<li>不是使用比较运算符来组织元素的，而是通过一个哈希函数和键类型的==运算符。</li>
+<li>提供了与有序容器相同的操作</li>
+<li>可以直接定义关键字是内置类型的无序容器。</li>
+<li>不能直接定义关键字类型为自定义类的无序容器，如果需要，必须提供我们自己的hash模板。</li>
+</ul>
+</blockquote>
+<h3 id="集合-set">集合（set）</h3>
+<p>集合用来存储一组无重复的元素。由于集合的元素本身是有序的，可以高效地查找指定元素，也可以方便地得到指定大小范围的元素在容器中所处的区间。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pair&lt;set&lt;<span class="type">double</span>&gt;::iterator,<span class="type">bool</span>&gt; r=s.<span class="built_in">insert</span>(v); </span><br><span class="line"><span class="keyword">if</span> (!r.second);</span><br><span class="line"><span class="comment">//稍微解释一下这个意思，insert函数的返回值是一个二元组，first是迭代器，第二个是判断能否插入的bool值。</span></span><br><span class="line"><span class="comment">//第一行构建了一个r二元组，访问其中两个元素的方法就是r.first和r.second。</span></span><br></pre></td></tr></table></figure>
+<h3 id="映射-map">映射（map）</h3>
+<p>映射与集合同属于单重关联容器，它们的主要区别在于，集合的元素类型是键本身，而映射的元素类型是由键和附加数据所构成的<strong>二元组</strong>。</p>
+<p>在集合中按照键查找一个元素时，一般只是用来确定这个元素是否存在，而在映射中按照键查找一个元素时，除了能确定它的存在性外，还可以得到<strong>相应的附加数据</strong>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">courses.<span class="built_in">insert</span>(<span class="built_in">make_pair</span>(<span class="string">&quot;CSAPP&quot;</span>, <span class="number">3</span>));</span><br><span class="line"><span class="comment">//二元组的初始化可以用pair&lt;first_type,second_type&gt; r = &#123;element1,element2&#125;</span></span><br><span class="line"><span class="comment">//同时如果想作为函数的参数，可以省略构造这一步，直接使用make_pair(element1,element2)</span></span><br></pre></td></tr></table></figure>
+<h3 id="多重集合-multiset-与多重映射-multimap">多重集合（multiset）与多重映射（multimap）</h3>
+<p>多重集合是<strong>允许有重复元素</strong>的集合，多重映射是<strong>允许一个键对应多个附加数据</strong>的映射。</p>
+<p>多重集合与集合、多重映射与映射的用法差不多，只在几个成员函数上有细微差异，其差异主要表现在<strong>去除了键必须唯一的限制</strong>。</p>
+<h1 id="函数对象">函数对象</h1>
+<h2 id="函数对象基本概念及分类">函数对象基本概念及分类</h2>
+<p>函数对象其实就是一个行为类似函数的对象，它可以不需要参数，也可以带有若干参数，其功能是获取一个值，或着改变操作的状态。</p>
+<blockquote>
+<p>任何普通的函数和任何重载了调用运算符operator()的类的对象都满足函数对象的特征</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-31d073302a8e96d89105422051760a76_1440w.png" alt=""></p>
+<p>下面给出两个结果相同的程序：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;numeric&gt;</span> <span class="comment">//包含数值算法头文件</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//定义一个普通函数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">mult</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123; <span class="keyword">return</span> x * y; &#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a[] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">	<span class="type">const</span> <span class="type">int</span> N = <span class="built_in">sizeof</span>(a) / <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;The result by multipling all elements in a is &quot;</span> &lt;&lt; <span class="built_in">accumulate</span>(a, a + N, <span class="number">1</span>, mult) &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;numeric&gt;</span> <span class="comment">//包含数值算法头文件</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MultClass</span>&#123; <span class="comment">//定义MultClass类</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="comment">//重载操作符operator()</span></span><br><span class="line">	<span class="function"><span class="type">int</span> <span class="title">operator</span><span class="params">()</span> <span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> <span class="type">const</span> </span>&#123; <span class="keyword">return</span> x * y; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a[] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">	<span class="type">const</span> <span class="type">int</span> N = <span class="built_in">sizeof</span>(a) / <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;The result by multipling all elements in a is &quot;</span> &lt;&lt; <span class="built_in">accumulate</span>(a, a + N, <span class="number">1</span>, <span class="built_in">MultClass</span>()) <span class="comment">//Multclass类的对象传递给通用算法 </span></span><br><span class="line">	&lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一个普通函数，一个类重载（）。</p>
+<p>STL提供的函数对象：</p>
+<ul>
+<li>用于算数运算的函数对象</li>
+<li>用于关系运算、逻辑运算的函数对象（要求返回值为boolaxs）</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic4.zhimg.com/80/v2-0e4a6bbd4d06bb5765d22c2d1662cdad_1440w.jpeg" alt=""></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-7df16ba33fcbf887ef22acad3f7855ee_1440w.jpeg" alt=""></p>
+<h2 id="lambda表达式">lambda表达式</h2>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/DswCnblog/p/5629165.html">lambda表达式详解</a><br>
+定义：[捕获列表] (参数列表) -&gt; 返回类型 {函数体}</p>
+<ul>
+<li>捕获列表可捕获lambda所在函数的局部变量</li>
+<li>参数列表、返回类型和函数题与普通函数一致</li>
+<li>可定义在函数内部，理解为未命名的内联函数</li>
+<li>auto lmda = [] { return “Hello World!”; };</li>
+<li>cout&lt;&lt; lmda() &lt;&lt;std::endl; //执行与函数对象一致</li>
+</ul>
+<p>捕获列表有值捕获、引用捕获和隐式捕获方式</p>
+<ul>
+<li>int size = 10, base = 0; //局部变量</li>
+<li>auto longer = [size](const string &amp;s){return s.size()&gt;size;} //值捕获</li>
+<li>auto longer = [&amp;size](const string &amp;s){return s.size()&gt;size;}//引用捕获</li>
+<li>auto longer = [=](const string &amp;s){return s.size()&gt;base;}//隐式值捕获</li>
+<li>auto longer = [&amp;](const string &amp;s){return s.size()&gt;size;}//隐式引用捕获</li>
+</ul>
+<h2 id="函数适配器">函数适配器</h2>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic4.zhimg.com/80/v2-2ed3c65215b6553242c0785fb1c84ae7_1440w.jpeg" alt=""></p>
+<p>bind2nd产生binder2nd函数适配器的实例</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> placeholders; <span class="comment">//占位符_n的命名空间</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> intArr[] = &#123; <span class="number">30</span>, <span class="number">90</span>, <span class="number">10</span>, <span class="number">40</span>, <span class="number">70</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">80</span> &#125;;</span><br><span class="line">	<span class="type">const</span> <span class="type">int</span> N = <span class="built_in">sizeof</span>(intArr) / <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(intArr, intArr + N)</span></span>;</span><br><span class="line">	<span class="keyword">auto</span> p = <span class="built_in">find_if</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(),<span class="built_in">bind2nd</span>(greater&lt;&gt;(), <span class="number">40</span>));</span><br><span class="line">	<span class="keyword">if</span> (p == a.<span class="built_in">end</span>())</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;no element greater than 40&quot;</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;first element greater than 40 is: &quot;</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>函数模板还有很多内容，实践中再慢慢学习</p>
+</blockquote>
+<h1 id="算法">算法</h1>
+<p>算法的特点：</p>
+<ul>
+<li>STL算法本身是一种函数模版</li>
+<li>通过迭代器获得输入数据</li>
+<li>通过函数对象对数据进行处理</li>
+<li>通过迭代器将结果输出</li>
+<li>STL算法是通用的，独立于具体的数据类型、容器类型</li>
+</ul>
+<p>算法的分类：</p>
+<ul>
+<li>不可变序列算法</li>
+<li>可变序列算法</li>
+<li>排序和搜索算法</li>
+<li>数值算法</li>
+</ul>
+<blockquote>
+<p>代码所用算法都可以在图片中到找，故不做解释。</p>
+</blockquote>
+<h2 id="不可变序列算法">不可变序列算法</h2>
+<p>不直接修改所操作的容器内容的算法，用于查找指定元素、比较两个序列是否相等、对元素进行计数等。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-cbe6b4025b2427cf9b3936eb3a467b96_1440w.png" alt=""></p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> InputIterator, <span class="keyword">class</span> UnaryPredicate&gt;</span></span><br><span class="line"><span class="function">InputIterator <span class="title">find_if</span><span class="params">(InputIterator first, InputIterator last, UnaryPredicate pred)</span></span>;</span><br><span class="line"><span class="comment">//查找[first, last)区间内pred(x)为真的首个元素</span></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%BA%8F%E5%88%97%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/main.cpp">不可变序列算法实例</a></p>
+<h2 id="可变序列算法">可变序列算法</h2>
+<p>可以修改它们所操作的容器对象，包括对序列进行复制、删除、替换、倒序、旋转、交换、分割、去重、填充、洗牌的算法及生成一个序列的算法。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-ec3de91c8801e4fbb7993a038d8ba58e_1440w.png" alt=""></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picx.zhimg.com/80/v2-e1eedaedbe50397fdac1453674369c25_1440w.png" alt=""></p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> ForwardIterator, <span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">fill</span><span class="params">(ForwardIterator first, ForwardIterator last, <span class="type">const</span> T&amp; x)</span></span>;</span><br><span class="line"><span class="comment">//将[first, last)区间内的元素全部改写为x。</span></span><br></pre></td></tr></table></figure>
+<div class="note danger flat"><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_27788829/article/details/51181080?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-51181080-blog-80187847.pc_relevant_default&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-51181080-blog-80187847.pc_relevant_default&amp;utm_relevant_index=1">remove_if的欺诈性</a></p>
+</div>
+<blockquote>
+<p>Removing is done by shifting (by means of copy assignment (until C++11)move assignment (since C++11)) the elements in the range in such a way that the elements that are not to be removed appear in the beginning of the range. Relative order of the elements that remain is preserved and the <em>physical</em> size of the container is unchanged. Iterators pointing to an element between the new <em>logical</em> end and the <em>physical</em> end of the range are still dereferenceable, but the elements themselves have unspecified values (as per <a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable">MoveAssignable</a> post-condition).</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E5%8F%AF%E5%8F%98%E5%BA%8F%E5%88%97%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/main.cpp">可变序列算法实例</a></p>
+<h2 id="排序和搜索算法">排序和搜索算法</h2>
+<ul>
+<li>对序列进行排序</li>
+<li>对两有序序列进行合并</li>
+<li>对有序序列进行搜索</li>
+<li>有序序列的集合操作</li>
+<li>堆算法</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/80/v2-d880ec033f01b154525a1600bad9c14f_1440w.jpeg" alt=""></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/80/v2-e367dca4110be05e688ba80abffe29be_1440w.jpeg" alt=""></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">RandomAccessIterator</span> , <span class="keyword">class</span> <span class="title class_">UnaryPredicate</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sort</span><span class="params">(RandomAccessIterator first, RandomAccessIterator last, UnaryPredicate comp)</span></span>;</span><br><span class="line"><span class="comment">//以函数对象comp为“&lt;”，对 [first, last)区间内的数据进行排序</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>sort要求first和last必须是随机迭代器类型，因为sort的具体实现使用了快速排序，使用随机迭代器是效率上的考虑。</p>
+</blockquote>
+<h2 id="数值算法">数值算法</h2>
+<p>求序列中元素的“和”、部分“和”、相邻元素的“差”或两序列的内积，求“和”的“+”、求“差”的“-”以及求内积的“+”和“·”都可由函数对象指定。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/80/v2-b20e0971749bf96f4e9e97fdb6121fd2_1440w.png" alt=""></p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> <span class="title class_">InputIterator</span>, <span class="keyword">class</span> <span class="title class_">OutputIterator</span>, <span class="keyword">class</span> <span class="title class_">BinaryFunction</span>&gt; ▫ <span class="function">OutputIterator <span class="title">partial_sum</span><span class="params">(InputIterator first, InputIterator last, OutputIterator result, BinaryFunction op)</span></span>;</span><br><span class="line"><span class="comment">//对[first, last)内的元素求部分“和”（所谓部分“和”，是一个长度与输入序列相同的序列，其第n项为输入序列前n个元素的“和”）</span></span><br><span class="line"><span class="comment">//以函数对象op为“+”运算符，结果通过result输出，返回的迭代器指向输出序列最后一个元素的下一个元素</span></span><br></pre></td></tr></table></figure>
+<p>[数值算法实例](<a target="_blank" rel="noopener" href="https://github.com/hustlixiang21/cpp-practice/tree/main/%E6%95%B0%E5%80%BC%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B">https://github.com/hustlixiang21/cpp-practice/tree/main/数值算法应用实例</a></p>
+<h1 id="综合实例-银行账户管理">综合实例—银行账户管理</h1>
+<p><a target="_blank" rel="noopener" href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update4">源代码+更新</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://hustlixiang21.github.io">Lixiang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://hustlixiang21.github.io/2022/08/04/%E6%B3%9B%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8EC-%E6%A0%87%E5%87%86%E6%A8%A1%E7%89%88%E5%BA%93%EF%BC%88STL%EF%BC%89/">https://hustlixiang21.github.io/2022/08/04/泛型程序设计与C-标准模版库（STL）/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><a class="post-meta__tags" href="/tags/C-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">C++程序设计</a><a class="post-meta__tags" href="/tags/C-%E8%AF%AD%E8%A8%80/">C++语言</a></div><div class="post_share"><div class="social-share" data-image="https://pic1.zhimg.com/80/v2-b3235667ca289c4b127e5448bed79144_1440w.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/08/04/%E6%B5%81%E7%B1%BB%E5%BA%93%E4%B8%8E%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/80/v2-19acd9758c049d0f5b91788ed9dc37c7_1440w.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">流类库与输入/输出</div></div></a></div><div class="next-post pull-right"><a href="/2022/08/04/%E6%A8%A1%E7%89%88%E4%B8%8E%E7%BE%A4%E4%BD%93%E6%95%B0%E6%8D%AE/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-4d8dbc5f894427d430bdf29ad9ee3d04_1440w.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">模版与群体数据的组织</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/" title="CPP基础中需要注意的部分"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/ann-savchenko-H0h_89iFsWs-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-20</div><div class="title">CPP基础中需要注意的部分</div></div></a></div><div><a href="/2022/07/23/CPP%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/" title="CPP数组、指针和字符串"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pica.zhimg.com/80/v2-bb5f6ef138cca79e736aa26bb4bdc2e4_1440w.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-23</div><div class="title">CPP数组、指针和字符串</div></div></a></div><div><a href="/2022/07/20/CPP%E5%87%BD%E6%95%B0%E9%83%A8%E5%88%86/" title="CPP函数部分"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/jason-blackeye-GPPAjJicemU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-20</div><div class="title">CPP函数部分</div></div></a></div><div><a href="/2022/07/21/CPP%E6%95%B0%E6%8D%AE%E7%9A%84%E5%85%B1%E4%BA%AB%E4%B8%8E%E4%BF%9D%E6%8A%A4/" title="CPP数据的共享与保护"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/romain-briaux-P-O6B62iWgA-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-21</div><div class="title">CPP数据的共享与保护</div></div></a></div><div><a href="/2022/07/20/CPP%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" title="CPP类和对象"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/larm-rmah-1cvEeuJKYto-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-20</div><div class="title">CPP类和对象</div></div></a></div><div><a href="/2022/07/31/%E5%A4%9A%E6%80%81%E6%80%A7/" title="多态性"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/80/v2-aa2b0445c8d4db32c0e021608da2a7fc_1440w.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-31</div><div class="title">多态性</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Gitalk</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%8F%8Astl%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">泛型程序设计及STL结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E6%80%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">泛性程序设计的基本概念</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#stl%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">STL简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#stl%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E4%BB%B6-%E5%AE%B9%E5%99%A8-container"><span class="toc-number">2.1.</span> <span class="toc-text">STL的基本组件—容器（container）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stl%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E4%BB%B6-%E8%BF%AD%E4%BB%A3%E5%99%A8-iterator"><span class="toc-number">2.2.</span> <span class="toc-text">STL的基本组件—迭代器（iterator）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stl%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E4%BB%B6-%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1-function-object"><span class="toc-number">2.3.</span> <span class="toc-text">STL的基本组件—函数对象（function object）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stl%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E4%BB%B6-%E7%AE%97%E6%B3%95-algorithms"><span class="toc-number">2.4.</span> <span class="toc-text">STL的基本组件—算法（algorithms）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E4%B8%BE%E4%BE%8B-transform%E7%AE%97%E6%B3%95"><span class="toc-number">2.4.1.</span> <span class="toc-text">算法举例—transform算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text">迭代器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%B5%81%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E8%BE%93%E5%87%BA%E6%B5%81%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="toc-number">3.1.</span> <span class="toc-text">输入流迭代器和输出流迭代器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">3.2.</span> <span class="toc-text">迭代器的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%8C%BA%E9%97%B4"><span class="toc-number">3.3.</span> <span class="toc-text">迭代器的区间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0"><span class="toc-number">3.4.</span> <span class="toc-text">迭代器的辅助函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">容器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%B8%8E%E5%88%86%E7%B1%BB"><span class="toc-number">4.1.</span> <span class="toc-text">容器的基本功能与分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E5%8F%AF%E9%80%86%E5%AE%B9%E5%99%A8%E7%9A%84%E8%AE%BF%E9%97%AE"><span class="toc-number">4.1.1.</span> <span class="toc-text">对可逆容器的访问</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E5%AE%B9%E5%99%A8"><span class="toc-number">4.2.</span> <span class="toc-text">顺序容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="toc-number">4.2.1.</span> <span class="toc-text">顺序容器的接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F-vector"><span class="toc-number">4.2.2.</span> <span class="toc-text">向量（vector）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97-deque"><span class="toc-number">4.2.3.</span> <span class="toc-text">双端队列（deque）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8-list"><span class="toc-number">4.2.4.</span> <span class="toc-text">列表(list)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8-forward-list"><span class="toc-number">4.2.5.</span> <span class="toc-text">单向链表（forward_list）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84-array"><span class="toc-number">4.2.6.</span> <span class="toc-text">数组（array）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E6%8F%92%E5%85%A5%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E9%80%82%E9%85%8D%E5%99%A8"><span class="toc-number">4.3.</span> <span class="toc-text">顺序容器的插入迭代器与适配器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E6%8F%92%E5%85%A5%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="toc-number">4.3.1.</span> <span class="toc-text">顺序容器的插入迭代器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E9%80%82%E9%85%8D%E5%99%A8"><span class="toc-number">4.3.2.</span> <span class="toc-text">顺序容器的适配器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97%E5%85%B1%E5%90%8C%E6%94%AF%E6%8C%81%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">栈和队列共同支持的操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97%E7%9A%84%E4%B8%8D%E5%90%8C%E6%93%8D%E4%BD%9C"><span class="toc-number">4.3.2.2.</span> <span class="toc-text">栈和队列的不同操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97"><span class="toc-number">4.3.2.3.</span> <span class="toc-text">优先级队列</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E5%AE%B9%E5%99%A8"><span class="toc-number">4.4.</span> <span class="toc-text">关联容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E5%AE%B9%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD"><span class="toc-number">4.4.1.</span> <span class="toc-text">关联容器的分类和基本功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88-set"><span class="toc-number">4.4.2.</span> <span class="toc-text">集合（set）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%A0%E5%B0%84-map"><span class="toc-number">4.4.3.</span> <span class="toc-text">映射（map）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E9%9B%86%E5%90%88-multiset-%E4%B8%8E%E5%A4%9A%E9%87%8D%E6%98%A0%E5%B0%84-multimap"><span class="toc-number">4.4.4.</span> <span class="toc-text">多重集合（multiset）与多重映射（multimap）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1"><span class="toc-number">5.</span> <span class="toc-text">函数对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%88%86%E7%B1%BB"><span class="toc-number">5.1.</span> <span class="toc-text">函数对象基本概念及分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">5.2.</span> <span class="toc-text">lambda表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%80%82%E9%85%8D%E5%99%A8"><span class="toc-number">5.3.</span> <span class="toc-text">函数适配器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text">算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%BA%8F%E5%88%97%E7%AE%97%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">不可变序列算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%BA%8F%E5%88%97%E7%AE%97%E6%B3%95"><span class="toc-number">6.2.</span> <span class="toc-text">可变序列算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E5%92%8C%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95"><span class="toc-number">6.3.</span> <span class="toc-text">排序和搜索算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E7%AE%97%E6%B3%95"><span class="toc-number">6.4.</span> <span class="toc-text">数值算法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%BC%E5%90%88%E5%AE%9E%E4%BE%8B-%E9%93%B6%E8%A1%8C%E8%B4%A6%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">7.</span> <span class="toc-text">综合实例—银行账户管理</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/url(https:/pic1.zhimg.com/80/v2-d2596945a42864e294bf820b716c0101_1440w.jpeg)')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By Lixiang</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">笑相遇，似觉琼枝玉树，暖日明霞光烂。</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'IgaCfv8yUwqEcIFRqhEhEBG0-gzGzoHsz',
+      appKey: 'hCCYk2PzNXmmj2A8mjzBcjRR',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'fb37ffde539166b338d8',
+      clientSecret: '67734b8b6c2a0f5b156bcf3073299526acc35e6c',
+      repo: 'gitalk_comments',
+      owner: '',
+      admin: [''],
+      id: 'dd8020d2f2f1b58574e4a09fba8032f2',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Valine' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="3849362943" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="true" muted></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":15,"vOffset":15},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body></html>

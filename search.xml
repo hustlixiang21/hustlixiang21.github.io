@@ -84,6 +84,18 @@
       </tags>
   </entry>
   <entry>
+    <title>24_May</title>
+    <url>/2022/05/24/24-May/</url>
+    <content><![CDATA[<h3 id="have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
+]]></content>
+      <categories>
+        <category>一句</category>
+      </categories>
+      <tags>
+        <tag>一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A Happy 521</title>
     <url>/2022/05/18/A_happy_day/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -104,199 +116,6 @@
       <tags>
         <tag>和宝贝在一起的时光</tag>
         <tag>爱情</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CPP基础中需要注意的部分</title>
-    <url>/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/</url>
-    <content><![CDATA[<h2 id="数据的输入和输出">数据的输入和输出</h2>
-<h3 id="i-o流">I/O流</h3>
-<p>在C++，将数据从一个对象到另一个对象的流动抽象为“流”。cin和cout是预定义的流类对象，cin用来处理标准输入，即键盘输入，cout用来处理标准输出，即屏幕输出。</p>
-<hr>
-<h3 id="预定义的插入符和提取符">预定义的插入符和提取符</h3>
-<p>“&lt;&lt;”是预定义的插入符，作用在流类对象cout上便可以实现最一般的屏幕输出。</p>
-<p>“&gt;&gt;”是提取符，作用在流类对象cin上便可以实现最一般的键盘输入。</p>
-<hr>
-<h3 id="常用的i-o流类库操纵符">常用的I/O流类库操纵符</h3>
-<table>
-<thead>
-<tr>
-<th>操纵符名</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dec</td>
-<td>数值数据采用十进制表示</td>
-</tr>
-<tr>
-<td>hex</td>
-<td>数值数据采用十六进制表示</td>
-</tr>
-<tr>
-<td>oct</td>
-<td>数值数据采用八进制表示</td>
-</tr>
-<tr>
-<td>ws</td>
-<td>提取空白符</td>
-</tr>
-<tr>
-<td>endl</td>
-<td>插入换行符，并且更新流</td>
-</tr>
-<tr>
-<td>setsprecision(int)</td>
-<td>设置浮点数的小数位数（包括小数点）</td>
-</tr>
-<tr>
-<td>setw(int)</td>
-<td>设置域宽</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="if-else语句">if-else语句</h2>
-<p>首先是<code>else</code>的配对方式是与向上找同层的<code>if</code>配对.<br>
-例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">else</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="built_in">else</span>()</span><br></pre></td></tr></table></figure>
-<p>这样是可行的因为<code>else</code>都有配对的，但是缩进并不能代表结构，严格来说应该用<code>&#123;&#125;</code>来区分不同的嵌套。<strong>仅供区分不同的结构</strong>。</p>
-<hr>
-<p><strong>反例</strong>：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br></pre></td></tr></table></figure>
-<p>这样的话<code>else</code>和带有缩进的<code>if</code>配对。</p>
-<hr>
-<h2 id="typedef声明">typedef声明</h2>
-<p>typedef  已有类型名  新类型名表</p>
-<p>例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> Area,Volume;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Natural;</span><br><span class="line">Natural i1,i2;</span><br><span class="line">Area a;</span><br><span class="line">Volume v;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="除typedef外另一种自定义类型using">除typedef外另一种自定义类型using</h2>
-<p><code>using 新类型名 = 已有类型名</code></p>
-<p>例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Area = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">using</span> Volume = <span class="type">double</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="auto类型和decltype类型">auto类型和decltype类型</h2>
-<p><code>auto</code>：编译器通过初始值自动判断变量的类型<br>
-<code>decltype</code>：定义一个变量与某一表达式的类型相同，但并不用该表达式初始化变量<br>
-例如：<code>decltype(i) j = 2;</code>让j和i有同样的类型，但是并不用2来初始化j。</p>
-<h2 id="none"></h2>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>C++程序设计</tag>
-        <tag>C++语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>24_May</title>
-    <url>/2022/05/24/24-May/</url>
-    <content><![CDATA[<h3 id="have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
-]]></content>
-      <categories>
-        <category>一句</category>
-      </categories>
-      <tags>
-        <tag>一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CPP数组、指针和字符串</title>
-    <url>/2022/07/23/CPP%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</url>
-    <content><![CDATA[<h1 id="数组">数组</h1>
-<p>数组是具有一定顺序关系的若干对象的集合体，组成数组的对象成为该数组的元素。数组名是一个不能被赋值的指针，叫做指针常量。</p>
-<blockquote><p>C++中的二维数组被当作<strong>一维数组的数组</strong>。因此二维数组是按照<strong>行优先</strong>的顺序存储。</p>
-</blockquote>
-<hr>
-<blockquote><p>把数组作为参数时，一般不指定数组第一维的大小，即使指定，也会被忽略。</p>
-</blockquote>
-<h2 id="程序实例-线性拟合">程序实例—线性拟合</h2>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Linear%20fit">查看源代码</a></p>
-<hr>
-<h1 id="指针">指针</h1>
-<p>基本定义使用略去。</p>
-<h2 id="void指针的使用">void指针的使用</h2>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="type">void</span> voidObject;             <span class="comment">//不能声明void类型的变量</span></span><br><span class="line">  <span class="type">void</span> *pv;                    <span class="comment">//可以声明void类型的指针</span></span><br><span class="line">  <span class="type">int</span> i = <span class="number">5</span>;</span><br><span class="line">  pv = &amp;i;</span><br><span class="line">  <span class="type">int</span> *pint = <span class="built_in">static_cast</span>&lt;<span class="type">int</span> *&gt;(pv);</span><br><span class="line">  cout &lt;&lt; <span class="string">&quot;* pint=&quot;</span> &lt;&lt; * pint &lt;&lt; endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">运行结果：</span><br><span class="line">  * pint = <span class="number">5</span></span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p>void指针一般只在指针所指向的数据类型不确定的时候使用。</p>
-</div>
-<h2 id="空指针的使用">空指针的使用</h2>
-<p>不同类型的指针之间或者指针与非零整数之间的关系运算是<strong>毫无意义</strong>的，但是指针变量可以和整数0进行比较。0专用于表示空指针，也就是一个不指向任何有效地址的指针。</p>
-<p>空指针同时也可以用NULL表示。</p>
-<div class="note success flat"><p>NULL是一个在很多头文件中都有定义的宏，该定义为0。</p>
-</div>
-<h2 id="对象指针">对象指针</h2>
-<p>顾名思义，指向一个对象的指针。</p>
-<p>使用对象指针时，可以很形象的表示对象的成员，语法形式为<code>对象指针名-&gt;成员名</code>这个与<code>(*对象指针名).成员名</code>的访问是等价的。</p>
-<p>前面在类的组合时有个知识点叫做前向引用声明，当时有两个类，在定义时互相引用，这个问题就可以用指针解决。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>;         <span class="comment">//前向引用说明</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>&#123;</span><br><span class="line">  A *x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">  B *y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>声明一个指针而不是对象时允许的，当A定义完，就可以声明A对象。</p>
-<h3 id="this指针">this指针</h3>
-<p>this指针是一个隐含于每一个类的非静态成员函数中的特殊指针（包括构造函数和析构函数），它用于指向正在被<strong>成员函数操作的对象</strong></p>
-<div class="note info flat"><p>this指针是成员函数的隐含参数，让函数知道操作的是哪个对象，从而访问其数据成员。对于常成员函数来说，这个隐含的参数是长指针类型的。</p>
-</div>
-<h3 id="指向类的非静态成员的指针">指向类的非静态成员的指针</h3>
-<p>声明语句</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">类型说明符  类名::* 指针名                           <span class="comment">//声明指向数据成员的指针</span></span><br><span class="line">类型说明符 (类名::* 指针名)(参数表);                  <span class="comment">//声明指向函数成员的指针</span></span><br></pre></td></tr></table></figure>
-<p>为指向数据成员的指针赋值的一般语法形式为</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">指针名 = &amp;类名::数据成员名;</span><br></pre></td></tr></table></figure>
-<p>访问数据成员时，可以</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">对象名.*类成员指针名</span><br><span class="line">或</span><br><span class="line">对象指针名 -&gt; *类成员指针名</span><br></pre></td></tr></table></figure>
-<p>为指向成员函数的指针赋值的一般语法为</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">指针名 = &amp;类名::函数成员名;</span><br></pre></td></tr></table></figure>
-<h3 id="指向类的静态成员的指针">指向类的静态成员的指针</h3>
-<p>只需要使用普通的指针就可以</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">类型说明符  *指针名 = &amp;类名::静态数据成员</span><br><span class="line">类型说明符 (*指针名)(形式参数) = &amp;类名::静态成员函数</span><br></pre></td></tr></table></figure>
-<h1 id="动态内存分配">动态内存分配</h1>
-<p>在C++程序中建立和删除堆对象（程序运行过程中申请和释放的存储单元）使用的两个运算符：<code>new</code>和<code>delete</code>。</p>
-<div class="note danger flat"><p>有new必有delete释放，否则导致无法回收内存，使得程序占据的内存越来越大，叫做内存泄漏。</p>
-</div>
-<h2 id="创建一个类的对象">创建一个类的对象</h2>
-<blockquote><p>new建立一个类的对象时，需要注意的细节。</p>
-<blockquote><p>如果该类存在用户定义的默认构造函数，那么<code>new T</code>和<code>new T()</code>没有任何的区别。</p>
-</blockquote>
-<blockquote><p>如果该类没有定义默认的构造函数，使用<code>new T</code>时会调用系统生成的隐含的默认构造函数；使用<code>new T()</code>时，除了执行这个隐含的函数，还会为基本数据类型和指针类型的成员用0赋初值，这一过程是<strong>递归的</strong>。</p>
-</blockquote></blockquote>
-<h2 id="创建多维数组">创建多维数组</h2>
-<p>形式如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> 类型名T[数组第<span class="number">1</span>维长度][数组第二维长度]...;</span><br></pre></td></tr></table></figure>
-<p>其中数组的第一维长度可以是任何结果为正整数的<strong>表达式</strong>，而其他各维数组的长度必须是结果为正整数的<strong>常量表达式</strong>。</p>
-<p>错误的例子：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">float</span> * fp;</span><br><span class="line">fp = <span class="keyword">new</span> <span class="type">float</span>[<span class="number">10</span>][<span class="number">25</span>][<span class="number">10</span>]</span><br></pre></td></tr></table></figure>
- <div class="note danger flat"><p>在这里new操作产生的是一个指向一个<code>$25 \times 10$</code>的二维float类型数组的指针，而fp是一个指向float型数据的指针，产生了矛盾！</p>
-</div>
-<h1 id="用vector创建数组对象">用vector创建数组对象</h1>
-<p>C++提供了被封装的动态数组—vector，具有各种类型。vector<strong>不是一个类</strong>，而是<strong>一个类模板</strong>。</p>
-<p>使用vector定义动态数组的形式为：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;元素类型&gt;数组对象名(数组长度);</span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p>vector定义的数组对象的所有元素都会被初始化。如果为基本数据类型，则所有元素都会被0以初始化；如果为类类型，则会调用类的默认构造函数初始化。所以需要保证作为数组元素的类<strong>需要具有默认构造函数</strong>，初值可以指定，但是<strong>所有的元素初值必须是一样的</strong>。</p>
-</div>
-<h1 id="引用相关补充">引用相关补充</h1>
-<p>引用通常用于函数参数列表和函数返回值。下面列出了 C++ 程序员必须清楚的两个与 C++ 引用相关的重要概念：</p>
-<p><a href="https://www.runoob.com/cplusplus/passing-parameters-by-references.html">把引用作为参数</a></p>
-<p><a href="https://www.runoob.com/cplusplus/returning-values-by-reference.html">把引用作为返回值</a></p>
-<h1 id="深复制与浅复制">深复制与浅复制</h1>
-<p>隐含的复制构造函数实现的只是浅复制，但是这样的复制并不适用于所有的情况。</p>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B5%85%E5%A4%8D%E5%88%B6/main.cpp">浅复制代码示例</a></p>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B7%B1%E5%A4%8D%E5%88%B6/main.cpp">深复制代码示例</a></p>
-<h1 id="字符串">字符串</h1>
-<p>C++对字符串一系列复杂的操作进行了封装，形成了string类，更加方便的操作字符串。</p>
-<div class="note info flat"><p>执行很多字符串操作需要借助<strong>cstring</strong>头文件中的<strong>字符串处理函数</strong>，使用string类需要包含头文件<strong>string</strong>。</p>
-</div>
-<p><a href="https://www.runoob.com/cplusplus/cpp-strings.html">字符串相关讲解</a></p>
-<h1 id="个人银行账户管理程序">个人银行账户管理程序</h1>
-<p>对于上一个管理程序的功能补充。</p>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update">源码见github</a></p>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>C++程序设计</tag>
-        <tag>C++语言</tag>
       </tags>
   </entry>
   <entry>
@@ -416,6 +235,91 @@ Enter two integer: 3 5<br>
 Their sum of square: 34<br>
 Enter two real number: 2.3 5.8<br>
 Their sum of square: 38.93</p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPP基础中需要注意的部分</title>
+    <url>/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<h2 id="数据的输入和输出">数据的输入和输出</h2>
+<h3 id="i-o流">I/O流</h3>
+<p>在C++，将数据从一个对象到另一个对象的流动抽象为“流”。cin和cout是预定义的流类对象，cin用来处理标准输入，即键盘输入，cout用来处理标准输出，即屏幕输出。</p>
+<hr>
+<h3 id="预定义的插入符和提取符">预定义的插入符和提取符</h3>
+<p>“&lt;&lt;”是预定义的插入符，作用在流类对象cout上便可以实现最一般的屏幕输出。</p>
+<p>“&gt;&gt;”是提取符，作用在流类对象cin上便可以实现最一般的键盘输入。</p>
+<hr>
+<h3 id="常用的i-o流类库操纵符">常用的I/O流类库操纵符</h3>
+<table>
+<thead>
+<tr>
+<th>操纵符名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dec</td>
+<td>数值数据采用十进制表示</td>
+</tr>
+<tr>
+<td>hex</td>
+<td>数值数据采用十六进制表示</td>
+</tr>
+<tr>
+<td>oct</td>
+<td>数值数据采用八进制表示</td>
+</tr>
+<tr>
+<td>ws</td>
+<td>提取空白符</td>
+</tr>
+<tr>
+<td>endl</td>
+<td>插入换行符，并且更新流</td>
+</tr>
+<tr>
+<td>setsprecision(int)</td>
+<td>设置浮点数的小数位数（包括小数点）</td>
+</tr>
+<tr>
+<td>setw(int)</td>
+<td>设置域宽</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="if-else语句">if-else语句</h2>
+<p>首先是<code>else</code>的配对方式是与向上找同层的<code>if</code>配对.<br>
+例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">else</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="built_in">else</span>()</span><br></pre></td></tr></table></figure>
+<p>这样是可行的因为<code>else</code>都有配对的，但是缩进并不能代表结构，严格来说应该用<code>&#123;&#125;</code>来区分不同的嵌套。<strong>仅供区分不同的结构</strong>。</p>
+<hr>
+<p><strong>反例</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br></pre></td></tr></table></figure>
+<p>这样的话<code>else</code>和带有缩进的<code>if</code>配对。</p>
+<hr>
+<h2 id="typedef声明">typedef声明</h2>
+<p>typedef  已有类型名  新类型名表</p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> Area,Volume;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Natural;</span><br><span class="line">Natural i1,i2;</span><br><span class="line">Area a;</span><br><span class="line">Volume v;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="除typedef外另一种自定义类型using">除typedef外另一种自定义类型using</h2>
+<p><code>using 新类型名 = 已有类型名</code></p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Area = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">using</span> Volume = <span class="type">double</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="auto类型和decltype类型">auto类型和decltype类型</h2>
+<p><code>auto</code>：编译器通过初始值自动判断变量的类型<br>
+<code>decltype</code>：定义一个变量与某一表达式的类型相同，但并不用该表达式初始化变量<br>
+例如：<code>decltype(i) j = 2;</code>让j和i有同样的类型，但是并不用2来初始化j。</p>
+<h2 id="none"></h2>
 ]]></content>
       <categories>
         <category>CS学习笔记</category>
@@ -556,6 +460,102 @@ Their sum of square: 38.93</p>
 <p>程序源码上传至了<a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management">github</a>，使用<a href="https://hustlixiang21.github.io/2022/06/19/Makefile%E5%85%A5%E9%97%A8/">makefile</a>进行编译运行</p>
 <div class="note danger flat"><p>严重错误，静态变量没有在外部进行赋初始值，导致我进度直接停滞两小时，而且是在类的成员函数定义的文件内进行初始化赋值。</p>
 </div>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPP数组、指针和字符串</title>
+    <url>/2022/07/23/CPP%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</url>
+    <content><![CDATA[<h1 id="数组">数组</h1>
+<p>数组是具有一定顺序关系的若干对象的集合体，组成数组的对象成为该数组的元素。数组名是一个不能被赋值的指针，叫做指针常量。</p>
+<blockquote><p>C++中的二维数组被当作<strong>一维数组的数组</strong>。因此二维数组是按照<strong>行优先</strong>的顺序存储。</p>
+</blockquote>
+<hr>
+<blockquote><p>把数组作为参数时，一般不指定数组第一维的大小，即使指定，也会被忽略。</p>
+</blockquote>
+<h2 id="程序实例-线性拟合">程序实例—线性拟合</h2>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Linear%20fit">查看源代码</a></p>
+<hr>
+<h1 id="指针">指针</h1>
+<p>基本定义使用略去。</p>
+<h2 id="void指针的使用">void指针的使用</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="type">void</span> voidObject;             <span class="comment">//不能声明void类型的变量</span></span><br><span class="line">  <span class="type">void</span> *pv;                    <span class="comment">//可以声明void类型的指针</span></span><br><span class="line">  <span class="type">int</span> i = <span class="number">5</span>;</span><br><span class="line">  pv = &amp;i;</span><br><span class="line">  <span class="type">int</span> *pint = <span class="built_in">static_cast</span>&lt;<span class="type">int</span> *&gt;(pv);</span><br><span class="line">  cout &lt;&lt; <span class="string">&quot;* pint=&quot;</span> &lt;&lt; * pint &lt;&lt; endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">运行结果：</span><br><span class="line">  * pint = <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>void指针一般只在指针所指向的数据类型不确定的时候使用。</p>
+</div>
+<h2 id="空指针的使用">空指针的使用</h2>
+<p>不同类型的指针之间或者指针与非零整数之间的关系运算是<strong>毫无意义</strong>的，但是指针变量可以和整数0进行比较。0专用于表示空指针，也就是一个不指向任何有效地址的指针。</p>
+<p>空指针同时也可以用NULL表示。</p>
+<div class="note success flat"><p>NULL是一个在很多头文件中都有定义的宏，该定义为0。</p>
+</div>
+<h2 id="对象指针">对象指针</h2>
+<p>顾名思义，指向一个对象的指针。</p>
+<p>使用对象指针时，可以很形象的表示对象的成员，语法形式为<code>对象指针名-&gt;成员名</code>这个与<code>(*对象指针名).成员名</code>的访问是等价的。</p>
+<p>前面在类的组合时有个知识点叫做前向引用声明，当时有两个类，在定义时互相引用，这个问题就可以用指针解决。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>;         <span class="comment">//前向引用说明</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>&#123;</span><br><span class="line">  A *x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">  B *y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>声明一个指针而不是对象时允许的，当A定义完，就可以声明A对象。</p>
+<h3 id="this指针">this指针</h3>
+<p>this指针是一个隐含于每一个类的非静态成员函数中的特殊指针（包括构造函数和析构函数），它用于指向正在被<strong>成员函数操作的对象</strong></p>
+<div class="note info flat"><p>this指针是成员函数的隐含参数，让函数知道操作的是哪个对象，从而访问其数据成员。对于常成员函数来说，这个隐含的参数是长指针类型的。</p>
+</div>
+<h3 id="指向类的非静态成员的指针">指向类的非静态成员的指针</h3>
+<p>声明语句</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">类型说明符  类名::* 指针名                           <span class="comment">//声明指向数据成员的指针</span></span><br><span class="line">类型说明符 (类名::* 指针名)(参数表);                  <span class="comment">//声明指向函数成员的指针</span></span><br></pre></td></tr></table></figure>
+<p>为指向数据成员的指针赋值的一般语法形式为</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">指针名 = &amp;类名::数据成员名;</span><br></pre></td></tr></table></figure>
+<p>访问数据成员时，可以</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">对象名.*类成员指针名</span><br><span class="line">或</span><br><span class="line">对象指针名 -&gt; *类成员指针名</span><br></pre></td></tr></table></figure>
+<p>为指向成员函数的指针赋值的一般语法为</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">指针名 = &amp;类名::函数成员名;</span><br></pre></td></tr></table></figure>
+<h3 id="指向类的静态成员的指针">指向类的静态成员的指针</h3>
+<p>只需要使用普通的指针就可以</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">类型说明符  *指针名 = &amp;类名::静态数据成员</span><br><span class="line">类型说明符 (*指针名)(形式参数) = &amp;类名::静态成员函数</span><br></pre></td></tr></table></figure>
+<h1 id="动态内存分配">动态内存分配</h1>
+<p>在C++程序中建立和删除堆对象（程序运行过程中申请和释放的存储单元）使用的两个运算符：<code>new</code>和<code>delete</code>。</p>
+<div class="note danger flat"><p>有new必有delete释放，否则导致无法回收内存，使得程序占据的内存越来越大，叫做内存泄漏。</p>
+</div>
+<h2 id="创建一个类的对象">创建一个类的对象</h2>
+<blockquote><p>new建立一个类的对象时，需要注意的细节。</p>
+<blockquote><p>如果该类存在用户定义的默认构造函数，那么<code>new T</code>和<code>new T()</code>没有任何的区别。</p>
+</blockquote>
+<blockquote><p>如果该类没有定义默认的构造函数，使用<code>new T</code>时会调用系统生成的隐含的默认构造函数；使用<code>new T()</code>时，除了执行这个隐含的函数，还会为基本数据类型和指针类型的成员用0赋初值，这一过程是<strong>递归的</strong>。</p>
+</blockquote></blockquote>
+<h2 id="创建多维数组">创建多维数组</h2>
+<p>形式如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> 类型名T[数组第<span class="number">1</span>维长度][数组第二维长度]...;</span><br></pre></td></tr></table></figure>
+<p>其中数组的第一维长度可以是任何结果为正整数的<strong>表达式</strong>，而其他各维数组的长度必须是结果为正整数的<strong>常量表达式</strong>。</p>
+<p>错误的例子：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">float</span> * fp;</span><br><span class="line">fp = <span class="keyword">new</span> <span class="type">float</span>[<span class="number">10</span>][<span class="number">25</span>][<span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+ <div class="note danger flat"><p>在这里new操作产生的是一个指向一个<code>$25 \times 10$</code>的二维float类型数组的指针，而fp是一个指向float型数据的指针，产生了矛盾！</p>
+</div>
+<h1 id="用vector创建数组对象">用vector创建数组对象</h1>
+<p>C++提供了被封装的动态数组—vector，具有各种类型。vector<strong>不是一个类</strong>，而是<strong>一个类模板</strong>。</p>
+<p>使用vector定义动态数组的形式为：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;元素类型&gt;数组对象名(数组长度);</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>vector定义的数组对象的所有元素都会被初始化。如果为基本数据类型，则所有元素都会被0以初始化；如果为类类型，则会调用类的默认构造函数初始化。所以需要保证作为数组元素的类<strong>需要具有默认构造函数</strong>，初值可以指定，但是<strong>所有的元素初值必须是一样的</strong>。</p>
+</div>
+<h1 id="引用相关补充">引用相关补充</h1>
+<p>引用通常用于函数参数列表和函数返回值。下面列出了 C++ 程序员必须清楚的两个与 C++ 引用相关的重要概念：</p>
+<p><a href="https://www.runoob.com/cplusplus/passing-parameters-by-references.html">把引用作为参数</a></p>
+<p><a href="https://www.runoob.com/cplusplus/returning-values-by-reference.html">把引用作为返回值</a></p>
+<h1 id="深复制与浅复制">深复制与浅复制</h1>
+<p>隐含的复制构造函数实现的只是浅复制，但是这样的复制并不适用于所有的情况。</p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B5%85%E5%A4%8D%E5%88%B6/main.cpp">浅复制代码示例</a></p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%B7%B1%E5%A4%8D%E5%88%B6/main.cpp">深复制代码示例</a></p>
+<h1 id="字符串">字符串</h1>
+<p>C++对字符串一系列复杂的操作进行了封装，形成了string类，更加方便的操作字符串。</p>
+<div class="note info flat"><p>执行很多字符串操作需要借助<strong>cstring</strong>头文件中的<strong>字符串处理函数</strong>，使用string类需要包含头文件<strong>string</strong>。</p>
+</div>
+<p><a href="https://www.runoob.com/cplusplus/cpp-strings.html">字符串相关讲解</a></p>
+<h1 id="个人银行账户管理程序">个人银行账户管理程序</h1>
+<p>对于上一个管理程序的功能补充。</p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update">源码见github</a></p>
 ]]></content>
       <categories>
         <category>CS学习笔记</category>
@@ -908,6 +908,56 @@ setTime(),showTime()</li>
       </tags>
   </entry>
   <entry>
+    <title>git入门</title>
+    <url>/2022/07/05/git%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="git入门">git入门</h1>
+<p>依托清华大学暑培进行一些实操，参照书籍<a href="https://git-scm.com/book/en/v2">《pro git》</a>。</p>
+<p>同时推荐一个<a href="https://learngitbranching.js.org/?locale=zh_CN">快速入门的网站</a>。能够更加增加对于分支的理解。</p>
+<span id="more"></span>
+<h2 id="什么是git？">什么是git？</h2>
+<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理项目。</p>
+<h3 id="版本控制">版本控制</h3>
+<p>能够轻易的将仓库里的东西恢复到上一次的<strong>commit</strong>。</p>
+<p>原理：采用快照的方式进行版本控制。</p>
+<h3 id="分布式">分布式</h3>
+<p>我的理解就是能够多人多台主机在不同时空进行同一个开发，且互不影响，最后统一提交。</p>
+<h2 id="基本原理">基本原理</h2>
+<p>分为工作区、暂存区与版本库，文件夹中有一个.git文件，里面是暂存区和版本库，而.git外的区域就是工作区。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-99d8bb59ba479252bfae5f71554b33aa_1440w.png" alt="img"></p>
+<h2 id="案例演示">案例演示</h2>
+<p>首先使用命令行进入当前的文件夹。</p>
+<p>需要初始化当前的文件夹建立一个空的仓库，使用命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p><img src="https://pica.zhimg.com/80/v2-099c25239375be8b37a05910cbc07143_1440w.png" alt="img"></p>
+<p>将所需文件添加进入缓存区：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add &lt;文件名&gt;</span><br></pre></td></tr></table></figure>
+<p>将缓存区内的文件commit进入版本库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit </span><br></pre></td></tr></table></figure>
+<p>==这个时候一般会弹出默认的编辑器，要求对本次的提交进行一些描述，通常需要统一标准，写的清楚详细。==</p>
+<p><img src="https://pic1.zhimg.com/80/v2-245d2877ae4fc8dfe9e8b64e3e8081e2_1440w.png" alt="img"></p>
+<h3 id="一些常用的命令">一些常用的命令</h3>
+<p>查看commit日志：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://pic1.zhimg.com/80/v2-1025580221e635d84f2ebf13e632c0fe_1440w.png" alt="img"></p>
+<p>查看git状态，即缓存区内的文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic3.zhimg.com/80/v2-0edf6701fd8e886a2a037d0cc283edb9_1440w.png" alt="img"></p>
+<p>修改<strong>工作区文件</strong>与上次的commit进行比对，并输出不同的地方。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
+<p><img src="https://picx.zhimg.com/80/v2-0c8cd096128899e7b95e084d974e0214_1440w.png" alt="img"></p>
+<h3 id="分支和远程操作">分支和远程操作</h3>
+<p>参见文章开始处的网站教学，生动自然令人印象深刻。</p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>CS工具</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git远程连接</title>
     <url>/2022/07/17/git%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/</url>
     <content><![CDATA[<p>这个是继上篇文章git入门往后写的，主要原因还是在尝试将一些资料文件上传到github的时候遇到了比较多的问题吧。</p>
@@ -1017,56 +1067,6 @@ setTime(),showTime()</li>
 <p><a href="https://blog.csdn.net/A496608119/article/details/123566231">CSDN_Git本地文件上传到远程仓库</a></p>
 <p><a href="https://blog.csdn.net/u014630142/article/details/120261403">CSDN_删除 git 远程仓库文件</a></p>
 <p>仔细看看他们写的，可能比我写的清楚，我的目的还是通过我自己的理解的原理过程，去一步步建立连接，可以说这是我的第一篇也还算是教程的博客吧，谢谢观看！</p>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>CS工具</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git入门</title>
-    <url>/2022/07/05/git%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h1 id="git入门">git入门</h1>
-<p>依托清华大学暑培进行一些实操，参照书籍<a href="https://git-scm.com/book/en/v2">《pro git》</a>。</p>
-<p>同时推荐一个<a href="https://learngitbranching.js.org/?locale=zh_CN">快速入门的网站</a>。能够更加增加对于分支的理解。</p>
-<span id="more"></span>
-<h2 id="什么是git？">什么是git？</h2>
-<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理项目。</p>
-<h3 id="版本控制">版本控制</h3>
-<p>能够轻易的将仓库里的东西恢复到上一次的<strong>commit</strong>。</p>
-<p>原理：采用快照的方式进行版本控制。</p>
-<h3 id="分布式">分布式</h3>
-<p>我的理解就是能够多人多台主机在不同时空进行同一个开发，且互不影响，最后统一提交。</p>
-<h2 id="基本原理">基本原理</h2>
-<p>分为工作区、暂存区与版本库，文件夹中有一个.git文件，里面是暂存区和版本库，而.git外的区域就是工作区。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-99d8bb59ba479252bfae5f71554b33aa_1440w.png" alt="img"></p>
-<h2 id="案例演示">案例演示</h2>
-<p>首先使用命令行进入当前的文件夹。</p>
-<p>需要初始化当前的文件夹建立一个空的仓库，使用命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-<p><img src="https://pica.zhimg.com/80/v2-099c25239375be8b37a05910cbc07143_1440w.png" alt="img"></p>
-<p>将所需文件添加进入缓存区：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add &lt;文件名&gt;</span><br></pre></td></tr></table></figure>
-<p>将缓存区内的文件commit进入版本库：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit </span><br></pre></td></tr></table></figure>
-<p>==这个时候一般会弹出默认的编辑器，要求对本次的提交进行一些描述，通常需要统一标准，写的清楚详细。==</p>
-<p><img src="https://pic1.zhimg.com/80/v2-245d2877ae4fc8dfe9e8b64e3e8081e2_1440w.png" alt="img"></p>
-<h3 id="一些常用的命令">一些常用的命令</h3>
-<p>查看commit日志：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://pic1.zhimg.com/80/v2-1025580221e635d84f2ebf13e632c0fe_1440w.png" alt="img"></p>
-<p>查看git状态，即缓存区内的文件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic3.zhimg.com/80/v2-0edf6701fd8e886a2a037d0cc283edb9_1440w.png" alt="img"></p>
-<p>修改<strong>工作区文件</strong>与上次的commit进行比对，并输出不同的地方。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
-<p><img src="https://picx.zhimg.com/80/v2-0c8cd096128899e7b95e084d974e0214_1440w.png" alt="img"></p>
-<h3 id="分支和远程操作">分支和远程操作</h3>
-<p>参见文章开始处的网站教学，生动自然令人印象深刻。</p>
 ]]></content>
       <categories>
         <category>CS学习笔记</category>
@@ -2141,6 +2141,93 @@ tar命令可以将已经打包好的文件解压出来。</p>
       </tags>
   </entry>
   <entry>
+    <title>模版与群体数据的组织</title>
+    <url>/2022/08/04/%E6%A8%A1%E7%89%88%E4%B8%8E%E7%BE%A4%E4%BD%93%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<h1 id="函数模版与类模版">函数模版与类模版</h1>
+<p>模板可以实现<strong>参数化多态性</strong>，就是将程序处理对象的类型参数化，使一段程序能够用于处理多种<strong>不同类型</strong>的对象。</p>
+<h2 id="函数模板">函数模板</h2>
+<p>函数模板存在的意义简单来说就是为了避免两个只有处理<strong>数据类型不同</strong>的函数重复编写，使代码的可重用性大大提高，从而提高软件的开发效率。</p>
+<p>语法形式在函数定义前加上语句<code>template&lt;模板参数表&gt;</code></p>
+<p>模板参数表的内容：</p>
+<ul>
+<li>类型参数： class（或typename）标识符</li>
+<li>常量参数： 类型说明符 标识符</li>
+<li>模板参数： template&lt;参数表&gt; class 标识符</li>
+</ul>
+<p>实例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通用类型的绝对值函数</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">T <span class="title">abs</span><span class="params">(T x)</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x&gt;<span class="number">0</span> ? x : -x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <div class="note danger flat"><p>函数模版与函数有着本质的区别</p>
+<ol>
+<li>函数模版本身在编译时<strong>不会生成</strong>任何目标代码，只有函数模版的实例会生成目标代码。</li>
+<li>被多个源文件引用的函数模板，需要连通函数体一同放在头文件中，而不能像普通函数那样只把声明放在头文件中。</li>
+<li>函数指针也只能指向函数模版的实例，<strong>不能指向函数模板</strong>。</li>
+</ol>
+</div>
+<h2 id="类模版">类模版</h2>
+<p>使用类模板能够可以为类定义一种模式，使得类中的某些数据成员，某些成员函数的参数，返回值或局部变量能取任意类型。</p>
+<p>类模版的声明方式与函数模版方式相同，</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在类模版以外的地方定义成员函数</span></span><br><span class="line"><span class="keyword">template</span>&lt;模板参数表&gt;</span><br><span class="line">类型名 类名&lt;模板参数标识符列表&gt;::函数名(参数表)</span><br><span class="line">&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用模版类来定义对象</span></span><br><span class="line">模板名&lt;模版参数类型&gt;对象名<span class="number">1</span>,...,对象名n;</span><br></pre></td></tr></table></figure>
+<h1 id="线性群体">线性群体</h1>
+<p>线性群体顾名思义，元素的位置与其位置关系时互相对应的。分类可以分为，直接访问、顺序访问和索引访问。直接访问指不需要按照顺序直接跳到需要访问的位置，而顺序访问只能够按照元素排列顺序从头访问。</p>
+<h2 id="直接访问群体-数组类">直接访问群体—数组类</h2>
+<p>要求自己设计一个可变长度的数组，<a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%95%B0%E7%BB%84%E7%B1%BB%E6%A8%A1%E7%89%88/Array.h">点击查看源码</a>，并列出一些语法注意点。</p>
+ <div class="note info flat"><p>语法规定“=”，“[ ]”，“( )”，“-&gt;”只能被重载为成员函数，而且派生类中的“=”运算函数总会隐藏基类中的“=”运算符。</p>
+</div>
+<p>如果我们希望在程序中像使用普通数组一样使用Array类的对象，需要对其进行重载指针转换运算符。</p>
+<h3 id="指针转换运算符的作用">指针转换运算符的作用</h3>
+<p>为了说明重载指针转换运算符的必要性，先来看看下面这段程序：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">read</span> <span class="params">(<span class="type">int</span> *p, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++）</span><br><span class="line">        cin&gt;&gt;p[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> a[<span class="number">10</span>];</span><br><span class="line">    <span class="built_in">read</span>(a,<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里函数 read 的第一个形参是 int 指针，而数组名a 是一个int 型地址常量，类型恰好是匹配的。如果希望在程序中像使用普通数组一祥做用Array类的对象，将上述 main两数修改如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="function">Arrays&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line">    <span class="built_in">read</span>(a,<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>情况会怎样呢？这回在调用read 时会发现实参类型与形参类型不同，这时编译系统会试图进行自动类型转换：将对象名转换为 int * 类型。由于a是自定义的类型对象,所以编译系统提供的自动转换功能当然<strong>无法实现这一转换</strong>，因此我们需要自行编写重载的指针类型转换函数。<br>
+C++中,如果想将自定义类型T的对象隐含或显式地转换为S 类型，可以将operator S定义为T的成员函数。这样，在把T类型对象显式隐含转换为 S 类型，或用static_cast 显式转换为 S 类型时，该成员函数会被调用。转换操作符的重载函数不用指<br>
+定返回值的类型，这是由于这种情况下<strong>重载函数的返回类型与操作符名称一致</strong>，因此C++标准规定不能为这类函数指定返回值类型(也不要写 void)。<br>
+而当对象本身为常数时，为了避免通过指针对数组内容进行修改,只能将对象转换为常指针。</p>
+<p>在这个Array类中重载指针转换运算符的写法如下；</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line">Array&lt;T&gt;::<span class="keyword">operator</span> T *()  <span class="comment">//不用写返回值的类型</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> list;<span class="comment">//数组的首地址</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="顺序访问群体-链表类">顺序访问群体—链表类</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// LinkedList.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> LINKEDLIST_H </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LINKEDLIST_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Node.h&quot;</span></span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinkedList</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Node&lt;T&gt; *front, *rear;      <span class="comment">//表头和表尾指针</span></span><br><span class="line">    Node&lt;T&gt; *prevPtr, *currPtr; <span class="comment">//记录表当前遍历位置的指针，由插入和删除操作更新</span></span><br><span class="line">    <span class="type">int</span> size;                   <span class="comment">//表中的元素个数</span></span><br><span class="line">    <span class="type">int</span> position;               <span class="comment">//当前元素在表中的位置序号。由函数reset使用 </span></span><br><span class="line">    <span class="comment">//生成新结点，数据域为item，指针域为ptrNext</span></span><br><span class="line">    <span class="function">Node&lt;T&gt; *<span class="title">newNode</span><span class="params">(<span class="type">const</span> T &amp;item, Node&lt;T&gt; *ptrNext = <span class="literal">NULL</span>)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">freeNode</span><span class="params">(Node&lt;T&gt; *p)</span></span>; <span class="comment">//释放结点</span></span><br><span class="line">    <span class="comment">//将链表L 复制到当前表(假设当前表为空)，被复制构造函数、operator = 调用</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">copy</span><span class="params">(<span class="type">const</span> LinkedList&lt;T&gt; &amp;L)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">LinkedList</span>();                                     <span class="comment">//构造函数</span></span><br><span class="line">    <span class="built_in">LinkedList</span>(<span class="type">const</span> LinkedList&lt;T&gt; &amp;L);               <span class="comment">//复制构造函数</span></span><br><span class="line">    ~<span class="built_in">LinkedList</span>();                                    <span class="comment">//析构函数</span></span><br><span class="line">    LinkedList&lt;T&gt; &amp;<span class="keyword">operator</span>=(<span class="type">const</span> LinkedList&lt;T&gt; &amp;L); <span class="comment">//重载赋值运算符</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getSize</span><span class="params">()</span> <span class="type">const</span></span>;                              <span class="comment">//返回链表中元素个数 bool isEmpty() const; //链表是否为空</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">reset</span><span class="params">(<span class="type">int</span> pos = <span class="number">0</span>)</span></span>;                          <span class="comment">//初始化游标的位置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">next</span><span class="params">()</span></span>;                                      <span class="comment">//使游标移动到下一个结点</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">endOfList</span><span class="params">()</span> <span class="type">const</span></span>;                           <span class="comment">//游标是否到了链尾</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">currentPosition</span><span class="params">()</span> <span class="type">const</span></span>;                      <span class="comment">//返回游标当前的位置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertFront</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                  <span class="comment">//在表头插入结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertRear</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                   <span class="comment">//在表尾添加结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertAt</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                     <span class="comment">//在当前结点之前插入结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertAfter</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                  <span class="comment">//在当前结点之后插入结点</span></span><br><span class="line">    <span class="function">T <span class="title">deleteFront</span><span class="params">()</span></span>;                                  <span class="comment">//删除头结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">deleteCurrent</span><span class="params">()</span></span>;                             <span class="comment">//删除当前结点</span></span><br><span class="line">    <span class="function">T &amp;<span class="title">data</span><span class="params">()</span></span>;                                        <span class="comment">//返回对当前结点成员数据的引用</span></span><br><span class="line">    <span class="function"><span class="type">const</span> T &amp;<span class="title">data</span><span class="params">()</span> <span class="type">const</span></span>;                            <span class="comment">//返回对当前结点成员数据的常引用</span></span><br><span class="line">    <span class="comment">//清空链表:释放所有结点的内存空间。被析构函数、operator= 调用</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">clear</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// LINKEDLIST_H </span></span></span><br><span class="line"><span class="comment">//链表类模板函数实现代码可以从网上下载</span></span><br></pre></td></tr></table></figure>
+<p>链表的基本操作:</p>
+<ul>
+<li>生成链表</li>
+<li>插入结点</li>
+<li>查找结点</li>
+<li>删除结点</li>
+<li>遍历链表</li>
+<li>清空链表</li>
+</ul>
+<h2 id="栈类">栈类</h2>
+<p><strong>栈类模版的编写</strong>，<a href="https://github.com/hustlixiang21/cpp-practice/blob/main/stack_calculator/Stack.h">点击查看源码</a>。</p>
+<p>栈的元素其实可以用<strong>数组</strong>表示也可以用<strong>链表</strong>表示。</p>
+<p>栈的基本操作：</p>
+<ul>
+<li>初始化</li>
+<li>入栈</li>
+<li>出栈</li>
+<li>清空栈</li>
+<li>访问栈顶元素</li>
+<li>检测栈的状态（满、空）</li>
+</ul>
+<h2 id="队列类">队列类</h2>
+<p>设计的是循环队列，用的是数组，增减较为的麻烦，其实我觉得用链表实现的话不需要用循环。</p>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E9%98%9F%E5%88%97%E7%B1%BB%E6%A8%A1%E7%89%88/Queue.h">点击此处查看源码</a></p>
+<h1 id="群体数组的组织">群体数组的组织</h1>
+<p>简单的排序和查找都较为的基础，在此插入一些图片和链接以更好的理解。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-7da3a687b4b607d415bbf4617768727f_1440w.jpeg" alt=""></p>
+<p><a href="https://labuladong.github.io/algo/1/11/">我把二分搜索写了一首诗—labuladong</a></p>
+<h1 id="综合实例-对个人银行账户管理程序的改进">综合实例—对个人银行账户管理程序的改进</h1>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update_3">查看源码点击此处</a></p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>泛型程序设计与C++标准模版库（STL）</title>
     <url>/2022/08/04/%E6%B3%9B%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8EC-%E6%A0%87%E5%87%86%E6%A8%A1%E7%89%88%E5%BA%93%EF%BC%88STL%EF%BC%89/</url>
     <content><![CDATA[<p>上来先来两篇文章作为参考：<br>
@@ -2655,247 +2742,6 @@ unordered_set、unordered_map、unordered_multiset、unordered_multimap</p>
       </tags>
   </entry>
   <entry>
-    <title>模版与群体数据的组织</title>
-    <url>/2022/08/04/%E6%A8%A1%E7%89%88%E4%B8%8E%E7%BE%A4%E4%BD%93%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<h1 id="函数模版与类模版">函数模版与类模版</h1>
-<p>模板可以实现<strong>参数化多态性</strong>，就是将程序处理对象的类型参数化，使一段程序能够用于处理多种<strong>不同类型</strong>的对象。</p>
-<h2 id="函数模板">函数模板</h2>
-<p>函数模板存在的意义简单来说就是为了避免两个只有处理<strong>数据类型不同</strong>的函数重复编写，使代码的可重用性大大提高，从而提高软件的开发效率。</p>
-<p>语法形式在函数定义前加上语句<code>template&lt;模板参数表&gt;</code></p>
-<p>模板参数表的内容：</p>
-<ul>
-<li>类型参数： class（或typename）标识符</li>
-<li>常量参数： 类型说明符 标识符</li>
-<li>模板参数： template&lt;参数表&gt; class 标识符</li>
-</ul>
-<p>实例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通用类型的绝对值函数</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">T <span class="title">abs</span><span class="params">(T x)</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x&gt;<span class="number">0</span> ? x : -x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
- <div class="note danger flat"><p>函数模版与函数有着本质的区别</p>
-<ol>
-<li>函数模版本身在编译时<strong>不会生成</strong>任何目标代码，只有函数模版的实例会生成目标代码。</li>
-<li>被多个源文件引用的函数模板，需要连通函数体一同放在头文件中，而不能像普通函数那样只把声明放在头文件中。</li>
-<li>函数指针也只能指向函数模版的实例，<strong>不能指向函数模板</strong>。</li>
-</ol>
-</div>
-<h2 id="类模版">类模版</h2>
-<p>使用类模板能够可以为类定义一种模式，使得类中的某些数据成员，某些成员函数的参数，返回值或局部变量能取任意类型。</p>
-<p>类模版的声明方式与函数模版方式相同，</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在类模版以外的地方定义成员函数</span></span><br><span class="line"><span class="keyword">template</span>&lt;模板参数表&gt;</span><br><span class="line">类型名 类名&lt;模板参数标识符列表&gt;::函数名(参数表)</span><br><span class="line">&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用模版类来定义对象</span></span><br><span class="line">模板名&lt;模版参数类型&gt;对象名<span class="number">1</span>,...,对象名n;</span><br></pre></td></tr></table></figure>
-<h1 id="线性群体">线性群体</h1>
-<p>线性群体顾名思义，元素的位置与其位置关系时互相对应的。分类可以分为，直接访问、顺序访问和索引访问。直接访问指不需要按照顺序直接跳到需要访问的位置，而顺序访问只能够按照元素排列顺序从头访问。</p>
-<h2 id="直接访问群体-数组类">直接访问群体—数组类</h2>
-<p>要求自己设计一个可变长度的数组，<a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E6%95%B0%E7%BB%84%E7%B1%BB%E6%A8%A1%E7%89%88/Array.h">点击查看源码</a>，并列出一些语法注意点。</p>
- <div class="note info flat"><p>语法规定“=”，“[ ]”，“( )”，“-&gt;”只能被重载为成员函数，而且派生类中的“=”运算函数总会隐藏基类中的“=”运算符。</p>
-</div>
-<p>如果我们希望在程序中像使用普通数组一样使用Array类的对象，需要对其进行重载指针转换运算符。</p>
-<h3 id="指针转换运算符的作用">指针转换运算符的作用</h3>
-<p>为了说明重载指针转换运算符的必要性，先来看看下面这段程序：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">read</span> <span class="params">(<span class="type">int</span> *p, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++）</span><br><span class="line">        cin&gt;&gt;p[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> a[<span class="number">10</span>];</span><br><span class="line">    <span class="built_in">read</span>(a,<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里函数 read 的第一个形参是 int 指针，而数组名a 是一个int 型地址常量，类型恰好是匹配的。如果希望在程序中像使用普通数组一祥做用Array类的对象，将上述 main两数修改如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="function">Arrays&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line">    <span class="built_in">read</span>(a,<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>情况会怎样呢？这回在调用read 时会发现实参类型与形参类型不同，这时编译系统会试图进行自动类型转换：将对象名转换为 int * 类型。由于a是自定义的类型对象,所以编译系统提供的自动转换功能当然<strong>无法实现这一转换</strong>，因此我们需要自行编写重载的指针类型转换函数。<br>
-C++中,如果想将自定义类型T的对象隐含或显式地转换为S 类型，可以将operator S定义为T的成员函数。这样，在把T类型对象显式隐含转换为 S 类型，或用static_cast 显式转换为 S 类型时，该成员函数会被调用。转换操作符的重载函数不用指<br>
-定返回值的类型，这是由于这种情况下<strong>重载函数的返回类型与操作符名称一致</strong>，因此C++标准规定不能为这类函数指定返回值类型(也不要写 void)。<br>
-而当对象本身为常数时，为了避免通过指针对数组内容进行修改,只能将对象转换为常指针。</p>
-<p>在这个Array类中重载指针转换运算符的写法如下；</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line">Array&lt;T&gt;::<span class="keyword">operator</span> T *()  <span class="comment">//不用写返回值的类型</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> list;<span class="comment">//数组的首地址</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="顺序访问群体-链表类">顺序访问群体—链表类</h2>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// LinkedList.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> LINKEDLIST_H </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LINKEDLIST_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Node.h&quot;</span></span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinkedList</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Node&lt;T&gt; *front, *rear;      <span class="comment">//表头和表尾指针</span></span><br><span class="line">    Node&lt;T&gt; *prevPtr, *currPtr; <span class="comment">//记录表当前遍历位置的指针，由插入和删除操作更新</span></span><br><span class="line">    <span class="type">int</span> size;                   <span class="comment">//表中的元素个数</span></span><br><span class="line">    <span class="type">int</span> position;               <span class="comment">//当前元素在表中的位置序号。由函数reset使用 </span></span><br><span class="line">    <span class="comment">//生成新结点，数据域为item，指针域为ptrNext</span></span><br><span class="line">    <span class="function">Node&lt;T&gt; *<span class="title">newNode</span><span class="params">(<span class="type">const</span> T &amp;item, Node&lt;T&gt; *ptrNext = <span class="literal">NULL</span>)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">freeNode</span><span class="params">(Node&lt;T&gt; *p)</span></span>; <span class="comment">//释放结点</span></span><br><span class="line">    <span class="comment">//将链表L 复制到当前表(假设当前表为空)，被复制构造函数、operator = 调用</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">copy</span><span class="params">(<span class="type">const</span> LinkedList&lt;T&gt; &amp;L)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">LinkedList</span>();                                     <span class="comment">//构造函数</span></span><br><span class="line">    <span class="built_in">LinkedList</span>(<span class="type">const</span> LinkedList&lt;T&gt; &amp;L);               <span class="comment">//复制构造函数</span></span><br><span class="line">    ~<span class="built_in">LinkedList</span>();                                    <span class="comment">//析构函数</span></span><br><span class="line">    LinkedList&lt;T&gt; &amp;<span class="keyword">operator</span>=(<span class="type">const</span> LinkedList&lt;T&gt; &amp;L); <span class="comment">//重载赋值运算符</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getSize</span><span class="params">()</span> <span class="type">const</span></span>;                              <span class="comment">//返回链表中元素个数 bool isEmpty() const; //链表是否为空</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">reset</span><span class="params">(<span class="type">int</span> pos = <span class="number">0</span>)</span></span>;                          <span class="comment">//初始化游标的位置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">next</span><span class="params">()</span></span>;                                      <span class="comment">//使游标移动到下一个结点</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">endOfList</span><span class="params">()</span> <span class="type">const</span></span>;                           <span class="comment">//游标是否到了链尾</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">currentPosition</span><span class="params">()</span> <span class="type">const</span></span>;                      <span class="comment">//返回游标当前的位置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertFront</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                  <span class="comment">//在表头插入结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertRear</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                   <span class="comment">//在表尾添加结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertAt</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                     <span class="comment">//在当前结点之前插入结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertAfter</span><span class="params">(<span class="type">const</span> T &amp;item)</span></span>;                  <span class="comment">//在当前结点之后插入结点</span></span><br><span class="line">    <span class="function">T <span class="title">deleteFront</span><span class="params">()</span></span>;                                  <span class="comment">//删除头结点</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">deleteCurrent</span><span class="params">()</span></span>;                             <span class="comment">//删除当前结点</span></span><br><span class="line">    <span class="function">T &amp;<span class="title">data</span><span class="params">()</span></span>;                                        <span class="comment">//返回对当前结点成员数据的引用</span></span><br><span class="line">    <span class="function"><span class="type">const</span> T &amp;<span class="title">data</span><span class="params">()</span> <span class="type">const</span></span>;                            <span class="comment">//返回对当前结点成员数据的常引用</span></span><br><span class="line">    <span class="comment">//清空链表:释放所有结点的内存空间。被析构函数、operator= 调用</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">clear</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// LINKEDLIST_H </span></span></span><br><span class="line"><span class="comment">//链表类模板函数实现代码可以从网上下载</span></span><br></pre></td></tr></table></figure>
-<p>链表的基本操作:</p>
-<ul>
-<li>生成链表</li>
-<li>插入结点</li>
-<li>查找结点</li>
-<li>删除结点</li>
-<li>遍历链表</li>
-<li>清空链表</li>
-</ul>
-<h2 id="栈类">栈类</h2>
-<p><strong>栈类模版的编写</strong>，<a href="https://github.com/hustlixiang21/cpp-practice/blob/main/stack_calculator/Stack.h">点击查看源码</a>。</p>
-<p>栈的元素其实可以用<strong>数组</strong>表示也可以用<strong>链表</strong>表示。</p>
-<p>栈的基本操作：</p>
-<ul>
-<li>初始化</li>
-<li>入栈</li>
-<li>出栈</li>
-<li>清空栈</li>
-<li>访问栈顶元素</li>
-<li>检测栈的状态（满、空）</li>
-</ul>
-<h2 id="队列类">队列类</h2>
-<p>设计的是循环队列，用的是数组，增减较为的麻烦，其实我觉得用链表实现的话不需要用循环。</p>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/blob/main/%E9%98%9F%E5%88%97%E7%B1%BB%E6%A8%A1%E7%89%88/Queue.h">点击此处查看源码</a></p>
-<h1 id="群体数组的组织">群体数组的组织</h1>
-<p>简单的排序和查找都较为的基础，在此插入一些图片和链接以更好的理解。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-7da3a687b4b607d415bbf4617768727f_1440w.jpeg" alt=""></p>
-<p><a href="https://labuladong.github.io/algo/1/11/">我把二分搜索写了一首诗—labuladong</a></p>
-<h1 id="综合实例-对个人银行账户管理程序的改进">综合实例—对个人银行账户管理程序的改进</h1>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update_3">查看源码点击此处</a></p>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>C++程序设计</tag>
-        <tag>C++语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CPP继承与派生</title>
-    <url>/2022/07/31/%E7%BB%A7%E6%89%BF%E4%B8%8E%E6%B4%BE%E7%94%9F/</url>
-    <content><![CDATA[<h1 id="类的继承与派生">类的继承与派生</h1>
-<h2 id="概述">概述</h2>
-<p>所谓继承就是从先辈处得到<strong>属性</strong>和<strong>行为特征</strong>。</p>
-<p>类的继承，是新的类从已有类那里得到已有的特性。从另一个角度来看，从已有类产生新类的过程就是类的派生。</p>
-<div class="note info flat"><p>两者本质上是一样的，只是同一过程从不同角度去看而已。</p>
-</div>
-<h3 id="继承与派生的目的">继承与派生的目的</h3>
-<p>继承的目的：实现设计与代码的重用。</p>
-<p>派生的目的：当新的问题出现，原有程序无法较好的解决，需要对原有程序进行改造。</p>
-<hr>
-<blockquote><p>不同标准的分类</p>
-<blockquote><p>直接参与派生出某类的基类叫做<strong>直接基类</strong>，基类的基类甚至更高层的基类称为<strong>间接基类</strong>。</p>
-</blockquote>
-<blockquote><p>一个派生类，可以同时有多个基类，这种情况称为<strong>多继承</strong>。同理，只有一个基类的情况称为<strong>单继承</strong>。</p>
-</blockquote></blockquote>
-<h2 id="派生类的定义">派生类的定义</h2>
-<p>派生类定义语法为：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> 派生类名: 继承方式 基类名<span class="number">1</span>,...,继承方式 基类名n</span><br><span class="line">&#123;</span><br><span class="line">  成员声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="派生类的生成过程">派生类的生成过程</h2>
-<ol>
-<li>吸收基类成员</li>
-</ol>
-<p>​	吸收基类成员之后，派生类实际上就包含了它的全部基类中<strong>除构造和析构函数之外</strong>的所有成员。</p>
-<ol start="2">
-<li>改造基类成员</li>
-</ol>
-<p>​	如果派生类声明了一个和某基类成员同名的新成员，派生的新成员就<strong>隐藏或覆盖</strong>了外层同名成员。</p>
-<ol start="3">
-<li>添加新的成员</li>
-</ol>
-<p>​	派生类增加新成员使派生类在功能上有所发展。</p>
-<h1 id="访问控制">访问控制</h1>
-<p>访问主要来自两个方面：一是派生类中的新增成员访问从基类继承的成员；二是在派生类外部，通过派生类的对象访问从基类继承的成员。</p>
-<p>继承方式主要分为<strong>三种</strong>，及其各自的特点在下面列出。</p>
-<h2 id="公有继承-public">公有继承（public）</h2>
-<ul>
-<li>
-<p>基类的public和protected成员的访问属性在派生类中<strong>保持不变</strong>，但基类的private成员<strong>不可直接访问</strong>。</p>
-</li>
-<li>
-<p>派生类中的成员函数可以直接访问基类中的public和protected成员，但<strong>不能直接访问</strong>基类的private成员。</p>
-</li>
-<li>
-<p>通过派生类的对象访问从基类继承的成员<strong>只能访问public成员</strong>。</p>
-</li>
-</ul>
-<h2 id="保护继承-protected">保护继承（protected）</h2>
-<ul>
-<li>
-<p>基类的public和protected成员都<strong>以protected身份</strong>出现在派生类中，但基类的private成员<strong>不可直接访问</strong>。</p>
-</li>
-<li>
-<p>派生类中的成员函数可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员。</p>
-</li>
-<li>
-<p>通过派生类的对象<strong>不能直接访问从基类继承的任何成员</strong>。</p>
-</li>
-</ul>
-<h2 id="私有继承-private">私有继承（private）</h2>
-<ul>
-<li>
-<p>基类的public和protected成员都<strong>以private身份</strong>出现在派生类中，但基类的private成员<strong>不可直接访问</strong>。</p>
-</li>
-<li>
-<p>派生类中的成员函数<strong>可以直接访问</strong>基类中的public和protected成员，但<strong>不能直接访问</strong>基类的private成员。</p>
-</li>
-<li>
-<p>通过派生类的对象<strong>不能直接访问从基类继承的任何成员</strong>。</p>
-</li>
-</ul>
-<div class="note success flat"><p>其实不难看出，这三种继承方式的第二条完全一模一样，这正是遵循了数据的共享与保护原则。派生类的对象在公有继承下可以访问public成员，其余情况出于对数据的保护都不能访问。</p>
-</div>
-<p><a href="https://www.cnblogs.com/NueXini/p/16180257.html">附上一篇比较好的详解</a></p>
-<h1 id="类型兼容规则">类型兼容规则</h1>
-<p>类型兼容规则是指在需要基类对象的任何地方，都可以使用<strong>公有派生类的对象</strong>来替代。通过公有继承，派生类得到了基类中除构造函数、析构函数之外的所有成员，具备了基类的所有功能。（保护和私有继承不行，因为从对象不能访问从基类继承的任何成员）</p>
-<p>例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>&#123;...&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">D</span>: <span class="keyword">public</span> B &#123;...&#125;</span><br><span class="line"></span><br><span class="line">B b1, * pb1;</span><br><span class="line">D d1;</span><br></pre></td></tr></table></figure>
-<p>根据上述代码有如下三种替代的情况:</p>
-<ul>
-<li>
-<p>派生类的对象可以隐含转化为基类的对象</p>
-<p><code>b1=d1;</code></p>
-</li>
-<li>
-<p>派生类的对象可以初始化基类的引用</p>
-<p><code>B &amp;rb=d1;</code></p>
-</li>
-<li>
-<p>派生类的指针可以隐含转化为基类的指针</p>
-<p><code>pb1=&amp;d1</code></p>
-</li>
-</ul>
-<p>这种兼容规则使得我们可以用相同的函数统一处理基类及公有派生类的对象。即形参是基类的对象（引用、指针）时，实参 可以是派生类的对象或指针。大大提高了程序运行的效率。</p>
-<h1 id="派生类的构造和析构函数">派生类的构造和析构函数</h1>
-<p>派生类的构造函数只负责对派生类新增的成员进行初始化，对所有从基类继承下来的成员，其初始化工作还是由基类的构造函数完成。最后对派生对象的清理工作也需要加入新的析构函数。</p>
-<h2 id="构造函数">构造函数</h2>
-<p>由于派生的类对于基类中的很多数据成员是不能访问的，需要借助基类的构造函数。且在构造派生类对象的时候，会首先调用基类的构造函数，其次再是初始化派生类新增的成员对象。</p>
-<p>一般语法形式为</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">派生类名::派生类名(参数表):基类名<span class="number">1</span>(基类名<span class="number">1</span>初始化参数表),...,基类名<span class="built_in">n</span>(基类n初始化参数表)</span><br><span class="line">,成员对象名<span class="number">1</span>(成员对象<span class="number">1</span>初始化参数表),...,成员对象名<span class="built_in">m</span>(成员对象m初始化参数表)</span><br><span class="line">&#123;</span><br><span class="line">  派生类构造函数其他初始化操作</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>构造函数执行的一般次序</p>
-<ol>
-<li>调用基类构造函数，调用顺序按照被继承时声明的顺序(从左向右)。</li>
-<li>对派生类新增的成员对象初始化，按照在类中声明的顺序。</li>
-<li>执行派生类构造函数体中的内容。</li>
-</ol>
-<h2 id="复制构造函数">复制构造函数</h2>
-<p>派生类进行复制构造的时候同样会用到基类的复制构造函数。</p>
-<p>例：如果要为Derived类（以Base类为基类）编写复制构造函数，形式如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Derived::<span class="built_in">Derived</span>(<span class="type">const</span> Derived &amp;v): <span class="built_in">Base</span>(v)&#123;...&#125;</span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p>此处基类使用了派生类的引用，完全符合类型兼容规则中的，可以用派生类的对象去初始化基类。</p>
-</div>
-<h2 id="析构函数">析构函数</h2>
-<p>其实和构造函数的思想完全一致，最大的区别就是，<strong>析构的次序和初始化的次序完全反了过来。</strong></p>
-<hr>
-<h1 id="派生类成员的标识与访问">派生类成员的标识与访问</h1>
-<h2 id="作用域分辨符">作用域分辨符</h2>
-<p>&quot;::&quot;就是作用域分辨符，用来限定要访问的成员所在的类的名称。</p>
-<p>如果派生类中声明了与基类成员函数同名的新函数，即使函数的参数表不同，从基类继承的同名函数的所有重载形式也都会被隐藏。</p>
-<p>对于数据成员也是如此，新增同名数据会覆盖基类；若多继承基类重复，则会产生二义性，必须通过类名和作用域分辨符来标识成员。</p>
-<div class="note danger flat"><p>只有在相同作用域中定义的函数才叫做重载。</p>
-</div>
-<hr>
-<p>可以使用using关键字去使用别的作用域中的标识符。</p>
-<h2 id="虚基类">虚基类</h2>
-<p>假设一个派生类继承了多个基类，而且这多个基类中部分或者全部基类由<strong>另一个共同基类派生而来</strong>的时候，那么在这个派生类中，会有相同的名称，在内存中也拥有<strong>多个副本</strong>，造成程序开销。</p>
-<p>这时候可以将共同基类设置为虚基类，从不同路径继承过来的同名数据成员在内存中就只有一个副本，同一个函数名也只有一个映射。</p>
-<p>语法形式为：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> 派生类名:<span class="keyword">virtual</span> 继承方式 基类名</span><br></pre></td></tr></table></figure>
-<h2 id="虚基类及其派生类的构造函数">虚基类及其派生类的构造函数</h2>
-<p>在整个继承关系中，直接或间接继承虚基类的所有派生类，都必须在构造函数的成员初始化列表中列出对虚基类的初始化。</p>
-<p>且调用虚拟类的构造函数时，C++编译器会指定最远派生类的构造函数去调用虚基类的构造函数，不必担心会多次重复调用。</p>
-<blockquote><p>构造一个类的对象的一般顺序是：</p>
-<p>（1） 如果该类有直接或间接的虚基类，则限制性虚基类的构造函数。</p>
-<p>（2） 如果有其他基类，则按照他们在继承声明列表中出现的次序，分别初始化，但在构造的过程中，不再执行他们的虚基类的构造函数</p>
-<p>（3） 按照定义出现的顺序，对新增的成员对象初始化。对于类类型的成员对象，如果出现在构造函数初始化列表中，则以其中指定的参数执行构造函数，如未出现，则执行默认构造函数；对于基本类型的成员独享，如果出现在初始化列表中，则使用其中指定的值为其赋初值，否则什么也不干。</p>
-<p>（4） 执行构造函数的函数体。</p>
-</blockquote>
-<h1 id="程序实例-用高斯消去法解线性方程组">程序实例——用高斯消去法解线性方程组</h1>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Gauss%E6%B6%88%E5%8E%BB_CPP">源码见github</a></p>
-<h1 id="综合实例-个人银行账户管理程序">综合实例——个人银行账户管理程序</h1>
-<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update_1">源码见github</a></p>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>C++程序设计</tag>
-        <tag>C++语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>流类库与输入/输出</title>
     <url>/2022/08/04/%E6%B5%81%E7%B1%BB%E5%BA%93%E4%B8%8E%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/</url>
     <content><![CDATA[<h1 id="i-o流的概念及流类库的结构">I/O流的概念及流类库的结构</h1>
@@ -3101,6 +2947,160 @@ C++中,如果想将自定义类型T的对象隐含或显式地转换为S 类型�
 </ul>
 <h1 id="综合实例-个人银行账户管理">综合实例-个人银行账户管理</h1>
 <p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update5">点击查看源代码</a></p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPP继承与派生</title>
+    <url>/2022/07/31/%E7%BB%A7%E6%89%BF%E4%B8%8E%E6%B4%BE%E7%94%9F/</url>
+    <content><![CDATA[<h1 id="类的继承与派生">类的继承与派生</h1>
+<h2 id="概述">概述</h2>
+<p>所谓继承就是从先辈处得到<strong>属性</strong>和<strong>行为特征</strong>。</p>
+<p>类的继承，是新的类从已有类那里得到已有的特性。从另一个角度来看，从已有类产生新类的过程就是类的派生。</p>
+<div class="note info flat"><p>两者本质上是一样的，只是同一过程从不同角度去看而已。</p>
+</div>
+<h3 id="继承与派生的目的">继承与派生的目的</h3>
+<p>继承的目的：实现设计与代码的重用。</p>
+<p>派生的目的：当新的问题出现，原有程序无法较好的解决，需要对原有程序进行改造。</p>
+<hr>
+<blockquote><p>不同标准的分类</p>
+<blockquote><p>直接参与派生出某类的基类叫做<strong>直接基类</strong>，基类的基类甚至更高层的基类称为<strong>间接基类</strong>。</p>
+</blockquote>
+<blockquote><p>一个派生类，可以同时有多个基类，这种情况称为<strong>多继承</strong>。同理，只有一个基类的情况称为<strong>单继承</strong>。</p>
+</blockquote></blockquote>
+<h2 id="派生类的定义">派生类的定义</h2>
+<p>派生类定义语法为：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> 派生类名: 继承方式 基类名<span class="number">1</span>,...,继承方式 基类名n</span><br><span class="line">&#123;</span><br><span class="line">  成员声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="派生类的生成过程">派生类的生成过程</h2>
+<ol>
+<li>吸收基类成员</li>
+</ol>
+<p>​	吸收基类成员之后，派生类实际上就包含了它的全部基类中<strong>除构造和析构函数之外</strong>的所有成员。</p>
+<ol start="2">
+<li>改造基类成员</li>
+</ol>
+<p>​	如果派生类声明了一个和某基类成员同名的新成员，派生的新成员就<strong>隐藏或覆盖</strong>了外层同名成员。</p>
+<ol start="3">
+<li>添加新的成员</li>
+</ol>
+<p>​	派生类增加新成员使派生类在功能上有所发展。</p>
+<h1 id="访问控制">访问控制</h1>
+<p>访问主要来自两个方面：一是派生类中的新增成员访问从基类继承的成员；二是在派生类外部，通过派生类的对象访问从基类继承的成员。</p>
+<p>继承方式主要分为<strong>三种</strong>，及其各自的特点在下面列出。</p>
+<h2 id="公有继承-public">公有继承（public）</h2>
+<ul>
+<li>
+<p>基类的public和protected成员的访问属性在派生类中<strong>保持不变</strong>，但基类的private成员<strong>不可直接访问</strong>。</p>
+</li>
+<li>
+<p>派生类中的成员函数可以直接访问基类中的public和protected成员，但<strong>不能直接访问</strong>基类的private成员。</p>
+</li>
+<li>
+<p>通过派生类的对象访问从基类继承的成员<strong>只能访问public成员</strong>。</p>
+</li>
+</ul>
+<h2 id="保护继承-protected">保护继承（protected）</h2>
+<ul>
+<li>
+<p>基类的public和protected成员都<strong>以protected身份</strong>出现在派生类中，但基类的private成员<strong>不可直接访问</strong>。</p>
+</li>
+<li>
+<p>派生类中的成员函数可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员。</p>
+</li>
+<li>
+<p>通过派生类的对象<strong>不能直接访问从基类继承的任何成员</strong>。</p>
+</li>
+</ul>
+<h2 id="私有继承-private">私有继承（private）</h2>
+<ul>
+<li>
+<p>基类的public和protected成员都<strong>以private身份</strong>出现在派生类中，但基类的private成员<strong>不可直接访问</strong>。</p>
+</li>
+<li>
+<p>派生类中的成员函数<strong>可以直接访问</strong>基类中的public和protected成员，但<strong>不能直接访问</strong>基类的private成员。</p>
+</li>
+<li>
+<p>通过派生类的对象<strong>不能直接访问从基类继承的任何成员</strong>。</p>
+</li>
+</ul>
+<div class="note success flat"><p>其实不难看出，这三种继承方式的第二条完全一模一样，这正是遵循了数据的共享与保护原则。派生类的对象在公有继承下可以访问public成员，其余情况出于对数据的保护都不能访问。</p>
+</div>
+<p><a href="https://www.cnblogs.com/NueXini/p/16180257.html">附上一篇比较好的详解</a></p>
+<h1 id="类型兼容规则">类型兼容规则</h1>
+<p>类型兼容规则是指在需要基类对象的任何地方，都可以使用<strong>公有派生类的对象</strong>来替代。通过公有继承，派生类得到了基类中除构造函数、析构函数之外的所有成员，具备了基类的所有功能。（保护和私有继承不行，因为从对象不能访问从基类继承的任何成员）</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>&#123;...&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">D</span>: <span class="keyword">public</span> B &#123;...&#125;</span><br><span class="line"></span><br><span class="line">B b1, * pb1;</span><br><span class="line">D d1;</span><br></pre></td></tr></table></figure>
+<p>根据上述代码有如下三种替代的情况:</p>
+<ul>
+<li>
+<p>派生类的对象可以隐含转化为基类的对象</p>
+<p><code>b1=d1;</code></p>
+</li>
+<li>
+<p>派生类的对象可以初始化基类的引用</p>
+<p><code>B &amp;rb=d1;</code></p>
+</li>
+<li>
+<p>派生类的指针可以隐含转化为基类的指针</p>
+<p><code>pb1=&amp;d1</code></p>
+</li>
+</ul>
+<p>这种兼容规则使得我们可以用相同的函数统一处理基类及公有派生类的对象。即形参是基类的对象（引用、指针）时，实参 可以是派生类的对象或指针。大大提高了程序运行的效率。</p>
+<h1 id="派生类的构造和析构函数">派生类的构造和析构函数</h1>
+<p>派生类的构造函数只负责对派生类新增的成员进行初始化，对所有从基类继承下来的成员，其初始化工作还是由基类的构造函数完成。最后对派生对象的清理工作也需要加入新的析构函数。</p>
+<h2 id="构造函数">构造函数</h2>
+<p>由于派生的类对于基类中的很多数据成员是不能访问的，需要借助基类的构造函数。且在构造派生类对象的时候，会首先调用基类的构造函数，其次再是初始化派生类新增的成员对象。</p>
+<p>一般语法形式为</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">派生类名::派生类名(参数表):基类名<span class="number">1</span>(基类名<span class="number">1</span>初始化参数表),...,基类名<span class="built_in">n</span>(基类n初始化参数表)</span><br><span class="line">,成员对象名<span class="number">1</span>(成员对象<span class="number">1</span>初始化参数表),...,成员对象名<span class="built_in">m</span>(成员对象m初始化参数表)</span><br><span class="line">&#123;</span><br><span class="line">  派生类构造函数其他初始化操作</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>构造函数执行的一般次序</p>
+<ol>
+<li>调用基类构造函数，调用顺序按照被继承时声明的顺序(从左向右)。</li>
+<li>对派生类新增的成员对象初始化，按照在类中声明的顺序。</li>
+<li>执行派生类构造函数体中的内容。</li>
+</ol>
+<h2 id="复制构造函数">复制构造函数</h2>
+<p>派生类进行复制构造的时候同样会用到基类的复制构造函数。</p>
+<p>例：如果要为Derived类（以Base类为基类）编写复制构造函数，形式如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Derived::<span class="built_in">Derived</span>(<span class="type">const</span> Derived &amp;v): <span class="built_in">Base</span>(v)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>此处基类使用了派生类的引用，完全符合类型兼容规则中的，可以用派生类的对象去初始化基类。</p>
+</div>
+<h2 id="析构函数">析构函数</h2>
+<p>其实和构造函数的思想完全一致，最大的区别就是，<strong>析构的次序和初始化的次序完全反了过来。</strong></p>
+<hr>
+<h1 id="派生类成员的标识与访问">派生类成员的标识与访问</h1>
+<h2 id="作用域分辨符">作用域分辨符</h2>
+<p>&quot;::&quot;就是作用域分辨符，用来限定要访问的成员所在的类的名称。</p>
+<p>如果派生类中声明了与基类成员函数同名的新函数，即使函数的参数表不同，从基类继承的同名函数的所有重载形式也都会被隐藏。</p>
+<p>对于数据成员也是如此，新增同名数据会覆盖基类；若多继承基类重复，则会产生二义性，必须通过类名和作用域分辨符来标识成员。</p>
+<div class="note danger flat"><p>只有在相同作用域中定义的函数才叫做重载。</p>
+</div>
+<hr>
+<p>可以使用using关键字去使用别的作用域中的标识符。</p>
+<h2 id="虚基类">虚基类</h2>
+<p>假设一个派生类继承了多个基类，而且这多个基类中部分或者全部基类由<strong>另一个共同基类派生而来</strong>的时候，那么在这个派生类中，会有相同的名称，在内存中也拥有<strong>多个副本</strong>，造成程序开销。</p>
+<p>这时候可以将共同基类设置为虚基类，从不同路径继承过来的同名数据成员在内存中就只有一个副本，同一个函数名也只有一个映射。</p>
+<p>语法形式为：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> 派生类名:<span class="keyword">virtual</span> 继承方式 基类名</span><br></pre></td></tr></table></figure>
+<h2 id="虚基类及其派生类的构造函数">虚基类及其派生类的构造函数</h2>
+<p>在整个继承关系中，直接或间接继承虚基类的所有派生类，都必须在构造函数的成员初始化列表中列出对虚基类的初始化。</p>
+<p>且调用虚拟类的构造函数时，C++编译器会指定最远派生类的构造函数去调用虚基类的构造函数，不必担心会多次重复调用。</p>
+<blockquote><p>构造一个类的对象的一般顺序是：</p>
+<p>（1） 如果该类有直接或间接的虚基类，则限制性虚基类的构造函数。</p>
+<p>（2） 如果有其他基类，则按照他们在继承声明列表中出现的次序，分别初始化，但在构造的过程中，不再执行他们的虚基类的构造函数</p>
+<p>（3） 按照定义出现的顺序，对新增的成员对象初始化。对于类类型的成员对象，如果出现在构造函数初始化列表中，则以其中指定的参数执行构造函数，如未出现，则执行默认构造函数；对于基本类型的成员独享，如果出现在初始化列表中，则使用其中指定的值为其赋初值，否则什么也不干。</p>
+<p>（4） 执行构造函数的函数体。</p>
+</blockquote>
+<h1 id="程序实例-用高斯消去法解线性方程组">程序实例——用高斯消去法解线性方程组</h1>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Gauss%E6%B6%88%E5%8E%BB_CPP">源码见github</a></p>
+<h1 id="综合实例-个人银行账户管理程序">综合实例——个人银行账户管理程序</h1>
+<p><a href="https://github.com/hustlixiang21/cpp-practice/tree/main/Personal_bank_management_update_1">源码见github</a></p>
 ]]></content>
       <categories>
         <category>CS学习笔记</category>

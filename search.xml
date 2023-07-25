@@ -14,10 +14,10 @@
       </tags>
   </entry>
   <entry>
-    <title>17_June</title>
-    <url>/2022/06/17/17-June/</url>
-    <content><![CDATA[<h3 id="no-road-of-flowers-leads-to-glory">NO road of flowers leads to glory.</h3>
-<h3 id="没有一条通往光荣的道路是铺满鲜花的">没有一条通往光荣的道路是铺满鲜花的。</h3>
+    <title>14_June</title>
+    <url>/2022/06/14/14-june/</url>
+    <content><![CDATA[<h3 id="great-things-never-came-from-comfort-zones">Great things never came from comfort zones.</h3>
+<h3 id="伟大的事物从不来自于舒适圈">伟大的事物从不来自于舒适圈。</h3>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -42,10 +42,10 @@
       </tags>
   </entry>
   <entry>
-    <title>14_June</title>
-    <url>/2022/06/14/14-june/</url>
-    <content><![CDATA[<h3 id="great-things-never-came-from-comfort-zones">Great things never came from comfort zones.</h3>
-<h3 id="伟大的事物从不来自于舒适圈">伟大的事物从不来自于舒适圈。</h3>
+    <title>17_June</title>
+    <url>/2022/06/17/17-June/</url>
+    <content><![CDATA[<h3 id="no-road-of-flowers-leads-to-glory">NO road of flowers leads to glory.</h3>
+<h3 id="没有一条通往光荣的道路是铺满鲜花的">没有一条通往光荣的道路是铺满鲜花的。</h3>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -71,9 +71,10 @@
       </tags>
   </entry>
   <entry>
-    <title>24_May</title>
-    <url>/2022/05/24/24-May/</url>
-    <content><![CDATA[<h3 id="have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
+    <title>22_June</title>
+    <url>/2022/06/22/22-June/</url>
+    <content><![CDATA[<h3 id="the-only-person-you-are-destined-to-become-is-the-person-you-decide-to-be">The only person you are destined to become is the person you decide to be.</h3>
+<h3 id="你注定只会成为你决心要变成的那个人">你注定只会成为你决心要变成的那个人。</h3>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -83,10 +84,9 @@
       </tags>
   </entry>
   <entry>
-    <title>22_June</title>
-    <url>/2022/06/22/22-June/</url>
-    <content><![CDATA[<h3 id="the-only-person-you-are-destined-to-become-is-the-person-you-decide-to-be">The only person you are destined to become is the person you decide to be.</h3>
-<h3 id="你注定只会成为你决心要变成的那个人">你注定只会成为你决心要变成的那个人。</h3>
+    <title>24_May</title>
+    <url>/2022/05/24/24-May/</url>
+    <content><![CDATA[<h3 id="have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
 ]]></content>
       <categories>
         <category>一句</category>
@@ -116,91 +116,6 @@
       <tags>
         <tag>和宝贝在一起的时光</tag>
         <tag>爱情</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CPP基础中需要注意的部分</title>
-    <url>/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/</url>
-    <content><![CDATA[<h2 id="数据的输入和输出">数据的输入和输出</h2>
-<h3 id="i-o流">I/O流</h3>
-<p>在C++，将数据从一个对象到另一个对象的流动抽象为“流”。cin和cout是预定义的流类对象，cin用来处理标准输入，即键盘输入，cout用来处理标准输出，即屏幕输出。</p>
-<hr>
-<h3 id="预定义的插入符和提取符">预定义的插入符和提取符</h3>
-<p>“&lt;&lt;”是预定义的插入符，作用在流类对象cout上便可以实现最一般的屏幕输出。</p>
-<p>“&gt;&gt;”是提取符，作用在流类对象cin上便可以实现最一般的键盘输入。</p>
-<hr>
-<h3 id="常用的i-o流类库操纵符">常用的I/O流类库操纵符</h3>
-<table>
-<thead>
-<tr>
-<th>操纵符名</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dec</td>
-<td>数值数据采用十进制表示</td>
-</tr>
-<tr>
-<td>hex</td>
-<td>数值数据采用十六进制表示</td>
-</tr>
-<tr>
-<td>oct</td>
-<td>数值数据采用八进制表示</td>
-</tr>
-<tr>
-<td>ws</td>
-<td>提取空白符</td>
-</tr>
-<tr>
-<td>endl</td>
-<td>插入换行符，并且更新流</td>
-</tr>
-<tr>
-<td>setsprecision(int)</td>
-<td>设置浮点数的小数位数（包括小数点）</td>
-</tr>
-<tr>
-<td>setw(int)</td>
-<td>设置域宽</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="if-else语句">if-else语句</h2>
-<p>首先是<code>else</code>的配对方式是与向上找同层的<code>if</code>配对.<br>
-例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">else</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="built_in">else</span>()</span><br></pre></td></tr></table></figure>
-<p>这样是可行的因为<code>else</code>都有配对的，但是缩进并不能代表结构，严格来说应该用<code>&#123;&#125;</code>来区分不同的嵌套。<strong>仅供区分不同的结构</strong>。</p>
-<hr>
-<p><strong>反例</strong>：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br></pre></td></tr></table></figure>
-<p>这样的话<code>else</code>和带有缩进的<code>if</code>配对。</p>
-<hr>
-<h2 id="typedef声明">typedef声明</h2>
-<p>typedef  已有类型名  新类型名表</p>
-<p>例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> Area,Volume;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Natural;</span><br><span class="line">Natural i1,i2;</span><br><span class="line">Area a;</span><br><span class="line">Volume v;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="除typedef外另一种自定义类型using">除typedef外另一种自定义类型using</h2>
-<p><code>using 新类型名 = 已有类型名</code></p>
-<p>例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Area = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">using</span> Volume = <span class="type">double</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="auto类型和decltype类型">auto类型和decltype类型</h2>
-<p><code>auto</code>：编译器通过初始值自动判断变量的类型<br>
-<code>decltype</code>：定义一个变量与某一表达式的类型相同，但并不用该表达式初始化变量<br>
-例如：<code>decltype(i) j = 2;</code>让j和i有同样的类型，但是并不用2来初始化j。</p>
-<h2 id="none"></h2>
-]]></content>
-      <categories>
-        <category>CS学习笔记</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>C++程序设计</tag>
-        <tag>C++语言</tag>
       </tags>
   </entry>
   <entry>
@@ -320,6 +235,91 @@ Enter two integer: 3 5<br>
 Their sum of square: 34<br>
 Enter two real number: 2.3 5.8<br>
 Their sum of square: 38.93</p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++程序设计</tag>
+        <tag>C++语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPP基础中需要注意的部分</title>
+    <url>/2022/07/20/CPP%E5%9F%BA%E7%A1%80%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<h2 id="数据的输入和输出">数据的输入和输出</h2>
+<h3 id="i-o流">I/O流</h3>
+<p>在C++，将数据从一个对象到另一个对象的流动抽象为“流”。cin和cout是预定义的流类对象，cin用来处理标准输入，即键盘输入，cout用来处理标准输出，即屏幕输出。</p>
+<hr>
+<h3 id="预定义的插入符和提取符">预定义的插入符和提取符</h3>
+<p>“&lt;&lt;”是预定义的插入符，作用在流类对象cout上便可以实现最一般的屏幕输出。</p>
+<p>“&gt;&gt;”是提取符，作用在流类对象cin上便可以实现最一般的键盘输入。</p>
+<hr>
+<h3 id="常用的i-o流类库操纵符">常用的I/O流类库操纵符</h3>
+<table>
+<thead>
+<tr>
+<th>操纵符名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dec</td>
+<td>数值数据采用十进制表示</td>
+</tr>
+<tr>
+<td>hex</td>
+<td>数值数据采用十六进制表示</td>
+</tr>
+<tr>
+<td>oct</td>
+<td>数值数据采用八进制表示</td>
+</tr>
+<tr>
+<td>ws</td>
+<td>提取空白符</td>
+</tr>
+<tr>
+<td>endl</td>
+<td>插入换行符，并且更新流</td>
+</tr>
+<tr>
+<td>setsprecision(int)</td>
+<td>设置浮点数的小数位数（包括小数点）</td>
+</tr>
+<tr>
+<td>setw(int)</td>
+<td>设置域宽</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="if-else语句">if-else语句</h2>
+<p>首先是<code>else</code>的配对方式是与向上找同层的<code>if</code>配对.<br>
+例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">else</span>()</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="built_in">else</span>()</span><br></pre></td></tr></table></figure>
+<p>这样是可行的因为<code>else</code>都有配对的，但是缩进并不能代表结构，严格来说应该用<code>&#123;&#125;</code>来区分不同的嵌套。<strong>仅供区分不同的结构</strong>。</p>
+<hr>
+<p><strong>反例</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line"><span class="keyword">else</span></span><br></pre></td></tr></table></figure>
+<p>这样的话<code>else</code>和带有缩进的<code>if</code>配对。</p>
+<hr>
+<h2 id="typedef声明">typedef声明</h2>
+<p>typedef  已有类型名  新类型名表</p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> Area,Volume;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Natural;</span><br><span class="line">Natural i1,i2;</span><br><span class="line">Area a;</span><br><span class="line">Volume v;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="除typedef外另一种自定义类型using">除typedef外另一种自定义类型using</h2>
+<p><code>using 新类型名 = 已有类型名</code></p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> Area = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">using</span> Volume = <span class="type">double</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="auto类型和decltype类型">auto类型和decltype类型</h2>
+<p><code>auto</code>：编译器通过初始值自动判断变量的类型<br>
+<code>decltype</code>：定义一个变量与某一表达式的类型相同，但并不用该表达式初始化变量<br>
+例如：<code>decltype(i) j = 2;</code>让j和i有同样的类型，但是并不用2来初始化j。</p>
+<h2 id="none"></h2>
 ]]></content>
       <categories>
         <category>CS学习笔记</category>
@@ -1078,28 +1078,6 @@ setTime(),showTime()</li>
       </tags>
   </entry>
   <entry>
-    <title>个人计划（暑假）</title>
-    <url>/2022/06/01/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<h1 id="对于这个暑假的一些具体安排">对于这个暑假的一些具体安排</h1>
-<p>最近觉得心里乱乱的，感觉什么都想学，什么都想知道，但是人的精力的确是有限的，所以在此厘清自己的头绪，学会取舍。</p>
-<span id="more"></span>
-<p>按照我认为从急到缓</p>
-<ul>
-<li>[ ] 科研老师交予的任务，三本书，还有斯坦福的视频，这是一定要完成的任务！</li>
-<li>[ ] C++（郑莉）的学习和数据结构（清华数据结构），算法（先就PAT乙）的学习，努力提高自己的代码能力，练习配上地大的实习和头哥的实验。</li>
-<li>[ ] 学会一些基础的CS工具，linux，git，py，cmake和docker等等，对自己的要求就是浅尝辄止，不许过多浪费时间。</li>
-<li>[ ] 至少要有做自己的项目的经历，初步的想法是用自己买的服务器搭一个网页游戏，从中学习前后端的知识，边做边学。还有一个就是利用c++写一个小游戏，参照地大的项目，目的是提高自己对C++的理解，然后熟悉程序开发的过程，OOP(面向对象编程)可以先搁置。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>个人反思</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>useful_links</title>
     <url>/2022/05/25/useful-links/</url>
     <content><![CDATA[<p>书籍资源:<a href="https://github.com/frankcbliu/CS-Books-PDF">https://github.com/frankcbliu/CS-Books-PDF</a></p>
@@ -1145,16 +1123,18 @@ setTime(),showTime()</li>
       </tags>
   </entry>
   <entry>
-    <title>周计划（6.13-6.19）</title>
-    <url>/2022/06/13/%E5%91%A8%E8%AE%A1%E5%88%92%EF%BC%886-13-6-19%EF%BC%89/</url>
-    <content><![CDATA[<ul>
-<li>[x] 微积分通过考试宝典整体过一遍，熟悉知识体系。</li>
-<li>[x] 大学物理通过宝典和精选习题也是整体的过一遍。</li>
-<li>[x] 英语卓越篇八个单元，每天复习一个单元，认真积累词汇，读懂文章。词汇每日过一遍。</li>
-<li>[x] 近代史的vlog的ddl尽快完成。</li>
+    <title>个人计划（暑假）</title>
+    <url>/2022/06/01/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<h1 id="对于这个暑假的一些具体安排">对于这个暑假的一些具体安排</h1>
+<p>最近觉得心里乱乱的，感觉什么都想学，什么都想知道，但是人的精力的确是有限的，所以在此厘清自己的头绪，学会取舍。</p>
+<span id="more"></span>
+<p>按照我认为从急到缓</p>
+<ul>
+<li>[ ] 科研老师交予的任务，三本书，还有斯坦福的视频，这是一定要完成的任务！</li>
+<li>[ ] C++（郑莉）的学习和数据结构（清华数据结构），算法（先就PAT乙）的学习，努力提高自己的代码能力，练习配上地大的实习和头哥的实验。</li>
+<li>[ ] 学会一些基础的CS工具，linux，git，py，cmake和docker等等，对自己的要求就是浅尝辄止，不许过多浪费时间。</li>
+<li>[ ] 至少要有做自己的项目的经历，初步的想法是用自己买的服务器搭一个网页游戏，从中学习前后端的知识，边做边学。还有一个就是利用c++写一个小游戏，参照地大的项目，目的是提高自己对C++的理解，然后熟悉程序开发的过程，OOP(面向对象编程)可以先搁置。</li>
 </ul>
-<p>总结：</p>
-<p>微积分基本完成，大学物理还没开始复习，英语也只完成了两个单元，效率低下，面对即将到来的考试你准备怎么应对？大物好好复习！！！</p>
 ]]></content>
       <categories>
         <category>心路</category>
@@ -1365,6 +1345,26 @@ This is my website, click the button  <a class="btn-beautify block right blue la
       </tags>
   </entry>
   <entry>
+    <title>周计划（6.13-6.19）</title>
+    <url>/2022/06/13/%E5%91%A8%E8%AE%A1%E5%88%92%EF%BC%886-13-6-19%EF%BC%89/</url>
+    <content><![CDATA[<ul>
+<li>[x] 微积分通过考试宝典整体过一遍，熟悉知识体系。</li>
+<li>[x] 大学物理通过宝典和精选习题也是整体的过一遍。</li>
+<li>[x] 英语卓越篇八个单元，每天复习一个单元，认真积累词汇，读懂文章。词汇每日过一遍。</li>
+<li>[x] 近代史的vlog的ddl尽快完成。</li>
+</ul>
+<p>总结：</p>
+<p>微积分基本完成，大学物理还没开始复习，英语也只完成了两个单元，效率低下，面对即将到来的考试你准备怎么应对？大物好好复习！！！</p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多态性</title>
     <url>/2022/07/31/%E5%A4%9A%E6%80%81%E6%80%A7/</url>
     <content><![CDATA[<h1 id="多态性概述">多态性概述</h1>
@@ -1550,6 +1550,39 @@ This is my website, click the button  <a class="btn-beautify block right blue la
       <tags>
         <tag>生活</tag>
         <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我们应当去往何处？</title>
+    <url>/2022/10/11/%E6%88%91%E4%BB%AC%E5%BA%94%E5%BD%93%E5%8E%BB%E5%BE%80%E4%BD%95%E5%A4%84%EF%BC%9F/</url>
+    <content><![CDATA[<p>已经许久没更新过自己的博客了，或许也是因为这忙碌的生活导致自己无暇顾及。开学后的一个半月里，终于在昨天，迎来了自己本学期的第一次破防，我决定在今天去写一些东西，希望能够记录乃至帮助自己走出自己像轮子一般的生活。</p>
+<p>我从未想到过我的大学竟然可以这么累，我现在甚至不知道自己忙碌的意义在哪里，数不清的任务，还有数不清的需要去做的事儿，还有忙着跟npy争辩。我的生活给我的感觉就像是完成一项项的任务，完成了任务就能稍微舒服点了，然后紧接着别的任务来了，我又得忙碌了，做不完心里就不踏实。试问，这样的生活真的有意思么？看着别人的大学生活，我很羡慕，能有三五好友漫步谈心，干饭喝酒，这样的生活我也想要。但是我的学校给我的感觉就是，不学你就得死，众多的傻x课程，包括无聊至极的思政课，无脑夸无脑鼓吹，你当我是tmd小学生呢。还不能选自己想要的课程，这样的课程体系还停留在上个世纪，能不能有点进步性的改革，当成高中生来教。</p>
+<p>当然，说这些的一切前提还是我并不是一个摆子，我也不想摆，但是也不想卷，只想学自己想学的，要考试的课程复习复习就完事儿了，我也不想去下很大的功夫去刷题考高分，但是总有这么一群人喜欢干这种事儿，譬如那个奖学金答辩就是，甲醛为王，答辩走个过场，你分数是啥，你就是啥奖，那你就别说综合评定占比多少多少，名额大概率也是分配好的，平衡嘛，我懂。</p>
+<p>喷完了，舒服！但是生活还得继续，我希望自己的生活能够更加的丰富，改变盲目内卷的状态，find your own path！面对着清晨的第一缕阳光，我发现我仍然是那个自信阳光正能量的李翔！</p>
+<p>我的目标是星辰大海，我必将远航！</p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>个人反思</tag>
+        <tag>感悟</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>杭州游记</title>
+    <url>/2023/05/03/%E6%9D%AD%E5%B7%9E%E6%B8%B8%E8%AE%B0/</url>
+    <content><![CDATA[<p>五一假期，我和几个好兄弟决定去有着“上有天堂，下有苏杭”美誉的杭州走走看看，正好也是许久不见相聚的好机会，于是五一一到，我们整装待发，从各个省份城市，共同奔赴杭州。</p>
+<h3 id="4-30">4.30</h3>
+<p>早上跟乐哥碰头，从武汉站出发历经4个半小时到达杭州东站，见到非爷在酒店楼下等我们，然后摆了俩小时聊天，去浙大华家池校区，被残忍的拒之门外，我好说歹说也不让进，我们几个只得绕着浙大走了一圈，也算是到过了浙大，得知陶神也到了我们几个赶忙回酒店迎接，没想到陶神从我们后面窜了出来，得陶神因为有事儿只能来一晚上，然后我们一起吃饭、喝酒，最重要的还是夸天，回到酒店就开卷，搞各种东西，非爷卷图形学和人智导，我等只能在旁仰望，欢声笑语罢，我们上床进入梦乡，结束了这四人团聚的一天。（这次有俩人没赶上高铁，我不说是谁）</p>
+<h3 id="5-1">5.1</h3>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>游记</tag>
       </tags>
   </entry>
   <entry>
@@ -2105,39 +2138,6 @@ tar命令可以将已经打包好的文件解压出来。</p>
       <tags>
         <tag>摄影</tag>
         <tag>美景</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>杭州游记</title>
-    <url>/2023/05/03/%E6%9D%AD%E5%B7%9E%E6%B8%B8%E8%AE%B0/</url>
-    <content><![CDATA[<p>五一假期，我和几个好兄弟决定去有着“上有天堂，下有苏杭”美誉的杭州走走看看，正好也是许久不见相聚的好机会，于是五一一到，我们整装待发，从各个省份城市，共同奔赴杭州。</p>
-<h3 id="4-30">4.30</h3>
-<p>早上跟乐哥碰头，从武汉站出发历经4个半小时到达杭州东站，见到非爷在酒店楼下等我们，然后摆了俩小时聊天，去浙大华家池校区，被残忍的拒之门外，我好说歹说也不让进，我们几个只得绕着浙大走了一圈，也算是到过了浙大，得知陶神也到了我们几个赶忙回酒店迎接，没想到陶神从我们后面窜了出来，得陶神因为有事儿只能来一晚上，然后我们一起吃饭、喝酒，最重要的还是夸天，回到酒店就开卷，搞各种东西，非爷卷图形学和人智导，我等只能在旁仰望，欢声笑语罢，我们上床进入梦乡，结束了这四人团聚的一天。（这次有俩人没赶上高铁，我不说是谁）</p>
-<h3 id="5-1">5.1</h3>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>游记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我们应当去往何处？</title>
-    <url>/2022/10/11/%E6%88%91%E4%BB%AC%E5%BA%94%E5%BD%93%E5%8E%BB%E5%BE%80%E4%BD%95%E5%A4%84%EF%BC%9F/</url>
-    <content><![CDATA[<p>已经许久没更新过自己的博客了，或许也是因为这忙碌的生活导致自己无暇顾及。开学后的一个半月里，终于在昨天，迎来了自己本学期的第一次破防，我决定在今天去写一些东西，希望能够记录乃至帮助自己走出自己像轮子一般的生活。</p>
-<p>我从未想到过我的大学竟然可以这么累，我现在甚至不知道自己忙碌的意义在哪里，数不清的任务，还有数不清的需要去做的事儿，还有忙着跟npy争辩。我的生活给我的感觉就像是完成一项项的任务，完成了任务就能稍微舒服点了，然后紧接着别的任务来了，我又得忙碌了，做不完心里就不踏实。试问，这样的生活真的有意思么？看着别人的大学生活，我很羡慕，能有三五好友漫步谈心，干饭喝酒，这样的生活我也想要。但是我的学校给我的感觉就是，不学你就得死，众多的傻x课程，包括无聊至极的思政课，无脑夸无脑鼓吹，你当我是tmd小学生呢。还不能选自己想要的课程，这样的课程体系还停留在上个世纪，能不能有点进步性的改革，当成高中生来教。</p>
-<p>当然，说这些的一切前提还是我并不是一个摆子，我也不想摆，但是也不想卷，只想学自己想学的，要考试的课程复习复习就完事儿了，我也不想去下很大的功夫去刷题考高分，但是总有这么一群人喜欢干这种事儿，譬如那个奖学金答辩就是，甲醛为王，答辩走个过场，你分数是啥，你就是啥奖，那你就别说综合评定占比多少多少，名额大概率也是分配好的，平衡嘛，我懂。</p>
-<p>喷完了，舒服！但是生活还得继续，我希望自己的生活能够更加的丰富，改变盲目内卷的状态，find your own path！面对着清晨的第一缕阳光，我发现我仍然是那个自信阳光正能量的李翔！</p>
-<p>我的目标是星辰大海，我必将远航！</p>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>个人反思</tag>
-        <tag>感悟</tag>
       </tags>
   </entry>
   <entry>
@@ -2958,6 +2958,18 @@ unordered_set、unordered_map、unordered_multiset、unordered_multimap</p>
       </tags>
   </entry>
   <entry>
+    <title>警醒</title>
+    <url>/2022/06/15/%E8%AD%A6%E9%86%92/</url>
+    <content><![CDATA[<h1 id="戒骄戒躁-专注当下">戒骄戒躁，专注当下！</h1>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CPP继承与派生</title>
     <url>/2022/07/31/%E7%BB%A7%E6%89%BF%E4%B8%8E%E6%B4%BE%E7%94%9F/</url>
     <content><![CDATA[<h1 id="类的继承与派生">类的继承与派生</h1>
@@ -3109,18 +3121,6 @@ unordered_set、unordered_map、unordered_multiset、unordered_multimap</p>
         <tag>学习笔记</tag>
         <tag>C++程序设计</tag>
         <tag>C++语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>警醒</title>
-    <url>/2022/06/15/%E8%AD%A6%E9%86%92/</url>
-    <content><![CDATA[<h1 id="戒骄戒躁-专注当下">戒骄戒躁，专注当下！</h1>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>个人反思</tag>
       </tags>
   </entry>
   <entry>

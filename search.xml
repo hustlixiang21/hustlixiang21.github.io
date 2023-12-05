@@ -14,21 +14,6 @@
       </tags>
   </entry>
   <entry>
-    <title>15_June</title>
-    <url>/2022/06/15/15-June/</url>
-    <content><![CDATA[<h3 id="may-you-be-loyal-to-yourself-live-like-yourself">May you be loyal to yourself, live like yourself.</h3>
-<h3 id="愿你忠于自我-活出自我">愿你忠于自我，活出自我</h3>
-<span id="more"></span>
-<h2 id="每天早点睡觉">每天早点睡觉！！！</h2>
-]]></content>
-      <categories>
-        <category>一句</category>
-      </categories>
-      <tags>
-        <tag>一句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>14_June</title>
     <url>/2022/06/14/14-june/</url>
     <content><![CDATA[<h3 id="great-things-never-came-from-comfort-zones">Great things never came from comfort zones.</h3>
@@ -55,19 +40,18 @@
       </tags>
   </entry>
   <entry>
-    <title>19_June</title>
-    <url>/2022/06/19/19-June/</url>
-    <content><![CDATA[<h3 id="the-first-time-i-hugged-the-sky-was-when-you-held-me-above-your-head">The first time I hugged the sky was when you held me above your head.</h3>
-<h3 id="我第一次拥抱天空是您将我举过头顶">我第一次拥抱天空是您将我举过头顶。</h3>
-<h3 id="祝所有的父亲父亲节快乐">祝所有的父亲父亲节快乐！！！</h3>
+    <title>15_June</title>
+    <url>/2022/06/15/15-June/</url>
+    <content><![CDATA[<h3 id="may-you-be-loyal-to-yourself-live-like-yourself">May you be loyal to yourself, live like yourself.</h3>
+<h3 id="愿你忠于自我-活出自我">愿你忠于自我，活出自我</h3>
+<span id="more"></span>
+<h2 id="每天早点睡觉">每天早点睡觉！！！</h2>
 ]]></content>
       <categories>
-        <category>生活</category>
+        <category>一句</category>
       </categories>
       <tags>
-        <tag>生活</tag>
-        <tag>自我激励</tag>
-        <tag>亲情</tag>
+        <tag>一句</tag>
       </tags>
   </entry>
   <entry>
@@ -84,15 +68,19 @@
       </tags>
   </entry>
   <entry>
-    <title>24_May</title>
-    <url>/2022/05/24/24-May/</url>
-    <content><![CDATA[<h3 id="have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
+    <title>19_June</title>
+    <url>/2022/06/19/19-June/</url>
+    <content><![CDATA[<h3 id="the-first-time-i-hugged-the-sky-was-when-you-held-me-above-your-head">The first time I hugged the sky was when you held me above your head.</h3>
+<h3 id="我第一次拥抱天空是您将我举过头顶">我第一次拥抱天空是您将我举过头顶。</h3>
+<h3 id="祝所有的父亲父亲节快乐">祝所有的父亲父亲节快乐！！！</h3>
 ]]></content>
       <categories>
-        <category>一句</category>
+        <category>生活</category>
       </categories>
       <tags>
-        <tag>一句</tag>
+        <tag>生活</tag>
+        <tag>自我激励</tag>
+        <tag>亲情</tag>
       </tags>
   </entry>
   <entry>
@@ -116,6 +104,18 @@
       <tags>
         <tag>和宝贝在一起的时光</tag>
         <tag>爱情</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>24_May</title>
+    <url>/2022/05/24/24-May/</url>
+    <content><![CDATA[<h3 id="have-a-heart-that-never-hardens-and-a-temper-that-never-tires-and-a-touch-that-never-hurts">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</h3>
+]]></content>
+      <categories>
+        <category>一句</category>
+      </categories>
+      <tags>
+        <tag>一句</tag>
       </tags>
   </entry>
   <entry>
@@ -828,29 +828,6 @@ setTime(),showTime()</li>
       </tags>
   </entry>
   <entry>
-    <title>Qt</title>
-    <url>/2022/09/03/Qt/</url>
-    <content><![CDATA[<p><a href="https://github.com/liubf21/Qt-Practical-Training-For-Programming">非爷的Qt仓库</a></p>
-<h1 id="一个简单计算器的实现">一个简单计算器的实现</h1>
-<p>照着下面的视频自己一步步来的，可以对于qt有个大致的了解，并且自己也亲手写了几个键的功能，也算是自己的第一个具有ui界面的简单程序了。</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/txGRU7OrTZo" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<p><a href="https://github.com/hustlixiang21/Qt_Practice/tree/main/Calculator">点击查看源代码</a></p>
-<p>效果图：<br>
-<img src="https://picx.zhimg.com/80/v2-9e256ce589cf3dff00310312c0ad7f46_1440w.png" alt="效果图"></p>
-<h1 id="添加程序图标">添加程序图标</h1>
-<p>参考博客：<a href="https://blog.csdn.net/yc__coder/article/details/107425940?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-107425940-blog-79359228.pc_relevant_multi_platform_featuressortv2dupreplace&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-107425940-blog-79359228.pc_relevant_multi_platform_featuressortv2dupreplace&amp;utm_relevant_index=3">Mac端设置Qt应用图标</a></p>
-<p>当然，最好的方式是去<a href="https://resources.qt.io/learning-hub">官网的document</a>进行查询。</p>
-]]></content>
-      <categories>
-        <category>CS工具</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>C++语言</tag>
-        <tag>ui程序设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Web认证的校园网接路由器</title>
     <url>/2023/02/16/Web%E8%AE%A4%E8%AF%81%E7%9A%84%E6%A0%A1%E5%9B%AD%E7%BD%91%E6%8E%A5%E8%B7%AF%E7%94%B1%E5%99%A8/</url>
     <content><![CDATA[<h1 id="需求">需求</h1>
@@ -905,6 +882,29 @@ setTime(),showTime()</li>
       </categories>
       <tags>
         <tag>计算机网络 - 校园网 - 路由</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Qt</title>
+    <url>/2022/09/03/Qt/</url>
+    <content><![CDATA[<p><a href="https://github.com/liubf21/Qt-Practical-Training-For-Programming">非爷的Qt仓库</a></p>
+<h1 id="一个简单计算器的实现">一个简单计算器的实现</h1>
+<p>照着下面的视频自己一步步来的，可以对于qt有个大致的了解，并且自己也亲手写了几个键的功能，也算是自己的第一个具有ui界面的简单程序了。</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/txGRU7OrTZo" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<p><a href="https://github.com/hustlixiang21/Qt_Practice/tree/main/Calculator">点击查看源代码</a></p>
+<p>效果图：<br>
+<img src="https://picx.zhimg.com/80/v2-9e256ce589cf3dff00310312c0ad7f46_1440w.png" alt="效果图"></p>
+<h1 id="添加程序图标">添加程序图标</h1>
+<p>参考博客：<a href="https://blog.csdn.net/yc__coder/article/details/107425940?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-107425940-blog-79359228.pc_relevant_multi_platform_featuressortv2dupreplace&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-107425940-blog-79359228.pc_relevant_multi_platform_featuressortv2dupreplace&amp;utm_relevant_index=3">Mac端设置Qt应用图标</a></p>
+<p>当然，最好的方式是去<a href="https://resources.qt.io/learning-hub">官网的document</a>进行查询。</p>
+]]></content>
+      <categories>
+        <category>CS工具</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>C++语言</tag>
+        <tag>ui程序设计</tag>
       </tags>
   </entry>
   <entry>
@@ -1174,6 +1174,26 @@ setTime(),showTime()</li>
       </tags>
   </entry>
   <entry>
+    <title>周计划（6.13-6.19）</title>
+    <url>/2022/06/13/%E5%91%A8%E8%AE%A1%E5%88%92%EF%BC%886-13-6-19%EF%BC%89/</url>
+    <content><![CDATA[<ul>
+<li>[x] 微积分通过考试宝典整体过一遍，熟悉知识体系。</li>
+<li>[x] 大学物理通过宝典和精选习题也是整体的过一遍。</li>
+<li>[x] 英语卓越篇八个单元，每天复习一个单元，认真积累词汇，读懂文章。词汇每日过一遍。</li>
+<li>[x] 近代史的vlog的ddl尽快完成。</li>
+</ul>
+<p>总结：</p>
+<p>微积分基本完成，大学物理还没开始复习，英语也只完成了两个单元，效率低下，面对即将到来的考试你准备怎么应对？大物好好复习！！！</p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客写作tricks</title>
     <url>/2022/07/20/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9Ctricks/</url>
     <content><![CDATA[<h2 id="加粗和斜体">加粗和斜体</h2>
@@ -1342,26 +1362,6 @@ This is my website, click the button  <a class="btn-beautify block right blue la
       </categories>
       <tags>
         <tag>博客写作技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>周计划（6.13-6.19）</title>
-    <url>/2022/06/13/%E5%91%A8%E8%AE%A1%E5%88%92%EF%BC%886-13-6-19%EF%BC%89/</url>
-    <content><![CDATA[<ul>
-<li>[x] 微积分通过考试宝典整体过一遍，熟悉知识体系。</li>
-<li>[x] 大学物理通过宝典和精选习题也是整体的过一遍。</li>
-<li>[x] 英语卓越篇八个单元，每天复习一个单元，认真积累词汇，读懂文章。词汇每日过一遍。</li>
-<li>[x] 近代史的vlog的ddl尽快完成。</li>
-</ul>
-<p>总结：</p>
-<p>微积分基本完成，大学物理还没开始复习，英语也只完成了两个单元，效率低下，面对即将到来的考试你准备怎么应对？大物好好复习！！！</p>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>个人反思</tag>
       </tags>
   </entry>
   <entry>
@@ -1550,6 +1550,23 @@ This is my website, click the button  <a class="btn-beautify block right blue la
       <tags>
         <tag>生活</tag>
         <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我们应当去往何处？</title>
+    <url>/2022/10/11/%E6%88%91%E4%BB%AC%E5%BA%94%E5%BD%93%E5%8E%BB%E5%BE%80%E4%BD%95%E5%A4%84%EF%BC%9F/</url>
+    <content><![CDATA[<p>已经许久没更新过自己的博客了，或许也是因为这忙碌的生活导致自己无暇顾及。开学后的一个半月里，终于在昨天，迎来了自己本学期的第一次破防，我决定在今天去写一些东西，希望能够记录乃至帮助自己走出自己像轮子一般的生活。</p>
+<p>我从未想到过我的大学竟然可以这么累，我现在甚至不知道自己忙碌的意义在哪里，数不清的任务，还有数不清的需要去做的事儿，还有忙着跟npy争辩。我的生活给我的感觉就像是完成一项项的任务，完成了任务就能稍微舒服点了，然后紧接着别的任务来了，我又得忙碌了，做不完心里就不踏实。试问，这样的生活真的有意思么？看着别人的大学生活，我很羡慕，能有三五好友漫步谈心，干饭喝酒，这样的生活我也想要。但是我的学校给我的感觉就是，不学你就得死，众多的傻x课程，包括无聊至极的思政课，无脑夸无脑鼓吹，你当我是tmd小学生呢。还不能选自己想要的课程，这样的课程体系还停留在上个世纪，能不能有点进步性的改革，当成高中生来教。</p>
+<p>当然，说这些的一切前提还是我并不是一个摆子，我也不想摆，但是也不想卷，只想学自己想学的，要考试的课程复习复习就完事儿了，我也不想去下很大的功夫去刷题考高分，但是总有这么一群人喜欢干这种事儿，譬如那个奖学金答辩就是，甲醛为王，答辩走个过场，你分数是啥，你就是啥奖，那你就别说综合评定占比多少多少，名额大概率也是分配好的，平衡嘛，我懂。</p>
+<p>喷完了，舒服！但是生活还得继续，我希望自己的生活能够更加的丰富，改变盲目内卷的状态，find your own path！面对着清晨的第一缕阳光，我发现我仍然是那个自信阳光正能量的李翔！</p>
+<p>我的目标是星辰大海，我必将远航！</p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>个人反思</tag>
+        <tag>感悟</tag>
       </tags>
   </entry>
   <entry>
@@ -2070,23 +2087,6 @@ tar命令可以将已经打包好的文件解压出来。</p>
         <tag>CS工具</tag>
         <tag>linux基础</tag>
         <tag>命令行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我们应当去往何处？</title>
-    <url>/2022/10/11/%E6%88%91%E4%BB%AC%E5%BA%94%E5%BD%93%E5%8E%BB%E5%BE%80%E4%BD%95%E5%A4%84%EF%BC%9F/</url>
-    <content><![CDATA[<p>已经许久没更新过自己的博客了，或许也是因为这忙碌的生活导致自己无暇顾及。开学后的一个半月里，终于在昨天，迎来了自己本学期的第一次破防，我决定在今天去写一些东西，希望能够记录乃至帮助自己走出自己像轮子一般的生活。</p>
-<p>我从未想到过我的大学竟然可以这么累，我现在甚至不知道自己忙碌的意义在哪里，数不清的任务，还有数不清的需要去做的事儿，还有忙着跟npy争辩。我的生活给我的感觉就像是完成一项项的任务，完成了任务就能稍微舒服点了，然后紧接着别的任务来了，我又得忙碌了，做不完心里就不踏实。试问，这样的生活真的有意思么？看着别人的大学生活，我很羡慕，能有三五好友漫步谈心，干饭喝酒，这样的生活我也想要。但是我的学校给我的感觉就是，不学你就得死，众多的傻x课程，包括无聊至极的思政课，无脑夸无脑鼓吹，你当我是tmd小学生呢。还不能选自己想要的课程，这样的课程体系还停留在上个世纪，能不能有点进步性的改革，当成高中生来教。</p>
-<p>当然，说这些的一切前提还是我并不是一个摆子，我也不想摆，但是也不想卷，只想学自己想学的，要考试的课程复习复习就完事儿了，我也不想去下很大的功夫去刷题考高分，但是总有这么一群人喜欢干这种事儿，譬如那个奖学金答辩就是，甲醛为王，答辩走个过场，你分数是啥，你就是啥奖，那你就别说综合评定占比多少多少，名额大概率也是分配好的，平衡嘛，我懂。</p>
-<p>喷完了，舒服！但是生活还得继续，我希望自己的生活能够更加的丰富，改变盲目内卷的状态，find your own path！面对着清晨的第一缕阳光，我发现我仍然是那个自信阳光正能量的李翔！</p>
-<p>我的目标是星辰大海，我必将远航！</p>
-]]></content>
-      <categories>
-        <category>心路</category>
-      </categories>
-      <tags>
-        <tag>个人反思</tag>
-        <tag>感悟</tag>
       </tags>
   </entry>
   <entry>
@@ -3324,6 +3324,438 @@ FTP支持两种模式：Standard（PORT方式，主动方式），Passive（PASV
       </categories>
       <tags>
         <tag>个人反思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HUST操作系统实验二:进程/线程的同步机制和应用编程</title>
+    <url>/2023/11/29/HUST%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E8%BF%9B%E7%A8%8B-%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6%E5%92%8C%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="操作系统实验二">操作系统实验二</h1>
+<h2 id="实验目的">实验目的</h2>
+<ol>
+<li>理解进程/线程的概念和应用编程过程；</li>
+<li>理解进程/线程的同步机制和应用编程；</li>
+<li>掌握和推广国产操作系统（推银河麒麟或优麒麟，建议）</li>
+</ol>
+<h2 id="实验内容">实验内容</h2>
+<ol>
+<li>在Linux/Windows下创建2个线程A和B，循环输出数据或字符串。</li>
+<li>在Liunx下创建（fork）一个子进程，实验wait/exit函数</li>
+<li>在Windows/Linux下，利用线程实现并发画圆画方。</li>
+<li>在Windows或Linux下利用线程实现“生产者-消费者”同步控制</li>
+<li>在Linux下利用信号机制(signal)实现进程通信</li>
+<li>在Windows或Linux下模拟哲学家就餐，提供死锁和非死锁解法。</li>
+<li>研读Linux内核并用printk调试进程创建和调度策略的相关信息。</li>
+</ol>
+<h2 id="任务一：在linux-windows下创建2个线程a和b-循环输出数据或字符串">任务一：在Linux/Windows下创建2个线程A和B，循环输出数据或字符串</h2>
+<p>要求：</p>
+<ol>
+<li>
+<p>使用pthread线程库或CreateThread函数</p>
+</li>
+<li>
+<p>线程A递增输出1-1000；线程B递减输出1000-1。为避免输出太快，每隔0.2秒（可自行调节）输出一个数。</p>
+</li>
+<li>
+<p>输出数据时，同时输出”A”或”B”标示是哪个线程输出的，并注意格式化输出信息。例如：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A:1000</span><br><span class="line">A:0999</span><br><span class="line">B:0001</span><br><span class="line">A:0998</span><br><span class="line">B:0002</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="编写code并编译">编写code并编译</h3>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 线程A的函数 - 递增输出</span></span><br><span class="line"><span class="type">void</span>* <span class="title function_">print_numbers_ascending</span><span class="params">(<span class="type">void</span>* arg)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;A:%04d\n&quot;</span>, i);</span><br><span class="line">        usleep(<span class="number">200000</span>); <span class="comment">// 暂停0.2秒</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 线程B的函数 - 递减输出</span></span><br><span class="line"><span class="type">void</span>* <span class="title function_">print_numbers_descending</span><span class="params">(<span class="type">void</span>* arg)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1000</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;B:%04d\n&quot;</span>, i);</span><br><span class="line">        usleep(<span class="number">200000</span>); <span class="comment">// 暂停0.2秒</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">pthread_t</span> threadA, threadB;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建线程</span></span><br><span class="line">    pthread_create(&amp;threadA, <span class="literal">NULL</span>, print_numbers_ascending, <span class="literal">NULL</span>);</span><br><span class="line">    pthread_create(&amp;threadB, <span class="literal">NULL</span>, print_numbers_descending, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 等待线程结束</span></span><br><span class="line">    pthread_join(threadA, <span class="literal">NULL</span>);</span><br><span class="line">    pthread_join(threadB, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* pthread_create 函数：创建一个线程</span></span><br><span class="line"><span class="comment"> * 函数原型 int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);</span></span><br><span class="line"><span class="comment"> * pthread_t *thread: 这是一个指向pthread_t类型变量的指针，pthread_t通常用于标识线程。函数执行成功后，这个变量会被赋值为新创建的线程的标识。</span></span><br><span class="line"><span class="comment"> * const pthread_attr_t *attr: 指向pthread_attr_t结构的指针，该结构用于设置线程属性。如果传入NULL，则使用默认属性。</span></span><br><span class="line"><span class="comment"> * void *(*start_routine) (void *): 指向将被新线程执行的函数的指针。这个函数必须接受一个void *类型的参数并返回一个void *类型的值。</span></span><br><span class="line"><span class="comment"> * void *arg: 被传递给start_routine函数的参数。这可以是指向任何类型的指针，依赖于你的具体需求。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* pthread_join 函数：等待一个线程的终止</span></span><br><span class="line"><span class="comment"> * 函数原型 int pthread_join(pthread_t thread, void **retval);</span></span><br><span class="line"><span class="comment"> * pthread_t thread: 要等待的线程标识符。这是由pthread_create函数创建线程时返回的那个标识符。</span></span><br><span class="line"><span class="comment"> * void **retval: 如果不为NULL，则指向一个位置，该位置用于存储由线程返回的退出状态。如果线程通过pthread_exit退出，retval将包含传递给pthread_exit的值。如果线程通过返回（即线程启动例程返回），retval将包含返回的值。</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<p>pthread_create函数详解：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/pthread_create.png" alt="pthread_create函数详解"></p>
+<p>使用命令<code>gcc -o mission1 mission1.c -lpthread</code>编译文件并执行。</p>
+<h3 id="运行中查看进程的运行状态">运行中查看进程的运行状态</h3>
+<p>查看进程或者线程常用的指令:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef | grep [进程的名称] <span class="comment"># 查看特定名称进程的信息</span></span><br><span class="line">lixiang     4874    3403  0 11:11 pts/1    00:00:00 ./mission1</span><br><span class="line">lixiang     4883    3455  0 11:12 pts/2    00:00:00 grep --color=auto mission1</span><br><span class="line"></span><br><span class="line">ps -T -p [进程的PID] <span class="comment"># 查看特定PID进程的信息（-T表示显示其线程）</span></span><br><span class="line">PID    SPID    TTY       TIME       CMD</span><br><span class="line">4874   4874   pts/1    00:00:00   mission1</span><br><span class="line">4874   4875   pts/1    00:00:00   mission1</span><br><span class="line">4874   4876   pts/1    00:00:00   mission1</span><br><span class="line"></span><br><span class="line">ps -Tfl -p [进程的PID] <span class="comment"># 更加详细的展示特定PID进程的信息（包括cpu利用率等等）</span></span><br><span class="line">F S UID          PID    SPID    PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD</span><br><span class="line">0 S lixiang     4945    4945    3403  0  80   0 - 21144 futex_ 11:17 pts/1    00:00:00 ./mission1</span><br><span class="line">1 S lixiang     4945    4946    3403  0  80   0 - 21144 hrtime 11:17 pts/1    00:00:00 ./mission1</span><br><span class="line">1 S lixiang     4945    4947    3403  0  80   0 - 21144 hrtime 11:17 pts/1    00:00:00 ./mission1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下面是常用的一些参数介绍：</span></span><br><span class="line">-e：显示所有进程，而不仅仅是当前用户的进程。</span><br><span class="line">-f：显示完整的进程信息，包括进程的父进程ID、CPU利用率等。</span><br><span class="line">-l：以长格式显示进程信息，包括进程的状态、PID、终端、CPU利用率等。</span><br><span class="line">-u user：显示指定用户的进程信息。</span><br><span class="line">-p pid：显示指定PID的进程信息。</span><br><span class="line">-s：按照进程的启动时间排序输出。</span><br><span class="line">-r：按照进程的CPU利用率排序输出。</span><br><span class="line">-T：显示线程</span><br></pre></td></tr></table></figure>
+<p>运行mission1之后利用ps命令展示其详细信息</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/pid_spid.png" alt="mission1进程的详细信息"></p>
+<p>图中SPID表示的就是线程的ID号，3852和3852就是我们创建的A、B线程</p>
+<h3 id="程序运行结果">程序运行结果</h3>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/result.png" alt="运行结果"></p>
+<p>参考资料：</p>
+<p><a href="https://blog.csdn.net/qq_44824574/article/details/110672780">Linux——线程的创建</a></p>
+<p><a href="https://blog.csdn.net/qq_37037348/article/details/131491031#:~:text=%E6%A6%82%E5%BF%B5%E5%92%8C%E5%8E%9F%E7%90%86%201%20ps%E5%91%BD%E4%BB%A4%E9%80%9A%E8%BF%87%E8%AF%BB%E5%8F%96%2Fproc%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%96%87%E4%BB%B6%E8%8E%B7%E5%8F%96%E8%BF%9B%E7%A8%8B%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82,2%20%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8C%85%E5%90%AB%E4%BA%86%E8%BF%9B%E7%A8%8B%E7%9A%84PID%E3%80%81%E7%8A%B6%E6%80%81%E3%80%81%E7%88%B6%E8%BF%9B%E7%A8%8BID%E3%80%81CPU%E5%88%A9%E7%94%A8%E7%8E%87%E3%80%81%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8%E7%AD%89%E4%BF%A1%E6%81%AF%E3%80%82%203%20ps%E5%91%BD%E4%BB%A4%E8%A7%A3%E6%9E%90%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%96%87%E4%BB%B6%E5%B9%B6%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA%EF%BC%8C%E4%BB%A5%E4%BE%BF%E7%94%A8%E6%88%B7%E6%9F%A5%E7%9C%8B%E3%80%82">ps命令介绍</a></p>
+<p><a href="https://www.linuxcool.com/ps">ps命令手册大全</a></p>
+<h2 id="任务二：在liunx下创建-fork-一个子进程-实验wait-exit函数">任务二：在Liunx下创建（fork）一个子进程，实验wait/exit函数</h2>
+<p>要求：</p>
+<ol>
+<li>效果1：父进程不用wait函数，让父进程先于子进程结束，子进程进入死循环或较长时间的循环，观察父子进程的进程ID和父进程ID。
+<ol>
+<li>程序中printf各进程的进程号和父进程号。注意，父进程和子进程的输出请给出相应的提示字符串以便相互区分，后同</li>
+<li>同时，用ps命令显示进程列表，观察指定进程的进程ID和父进程ID，和printf输出的这些ID是否一致，并解释。</li>
+</ol>
+</li>
+<li>效果2：父进程用wait函数。子进程休眠5秒，父进程不休眠。子进程<br>
+用exit返回参数。父进程中printf子进程返回的参数。</li>
+</ol>
+<h3 id="效果一">效果一</h3>
+<p>本任务的核心在于，让父进程先于子进程结束，观察进程ID的变化。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">pid_t</span> pid = fork();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (pid == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Child process</span></span><br><span class="line">        <span class="comment">// 子进程进入死循环</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;子进程打印：子进程PID: %d, 父进程PID: %d\n&quot;</span>, getpid(), getppid());</span><br><span class="line">            sleep(<span class="number">5</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (pid &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Parent process</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;父进程打印：父进程PID：%d, 子进程PID：%d\n&quot;</span>, getpid(), pid);</span><br><span class="line">        sleep(<span class="number">20</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// fork failed</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;创建子进程失败\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序运行结果图如下：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/2-program1_run.png" alt="程序运行结果"></p>
+<p>父进程PID=3604，子进程PID=3605，然后父进程经历20s结束后，子进程打印自己的PID和父进程的PID，在父进程未结束的20s内，子进程打印的父进程PID=3604，但父进程结束后，子进程继续运行，此时父进程的ID变成了1。产生这样的效果的原因是：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/2-program1-explain.png" alt="父进程结束后子进程的父进程ID变为1的原因"></p>
+<h3 id="效果二">效果二</h3>
+<p>子进程先于父进程结束，并用exit返回一个值，父进程打印这个状态值。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">pid_t</span> pid = fork();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (pid == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Child process</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;子进程打印：子进程PID：%d, 父进程PID：%d\n&quot;</span>, getpid(), getppid());</span><br><span class="line">        sleep(<span class="number">5</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">42</span>); <span class="comment">// 使用 exit 返回状态值42</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (pid &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Parent process</span></span><br><span class="line">        <span class="type">int</span> status;</span><br><span class="line">        wait(&amp;status); <span class="comment">// wait for child process to finish</span></span><br><span class="line">        <span class="keyword">if</span> (WIFEXITED(status))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;子进程结束状态：%d\n&quot;</span>, WEXITSTATUS(status));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// fork failed</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;创建子进程失败\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序运行的结果如下：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/2-program2_run.png" alt="程序运行结果图"></p>
+<p>代码中子进程exit(42)，父进程打印退出的状态码42。</p>
+<p><a href="https://blog.csdn.net/qq_43412060/article/details/105442802">【Linux】——进程创建fork()详解</a></p>
+<h2 id="任务三：在windows-linux下-利用线程实现并发画圆画方">任务三：在Windows/Linux下，利用线程实现并发画圆画方</h2>
+<p>本任务我采用了Qt6实现了双线程画圆画方的GUI界面。在此只解释核心代码的部分：</p>
+<p>由于Qt的<strong>绘制动作只能够在主线程中完成</strong>，所以我们画圆和方的两个线程分别用于计算圆和方的坐标点，并传给主线程，主线程完成相应的绘制动作。</p>
+<p>项目文件目录如下：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-directory.png" alt="项目文件目录"></p>
+<p>首先Qt想要绘制图形需要在MainWindow类中overwrite一下paintEvent：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">MainWindow::paintEvent</span><span class="params">(QPaintEvent *event)</span> </span>&#123;</span><br><span class="line">    <span class="function">QPainter <span class="title">painter</span><span class="params">(<span class="keyword">this</span>)</span></span>;</span><br><span class="line">    painter.<span class="built_in">setPen</span>(Qt::blue);</span><br><span class="line">    <span class="comment">// 画出所有圆的点</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> QPoint &amp;pt : circlePoints) &#123;</span><br><span class="line">        painter.<span class="built_in">drawPoint</span>(pt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 连接点画圆（可选）</span></span><br><span class="line">    <span class="keyword">if</span> (circlePoints.<span class="built_in">size</span>() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        painter.<span class="built_in">setPen</span>(Qt::red);</span><br><span class="line">        painter.<span class="built_in">drawPolyline</span>(circlePoints.<span class="built_in">constData</span>(), circlePoints.<span class="built_in">size</span>());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 画出所有方的点</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> QPoint &amp;pt : squarePoints) &#123;</span><br><span class="line">        painter.<span class="built_in">drawPoint</span>(pt);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 连接点画方（可选）</span></span><br><span class="line">    <span class="keyword">if</span> (squarePoints.<span class="built_in">size</span>() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        painter.<span class="built_in">setPen</span>(Qt::blue);</span><br><span class="line">        painter.<span class="built_in">drawPolyline</span>(squarePoints.<span class="built_in">constData</span>(), squarePoints.<span class="built_in">size</span>());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>两个关于线程的类，一个是圆线程类，一个是方线程类，他们都是Qt中线程类QThread的子类，由于只是坐标点计算的区别，我就选一个圆的线程类来说明：</p>
+<p>圆线程类中的process函数用于处理下一个坐标点，然后释放circlePoint信号（signal），把该坐标传入主线程，主线程进行处理。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">CircleThread::process</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">double</span> radianIncrement = <span class="number">2</span> * (M_PI / <span class="number">180.0</span>); <span class="comment">// 每次增加的弧度（1度）</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 计算新点的位置，这里以圆的参数方程为例</span></span><br><span class="line">    <span class="type">int</span> centerX = center.<span class="built_in">x</span>();</span><br><span class="line">    <span class="type">int</span> centerY = center.<span class="built_in">y</span>();</span><br><span class="line">    <span class="type">int</span> x = centerX + <span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(radius * <span class="built_in">cos</span>(circleAngle));</span><br><span class="line">    <span class="type">int</span> y = centerY + <span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(radius * <span class="built_in">sin</span>(circleAngle));</span><br><span class="line">    circleAngle += radianIncrement;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 发送新点的位置</span></span><br><span class="line">    <span class="function">emit <span class="title">circlePoint</span><span class="params">(QPoint(x, y))</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于圆线程类，需要overwrite一下run函数，run函数在线程start的时候被调用，具体的逻辑就是隔一段时间进行process函数的调用，process函数处理点的信息然后发送给主线程。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">CircleThread::run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">isInterruptionRequested</span>()) &#123;</span><br><span class="line">        <span class="built_in">process</span>();</span><br><span class="line">        <span class="keyword">if</span> (circleAngle &gt;= <span class="number">2</span> * M_PI) <span class="keyword">break</span>;</span><br><span class="line">        <span class="built_in">msleep</span>(<span class="number">62</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>主线程中需要做的是初始化一个圆线程类的实例，并connect前面提到的circlePoint信号和处理点的Slot槽。需要注意的是Slot函数是个Lambda表达式的写法，把子线程传回来的点加入圆点集中，然后update绘制。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建画圆的线程</span></span><br><span class="line">circleThread = <span class="keyword">new</span> <span class="built_in">CircleThread</span>(<span class="keyword">this</span>, <span class="built_in">QPoint</span>(<span class="built_in">width</span>() / <span class="number">4</span>, <span class="built_in">height</span>() / <span class="number">2</span> - <span class="built_in">height</span>() / <span class="number">10</span>), <span class="built_in">qMin</span>(<span class="built_in">width</span>() / <span class="number">2</span>, <span class="built_in">height</span>()) / <span class="number">2</span> - <span class="number">50</span>);</span><br><span class="line"><span class="comment">// 连接画圆线程的数据发送信号和主线程的数据接收槽函数</span></span><br><span class="line"><span class="built_in">connect</span>(circleThread, &amp;CircleThread::circlePoint, <span class="keyword">this</span>, [&amp;](<span class="type">const</span> QPoint &amp;pt) &#123;</span><br><span class="line">    circlePoints.<span class="built_in">append</span>(pt);</span><br><span class="line">    <span class="comment">// 更新调用paintEvent</span></span><br><span class="line">    <span class="built_in">update</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>最后一步的处理比较的简单，我们需要启动线程，线程的启动由button“开始绘制”控制，点击则启动两个线程。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这是一个槽函数，用于和button的点击信号连接</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">MainWindow::on_startpaint_clicked</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 启动画圆线程</span></span><br><span class="line">    circleThread-&gt;<span class="built_in">start</span>();</span><br><span class="line">    <span class="comment">// 启动画方线程</span></span><br><span class="line">    squareThread-&gt;<span class="built_in">start</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最终启动程序，程序运行效果图如下：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/%E5%8F%8C%E7%BA%BF%E7%A8%8B%E7%94%BB%E5%9C%86%E6%96%B9.gif" alt="程序运行效果图"></p>
+<p>参考资料：</p>
+<p><a href="https://blog.csdn.net/qq_48985554/article/details/114990083">Qt中多线程写法一（步骤讲解+代码+加演示）</a></p>
+<p><a href="https://doc.qt.io/">Qt Documentation</a></p>
+<h2 id="任务四：在windows或linux下利用线程实现-生产者-消费者-同步控制">任务四：在Windows或Linux下利用线程实现“生产者-消费者”同步控制</h2>
+<p>任务要求：</p>
+<ol>
+<li>使用数组（10个元素）代替缓冲区。2个输入线程产生产品（随机数）存到数组中；3个输出线程从数组中取数输出。</li>
+<li>Linux使用互斥锁对象和轻量级信号量对象，主要函数：sem_wait( )，sem_post( )，pthread_mutex_lock( )，pthread_mutex_unlock( )</li>
+<li>生产者1的数据：1000-1999 (每个数据随机间隔100ms-1s)，生产者2的数据：2000-2999 (每个数据随机间隔100ms-1s)</li>
+<li>消费者每休眠100ms-1s的随机时间消费一个数据。</li>
+<li>屏幕打印（或日志文件记录）每个数据的生产和消费记录。</li>
+</ol>
+<p>源代码如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;semaphore.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BUFFER_SIZE 10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 缓冲区和相关的同步机制</span></span><br><span class="line"><span class="type">int</span> buffer[BUFFER_SIZE];</span><br><span class="line"><span class="type">int</span> in = <span class="number">0</span>, out = <span class="number">0</span>;</span><br><span class="line"><span class="type">pthread_mutex_t</span> mutex;</span><br><span class="line"><span class="type">sem_t</span> empty, full;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 随机休眠时间</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">random_sleep</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> rand() % <span class="number">901</span> + <span class="number">100</span>; <span class="comment">// 100ms到1s的随机时间</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 生产者线程函数</span></span><br><span class="line"><span class="type">void</span> *<span class="title function_">producer</span><span class="params">(<span class="type">void</span> *param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> id = *(<span class="type">int</span> *)param;</span><br><span class="line">    <span class="type">int</span> base = id == <span class="number">1</span> ? <span class="number">1000</span> : <span class="number">2000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> product = base + rand() % <span class="number">1000</span>;</span><br><span class="line">        sem_wait(&amp;empty);</span><br><span class="line">        pthread_mutex_lock(&amp;mutex);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 存储产品到缓冲区</span></span><br><span class="line">        buffer[in] = product;</span><br><span class="line">        in = (in + <span class="number">1</span>) % BUFFER_SIZE;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Producer %d produced %d\n&quot;</span>, id, product);</span><br><span class="line"></span><br><span class="line">        pthread_mutex_unlock(&amp;mutex);</span><br><span class="line">        sem_post(&amp;full);</span><br><span class="line"></span><br><span class="line">        usleep(random_sleep() * <span class="number">1000</span>); <span class="comment">// 休眠</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 消费者线程函数</span></span><br><span class="line"><span class="type">void</span> *<span class="title function_">consumer</span><span class="params">(<span class="type">void</span> *param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> id = *(<span class="type">int</span> *)param;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        sem_wait(&amp;full);</span><br><span class="line">        pthread_mutex_lock(&amp;mutex);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 从缓冲区取出产品</span></span><br><span class="line">        <span class="type">int</span> product = buffer[out];</span><br><span class="line">        out = (out + <span class="number">1</span>) % BUFFER_SIZE;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Consumer %d consumed %d\n&quot;</span>, id, product);</span><br><span class="line"></span><br><span class="line">        pthread_mutex_unlock(&amp;mutex);</span><br><span class="line">        sem_post(&amp;empty);</span><br><span class="line"></span><br><span class="line">        usleep(random_sleep() * <span class="number">1000</span>); <span class="comment">// 休眠</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">pthread_t</span> producers[<span class="number">2</span>], consumers[<span class="number">3</span>];</span><br><span class="line">    <span class="type">int</span> producer_ids[<span class="number">2</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>&#125;;</span><br><span class="line">    <span class="type">int</span> consumer_ids[<span class="number">3</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 以默认属性初始化互斥锁</span></span><br><span class="line">    pthread_mutex_init(&amp;mutex, <span class="literal">NULL</span>);</span><br><span class="line">    <span class="comment">// 第二个参数0表示信号量用于线程间同步</span></span><br><span class="line">    sem_init(&amp;empty, <span class="number">0</span>, BUFFER_SIZE); <span class="comment">// 开始时有BUFFER_SIZE个空位</span></span><br><span class="line">    sem_init(&amp;full, <span class="number">0</span>, <span class="number">0</span>);            <span class="comment">// 开始时没有产品可供消费</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建生产者和消费者线程</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_create(&amp;producers[i], <span class="literal">NULL</span>, producer, &amp;producer_ids[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_create(&amp;consumers[i], <span class="literal">NULL</span>, consumer, &amp;consumer_ids[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 等待线程结束</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_join(producers[i], <span class="literal">NULL</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_join(consumers[i], <span class="literal">NULL</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 销毁互斥锁和信号量</span></span><br><span class="line">    pthread_mutex_destroy(&amp;mutex);</span><br><span class="line">    sem_destroy(&amp;empty);</span><br><span class="line">    sem_destroy(&amp;full);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码分析：</p>
+<p>首先应该对产品区加互斥锁防止多个线程的同时访问，而后我们要保证产品缓冲区满的时候生产者不再生产，而没有产品的时候，消费者无法消费。所以需要P-V操作完成同步机制，empty信号代表当前缓冲区的空位，每当生产者开始生产，空位减1；消费者消费后空位加1。full信号代表当前缓冲区内的产品个数，消费者开始消费的时候减1，生产者生产完毕加1，这样就实现了生产者和消费者之间的同步机制。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*生产者*/</span></span><br><span class="line">sem_wait(&amp;empty);</span><br><span class="line">pthread_mutex_lock(&amp;mutex);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 存储产品到缓冲区</span></span><br><span class="line">buffer[in] = product;</span><br><span class="line">in = (in + <span class="number">1</span>) % BUFFER_SIZE;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Producer %d produced %d\n&quot;</span>, id, product);</span><br><span class="line"></span><br><span class="line">pthread_mutex_unlock(&amp;mutex);</span><br><span class="line">sem_post(&amp;full);</span><br><span class="line"><span class="comment">/*生产者*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*消费者*/</span></span><br><span class="line">sem_wait(&amp;full);</span><br><span class="line">pthread_mutex_lock(&amp;mutex);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从缓冲区取出产品</span></span><br><span class="line"><span class="type">int</span> product = buffer[out];</span><br><span class="line">out = (out + <span class="number">1</span>) % BUFFER_SIZE;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Consumer %d consumed %d\n&quot;</span>, id, product);</span><br><span class="line"></span><br><span class="line">pthread_mutex_unlock(&amp;mutex);</span><br><span class="line">sem_post(&amp;empty);</span><br><span class="line"><span class="comment">/*消费者*/</span></span><br></pre></td></tr></table></figure>
+<p>程序运行结果如下：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/4-result.png" alt="程序运行结果"></p>
+<p>利用ps命令查看当前进程中的所有线程:</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/4-ps.png" alt="利用ps命令查看当前进程中的所有线程"></p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/WCHAN-explain.png" alt="WCHAN解释"></p>
+<p>参考资料：</p>
+<p><a href="https://blog.csdn.net/star_fighting/article/details/104309371">线程的同步问题–生产者 消费者</a></p>
+<h2 id="任务五：在linux下利用信号机制-signal-实现进程通信">任务五：在Linux下利用信号机制(signal)实现进程通信</h2>
+<p>任务要求:</p>
+<ol>
+<li>父进程创建(fork)子进程，并让子进程进入死循环。</li>
+<li>子进程每隔2秒输出“I am Child Process, alive !\n”</li>
+<li>父进程询问用户“To terminate Child Process. Yes or No? \n”要求用户从键盘回答Y或N.若用户回答N，延迟2秒后再提问.</li>
+<li>若用户回答Y，向子进程发送用户信号，让子进程结束。</li>
+<li>子进程结束之前打印字符串：”Bye,Wolrd !\n”</li>
+<li>函数：kill( )，signal( )，利用用户信号，编写信号处理函数</li>
+</ol>
+<p>本任务的核心在于使用kill函数杀死子进程，并在杀死的时候传入一个信号SIGUSR1(用户定义的信号，可以被用来报告异常行为（如除零错误、段错误等），也可以用来控制进程（如终止进程、停止（暂停）进程、继续（恢复）被停止的进程等)。子进程中接受信号并调用signalHandler信号处理函数进行相应的操作。</p>
+<p>源代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;signal.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 信号处理函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">signalHandler</span><span class="params">(<span class="type">int</span> sig)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Bye, World!\n&quot;</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">pid_t</span> pid = fork();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (pid == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 子进程</span></span><br><span class="line">    </span><br><span class="line">        signal(SIGUSR1, signalHandler); <span class="comment">// 注册信号处理函数</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;I am Child Process, alive!\n&quot;</span>);</span><br><span class="line">            sleep(<span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (pid &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 父进程</span></span><br><span class="line">        <span class="type">char</span> answer;</span><br><span class="line">        <span class="keyword">do</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;To terminate Child Process. Yes or No?\n&quot;</span>);</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot; %c&quot;</span>, &amp;answer);</span><br><span class="line">            <span class="keyword">if</span> (answer == <span class="string">&#x27;N&#x27;</span> || answer == <span class="string">&#x27;n&#x27;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                sleep(<span class="number">2</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">while</span> (answer != <span class="string">&#x27;Y&#x27;</span> &amp;&amp; answer != <span class="string">&#x27;y&#x27;</span>);</span><br><span class="line"></span><br><span class="line">        kill(pid, SIGUSR1); <span class="comment">// 给子进程发送SIGUSR1信号</span></span><br><span class="line">        wait(<span class="literal">NULL</span>); <span class="comment">// 等待子进程结束</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// fork失败</span></span><br><span class="line">        perror(<span class="string">&quot;fork failed&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码运行结果：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/5-result.png" alt="代码运行结果"></p>
+<p>参考资料：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/113876980">Linux进程间通信第三讲 信号signal kill</a></p>
+<h2 id="任务六：在windows或linux下模拟哲学家就餐-提供死锁和非死锁解法">任务六：在Windows或Linux下模拟哲学家就餐，提供死锁和非死锁解法</h2>
+<p>任务要求：</p>
+<ol>
+<li>同时提供提供可能会带来死锁的解法和不可能死锁的解法。</li>
+<li>可能会带来死锁的解法参见课件。Windows尝试使用临界区对象（EnterCriticalSection，LeaveCriticalSection）；Linux尝试使用互斥锁(pthread_mutex_lock, pthread_mutex_unlock)</li>
+<li>完全不可能产生死锁的解法，例如：尝试拿取两只筷子，两只都能拿则拿，否则都不拿。</li>
+<li>Linux尝试互斥锁pthread_mutex_lock，pthread_mutex_trylock等函数。</li>
+<li>为增强随机性，各状态间维持100ms-500ms内的随机时长。</li>
+<li>[可选]图形界面显示哲学家取筷，吃饭，放筷，思考等状态。</li>
+</ol>
+<h3 id="死锁解法">死锁解法</h3>
+<p>死锁解法的问题在于，每个哲学家先拿左手的筷子，后拿右手的筷子，当他们同时拿到左手的筷子时，没有一个哲学家能获取到右手的筷子，此时就产生的死锁的问题。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PHILOSOPHER_COUNT 5</span></span><br><span class="line"></span><br><span class="line"><span class="type">pthread_mutex_t</span> chopsticks[PHILOSOPHER_COUNT];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">get_random_sleep_time</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> rand() % <span class="number">400000</span> + <span class="number">100000</span>; <span class="comment">// 100ms到500ms的随机时间</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> *<span class="title function_">philosopher</span><span class="params">(<span class="type">void</span> *num)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> id = *(<span class="type">int</span> *)num;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 正在思考\n&quot;</span>, id);</span><br><span class="line">        usleep(get_random_sleep_time()); <span class="comment">// 随机思考时间</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 正在休息\n&quot;</span>, id);</span><br><span class="line">        usleep(get_random_sleep_time()); <span class="comment">// 随机休息时间</span></span><br><span class="line"></span><br><span class="line">        pthread_mutex_lock(&amp;chopsticks[id]); <span class="comment">// 拿起左边的筷子</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 拿起了左边的筷子\n&quot;</span>, id);</span><br><span class="line">        pthread_mutex_lock(&amp;chopsticks[(id + <span class="number">1</span>) % PHILOSOPHER_COUNT]); <span class="comment">// 拿起右边的筷子</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 拿起了右边的筷子\n&quot;</span>, id);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 正在就餐\n&quot;</span>, id);</span><br><span class="line">        usleep(get_random_sleep_time()); <span class="comment">// 随机就餐时间</span></span><br><span class="line"></span><br><span class="line">        pthread_mutex_unlock(&amp;chopsticks[(id + <span class="number">1</span>) % PHILOSOPHER_COUNT]); <span class="comment">// 放下右边的筷子</span></span><br><span class="line">        pthread_mutex_unlock(&amp;chopsticks[id]);                           <span class="comment">// 放下左边的筷子</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">pthread_t</span> philosophers[PHILOSOPHER_COUNT];</span><br><span class="line">    <span class="type">int</span> philosopher_numbers[PHILOSOPHER_COUNT];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; PHILOSOPHER_COUNT; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_mutex_init(&amp;chopsticks[i], <span class="literal">NULL</span>);</span><br><span class="line">        philosopher_numbers[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; PHILOSOPHER_COUNT; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_create(&amp;philosophers[i], <span class="literal">NULL</span>, philosopher, &amp;philosopher_numbers[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; PHILOSOPHER_COUNT; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_join(philosophers[i], <span class="literal">NULL</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>死锁状态：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/6-program1-result.png" alt="死锁状态"></p>
+<p>可以观察到他们同时拿到了左边的的筷子从而产生了死锁的现象。</p>
+<h3 id="非死锁解法">非死锁解法</h3>
+<p>我解决死锁的办法在于，哲学家尝试去先拿左手的筷子再拿右手的筷子，与上面不同的是，哲学家如果没有办法拿到右手的筷子去吃饭，那么就放下此时已占有的左手的筷子，从而避免了死锁问题。</p>
+<p>从具体的函数来说：pthread_mutex_trylock函数代替pthread_mutex_lock来避免阻塞，如果无法立即获取锁，就不会进入等待状态，从而避免了死锁的情况。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PHILOSOPHER_COUNT 5</span></span><br><span class="line"></span><br><span class="line"><span class="type">pthread_mutex_t</span> chopsticks[PHILOSOPHER_COUNT];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">get_random_sleep_time</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> rand() % <span class="number">400000</span> + <span class="number">100000</span>; <span class="comment">// 100ms到500ms的随机时间</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> *<span class="title function_">philosopher</span><span class="params">(<span class="type">void</span> *num)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> id = *(<span class="type">int</span> *)num;</span><br><span class="line">    <span class="type">int</span> left = id;</span><br><span class="line">    <span class="type">int</span> right = (id + <span class="number">1</span>) % PHILOSOPHER_COUNT;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 正在思考\n&quot;</span>, id);</span><br><span class="line">        usleep(get_random_sleep_time()); <span class="comment">// 随机思考时间</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 正在休息\n&quot;</span>, id);</span><br><span class="line">        usleep(get_random_sleep_time()); <span class="comment">// 随机思考时间</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 每个哲学家尝试先获取左手边的筷子，然后是右手边的筷子。如果两只筷子都成功获取，哲学家就开始就餐</span></span><br><span class="line">        <span class="comment">// pthread_mutex_trylock函数代替pthread_mutex_lock来避免阻塞，如果无法立即获取锁，就不会进入等待状态，从而避免了死锁的情况</span></span><br><span class="line">        <span class="keyword">if</span> (pthread_mutex_trylock(&amp;chopsticks[id]) == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 拿起了左边的筷子\n&quot;</span>, id);</span><br><span class="line">            sleep(<span class="number">1</span>); <span class="comment">// 为了让哲学家们更容易同时拿起左边筷子，这里加了一个1秒的延迟</span></span><br><span class="line">            <span class="keyword">if</span> (pthread_mutex_trylock(&amp;chopsticks[(id + <span class="number">1</span>) % PHILOSOPHER_COUNT]) == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 拿起了右边的筷子\n&quot;</span>, id);</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 正在就餐\n&quot;</span>, id);</span><br><span class="line">                usleep(get_random_sleep_time()); <span class="comment">// 随机就餐时间</span></span><br><span class="line"></span><br><span class="line">                pthread_mutex_unlock(&amp;chopsticks[(id + <span class="number">1</span>) % PHILOSOPHER_COUNT]);</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 放下了右边的筷子\n&quot;</span>, id);</span><br><span class="line">            &#125;</span><br><span class="line">            pthread_mutex_unlock(&amp;chopsticks[id]);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;哲学家 %d 放下了左边的筷子\n&quot;</span>, id);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">pthread_t</span> philosophers[PHILOSOPHER_COUNT];</span><br><span class="line">    <span class="type">int</span> philosopher_numbers[PHILOSOPHER_COUNT];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; PHILOSOPHER_COUNT; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_mutex_init(&amp;chopsticks[i], <span class="literal">NULL</span>);</span><br><span class="line">        philosopher_numbers[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; PHILOSOPHER_COUNT; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_create(&amp;philosophers[i], <span class="literal">NULL</span>, philosopher, &amp;philosopher_numbers[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; PHILOSOPHER_COUNT; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        pthread_join(philosophers[i], <span class="literal">NULL</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>非死锁程序运行结果：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/6-program2-result.png" alt="非死锁程序运行结果"></p>
+<p>这里我有意通过哲学家拿到左手的筷子后sleep一个较长的时间，让他们产生同时拿到左手筷子的冲突，通过图可以看到，5个哲学家的确同时拿到了左手边的筷子，与死锁写法不同的是，途中哲学家4主动放下了左边的筷子，重新进入思考状态，避免了死锁的状态。</p>
+<p>参考资料：</p>
+<p><a href="https://blog.csdn.net/monologuezjp/article/details/85449544">哲学家问题</a></p>
+<p><a href="https://blog.csdn.net/low5252/article/details/104800671">五个哲学家就餐问题</a></p>
+<h2 id="任务七：研读linux内核并用printk调试进程创建和调度策略的相关信息">任务七：研读Linux内核并用printk调试进程创建和调度策略的相关信息</h2>
+<p>要求：编写应用程序Hello.c，调用fork创建进程，在内核中跟踪该新建子进程的fork过程和显示与调度策略相关的PCB成员变量。</p>
+<ol>
+<li>编写应用程序Hello.c，在其中调用fork创建子进程(功能不限)，打印出父子进程的ID号。</li>
+<li>在内核中合适的位置（譬如do_fork函数内的某处）用printk输出“当前正创建的进程对应cmd，进程ID和父进程ID”等调试信息。</li>
+<li>为避免do_fork函数频繁地输出上述调试信息，须限定仅在Hello程序中调用fork时才输出上述调试信息，请思考要如何实现。</li>
+</ol>
+<blockquote>
+<p>参考方法：内核设计全局变量bool flag和系统调用SetDebug(bool)，SetDebug可以修改flag的值为true或false。在Hello程序中的调用fork函数前后，分别调用SetDebug(true)和SetDebug(false)修改flag。printk调试信息时检查flag以确定是否要使用printk输出调试信息。</p>
+</blockquote>
+<p>温馨提示：do_fork函数再较新版本的linux内核源码中已被kernel_clone函数代替。</p>
+<h3 id="修改-kernel-fork-c文件">修改./kernel/fork.c文件</h3>
+<p>在kernel_clone中使用printk，打印相关信息，p是指向task_struct结构体的指针，comm即当前执行的command，pid是子进程的进程号，current-&gt;pid是父进程的进程号，current是一个宏，指向父进程。</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/7-add_code.png" alt="在kernel_clone中增加printk代码"></p>
+<p>增加新的系统调用setdebug，用于设置debug_fork_flag，bool值debug_fork_flag是用于控制是否输出的全局变量。</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/7-setdebug.png" alt="setdebug系统调用"></p>
+<h3 id="增加声明">增加声明</h3>
+<ol>
+<li>系统调用：./kernel/fork.c（已经修改）</li>
+<li>系统调用函数声明 ./include/linux/syscalls.h</li>
+<li>ID：./arch/x86/entry/syscalls/syscall_64.tbl</li>
+<li>ID 声明：./include/uapi/asm-generic/unistd.h</li>
+</ol>
+<p>剩下3个文件的修改操作在实验一增加系统调用的任务中已经实践过，就不在此赘述。</p>
+<h3 id="编译内核">编译内核</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 实验一编译内核中已经实践过</span></span><br><span class="line">make mrproper</span><br><span class="line">make clean</span><br><span class="line">make -j6</span><br><span class="line">make modules_install</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h3 id="编写测试代码">编写测试代码</h3>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/syscall.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义SetDebug系统调用的编号（需要在内核中注册）</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_SETDEBUG 447</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">SetDebug</span><span class="params">(<span class="type">int</span> value)</span> &#123;</span><br><span class="line">    syscall(SYS_SETDEBUG, value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    SetDebug(<span class="number">1</span>); <span class="comment">// 启用调试信息</span></span><br><span class="line"></span><br><span class="line">    <span class="type">pid_t</span> pid = fork();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (pid == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 子进程</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;子进程 ID: %d\n&quot;</span>, getpid());</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pid &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 父进程</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;父进程 ID: %d\n&quot;</span>, getpid());</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// fork 失败</span></span><br><span class="line">        perror(<span class="string">&quot;fork&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    SetDebug(<span class="number">0</span>); <span class="comment">// 禁用调试信息</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>为了测试功能，我在另一个测试代码中注释掉了SetDebug函数，同时执行两个程序，期待的效果是，只有调用了SetDebug函数的程序会输出fork时的调试信息。</p>
+<p>test1没有启用打印信息，test2启用了打印信息。</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/7-result1.png" alt="运行test1和test2"></p>
+<p>使用dmesg查看信息，下图可以看到后台信息有一行正在创建的进程，cmd=test2，然后对比上图的子进程和父进程的PID，发现也是一致的。</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/7-result2.png" alt="dmesg打印后台信息"></p>
+<p>参考资料：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/617398860">Linux内核进程——do_fork()函数的实现原理</a></p>
+<p><a href="https://blog.csdn.net/liushengxi_root/article/details/81332740">linux 内核源码 fork 解读</a></p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>操作系统</tag>
+        <tag>课程实验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HUST操作系统实验三:内存管理</title>
+    <url>/2023/12/05/HUST%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E4%B8%89-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="操作系统实验三：内存管理">操作系统实验三：内存管理</h1>
+<h2 id="实验目的">实验目的</h2>
+<ol>
+<li>
+<p>理解页面淘汰算法原理，编写程序演示页面淘汰算法。</p>
+</li>
+<li>
+<p>验证Linux虚拟地址转化为物理地址的机制</p>
+</li>
+<li>
+<p>理解和验证程序运行局部性的原理。</p>
+</li>
+<li>
+<p>理解和验证缺页处理的流程。</p>
+</li>
+</ol>
+<h2 id="实验内容">实验内容</h2>
+<ol>
+<li>
+<p>Win/Linux编写二维数组遍历程序，理解局部性的原理。</p>
+</li>
+<li>
+<p>Windows/Linux模拟实现OPT或FIFO或LRU淘汰算法。</p>
+</li>
+<li>
+<p>研读并修改Linux内核的缺页处理函数do_no_page(新版本应该是handle_mm_fault) 或页框分配函数get_free_page，并用printk打印调试信息。注意：需要编译内核。<strong>建议优麒麟或麒麟系统</strong>。</p>
+</li>
+<li>
+<p>Linux下利用/proc/pid/pagemap技术计算某个变量或函数虚拟地址对应的物理地址等信息。<strong>建议优麒麟或麒麟系统</strong>。</p>
+</li>
+</ol>
+<h2 id="任务一：编写二维数组遍历程序-理解程序局部性原理">任务一：编写二维数组遍历程序，理解程序局部性原理</h2>
+<h3 id="任务要求">任务要求</h3>
+<ol>
+<li>
+<p>数组尽可能开大一些，并尝试改变数组大小，改变内外重循环次序。例如从[2048] X[2048]变化到[10240] x [20480]，观察它们的遍历效率。</p>
+</li>
+<li>
+<p>在任务管理器或利用/proc中文件系统观察它们的缺页次数。</p>
+</li>
+</ol>
+<h3 id="代码实现">代码实现</h3>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/resource.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 行优先遍历</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">traverseRowMajor</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; &amp;arr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">size_t</span> j = <span class="number">0</span>; j &lt; arr[i].<span class="built_in">size</span>(); j++)</span><br><span class="line">        &#123;</span><br><span class="line">            sum += arr[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 列优先遍历</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">traverseColumnMajor</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; &amp;arr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> j = <span class="number">0</span>; j &lt; arr[<span class="number">0</span>].<span class="built_in">size</span>(); j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            sum += arr[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> rows, cols;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;输入矩阵的行数和列数（格式: x y）: &quot;</span>;</span><br><span class="line">    cin &gt;&gt; rows &gt;&gt; cols;</span><br><span class="line"></span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">arr</span>(rows, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(cols, <span class="number">1</span>));</span><br><span class="line"></span><br><span class="line">    rusage usage;</span><br><span class="line">    timeval start, end;</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> choice;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;选择遍历方式（r: 行优先，c: 列优先）: &quot;</span>;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; choice;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 开始前获取进程的资源使用情况</span></span><br><span class="line">    <span class="built_in">getrusage</span>(RUSAGE_SELF, &amp;usage);</span><br><span class="line">    start = usage.ru_utime;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (choice == <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">traverseRowMajor</span>(arr);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (choice == <span class="string">&#x27;c&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">traverseColumnMajor</span>(arr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 结束时获取进程的资源使用情况</span></span><br><span class="line">    <span class="built_in">getrusage</span>(RUSAGE_SELF, &amp;usage);</span><br><span class="line">    end = usage.ru_utime;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 以毫秒输出时间</span></span><br><span class="line">    <span class="type">double</span> time_taken = (end.tv_sec - start.tv_sec) * <span class="number">1000</span> + (end.tv_usec - start.tv_usec) / <span class="number">1000.0</span>;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">3</span>) &lt;&lt; <span class="string">&quot;消耗时间： &quot;</span> &lt;&lt; time_taken &lt;&lt; <span class="string">&quot; 毫秒\n&quot;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;页面错误： &quot;</span> &lt;&lt; usage.ru_minflt &lt;&lt; <span class="string">&quot; 次\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="32位程序的编译">32位程序的编译</h3>
+<p>如果直接加上-m32编译，会报错：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-1-32bit_error.png" alt="32bit编译报错"></p>
+<p>因为缺少32位的库，需要安装32位的库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo dpkg --add-architecture i386              <span class="comment"># 添加32位架构</span></span><br><span class="line">sudo apt-get install gcc-multilib g++-multilib <span class="comment"># 安装32位库</span></span><br></pre></td></tr></table></figure>
+<h3 id="32位和64位程序的运行结果">32位和64位程序的运行结果</h3>
+<p>利用g++分别编译出32位和64位的可执行文件test_32和test_64运行结果如下：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-1-result1.png" alt="64位运行结果"></p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-1-result2.png" alt="32位运行结果"></p>
+<h3 id="现象观察和分析">现象观察和分析</h3>
+<ol>
+<li>
+<p>执行时间:</p>
+<ol>
+<li>在较小的矩阵（2048x2048）中，64位程序的执行时间略少于32位程序。</li>
+<li>在较大的矩阵（10240x20480）中，64位程序在行优先遍历时明显快于32位程序，但在列优先遍历时，两者的时间差异不大。</li>
+</ol>
+</li>
+<li>
+<p>页面错误:</p>
+<ol>
+<li>对于两种程序（32位和64位），在相同的矩阵大小和遍历方式下，页面错误的数量几乎相同。</li>
+</ol>
+</li>
+</ol>
+<p>执行时间差异:</p>
+<p>64位程序通常可以更有效地处理大型数据集，因为它们可以利用更大的地址空间和通常更高效的数据处理能力（例如，更大的寄存器和更优的内存管理）。这解释了为什么在处理较大的矩阵时，64位程序在行优先遍历中比32位程序更快。<br>
+对于列优先遍历，由于内存访问模式导致频繁的缓存未命中，这可能在一定程度上抵消了64位架构的优势，导致两者在大矩阵列优先遍历时的性能差异不大。</p>
+<p>页面错误相似性:</p>
+<p>页面错误的数量主要取决于程序的内存访问模式和操作系统的页面管理策略，而不是程序的位数。因此，即使是32位和64位程序，如果它们执行相同的内存访问操作，页面错误的数量也可能非常接近。感觉更多取决于内存访问模式和操作系统的内存管理。</p>
+<p>但我其实有一个疑问在于，从直观的感觉来看，列有限遍历产生的页面错误应该比行优先遍历更多，因为列优先遍历时，每次访问的地址都是连续的，而行优先遍历时，每次访问的地址都是不连续的。但实际上，两者的页面错误数量几乎相同。</p>
+<p><strong>GPT的回答：</strong></p>
+<ul>
+<li>
+<p>内存分页和访问模式：</p>
+<ul>
+<li>现代计算机系统中，物理内存是分页管理的。如果一个矩阵的行或列跨越了多个内存页，那么无论是行优先还是列优先遍历，都可能导致页面错误。</li>
+<li>在行优先遍历中，如果矩阵的每行都跨越多个页面，那么即使访问是连续的，也可能在访问新行时遇到页面错误。</li>
+<li>在列优先遍历中，尽管每次跳跃到新列可能会触及新的内存页，但如果列数据较小并且能够在单个或少数几个内存页中被完全包含，页面错误的发生可能不会比行优先多很多。</li>
+</ul>
+</li>
+<li>
+<p>缓存和预取策略：</p>
+<ul>
+<li>现代处理器具有高级的缓存和预取机制。这些机制可能在某种程度上减少了预期中列优先遍历的页面错误数量。</li>
+<li>处理器可能能够预测接下来的内存访问模式，并提前将数据从主内存加载到缓存中，这样即使是列优先访问，也可能不会立即导致页面错误。</li>
+</ul>
+</li>
+<li>
+<p>操作系统的内存管理：</p>
+<ul>
+<li>操作系统在管理内存时可能采取一些策略，如延迟分配，这可能导致实际的页面错误数量与预期不同。</li>
+<li>操作系统可能会保持一定数量的空闲页面池，这样在初期的内存访问中，页面错误的发生率可能较低。</li>
+</ul>
+</li>
+<li>
+<p>矩阵的物理内存布局：</p>
+<ul>
+<li>矩阵在物理内存中的实际布局也可能影响页面错误的发生。例如，如果矩阵的某些部分已经由于其他原因被加载到内存中，这可能会减少特定遍历方式下的页面错误。</li>
+</ul>
+</li>
+<li>
+<p>系统的整体内存负载：</p>
+<ul>
+<li>如果系统上运行的其他进程占用了大量内存，这可能会影响到您的程序的页面错误行为。系统的整体内存负载和可用性可能会导致不同时间点上相同操作的不同页面错误表现。</li>
+</ul>
+</li>
+</ul>
+<h2 id="任务二：模拟实现opt或fifo或lru淘汰算法">任务二：模拟实现OPT或FIFO或LRU淘汰算法</h2>
+<h3 id="任务要求">任务要求</h3>
+<ol>
+<li>
+<p>程序指令执行过程采用遍历数组的操作来模拟；</p>
+</li>
+<li>
+<p>用1个较大数组A（例如2400个元素）模拟进程，数组里面放的是随机数，每个元素被访问时就使用printf将其打印出来，模仿指令的执行。数组A的大小必须是设定的页大小（例如10个元素或16个元素等等）的整数倍。</p>
+</li>
+<li>
+<p>用3-8个小数组(例如数组B，数组C，数组D等)模拟分得的页框。小数组的大小等于页大小（例如10条指令的大小，即10的元素）。小数组里面复制的是大数组里面的相应页面的内容（自己另外构建页表，描述大数组的页与小数组序号的关系）。</p>
+</li>
+<li>
+<p>利用不同的次序访问数组A，次序可以是：顺序，跳转，分支，循环，或随机，自己构建访问次序。不同的次序也一定程度反映程序局部性。</p>
+</li>
+<li>
+<p>大数组的访问次序可以用rand()函数定义，模拟产生指令访问序列，对应到大数组A的访问次序。然后将指令序列变换成相应的页地址流，并针对不同的页面淘汰算法统计“缺页”情况。缺页即对应的“页面”没有装到小数组中（例如数组B，数组C，数组D等）。</p>
+</li>
+<li>
+<p>实验中页面大小，页框数，访问次序，淘汰算法都应可调。</p>
+</li>
+</ol>
+<h3 id="代码实现">代码实现</h3>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ARRAY_SIZE 2400                    <span class="comment">// 进程虚拟空间大小</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PAGE_SIZE 10                       <span class="comment">// 页框大小</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> NUM_PAGES (ARRAY_SIZE / PAGE_SIZE) <span class="comment">// 虚拟内存的页数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> NUM_FRAMES 5                       <span class="comment">// 物理内存的页数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> JUMP_NUM_FRAMES 7                  <span class="comment">// 跳转的页数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LOOP_TIMES 3                       <span class="comment">// 循环的次数</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> main_array[ARRAY_SIZE];        <span class="comment">// 进程虚拟空间</span></span><br><span class="line"><span class="type">int</span> frames[NUM_FRAMES][PAGE_SIZE]; <span class="comment">// 物理内存分割成页框</span></span><br><span class="line"><span class="type">int</span> page_table[NUM_PAGES];         <span class="comment">// 页表项（虚拟页框号到物理页框号的映射）</span></span><br><span class="line"><span class="type">int</span> frame_table[NUM_FRAMES];       <span class="comment">// 页框表（物理页框号到虚拟页框号的映射）</span></span><br><span class="line"><span class="type">int</span> page_faults = <span class="number">0</span>;               <span class="comment">// 缺页次数</span></span><br><span class="line"><span class="type">int</span> algo_choice = <span class="number">0</span>;               <span class="comment">// 页面替换算法</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> frame_pointer = <span class="number">0</span>;           <span class="comment">// 用于FIFO</span></span><br><span class="line"><span class="type">int</span> frame_queue[NUM_FRAMES];     <span class="comment">// 用于FIFO</span></span><br><span class="line"><span class="type">int</span> frame_timestamp[NUM_FRAMES]; <span class="comment">// 用于LRU</span></span><br><span class="line"><span class="type">int</span> future_pages[ARRAY_SIZE];    <span class="comment">// 用于OPT</span></span><br><span class="line"></span><br><span class="line"><span class="type">char</span> *algo_name[<span class="number">4</span>] = &#123;<span class="string">&quot;随机替换&quot;</span>, <span class="string">&quot;OPT&quot;</span>, <span class="string">&quot;FIFO&quot;</span>, <span class="string">&quot;LRU&quot;</span>&#125;; <span class="comment">// 页面替换算法名称</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">initialize</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    srand(time(<span class="literal">NULL</span>));</span><br><span class="line">    <span class="comment">// 填充随机数和初始化</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        main_array[i] = rand() % <span class="number">100000</span>;</span><br><span class="line">        future_pages[i] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 初始化页表</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; NUM_PAGES; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        page_table[i] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 初始化页框队列和时间戳</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; NUM_FRAMES; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        frame_queue[i] = <span class="number">-1</span>;</span><br><span class="line">        frame_timestamp[i] = <span class="number">-1</span>;</span><br><span class="line">        frame_table[i] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">find_frame_opt</span><span class="params">(<span class="type">int</span> current_time)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 实现 OPT 算法</span></span><br><span class="line">    <span class="type">int</span> frame = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> max_future = <span class="number">-1</span>;</span><br><span class="line">    <span class="comment">// 找到未来最长时间不会使用的页框</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; NUM_FRAMES; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 如果找到空闲页框，直接返回</span></span><br><span class="line">        <span class="keyword">if</span> (frame_table[i] == <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            frame = i;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="built_in">future</span> = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = current_time; j &lt; ARRAY_SIZE; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (future_pages[j] == frame_table[i])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">future</span> = j;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">future</span> &gt; max_future)</span><br><span class="line">        &#123;</span><br><span class="line">            max_future = <span class="built_in">future</span>;</span><br><span class="line">            frame = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (max_future == <span class="number">-1</span>)</span><br><span class="line">        frame = rand() % NUM_FRAMES;</span><br><span class="line">    <span class="keyword">return</span> frame;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">find_frame_fifo</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 实现 FIFO 算法，依靠队列，先进先出</span></span><br><span class="line">    <span class="type">int</span> frame = frame_pointer;</span><br><span class="line">    frame_pointer = (frame_pointer + <span class="number">1</span>) % NUM_FRAMES;</span><br><span class="line">    <span class="keyword">return</span> frame;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">find_frame_lru</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 实现 LRU 算法</span></span><br><span class="line">    <span class="type">int</span> lru = INT_MAX;</span><br><span class="line">    <span class="type">int</span> frame = <span class="number">-1</span>;</span><br><span class="line">    <span class="comment">// 找到最久未使用的页框</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; NUM_FRAMES; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (frame_timestamp[i] &lt; lru)</span><br><span class="line">        &#123;</span><br><span class="line">            lru = frame_timestamp[i];</span><br><span class="line">            frame = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> frame;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 访问页面</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">access_page</span><span class="params">(<span class="type">int</span> page_number, <span class="type">int</span> offset, <span class="type">int</span> current_time)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 缺页，采用对应的页面替换算法</span></span><br><span class="line">    <span class="keyword">if</span> (page_table[page_number] == <span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 找到一个空闲或是应该替换的页框</span></span><br><span class="line">        <span class="type">int</span> frame_number;</span><br><span class="line">        <span class="keyword">switch</span> (algo_choice)</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            frame_number = find_frame_opt(current_time);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            frame_number = find_frame_fifo();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">            frame_number = find_frame_lru();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            frame_number = rand() % NUM_FRAMES;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 把之前的虚拟到物理的页表映射改为-1</span></span><br><span class="line">        <span class="keyword">if</span> (frame_table[frame_number] != <span class="number">-1</span>)</span><br><span class="line">            page_table[frame_table[frame_number]] = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\033[1;31m页面错误\033[0m，页面%3d 装入页框%2d，偏移%2d处数据为：&quot;</span>, page_number, frame_number, offset);</span><br><span class="line">        page_table[page_number] = frame_number;</span><br><span class="line">        frame_table[frame_number] = page_number;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; PAGE_SIZE; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            frames[frame_number][i] = main_array[page_number * PAGE_SIZE + i];</span><br><span class="line">        &#125;</span><br><span class="line">        page_faults++;</span><br><span class="line">        frame_queue[frame_number] = page_number;</span><br><span class="line">        frame_timestamp[frame_number] = current_time;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\033[1;32m页面命中\033[0m，页面%3d 位于页框%2d，偏移%2d处数据为：&quot;</span>, page_number, page_table[page_number], offset);</span><br><span class="line">        frame_timestamp[page_table[page_number]] = current_time;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%5d &quot;</span>, main_array[page_number * PAGE_SIZE + offset]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    initialize();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提示用户选择页面替换算法</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请选择页面替换算法(1=OPT, 2=FIFO, 3=LRU)，默认随机替换: &quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;algo_choice);</span><br><span class="line">    <span class="keyword">if</span> (algo_choice &lt; <span class="number">1</span> || algo_choice &gt; <span class="number">3</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;无效的页面替换算法选项，使用默认的替换方式：随机替换。\n&quot;</span>);</span><br><span class="line">        algo_choice = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;当前使用的页面替换算法: %s\n&quot;</span>, algo_name[algo_choice]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提示用户选择页面访问顺序</span></span><br><span class="line">    <span class="type">int</span> access_order = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (algo_choice == <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 提示用户选择，选择错误重选</span></span><br><span class="line">        <span class="keyword">do</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (access_order &lt; <span class="number">1</span> || access_order &gt; <span class="number">4</span>)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;无效的访问顺序选项，请重新选择。\n&quot;</span>);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;OPT算法需要知道未来的页面访问顺序，请选择页面访问顺序 (1=顺序, 2=跳转, 3=分支, 4=循环): &quot;</span>);</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;access_order);</span><br><span class="line">        &#125; <span class="keyword">while</span> (access_order &lt; <span class="number">1</span> || access_order &gt; <span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 提示用户选择，选择错误重选</span></span><br><span class="line">        <span class="keyword">do</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (access_order &lt; <span class="number">1</span> || access_order &gt; <span class="number">5</span>)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;无效的访问顺序选项，请重新选择。\n&quot;</span>);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;请选择页面访问顺序 (1=顺序, 2=跳转, 3=分支, 4=循环, 5=随机): &quot;</span>);</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;access_order);</span><br><span class="line">        &#125; <span class="keyword">while</span> (access_order &lt; <span class="number">1</span> || access_order &gt; <span class="number">5</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 根据选择的访问顺序访问页面</span></span><br><span class="line">    <span class="keyword">switch</span> (access_order)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="comment">// 顺序访问</span></span><br><span class="line">        <span class="comment">// 构造future_pages数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++)</span><br><span class="line">            future_pages[i] = i / PAGE_SIZE;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++)</span><br><span class="line">            access_page(i / PAGE_SIZE, i % PAGE_SIZE, i);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="comment">// 跳转访问</span></span><br><span class="line">        <span class="comment">// 构造future_pages数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++)</span><br><span class="line">            future_pages[i] = i * JUMP_NUM_FRAMES % ARRAY_SIZE / PAGE_SIZE;</span><br><span class="line">        <span class="comment">// 间隔JUMP_NUM_FRAMES步访问</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++)</span><br><span class="line">            access_page(i * JUMP_NUM_FRAMES % ARRAY_SIZE / PAGE_SIZE, i * JUMP_NUM_FRAMES % ARRAY_SIZE % PAGE_SIZE, i);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>: <span class="comment">// 分支访问</span></span><br><span class="line">        <span class="comment">// 构造future_pages数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 偶数页框顺序访问，奇数页框跳转访问</span></span><br><span class="line">            <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">                future_pages[i] = i / PAGE_SIZE;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                future_pages[i] = i * JUMP_NUM_FRAMES % ARRAY_SIZE / PAGE_SIZE;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">                access_page(i / PAGE_SIZE, i % PAGE_SIZE, i);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                access_page(i * JUMP_NUM_FRAMES % ARRAY_SIZE / PAGE_SIZE, i * JUMP_NUM_FRAMES % ARRAY_SIZE % PAGE_SIZE, i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>: <span class="comment">// 循环访问</span></span><br><span class="line">        <span class="comment">// 构造future_pages数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++)</span><br><span class="line">            future_pages[i] = (i % (ARRAY_SIZE / LOOP_TIMES)) / PAGE_SIZE;</span><br><span class="line">        <span class="comment">// 循环访问loop_times次</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++) </span><br><span class="line">            access_page((i % (ARRAY_SIZE / LOOP_TIMES)) / PAGE_SIZE, (i % (ARRAY_SIZE / LOOP_TIMES)) % PAGE_SIZE, i);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">5</span>: <span class="comment">// 随机访问</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> ind = rand() % ARRAY_SIZE;</span><br><span class="line">            access_page(ind / PAGE_SIZE, ind % PAGE_SIZE, i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ARRAY_SIZE; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> ind = rand() % ARRAY_SIZE;</span><br><span class="line">            access_page(ind / PAGE_SIZE, ind % PAGE_SIZE, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 打印future_pages */</span></span><br><span class="line">    <span class="comment">// for (int i = 0; i &lt; NUM_PAGES; i++)</span></span><br><span class="line">    <span class="comment">// &#123;</span></span><br><span class="line">    <span class="comment">//     printf(&quot;%d &quot;, future_pages[i]);</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出缺页次数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;页面访问错误次数: %d，命中率: %.2f%%\n&quot;</span>, page_faults, (<span class="number">1</span> - (<span class="type">float</span>)page_faults / ARRAY_SIZE) * <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="程序运行结果">程序运行结果</h3>
+<p>这是原本的输出示例，但为了更好的演示，我对程序进行了一些修改，注释掉了一些输出。</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-2-output.png" alt="原本的输出"></p>
+<h4 id="opt">opt</h4>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-2-opt.png" alt="opt运行结果"></p>
+<h4 id="fifo">fifo</h4>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-2-fifo.png" alt="fifo运行结果"></p>
+<h4 id="lru">lru</h4>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-2-lru.png" alt="lru运行结果"></p>
+<p>由于opt算法需要知道未来的页面访问顺序，而故选中opt算法之后，不存在5=随机访问这个选项。</p>
+<h2 id="任务三：修改linux内核缺页处理函数-打印调试信息">任务三：修改Linux内核缺页处理函数，打印调试信息</h2>
+<h3 id="任务要求">任务要求</h3>
+<ol>
+<li>
+<p>编写2个类似hello world或简单的for循环应用程序作为测试目标。</p>
+</li>
+<li>
+<p>在Linux内核的缺页处理函数do_no_page( )或类似函数中（不同版本的此函数名有差异）采用printk方式添加调试信息，打印特定进程（以可程序的程序名为过滤条件）的缺页信息，统计缺页次数。</p>
+</li>
+<li>
+<p>也可以在Linux内核的分配物理页框函数get_free_page( )或类似函数中（不同版本的此函数名有差异）采用printk方式添加调试信息，打印特定进程（以可程序的程序名为过滤条件）运行过程中分配新页框的信息，统计相关信息。</p>
+</li>
+</ol>
+<h3 id="修改内核源代码">修改内核源代码</h3>
+<h4 id="增加代码-mm-memory-c">增加代码 <code>./mm/memory.c</code></h4>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 增加两个系统调用用于控制程序，一个是设置目标程序名，一个是获取目标程序的缺页次数</span></span><br><span class="line"><span class="type">static</span> <span class="type">char</span> target_program[<span class="number">256</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">// target program name</span></span><br><span class="line"><span class="type">static</span> <span class="type">long</span> page_fault_count = <span class="number">0</span>;      <span class="comment">// page fault counts</span></span><br><span class="line"></span><br><span class="line">SYSCALL_DEFINE1(set_target_program_name, <span class="type">const</span> <span class="type">char</span> __user *, program_name) &#123;</span><br><span class="line">        <span class="comment">// copy name to kernel </span></span><br><span class="line">        <span class="keyword">if</span> (copy_from_user(target_program,program_name, <span class="number">255</span>) != <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> -EFAULT;  <span class="comment">// if fail, return -EFAULT</span></span><br><span class="line"></span><br><span class="line">        target_program[<span class="number">255</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SYSCALL_DEFINE0(get_page_fault_count) &#123;</span><br><span class="line">        printk(KERN_INFO <span class="string">&quot;%s page fault count: %ld\n&quot;</span>, target_program, page_fault_count);</span><br><span class="line">        page_fault_count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> page_fault_count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在do_no_page函数中添加调试信息</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">strcmp</span>(current-&gt;comm, target_program) == <span class="number">0</span>)</span><br><span class="line">                page_fault_count++;</span><br></pre></td></tr></table></figure>
+<h4 id="系统调用函数声明-include-linux-syscalls-h">系统调用函数声明 <code>./include/linux/syscalls.h</code></h4>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 增加两个系统调用的声明</span></span><br><span class="line">asmlinkage <span class="type">long</span> <span class="title function_">sys_set_target_program_name</span><span class="params">(<span class="type">const</span> <span class="type">char</span> __user *name)</span>;</span><br><span class="line">asmlinkage <span class="type">long</span> <span class="title function_">sys_get_page_fault_count</span><span class="params">(<span class="type">void</span>)</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="系统调用id-arch-x86-entry-syscalls-syscall-64-tbl">系统调用ID <code>./arch/x86/entry/syscalls/syscall_64.tbl</code></h4>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 增加两个系统调用的系统调用号</span></span><br><span class="line"><span class="number">448</span>   <span class="number">64</span>   set_target_program_name     sys_set_target_program_name</span><br><span class="line"><span class="number">449</span>   <span class="number">64</span>   get_page_fault_count        sys_get_page_fault_count</span><br></pre></td></tr></table></figure>
+<h4 id="系统调用id声明-include-uapi-asm-generic-unistd-h">系统调用ID声明<code>./include/uapi/asm-generic/unistd.h</code></h4>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 增加两个系统调用的声明</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> __NR_set_target_program_name 448</span></span><br><span class="line">__SYSCALL(__NR_set_target_program_name, sys_set_target_program_name)</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> __NR_get_page_fault_count 449</span></span><br><span class="line">__SYSCALL(__NR_get_page_fault_count, sys_get_page_fault_count)</span><br></pre></td></tr></table></figure>
+<h3 id="编译内核完成后编写测试代码">编译内核完成后编写测试代码</h3>
+<p>编译的时候会报错如下：</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-3-error1.png" alt="报错"></p>
+<p>起初我不知道这个报错是什么意思，修改了很久就是没有效果，后来加了一个<code>#include &lt;linux/syscalls.h&gt;</code>就好了。也就是说，如果定义系统调用就必须要包含这个头文件。但是这个报错的指向性不是很明确，导致我耗费了很长时间。</p>
+<p>下面是test1.c，test2.c只是去掉了新增加的系统调用。为了测试调试信息是可控的。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/syscall.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 假设这些是您的新系统调用的编号</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_SET_TARGET_PROGRAM_NAME 448</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_GET_PAGE_FAULT_COUNT 449</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> size = <span class="number">1000</span>;</span><br><span class="line"><span class="type">int</span> <span class="built_in">array</span>[<span class="number">1000</span>][<span class="number">1000</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 设置目标程序名</span></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span> *target_program = <span class="string">&quot;test&quot;</span>;</span><br><span class="line">    syscall(SYS_SET_TARGET_PROGRAM_NAME, target_program);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行可能触发页面错误的操作</span></span><br><span class="line">    <span class="type">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; size; j++) &#123;</span><br><span class="line">            <span class="built_in">array</span>[i][j] = i + j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取并输出页面错误计数</span></span><br><span class="line">    syscall(SYS_GET_PAGE_FAULT_COUNT);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="程序运行结果">程序运行结果</h3>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-3-test_result.png" alt="程序运行结果"></p>
+<p>如图，只有test1程序的页面错误计数被打印出来了，而test2程序的页面错误计数没有被打印出来。</p>
+<h2 id="任务四：linux下利用-proc-pid-pagemap计算va对应的pa">任务四：Linux下利用/proc/pid/pagemap计算VA对应的PA</h2>
+<h3 id="任务要求">任务要求</h3>
+<ol>
+<li>
+<p>Linux的/proc/pid/pagemap文件允许用户查看当前进程虚拟页的物理地址等相关信息。每个虚拟页包含一个64位的值注意分析64位的信息</p>
+</li>
+<li>
+<p>获取当前进程的pagemap文件的全名</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ppt上的示例代码</span></span><br><span class="line"><span class="type">pid_t</span> pid = getpid();</span><br><span class="line"><span class="built_in">sprintf</span>(buf, <span class="string">&quot;%d&quot;</span>, pid);</span><br><span class="line"><span class="built_in">strcpy</span>(filename, <span class="string">&quot;/proc/&quot;</span>);</span><br><span class="line"><span class="built_in">strcat</span>(filename, buf);</span><br><span class="line"><span class="built_in">strcat</span>(filename, <span class="string">&quot;/pagemap&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可以直接一步到位</span></span><br><span class="line"><span class="built_in">sprintf</span>(filename, <span class="string">&quot;/proc/%d/pagemap&quot;</span>, pid);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>可以输出进程中某个或多个全局变量或自定义函数的虚拟地址，所在页号，所在物理页框号，物理地址等信息。</p>
+</li>
+</ol>
+<p>思考：</p>
+<p>(1) 如何扩充实验（写个通用函数）展示指定进程的指定虚拟地址对应的物理地址。</p>
+<p>(2) 如何扩充实验验证不同进程的共享库(例如某个已知，被普遍调用的*.so库)具有同一物理地址。</p>
+<h3 id="代码实现">代码实现</h3>
+<p>program.c实现了输出某个或多个全局变量或自定义函数的虚拟地址，所在页号，所在物理页框号，物理地址等信息。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">printPhysicalAddress</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *description, <span class="type">unsigned</span> <span class="type">long</span> vaddr)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> pageSize = getpagesize();                            <span class="comment">// 获取系统设定的页面大小</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> v_pageIndex = vaddr / pageSize;            <span class="comment">// 计算此虚拟地址相对于0x0的经过的页面数</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> v_offset = v_pageIndex * <span class="keyword">sizeof</span>(<span class="type">uint64_t</span>); <span class="comment">// 计算在/proc/pid/page_map文件中的偏移量</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> page_offset = vaddr % pageSize;            <span class="comment">// 计算虚拟地址在页面中的偏移量</span></span><br><span class="line">    <span class="type">uint64_t</span> item = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> buf[<span class="number">200</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(buf, <span class="string">&quot;/proc/%d/pagemap&quot;</span>, getpid());</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> fd = open(buf, O_RDONLY);</span><br><span class="line">    <span class="keyword">if</span> (fd == <span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        perror(<span class="string">&quot;Error opening pagemap&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    lseek(fd, v_offset, SEEK_SET); <span class="comment">// 移动文件指针到文件相应位置获取item</span></span><br><span class="line">    <span class="keyword">if</span> (read(fd, &amp;item, <span class="keyword">sizeof</span>(<span class="type">uint64_t</span>)) != <span class="keyword">sizeof</span>(<span class="type">uint64_t</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        perror(<span class="string">&quot;Error reading pagemap&quot;</span>);</span><br><span class="line">        close(fd);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">uint64_t</span> phy_pageIndex = (((<span class="type">uint64_t</span>)<span class="number">1</span> &lt;&lt; <span class="number">55</span>) - <span class="number">1</span>) &amp; item;      <span class="comment">// 物理页号，即取item的bit0-54</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> paddr = (phy_pageIndex * pageSize) + page_offset; <span class="comment">// 物理地址=物理页号*页面大小+页内偏移量</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;【%s】pid = %d, 虚拟地址 = 0x%lx, 所在页号 = %lu, 物理地址 = 0x%lx, 所在物理页框号 = %lu\n&quot;</span>,</span><br><span class="line">           description, getpid(), vaddr, v_pageIndex, paddr, phy_pageIndex);</span><br><span class="line"></span><br><span class="line">    close(fd);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">100</span>; <span class="comment">// 全局常量</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> b = <span class="number">100</span>;                   <span class="comment">// 局部变量</span></span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> c = <span class="number">100</span>;            <span class="comment">// 局部静态变量</span></span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> d = <span class="number">100</span>;             <span class="comment">// 局部常量</span></span><br><span class="line">    <span class="type">char</span> *p = (<span class="type">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>); <span class="comment">// 动态内存</span></span><br><span class="line"></span><br><span class="line">    printPhysicalAddress(<span class="string">&quot;全局常量&quot;</span>, (<span class="type">unsigned</span> <span class="type">long</span>)&amp;a);</span><br><span class="line">    printPhysicalAddress(<span class="string">&quot;局部变量&quot;</span>, (<span class="type">unsigned</span> <span class="type">long</span>)&amp;b);</span><br><span class="line">    printPhysicalAddress(<span class="string">&quot;局部静态变量&quot;</span>, (<span class="type">unsigned</span> <span class="type">long</span>)&amp;c);</span><br><span class="line">    printPhysicalAddress(<span class="string">&quot;局部常量&quot;</span>, (<span class="type">unsigned</span> <span class="type">long</span>)&amp;d);</span><br><span class="line">    printPhysicalAddress(<span class="string">&quot;动态内存&quot;</span>, (<span class="type">unsigned</span> <span class="type">long</span>)p);</span><br><span class="line">    <span class="built_in">free</span>(p);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>va2pa.c实现了输出指定进程的指定虚拟地址对应的物理地址。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 逻辑和上面的一样，只是pid和vaddr是参数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">printPhysicalAddressForProcess</span><span class="params">(<span class="type">pid_t</span> pid, <span class="type">unsigned</span> <span class="type">long</span> vaddr)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> pageSize = getpagesize();</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> v_pageIndex = vaddr / pageSize;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> v_offset = v_pageIndex * <span class="keyword">sizeof</span>(<span class="type">uint64_t</span>);</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> page_offset = vaddr % pageSize;</span><br><span class="line">    <span class="type">uint64_t</span> item = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> pagemap_file[<span class="number">256</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(pagemap_file, <span class="string">&quot;/proc/%d/pagemap&quot;</span>, pid);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> fd = open(pagemap_file, O_RDONLY);</span><br><span class="line">    <span class="keyword">if</span> (fd == <span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        perror(<span class="string">&quot;Error opening pagemap&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    lseek(fd, v_offset, SEEK_SET);</span><br><span class="line">    <span class="keyword">if</span> (read(fd, &amp;item, <span class="keyword">sizeof</span>(<span class="type">uint64_t</span>)) != <span class="keyword">sizeof</span>(<span class="type">uint64_t</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        perror(<span class="string">&quot;Error reading pagemap&quot;</span>);</span><br><span class="line">        close(fd);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">uint64_t</span> phy_pageIndex = (((<span class="type">uint64_t</span>)<span class="number">1</span> &lt;&lt; <span class="number">55</span>) - <span class="number">1</span>) &amp; item;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> paddr = (phy_pageIndex * pageSize) + page_offset;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;pid = %d, 虚拟地址 = 0x%lx, 所在页号 = %lu, 物理地址 = 0x%lx, 所在物理页框号 = %lu\n&quot;</span>,</span><br><span class="line">           pid, vaddr, v_pageIndex, paddr, phy_pageIndex);</span><br><span class="line">    close(fd);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (argc != <span class="number">3</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Usage: %s &lt;pid&gt; &lt;virtual address&gt;\n&quot;</span>, argv[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">pid_t</span> pid = atoi(argv[<span class="number">1</span>]);</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> vaddr = strtoul(argv[<span class="number">2</span>], <span class="literal">NULL</span>, <span class="number">16</span>);</span><br><span class="line"></span><br><span class="line">    printPhysicalAddressForProcess(pid, vaddr);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>test.c是一个测试程序，用于验证不同进程的共享库具有同一物理地址。如本程序中的printf函数，在<strong><a href="http://libc.so">libc.so</a></strong>共享库中</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;PID: %d, Virtual address of printf: %p\n&quot;</span>, getpid(), (<span class="type">void</span> *)<span class="built_in">printf</span>);</span><br><span class="line">    sleep(<span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="程序运行结果">程序运行结果</h3>
+<blockquote>
+<p>必须用sudo运行，否则这个文件应该是没有权限打开的</p>
+</blockquote>
+<h4 id="program-c">program.c</h4>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-4-program1.png" alt="program.c运行结果"></p>
+<h4 id="va2pa-c-test-c">va2pa.c &amp;&amp; test.c</h4>
+<p>启动两个test进程，分别输出printf函数的虚拟地址。va2pa.c分别计算两个进程的printf函数的虚拟地址对应的物理地址。</p>
+<p><img src="https://raw.githubusercontent.com/hustlixiang21/blog-image/main/3-4-va2pa.png" alt="va2pa.c程序运行结果"></p>
+<p>右边两个红色的框线，打印当前运行的test程序的pid和printf函数的虚拟地址，然后把进程号和虚拟地址作为va2pa.c的参数，计算出物理地址。结果如左边两个框线所示，两个进程的printf函数的虚拟地址对应的物理地址（蓝色荧光笔标记）相同，证明了不同进程的共享库具有同一物理地址。</p>
+]]></content>
+      <categories>
+        <category>CS学习笔记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>操作系统</tag>
+        <tag>课程实验</tag>
       </tags>
   </entry>
 </search>
